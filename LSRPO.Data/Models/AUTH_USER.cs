@@ -25,7 +25,7 @@ namespace LSRPO.Data.Models
         public string USR_FULLNAME { get; set; }
 
         [StringLength(100)]
-        public string USR_EMAIL { get; set; }
+        public string? USR_EMAIL { get; set; }
 
         [Required]
         [StringLength(64)]

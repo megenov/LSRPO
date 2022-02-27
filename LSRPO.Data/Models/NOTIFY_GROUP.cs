@@ -21,10 +21,10 @@ namespace LSRPO.Data.Models
         public string NG_NAME { get; set; }
 
         [StringLength(400)]
-        public string NG_DESCRIPTION { get; set; }
+        public string? NG_DESCRIPTION { get; set; }
 
         [StringLength(20)]
-        public string NG_NUMBER { get; set; }
+        public string? NG_NUMBER { get; set; }
 
         public bool? NG_MOD_FLAG { get; set; }
 

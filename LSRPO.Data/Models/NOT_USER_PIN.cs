@@ -10,9 +10,9 @@ namespace LSRPO.Data.Models
         public int NOT_USR_ID { get; set; }
 
         [StringLength(6)]
-        public string USR_PIN { get; set; }
+        public string? USR_PIN { get; set; }
 
-        //[ForeignKey(nameof(AUTH_USER))]
+        [ForeignKey(nameof(AUTH_USER))]
         public int? USR_ID { get; set; }
         public AUTH_USER AUTH_USER { get; set; }
     }
