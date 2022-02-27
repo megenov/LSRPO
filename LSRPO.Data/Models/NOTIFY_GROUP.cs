@@ -8,6 +8,7 @@ namespace LSRPO.Data.Models
         public NOTIFY_GROUP()
         {
             NG_USRS = new HashSet<NG_USR>();
+            NG_NPS = new HashSet<NG_NP>();
         }
 
         [Key]
@@ -29,5 +30,7 @@ namespace LSRPO.Data.Models
         public bool? NG_MOD_FLAG { get; set; }
 
         public ICollection<NG_USR> NG_USRS { get; set; }
+
+        public ICollection<NG_NP> NG_NPS { get; set; }
     }
 }
