@@ -1,4 +1,5 @@
-﻿using LSRPO.Models;
+﻿using LSRPO.Core.Constants;
+using LSRPO.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,6 +16,8 @@ namespace LSRPO.Controllers
 
         public IActionResult Index()
         {
+            ViewData[MessageConstant.SuccessMessage] = "Успешно изпълнен toastr";
+
             return View();
         }
 
