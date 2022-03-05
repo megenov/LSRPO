@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LSRPO.Data\LSRPO.Data.csproj" />
+    <ProjectReference Include="..\LSRPO.Core\LSRPO.Core.csproj" />
   </ItemGroup>
 
 </Project>
