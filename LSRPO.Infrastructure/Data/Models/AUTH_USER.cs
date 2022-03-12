@@ -31,6 +31,9 @@ namespace LSRPO.Infrastructure.Data.Models
         [StringLength(64)]
         public string USR_PASSWORD { get; set; }
 
+        [StringLength(200)]
+        public string? IMAGE_URL { get; set; }
+
         public NOT_USER_PIN NOT_USER_PIN { get; set; }
 
         public ICollection<NG_USR> NG_USRS { get; set; }
