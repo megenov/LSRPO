@@ -1,5 +1,5 @@
 using LSRPO.Core.Constants;
-using LSRPO.Data;
+using LSRPO.Infrastructure.Data;
 using LSRPO.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

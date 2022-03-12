@@ -1,10 +1,16 @@
 ﻿using LSRPO.Infrastructure.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace LSRPO.Infrastructure.Data
 {
-    public class LSRPODbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
+
         public virtual DbSet<AUTH_USER> AUTH_USERS { get; set; }
 
         public virtual DbSet<NOT_USER_PIN> NOT_USERS_PIN { get; set; }
@@ -35,18 +41,12 @@ namespace LSRPO.Infrastructure.Data
 
         public virtual DbSet<STATUS_STATE> STATUS_STATES { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=.;Database=OpovAEC;Integrated Security=True;");
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_PIN).IsUnique();
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_ID).IsUnique();
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
