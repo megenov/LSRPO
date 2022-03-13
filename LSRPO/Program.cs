@@ -1,5 +1,6 @@
 using LSRPO.Core.Constants;
 using LSRPO.Infrastructure.Data;
+using LSRPO.Infrastructure.Data.Repositories;
 using LSRPO.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,8 @@ builder.Services.AddControllersWithViews()
         options.ModelBinderProviders.Insert(1, new DateTimeModelBinderProvider(FormatingConstant.NormalDateFormat));
         options.ModelBinderProviders.Insert(2, new DoubleModelBinderProvider());
     });
+
+builder.Services.AddScoped<IApplicatioDbRepository, ApplicatioDbRepository>();
 
 var app = builder.Build();
 
