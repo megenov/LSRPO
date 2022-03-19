@@ -1,5 +1,6 @@
 using LSRPO.Core.Constants;
 using LSRPO.Infrastructure.Data;
+using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
 using LSRPO.ModelBinders;
 using Microsoft.AspNetCore.Identity;
@@ -13,8 +14,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<AUTH_USER, AUTH_ROLE>(options => 
+{ 
+    options.SignIn.RequireConfirmedAccount = false;
+})
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders()
+    .AddDefaultUI();
+
 builder.Services.AddControllersWithViews()
     .AddMvcOptions(options =>
     {

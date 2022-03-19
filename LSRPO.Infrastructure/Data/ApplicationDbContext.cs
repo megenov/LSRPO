@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LSRPO.Infrastructure.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<AUTH_USER, AUTH_ROLE, int>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

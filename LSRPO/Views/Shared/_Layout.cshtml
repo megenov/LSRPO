@@ -67,12 +67,21 @@
       
       <!-- Logout -->
       <li class="nav-item">
-        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
           <button type="submit" class="nav-link btn btn-link text-dark">
               <i class="fas fa-sign-out-alt"></i>
               Отписване
           </button>
         </form>
+
+        @*<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+          <button type="submit" class="nav-link btn btn-link text-dark">
+              <i class="fas fa-sign-out-alt"></i>
+              Отписване
+          </button>
+        </form>*@
+
       </li>
     </ul>
   </nav>

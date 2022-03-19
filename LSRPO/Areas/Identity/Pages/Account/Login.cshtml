@@ -35,12 +35,12 @@
       <form id="account" method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <span asp-validation-for="Input.Email" class="text-danger"></span>
+        <span asp-validation-for="Input.UserName" class="text-danger"></span>
         <div class="input-group mb-3">
-          <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Email" />
+          <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="Потребителско име" />
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
