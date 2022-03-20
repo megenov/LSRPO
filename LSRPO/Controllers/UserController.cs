@@ -25,22 +25,15 @@ namespace LSRPO.Controllers
             return View();
         }
 
-        [Authorize(Roles = UserConstant.Roles.Administrator)]
-        public async Task<IActionResult> ManageUsers()
-        {
-            var users = await userService.GetUsers();
+        //[Authorize(Roles = UserConstant.Roles.Administrator)]
+        //public async Task<IActionResult> CreateRole()
+        //{
+        //    await roleManager.CreateAsync(new AUTH_ROLE()
+        //    {
+        //        Name = ""
+        //    });
 
-            return Ok(users);
-        }
-
-        public async Task<IActionResult> CreateRole()
-        {
-            //await roleManager.CreateAsync(new AUTH_ROLE()
-            //{
-            //    Name = ""
-            //});
-
-            return Ok();
-        }
+        //    return Ok();
+        //}
     }
 }

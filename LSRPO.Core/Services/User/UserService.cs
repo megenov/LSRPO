@@ -20,9 +20,32 @@ namespace LSRPO.Core.Services.User
             this.repo = repo;
         }
 
+        public async Task<UserEditViewModel> GetUserForEdit(int id)
+        {
+            var user = await repo.GetByIdAsync<AUTH_USER>(id);
+
+            return new UserEditViewModel { Id = user.Id, FullName = user.USR_FULLNAME };
+        }
+
         public async Task<IEnumerable<UserListViewModel>> GetUsers()
         {
             return await repo.All<AUTH_USER>().Select(s => new UserListViewModel { Id = s.Id, UserName = s.UserName, FullName = s.USR_FULLNAME }).ToListAsync();
+        }
+
+        public async Task<bool> UpdateUser(UserEditViewModel model)
+        {
+            bool result = false;
+
+            var user = await repo.GetByIdAsync<AUTH_USER>(model.Id);
+
+            if (user != null)
+            {
+                user.USR_FULLNAME = model.FullName;
+                await repo.SaveChangesAsync();
+                result = true;
+            }
+
+            return result;
         }
     }
 }

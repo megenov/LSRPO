@@ -1,0 +1,62 @@
+﻿@using LSRPO.Core.Models.User
+@model IEnumerable<UserListViewModel>
+
+@{
+    ViewData["Title"] = "Потребители";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">@Model.Count() Потребителски записа</h3>
+                <div class="card-tools">
+                    <div class="input-group input-group-sm" style="width: 200px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th style="width: 350px">Потребителско име</th>
+                            <th style="width: 350px">Име</th>
+                            <th style="width: 350px">Действие</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>@user.UserName</td>
+                                <td>@user.FullName</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a asp-area="admin" asp-action="roles" asp-controller="user" asp-route-id="@user.Id" class="btn btn-default">Роли</a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a asp-area="admin" asp-action="info" asp-controller="user" asp-route-id="@user.Id" class="btn btn-info">Информация</a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a asp-area="admin" asp-action="edit" asp-controller="user" asp-route-id="@user.Id" class="btn btn-warning">Редактиране</a>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a asp-area="admin" asp-action="delete" asp-controller="user" asp-route-id="@user.Id" class="btn btn-danger">Изтриване</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
