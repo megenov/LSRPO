@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using System.Security.Claims;
 
 namespace LSRPO.Areas.Identity.Pages.Account
 {
@@ -127,7 +128,7 @@ namespace LSRPO.Areas.Identity.Pages.Account
 
                 user.USR_FULLNAME = Input.USR_FULLNAME;
                 user.USR_REG_DATE = DateTime.Now;
-                //user.IMAGE_URL = "~/img/user.png";
+                user.IMAGE_URL = "img/user.png";
 
                 await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, $"{Input.UserName}@stk.local", CancellationToken.None);
@@ -135,6 +136,9 @@ namespace LSRPO.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    await _userManager.AddClaimAsync(user, new Claim("FullName", user.USR_FULLNAME));
+                    await _userManager.AddClaimAsync(user, new Claim("ImageUrl", user.IMAGE_URL));
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
