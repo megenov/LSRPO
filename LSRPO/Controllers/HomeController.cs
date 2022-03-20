@@ -16,7 +16,7 @@ namespace LSRPO.Controllers
 
         public IActionResult Index()
         {
-            ViewData[MessageConstant.SuccessMessage] = "Успешно изпълнен toastr";
+            //ViewData[MessageConstant.SuccessMessage] = "Успешно изпълнен toastr";
 
             return View();
         }

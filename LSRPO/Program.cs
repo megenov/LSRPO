@@ -1,4 +1,6 @@
 using LSRPO.Core.Constants;
+using LSRPO.Core.Contracts.User;
+using LSRPO.Core.Services.User;
 using LSRPO.Infrastructure.Data;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
@@ -10,14 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddIdentity<AUTH_USER, AUTH_ROLE>(options => 
-{ 
+builder.Services.AddIdentity<AUTH_USER, AUTH_ROLE>(options =>
+{
     options.SignIn.RequireConfirmedAccount = false;
 })
+    .AddRoles<AUTH_ROLE>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders()
     .AddDefaultUI();
@@ -31,6 +34,7 @@ builder.Services.AddControllersWithViews()
     });
 
 builder.Services.AddScoped<IApplicatioDbRepository, ApplicatioDbRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 

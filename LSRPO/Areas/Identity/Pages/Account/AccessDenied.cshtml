@@ -1,0 +1,21 @@
+﻿@page
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "Отказан достъп";
+}
+
+@*<header>
+    <h1 class="text-danger">@ViewData["Title"]</h1>
+    <p class="text-danger">You do not have access to this resource.</p>
+</header>*@
+
+<section class="content">
+    <div class="error-page">
+        <div class="error-content">
+            <h3><i class="fas fa-exclamation-triangle text-danger"></i>@ViewData["Title"]</h3>
+            <p>
+                Нямате права за достъп до тази страница.
+            </p>
+        </div>
+    </div>
+</section>
