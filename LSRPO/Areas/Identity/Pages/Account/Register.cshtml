@@ -52,7 +52,14 @@
                 </div>
             </div>
 
-            <button id="registerSubmit" type="submit" class="btn btn-primary btn-block">Добавяне на потребителя</button>
+            <div class="row">
+                <div class="col-6">
+                    <button id="registerSubmit" type="submit" class="btn btn-primary btn-block">Добавяне</button>
+                </div>
+                <div class="col-6">
+                    <a asp-area="admin" asp-action="manageusers" asp-controller="user" class="btn btn-block btn-warning">Отказ</a>
+                </div>
+            </div>
 
         </form>
     </div>

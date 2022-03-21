@@ -12,6 +12,10 @@
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+            @*<div class="text-center">
+                <img class="profile-user-img img-fluid img-circle" src="~/img/user.png" alt="User profile picture">
+            </div>*@
+
             <span asp-validation-for="FullName" class="text-danger"></span>
             <div class="input-group mb-3">
                 <input asp-for="FullName" class="form-control" aria-required="true" />
@@ -24,7 +28,7 @@
 
             <div class="row">
                 <div class="col-6">
-                    <button id="edit-submit" type="submit" class="btn btn-block btn-success">Редактиране на потребителя</button>
+                    <button id="edit-submit" type="submit" class="btn btn-block btn-success">Редактиране</button>
                 </div>
                 <div class="col-6">
                     <a asp-area="admin" asp-action="manageusers" asp-controller="user" class="btn btn-block btn-warning">Отказ</a>

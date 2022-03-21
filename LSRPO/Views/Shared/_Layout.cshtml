@@ -24,12 +24,32 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" @*href="#"*@ role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="/" class="nav-link">Начало</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="/" class="nav-link">Контакти</a>
-      </li>
+
+      <li class="nav-item dropdown d-sm-inline-block">
+			<a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Администриране</a>
+		    <ul class="dropdown-menu">
+			  <li><a asp-area="admin" asp-action="manageusers" asp-controller="user" class="dropdown-item">Потребители</a></li>
+			  <li><a class="dropdown-item" href="#">ПИН кодове</a></li>
+		    </ul>
+		</li>
+
+        <li class="nav-item dropdown d-sm-inline-block">
+			<a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Конфигурация</a>
+		    <ul class="dropdown-menu">
+			  <li><a class="dropdown-item" href="#">Обекти за оповестяване</a></li>
+			  <li><a class="dropdown-item" href="#">Групи за оповестяване</a></li>
+              <li><a class="dropdown-item" href="#">Процеси</a></li>
+              <li><a class="dropdown-item" href="#">Пултове</a></li>
+		    </ul>
+		</li>
+
+        <li class="nav-item dropdown d-sm-inline-block">
+			<a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Мониторинг</a>
+		    <ul class="dropdown-menu">
+			  <li><a class="dropdown-item" href="#">Мониторинг на оповестителни процеси</a></li>
+			  <li><a class="dropdown-item" href="#">Справка за оповестителни процеси</a></li>
+		    </ul>
+		</li>
 
       <!-- Fullscreen -->
       <li class="nav-item">
@@ -165,6 +185,52 @@
 <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/adminlte.min.js"></script>
 <script src="~/plugins/toastr/toastr.min.js"></script>
+
+<script type="text/javascript">
+
+	window.addEventListener("resize", function() {
+		"use strict"; window.location.reload(); 
+	});
+
+
+	document.addEventListener("DOMContentLoaded", function(){
+
+		// make it as accordion for smaller screens
+		if (window.innerWidth > 992) {
+
+			document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+				
+				everyitem.addEventListener('mouseover', function(e){
+
+					let el_link = this.querySelector('a[data-bs-toggle]');
+
+					if(el_link != null){
+						let nextEl = el_link.nextElementSibling;
+						el_link.classList.add('show');
+				 		nextEl.classList.add('show');
+					}
+					
+				});
+				everyitem.addEventListener('mouseleave', function(e){
+				 	let el_link = this.querySelector('a[data-bs-toggle]');
+					
+					if(el_link != null){
+						let nextEl = el_link.nextElementSibling;
+						el_link.classList.remove('show');
+				 		nextEl.classList.remove('show');
+					}
+					
+
+				})
+			});
+
+		}
+		// end if innerWidth
+	}); 
+	// DOMContentLoaded  end
+
+</script>
+
 <partial name="_UserMessages" />
 @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-md-4">
         <form id="roles" method="post">
-            <input type="hidden" name="Id" value="@Model.UserId" />
+            <input type="hidden" name="UserId" value="@Model.UserId" />
             <h2>@Html.DisplayFor(d => d.FullName)</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -46,7 +46,7 @@
 
             <div class="row">
                 <div class="col-6">
-                    <button id="roles-submit" type="submit" class="btn btn-block btn-success">Редактиране на ролите</button>
+                    <button id="roles-submit" type="submit" class="btn btn-block btn-success">Редактиране</button>
                 </div>
                 <div class="col-6">
                     <a asp-area="admin" asp-action="manageusers" asp-controller="user" class="btn btn-block btn-warning">Отказ</a>
