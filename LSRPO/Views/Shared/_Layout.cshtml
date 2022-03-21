@@ -1,237 +1,229 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>@ViewData["Title"] - LSRPO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] - LSRPO</title>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <link rel="stylesheet" href="~/css/adminlte.min.css">
-  <link rel="stylesheet" href="~/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/adminlte.min.css">
+    <link rel="stylesheet" href="~/plugins/toastr/toastr.min.css">
 
-  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-  @await RenderSectionAsync("Head", required: false)
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @await RenderSectionAsync("Head", required: false)
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+    <div class="wrapper">
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" @*href="#"*@ role="button"><i class="fas fa-bars"></i></a>
-      </li>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" @*href="#"*@ role="button"><i class="fas fa-bars"></i></a>
+                </li>
 
-      <li class="nav-item dropdown d-sm-inline-block">
-			<a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Администриране</a>
-		    <ul class="dropdown-menu">
-			  <li><a asp-area="admin" asp-action="manageusers" asp-controller="user" class="dropdown-item">Потребители</a></li>
-			  <li><a class="dropdown-item" href="#">ПИН кодове</a></li>
-		    </ul>
-		</li>
+                <li class="nav-item dropdown d-sm-inline-block">
+                    <a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Администриране</a>
+                    <ul class="dropdown-menu">
+                        <li><a asp-area="admin" asp-action="manageusers" asp-controller="user" class="dropdown-item">Потребители</a></li>
+                        <li><a class="dropdown-item" href="#">ПИН кодове</a></li>
+                    </ul>
+                </li>
 
-        <li class="nav-item dropdown d-sm-inline-block">
-			<a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Конфигурация</a>
-		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="#">Обекти за оповестяване</a></li>
-			  <li><a class="dropdown-item" href="#">Групи за оповестяване</a></li>
-              <li><a class="dropdown-item" href="#">Процеси</a></li>
-              <li><a class="dropdown-item" href="#">Пултове</a></li>
-		    </ul>
-		</li>
+                <li class="nav-item dropdown d-sm-inline-block">
+                    <a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Конфигурация</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Обекти за оповестяване</a></li>
+                        <li><a class="dropdown-item" href="#">Групи за оповестяване</a></li>
+                        <li><a class="dropdown-item" href="#">Процеси</a></li>
+                        <li><a class="dropdown-item" href="#">Пултове</a></li>
+                    </ul>
+                </li>
 
-        <li class="nav-item dropdown d-sm-inline-block">
-			<a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Мониторинг</a>
-		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="#">Мониторинг на оповестителни процеси</a></li>
-			  <li><a class="dropdown-item" href="#">Справка за оповестителни процеси</a></li>
-		    </ul>
-		</li>
+                <li class="nav-item dropdown d-sm-inline-block">
+                    <a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Мониторинг</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Мониторинг на оповестителни процеси</a></li>
+                        <li><a class="dropdown-item" href="#">Справка за оповестителни процеси</a></li>
+                    </ul>
+                </li>
 
-      <!-- Fullscreen -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
+                <!-- Fullscreen -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
 
-    </ul>
+            </ul>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
 
-      <!-- Navbar Search -->
-      @*<li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="/" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
+                <!-- Navbar Search -->
+                @*<li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="/" role="button">
+                    <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                    <form class="form-inline">
+                    <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                    <i class="fas fa-times"></i>
+                    </button>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+                    </li>*@
+
+                <!-- Logout -->
+                <li class="nav-item">
+
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="nav-link btn btn-link text-dark">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Отписване
+                        </button>
+                    </form>
+
+                    @*<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                        <button type="submit" class="nav-link btn btn-link text-dark">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Отписване
+                        </button>
+                        </form>*@
+
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/" class="brand-link">
+                <img src="~/img/npp.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">АЕЦ Козлодуй</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <partial name="_LoginPartial" />
+
+                <!-- SidebarSearch Form -->
+                @*<div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                    <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                    <i class="fas fa-search fa-fw"></i>
+                    </button>
+                    </div>
+                    </div>
+                    </div>*@
+
+                <!-- Sidebar Menu -->
+                <partial name="_SideMenu" />
+                <!-- /.sidebar-menu -->
             </div>
-          </form>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">@ViewData["Title"]</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="/">Начало</a></li>
+                                <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
         </div>
-      </li>*@
-      
-      <!-- Logout -->
-      <li class="nav-item">
-
-        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-          <button type="submit" class="nav-link btn btn-link text-dark">
-              <i class="fas fa-sign-out-alt"></i>
-              Отписване
-          </button>
-        </form>
-
-        @*<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-          <button type="submit" class="nav-link btn btn-link text-dark">
-              <i class="fas fa-sign-out-alt"></i>
-              Отписване
-          </button>
-        </form>*@
-
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="/" class="brand-link">
-      <img src="~/img/npp.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">АЕЦ Козлодуй</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <partial name="_LoginPartial" />
-
-      <!-- SidebarSearch Form -->
-      @*<div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>*@
-
-      <!-- Sidebar Menu -->
-      <partial name="_SideMenu" />
-      <!-- /.sidebar-menu -->
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+                Локална система за ранно предупреждение и оповестяване
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2022-@DateTime.Now.Year <a href="/">ЛСРПО</a>.</strong> All rights reserved.
+        </footer>
     </div>
-    <!-- /.sidebar -->
-  </aside>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/adminlte.min.js"></script>
+    <script src="~/plugins/toastr/toastr.min.js"></script>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">@ViewData["Title"]</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/">Начало</a></li>
-              <li class="breadcrumb-item active">@ViewData["Title"]</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+    <script type="text/javascript">
 
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        @RenderBody()
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+        window.addEventListener("resize", function() {
+            "use strict"; window.location.reload();
+        });
 
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      Локална система за ранно предупреждение и оповестяване
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2022-@DateTime.Now.Year <a href="/">ЛСРПО</a>.</strong> All rights reserved.
-  </footer>
-</div>
-<!-- ./wrapper -->
+        document.addEventListener("DOMContentLoaded", function(){
 
-<!-- REQUIRED SCRIPTS -->
-<script src="~/plugins/jquery/jquery.min.js"></script>
-<script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/adminlte.min.js"></script>
-<script src="~/plugins/toastr/toastr.min.js"></script>
+            // make it as accordion for smaller screens
+            if (window.innerWidth > 992) {
 
-<script type="text/javascript">
+                document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
 
-	window.addEventListener("resize", function() {
-		"use strict"; window.location.reload(); 
-	});
+                    everyitem.addEventListener('mouseover', function(e){
 
+                        let el_link = this.querySelector('a[data-bs-toggle]');
 
-	document.addEventListener("DOMContentLoaded", function(){
+                        if(el_link != null){
+                            let nextEl = el_link.nextElementSibling;
+                            el_link.classList.add('show');
+                            nextEl.classList.add('show');
+                        }
 
-		// make it as accordion for smaller screens
-		if (window.innerWidth > 992) {
+                    });
+                    everyitem.addEventListener('mouseleave', function(e){
+                        let el_link = this.querySelector('a[data-bs-toggle]');
 
-			document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
-				
-				everyitem.addEventListener('mouseover', function(e){
+                        if(el_link != null){
+                            let nextEl = el_link.nextElementSibling;
+                            el_link.classList.remove('show');
+                            nextEl.classList.remove('show');
+                        }
+                    })
+                });
+            }
+            // end if innerWidth
+        });
+        // DOMContentLoaded  end
 
-					let el_link = this.querySelector('a[data-bs-toggle]');
+    </script>
 
-					if(el_link != null){
-						let nextEl = el_link.nextElementSibling;
-						el_link.classList.add('show');
-				 		nextEl.classList.add('show');
-					}
-					
-				});
-				everyitem.addEventListener('mouseleave', function(e){
-				 	let el_link = this.querySelector('a[data-bs-toggle]');
-					
-					if(el_link != null){
-						let nextEl = el_link.nextElementSibling;
-						el_link.classList.remove('show');
-				 		nextEl.classList.remove('show');
-					}
-					
-
-				})
-			});
-
-		}
-		// end if innerWidth
-	}); 
-	// DOMContentLoaded  end
-
-</script>
-
-<partial name="_UserMessages" />
-@await RenderSectionAsync("Scripts", required: false)
+    <partial name="_UserMessages" />
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -3,11 +3,6 @@ using LSRPO.Core.Models.User;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LSRPO.Core.Services.User
 {
@@ -25,6 +20,13 @@ namespace LSRPO.Core.Services.User
             var user = await repo.GetByIdAsync<AUTH_USER>(id);
 
             return new UserEditViewModel { Id = user.Id, FullName = user.USR_FULLNAME };
+        }
+
+        public async Task<UserProfileViewModel> GetUserForProfileEdit(int id)
+        {
+            var user = await repo.GetByIdAsync<AUTH_USER>(id);
+
+            return new UserProfileViewModel { Id = user.Id, UserName = user.UserName, FullName = user.USR_FULLNAME, Image = user.IMAGE_URL };
         }
 
         public async Task<IEnumerable<UserListViewModel>> GetUsers()

@@ -25,6 +25,15 @@ namespace LSRPO.Controllers
             return View();
         }
 
+        public async Task<IActionResult> UserProfile()
+        {
+            var user = await userManager.GetUserAsync(User);
+            var model = await userService.GetUserForProfileEdit(user.Id);
+            ViewBag.Roles = await userManager.GetRolesAsync(user);
+
+            return View(model);
+        }
+
         //[Authorize(Roles = UserConstant.Roles.Administrator)]
         //public async Task<IActionResult> CreateRole()
         //{
