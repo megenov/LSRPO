@@ -6,6 +6,7 @@ namespace LSRPO.Core.Models.User
     {
         public int Id { get; set; }
 
+        [Display(Name = "Потребителско име")]
         public string? UserName { get; set; }
 
         [Required(ErrorMessage = "Полето {0} е задължително")]
@@ -13,7 +14,8 @@ namespace LSRPO.Core.Models.User
         [Display(Name = "Име")]
         public string? FullName { get; set; }
 
-        [StringLength(200, ErrorMessage = "Полето {0} не може да надвишава {1} символа.")]
-        public string? Image { get; set; }
+        //[Display(Name = "Снимка")]
+        //[StringLength(200, ErrorMessage = "Полето {0} не може да надвишава {1} символа.")]
+        //public string? Image { get; set; }
     }
 }

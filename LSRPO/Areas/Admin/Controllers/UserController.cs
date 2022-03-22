@@ -66,35 +66,6 @@ namespace LSRPO.Areas.Admin.Controllers
             return RedirectToAction("ManageUsers");
         }
 
-        //public async Task<IActionResult> Edit(int id)
-        //{
-        //    var model = await userService.GetUserForEdit(id);
-
-        //    return View(model);
-        //}
-
-        //[HttpPost]
-        //public async Task<IActionResult> Edit(UserEditViewModel model)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(model);
-        //    }
-
-        //    if (await userService.UpdateUser(model))
-        //    {
-        //        //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
-        //        TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
-        //    }
-        //    else
-        //    {
-        //        //ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
-        //        TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
-        //    }
-
-        //    return RedirectToAction("ManageUsers");
-        //}
-
         public async Task<IActionResult> EditProfile(int id)
         {
             var user = await userManager.FindByIdAsync(id.ToString());
@@ -105,14 +76,14 @@ namespace LSRPO.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditProfile(UserProfileViewModel model)
+        public async Task<IActionResult> EditProfile(UserProfileViewModel model, IFormFile? image)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            if (await userService.UpdateUser(model))
+            if (await userService.UpdateUser(model, image))
             {
                 //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
                 TempData[MessageConstant.SuccessMessage] = "Успешен запис!";

@@ -3,30 +3,27 @@ using LSRPO.Core.Models.User;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Hosting;
 
 namespace LSRPO.Core.Services.User
 {
     public class UserService : IUserService
     {
         private readonly IApplicatioDbRepository repo;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public UserService(IApplicatioDbRepository repo)
+        public UserService(IApplicatioDbRepository repo, IWebHostEnvironment webHostEnvironment)
         {
             this.repo = repo;
-        }
-
-        public async Task<UserEditViewModel> GetUserForEdit(int id)
-        {
-            var user = await repo.GetByIdAsync<AUTH_USER>(id);
-
-            return new UserEditViewModel { Id = user.Id, FullName = user.USR_FULLNAME };
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         public async Task<UserProfileViewModel> GetUserForProfileEdit(int id)
         {
             var user = await repo.GetByIdAsync<AUTH_USER>(id);
 
-            return new UserProfileViewModel { Id = user.Id, UserName = user.UserName, FullName = user.USR_FULLNAME, Image = user.IMAGE_URL };
+            return new UserProfileViewModel { Id = user.Id, UserName = user.UserName, FullName = user.USR_FULLNAME };
         }
 
         public async Task<IEnumerable<UserListViewModel>> GetUsers()
@@ -34,16 +31,31 @@ namespace LSRPO.Core.Services.User
             return await repo.All<AUTH_USER>().Select(s => new UserListViewModel { Id = s.Id, UserName = s.UserName, FullName = s.USR_FULLNAME }).ToListAsync();
         }
 
-        public async Task<bool> UpdateUser(UserProfileViewModel model)
+        public async Task<bool> UpdateUser(UserProfileViewModel model, IFormFile image)
         {
             bool result = false;
-
             var user = await repo.GetByIdAsync<AUTH_USER>(model.Id);
 
-            if (user != null)
+            if (image != null)
+            {
+                string detailPath = Path.Combine(@"\img", image.FileName);
+                using (var stream = new FileStream(webHostEnvironment.WebRootPath + detailPath, FileMode.Create))
+                {
+                    await image.CopyToAsync(stream);
+                }
+
+                if (user != null)
+                {
+                    user.USR_FULLNAME = model.FullName;
+                    user.IMAGE_URL = image.FileName;
+                    await repo.SaveChangesAsync();
+                    result = true;
+                }
+            }
+
+            else if (user != null)
             {
                 user.USR_FULLNAME = model.FullName;
-                user.IMAGE_URL = model.Image;
                 await repo.SaveChangesAsync();
                 result = true;
             }

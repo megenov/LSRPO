@@ -1,4 +1,5 @@
 ﻿using LSRPO.Core.Models.User;
+using Microsoft.AspNetCore.Http;
 
 namespace LSRPO.Core.Contracts.User
 {
@@ -6,11 +7,9 @@ namespace LSRPO.Core.Contracts.User
     {
         Task<IEnumerable<UserListViewModel>> GetUsers();
 
-        Task<UserEditViewModel> GetUserForEdit(int id);
-
         Task<UserProfileViewModel> GetUserForProfileEdit(int id);
 
-        Task<bool> UpdateUser(UserProfileViewModel model);
+        Task<bool> UpdateUser(UserProfileViewModel model, IFormFile image);
 
         //Task<bool> UpdateRoles(UserRolesViewModel model);
     }

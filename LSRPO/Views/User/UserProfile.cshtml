@@ -24,37 +24,11 @@
         </div>
     </div>
 
-
-    @*<div class="row">
-        <div class="col-md-6">
-        <form id="change-password-form" method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-floating">
-        <input asp-for="Input.OldPassword" class="form-control" autocomplete="current-password" aria-required="true" />
-        <label asp-for="Input.OldPassword" class="form-label"></label>
-        <span asp-validation-for="Input.OldPassword" class="text-danger"></span>
-        </div>
-        <div class="form-floating">
-        <input asp-for="Input.NewPassword" class="form-control" autocomplete="new-password" aria-required="true" />
-        <label asp-for="Input.NewPassword" class="form-label"></label>
-        <span asp-validation-for="Input.NewPassword" class="text-danger"></span>
-        </div>
-        <div class="form-floating">
-        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
-        <label asp-for="Input.ConfirmPassword" class="form-label"></label>
-        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-        </div>
-        <button type="submit" class="w-100 btn btn-lg btn-primary">Update password</button>
-        </form>
-        </div>
-        </div>*@
-
-
     <div class="col-8">
         <div class="card card-primary card-outline">
             <div class="card-body box-profile">
 
-                <form id="change-user-profile" method="post">
+                <form id="change-user-profile" method="post" enctype="multipart/form-data" asp-controller="user" asp-action="UserProfile">
 
                     <div class="card-body" style="display: block;">
 
@@ -70,28 +44,14 @@
                             <input asp-for="FullName" class="form-control" aria-required="true" />
                             <span asp-validation-for="FullName" class="text-danger"></span>
                         </div>
+
                         <div class="form-group">
-                            <label asp-for="Image" class="form-label"></label>
-                            <input asp-for="Image" class="form-control" />
-                            <span asp-validation-for="Image" class="text-danger"></span>
+                            <label class="form-label">Снимка</label>
+                            <div class="custom-file">
+                                <input type="file" name="image" class="custom-file-input" id="image">
+                                <label class="custom-file-label" for="image">Избор на файл</label>
+                            </div>
                         </div>
-
-
-                        @*<div class="form-group">
-                            <label asp-for="OldPassword" class="form-label"></label>
-                            <input asp-for="OldPassword" class="form-control" aria-required="true" />
-                            <span asp-validation-for="OldPassword" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                            <label asp-for="NewPassword" class="form-label"></label>
-                            <input asp-for="NewPassword" class="form-control" aria-required="true" />
-                            <span asp-validation-for="NewPassword" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                            <label asp-for="ConfirmPassword" class="form-label"></label>
-                            <input asp-for="ConfirmPassword" class="form-control" aria-required="true" />
-                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                            </div>*@
 
                     </div>
 
@@ -110,3 +70,12 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+<script>
+    $(function () {
+      bsCustomFileInput.init();
+    });
+</script>
+<partial name="_ValidationScriptsPartial" />
+}

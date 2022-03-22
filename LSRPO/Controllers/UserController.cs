@@ -36,14 +36,14 @@ namespace LSRPO.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UserProfile(UserProfileViewModel model)
+        public async Task<IActionResult> UserProfile(UserProfileViewModel model, IFormFile? image)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            if (await userService.UpdateUser(model))
+            if (await userService.UpdateUser(model, image))
             {
                 //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
                 TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
