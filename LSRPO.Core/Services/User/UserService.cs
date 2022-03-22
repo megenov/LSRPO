@@ -34,7 +34,7 @@ namespace LSRPO.Core.Services.User
             return await repo.All<AUTH_USER>().Select(s => new UserListViewModel { Id = s.Id, UserName = s.UserName, FullName = s.USR_FULLNAME }).ToListAsync();
         }
 
-        public async Task<bool> UpdateUser(UserEditViewModel model)
+        public async Task<bool> UpdateUser(UserProfileViewModel model)
         {
             bool result = false;
 
@@ -43,6 +43,7 @@ namespace LSRPO.Core.Services.User
             if (user != null)
             {
                 user.USR_FULLNAME = model.FullName;
+                user.IMAGE_URL = model.Image;
                 await repo.SaveChangesAsync();
                 result = true;
             }

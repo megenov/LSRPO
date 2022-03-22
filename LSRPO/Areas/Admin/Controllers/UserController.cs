@@ -66,15 +66,46 @@ namespace LSRPO.Areas.Admin.Controllers
             return RedirectToAction("ManageUsers");
         }
 
-        public async Task<IActionResult> Edit(int id)
+        //public async Task<IActionResult> Edit(int id)
+        //{
+        //    var model = await userService.GetUserForEdit(id);
+
+        //    return View(model);
+        //}
+
+        //[HttpPost]
+        //public async Task<IActionResult> Edit(UserEditViewModel model)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(model);
+        //    }
+
+        //    if (await userService.UpdateUser(model))
+        //    {
+        //        //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
+        //        TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
+        //    }
+        //    else
+        //    {
+        //        //ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+        //        TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+        //    }
+
+        //    return RedirectToAction("ManageUsers");
+        //}
+
+        public async Task<IActionResult> EditProfile(int id)
         {
-            var model = await userService.GetUserForEdit(id);
+            var user = await userManager.FindByIdAsync(id.ToString());
+            var model = await userService.GetUserForProfileEdit(id);
+            ViewBag.Roles = await userManager.GetRolesAsync(user);
 
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(UserEditViewModel model)
+        public async Task<IActionResult> EditProfile(UserProfileViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -83,11 +114,13 @@ namespace LSRPO.Areas.Admin.Controllers
 
             if (await userService.UpdateUser(model))
             {
-                ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
+                //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
+                TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
             }
             else
             {
-                ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+                //ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+                TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
             }
 
             return RedirectToAction("ManageUsers");

@@ -7,61 +7,67 @@
 @*<h1>@ViewData["Title"]</h1>*@
 
 <div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="col-5">
+        <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
 
-            <span asp-validation-for="Input.UserName" class="text-danger"></span>
-            <div class="input-group mb-3">
-                <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="Потребителско име" />
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-user"></span>
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="Потребителско име" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <span asp-validation-for="Input.USR_FULLNAME" class="text-danger"></span>
-            <div class="input-group mb-3">
-                <input asp-for="Input.USR_FULLNAME" class="form-control" autocomplete="fullname" aria-required="true" placeholder="Име">
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-user-tie"></span>
+                    <span asp-validation-for="Input.USR_FULLNAME" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.USR_FULLNAME" class="form-control" autocomplete="fullname" aria-required="true" placeholder="Име">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user-tie"></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <span asp-validation-for="Input.Password" class="text-danger"></span>
-            <div class="input-group mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Парола" />
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Парола" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            <div class="input-group mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Потвърждаване на парола" />
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Потвърждаване на парола" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-6">
-                    <button id="registerSubmit" type="submit" class="btn btn-primary btn-block">Добавяне</button>
-                </div>
-                <div class="col-6">
-                    <a asp-area="admin" asp-action="manageusers" asp-controller="user" class="btn btn-block btn-warning">Отказ</a>
-                </div>
-            </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button id="registerSubmit" type="submit" class="btn btn-primary btn-block">Добавяне</button>
+                        </div>
+                        <div class="col-6">
+                            <a asp-area="admin" asp-action="manageusers" asp-controller="user" class="btn btn-block btn-warning">Отказ</a>
+                        </div>
+                    </div>
 
-        </form>
+                </form>
+
+            </div>
+        </div>
+
     </div>
 </div>
 

@@ -10,7 +10,7 @@ namespace LSRPO.Core.Contracts.User
 
         Task<UserProfileViewModel> GetUserForProfileEdit(int id);
 
-        Task<bool> UpdateUser(UserEditViewModel model);
+        Task<bool> UpdateUser(UserProfileViewModel model);
 
         //Task<bool> UpdateRoles(UserRolesViewModel model);
     }

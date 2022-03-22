@@ -1,5 +1,6 @@
 ﻿using LSRPO.Core.Constants;
 using LSRPO.Core.Contracts.User;
+using LSRPO.Core.Models.User;
 using LSRPO.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -32,6 +33,28 @@ namespace LSRPO.Controllers
             ViewBag.Roles = await userManager.GetRolesAsync(user);
 
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UserProfile(UserProfileViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            if (await userService.UpdateUser(model))
+            {
+                //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
+                TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
+            }
+            else
+            {
+                //ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+                TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+            }
+
+            return Redirect("/");
         }
 
         //[Authorize(Roles = UserConstant.Roles.Administrator)]
