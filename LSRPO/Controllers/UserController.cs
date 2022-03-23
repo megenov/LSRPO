@@ -5,6 +5,7 @@ using LSRPO.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace LSRPO.Controllers
 {
@@ -12,12 +13,14 @@ namespace LSRPO.Controllers
     {
         private readonly RoleManager<AUTH_ROLE> roleManager;
         private readonly UserManager<AUTH_USER> userManager;
+        private readonly SignInManager<AUTH_USER> signInManager;
         private readonly IUserService userService;
 
-        public UserController(RoleManager<AUTH_ROLE> roleManager, UserManager<AUTH_USER> userManager, IUserService userService)
+        public UserController(RoleManager<AUTH_ROLE> roleManager, UserManager<AUTH_USER> userManager, SignInManager<AUTH_USER> signInManager, IUserService userService)
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
+            this.signInManager = signInManager;
             this.userService = userService;
         }
 
@@ -43,7 +46,27 @@ namespace LSRPO.Controllers
                 return View(model);
             }
 
-            if (await userService.UpdateUser(model, image))
+            (bool result, bool nameEdit, bool imageEdit) = await userService.UpdateUser(model, image);
+
+            var user = await userManager.GetUserAsync(User);
+
+            if (nameEdit)
+            {
+                var newClaim = new Claim(ClaimConstant.FullName, model.FullName);
+                var userClaims = await userManager.GetClaimsAsync(user);
+                var claim = userClaims.First(a => a.Type == ClaimConstant.FullName);
+                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+            }
+
+            if (imageEdit)
+            {
+                var newClaim = new Claim(ClaimConstant.ImageUrl, image.FileName);
+                var userClaims = await userManager.GetClaimsAsync(user);
+                var claim = userClaims.First(a => a.Type == ClaimConstant.ImageUrl);
+                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+            }
+
+            if (result)
             {
                 //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
                 TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
@@ -52,6 +75,12 @@ namespace LSRPO.Controllers
             {
                 //ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
                 TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+            }
+
+            if (nameEdit || imageEdit)
+            {
+                await signInManager.SignInAsync(user, isPersistent: false);
+                return Redirect("/");
             }
 
             return Redirect("/");

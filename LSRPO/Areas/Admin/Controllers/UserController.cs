@@ -5,6 +5,7 @@ using LSRPO.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Security.Claims;
 
 namespace LSRPO.Areas.Admin.Controllers
 {
@@ -83,7 +84,27 @@ namespace LSRPO.Areas.Admin.Controllers
                 return View(model);
             }
 
-            if (await userService.UpdateUser(model, image))
+            (bool result, bool nameEdit, bool imageEdit) = await userService.UpdateUser(model, image);
+
+            var user = await userManager.FindByIdAsync(model.Id.ToString());
+
+            if (nameEdit)
+            {
+                var newClaim = new Claim(ClaimConstant.FullName, model.FullName);
+                var userClaims = await userManager.GetClaimsAsync(user);
+                var claim = userClaims.First(a => a.Type == ClaimConstant.FullName);
+                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+            }
+
+            if (imageEdit)
+            {
+                var newClaim = new Claim(ClaimConstant.ImageUrl, image.FileName);
+                var userClaims = await userManager.GetClaimsAsync(user);
+                var claim = userClaims.First(a => a.Type == ClaimConstant.ImageUrl);
+                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+            }
+
+            if (result)
             {
                 //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
                 TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
@@ -94,7 +115,38 @@ namespace LSRPO.Areas.Admin.Controllers
                 TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
             }
 
-            return RedirectToAction("ManageUsers");
+            return RedirectToAction("EditProfile");
+        }
+
+        public async Task<IActionResult> ChangePassword(int id)
+        {
+            ViewBag.Id = id;
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var user = await userManager.FindByIdAsync(model.Id.ToString());
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+            var result = await userManager.ResetPasswordAsync(user, token, model.ConfirmPassword);
+
+            if (result.Succeeded)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+            }
+
+            return RedirectToAction("EditProfile", new { id = model.Id });
         }
 
         public async Task<IActionResult> CreateRole()
