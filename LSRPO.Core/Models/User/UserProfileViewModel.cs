@@ -16,5 +16,8 @@ namespace LSRPO.Core.Models.User
 
         [Display(Name = "Снимка")]
         public string? Image { get; set; }
+
+        [Display(Name = "Роля")]
+        public string? RoleName { get; set; }
     }
 }

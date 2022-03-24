@@ -165,8 +165,10 @@ namespace LSRPO.Areas.Identity.Pages.Account
                     //}
 
                     //При успешна регистрация, автоматично вписва и препраща.
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    return LocalRedirect(returnUrl);
+                    //await _signInManager.SignInAsync(user, isPersistent: false);
+                    //return LocalRedirect(returnUrl);
+                    TempData[MessageConstant.SuccessMessage] = $"Успешно създаден потребител {Input.USR_FULLNAME}!";
+                    return Redirect("/Admin/User/ManageUsers");
                 }
                 foreach (var error in result.Errors)
                 {

@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "Потребители";
+    var roles = (Dictionary<int, string>)ViewBag.Roles;
 }
 
 <div class="row">
@@ -28,31 +29,39 @@
                 <table class="table table-hover text-nowrap">
                     <thead>
                         <tr>
-                            <th style="width: 350px">Потребителско име</th>
-                            <th style="width: 350px">Име</th>
-                            <th style="width: 350px">Действие</th>
+                            <th style="width: 300px">Потребителско име</th>
+                            <th style="width: 300px">Име</th>
+                            <th style="width: 300px">Роля</th>
+                            <th style="width: 300px">Действие</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var user in Model)
                         {
                             <tr>
+
                                 <td>@user.UserName</td>
                                 <td>@user.FullName</td>
+
+                                <td>@{
+                                        foreach (var role in roles) 
+                                        { 
+                                            if(role.Key == user.Id)
+                                            { @role.Value }
+                                        } 
+                                    }</td>
+
                                 <td>
-                                    <div class="btn-group">
-                                        <a asp-area="admin" asp-action="roles" asp-controller="user" asp-route-id="@user.Id" class="btn btn-default">Роли</a>
-                                    </div>
-                                    <div class="btn-group">
-                                        <a asp-area="admin" asp-action="info" asp-controller="user" asp-route-id="@user.Id" class="btn btn-info">Информация</a>
-                                    </div>
                                     <div class="btn-group">
                                         <a asp-area="admin" asp-action="EditProfile" asp-controller="user" asp-route-id="@user.Id" class="btn btn-warning">Редактиране</a>
                                     </div>
                                     <div class="btn-group">
-                                        <a asp-area="admin" asp-action="delete" asp-controller="user" asp-route-id="@user.Id" class="btn btn-danger">Изтриване</a>
+                                        <form asp-area="admin" asp-action="DeleteUser" asp-controller="user" asp-route-id="@user.Id" method="post">
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Потвърждаване изтриването на потребител: @user.FullName')">Изтриване</button>
+                                        </form>
                                     </div>
                                 </td>
+
                             </tr>
                         }
                     </tbody>

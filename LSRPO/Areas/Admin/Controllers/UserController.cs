@@ -31,47 +31,33 @@ namespace LSRPO.Areas.Admin.Controllers
         {
             var users = await userService.GetUsers();
 
-            return View(users);
-        }
+            Dictionary<int, string> roles = new Dictionary<int, string>();
 
-        public async Task<IActionResult> Roles(int id)
-        {
-            var user = await userManager.FindByIdAsync(id.ToString());
-
-            var model = new UserRolesViewModel()
+            foreach (var item in users)
             {
-                UserId = user.Id,
-                FullName = user.USR_FULLNAME
-            };
-
-            ViewBag.RoleItems = roleManager.Roles
-                .ToList()
-                .Select(s => new SelectListItem()
-                {
-                    Text = s.Name,
-                    Value = s.Id.ToString(),
-                    Selected = userManager.IsInRoleAsync(user, s.Name).Result
-                }).ToList();
-
-            return View(model);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Roles(UserRolesViewModel model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
+                var user = await userManager.FindByIdAsync(item.Id.ToString());
+                IList<string> rolesList = await userManager.GetRolesAsync(user);
+                roles[item.Id] = rolesList.FirstOrDefault();
             }
 
-            return RedirectToAction("ManageUsers");
+            ViewBag.Roles = roles;
+
+            return View(users);
         }
 
         public async Task<IActionResult> EditProfile(int id)
         {
             var user = await userManager.FindByIdAsync(id.ToString());
             var model = await userService.GetUserForProfileEdit(id);
-            ViewBag.Roles = await userManager.GetRolesAsync(user);
+            ViewBag.Roles = userManager.GetRolesAsync(user).Result;
+            ViewBag.RoleItems = roleManager.Roles
+                .ToList()
+                .Select(s => new SelectListItem()
+                {
+                    Text = s.Name,
+                    Value = s.Name,
+                    Selected = userManager.IsInRoleAsync(user, s.Name).Result
+                }).ToList();
 
             return View(model);
         }
@@ -104,6 +90,16 @@ namespace LSRPO.Areas.Admin.Controllers
                 await userManager.ReplaceClaimAsync(user, claim, newClaim);
             }
 
+            if (model.RoleName != null)
+            {
+                var userRoles = await userManager.GetRolesAsync(user);
+                if (userRoles.Count > 0)
+                {
+                    await userManager.RemoveFromRolesAsync(user, userRoles);
+                }
+                await userManager.AddToRoleAsync(user, model.RoleName);
+            }
+
             if (result)
             {
                 //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
@@ -115,7 +111,7 @@ namespace LSRPO.Areas.Admin.Controllers
                 TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
             }
 
-            return RedirectToAction("EditProfile");
+            return RedirectToAction(nameof(ManageUsers));
         }
 
         public async Task<IActionResult> ChangePassword(int id)
@@ -146,7 +142,24 @@ namespace LSRPO.Areas.Admin.Controllers
                 TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
             }
 
-            return RedirectToAction("EditProfile", new { id = model.Id });
+            return RedirectToAction(nameof(EditProfile), new { id = model.Id });
+        }
+
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var user = await userManager.FindByIdAsync(id.ToString());
+            var result = await userManager.DeleteAsync(user);
+
+            if (result.Succeeded)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешено изтриване!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+            }
+
+            return RedirectToAction(nameof(ManageUsers));
         }
 
         public async Task<IActionResult> CreateRole()
