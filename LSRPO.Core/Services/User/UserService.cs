@@ -5,6 +5,7 @@ using LSRPO.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
+using LSRPO.Infrastructure.Data;
 
 namespace LSRPO.Core.Services.User
 {
@@ -13,10 +14,57 @@ namespace LSRPO.Core.Services.User
         private readonly IApplicatioDbRepository repo;
         private readonly IWebHostEnvironment webHostEnvironment;
 
-        public UserService(IApplicatioDbRepository repo, IWebHostEnvironment webHostEnvironment)
+        private readonly ApplicationDbContext dbContext;
+
+        public UserService(IApplicatioDbRepository repo, IWebHostEnvironment webHostEnvironment, ApplicationDbContext dbContext)
         {
             this.repo = repo;
             this.webHostEnvironment = webHostEnvironment;
+            this.dbContext = dbContext;
+        }
+
+        public async Task<(bool result, string error)> DeletePinCode(int pinId)
+        {
+            bool result = false;
+            var error = string.Empty;
+
+            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
+            var pinCode2 = await dbContext.NOT_USERS_PIN.FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
+
+            if (pinCode2 == null)
+            {
+                return (result, "Този потребител няма ПИН код!");
+            }
+
+            try
+            {
+                //await repo.DeleteAsync<NOT_USER_PIN>(pinCode);
+                //await repo.SaveChangesAsync();
+
+                dbContext.Remove(pinCode2);
+                dbContext.SaveChanges();
+                result = true;
+            }
+            catch (Exception)
+            {
+                error = "Неуспешен запис на промените в Базата данни";
+            }
+
+           return (result, error);
+        }
+
+        public async Task<IEnumerable<PinCodesViewModel>> GetPinCodes()
+        {
+            return await repo.All<AUTH_USER>()
+                .Select(s => new PinCodesViewModel 
+                { 
+                    Id = s.Id, 
+                    PinId = s.NOT_USER_PIN.NOT_USR_ID,
+                    UserName = s.UserName, 
+                    FullName = s.USR_FULLNAME, 
+                    PinCode = s.NOT_USER_PIN.USR_PIN 
+                })
+                .ToListAsync();
         }
 
         public async Task<UserProfileViewModel> GetUserForProfileEdit(int id)

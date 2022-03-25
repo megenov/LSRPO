@@ -162,6 +162,29 @@ namespace LSRPO.Areas.Admin.Controllers
             return RedirectToAction(nameof(ManageUsers));
         }
 
+        public async Task<IActionResult> PinCodes()
+        {
+            var userPins = await userService.GetPinCodes();
+
+            return View(userPins);
+        }
+
+        public async Task<IActionResult> DeletePin(int id)
+        {
+            (bool result, string error) = await userService.DeletePinCode(id);
+
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешено изтриване!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(PinCodes));
+        }
+
         public async Task<IActionResult> CreateRole()
         {
             //await roleManager.CreateAsync(new AUTH_ROLE()

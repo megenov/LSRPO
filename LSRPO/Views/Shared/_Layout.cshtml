@@ -10,8 +10,15 @@
     <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <link rel="stylesheet" href="~/css/adminlte.min.css">
     <link rel="stylesheet" href="~/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="~/plugins/datatables/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/plugins/datatables/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/plugins/datatables/datatables-buttons/css/buttons.bootstrap4.min.css">
 
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- jQuery -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+
     @await RenderSectionAsync("Head", required: false)
 </head>
 <body class="hold-transition sidebar-mini">
@@ -29,7 +36,7 @@
                     <a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Администриране</a>
                     <ul class="dropdown-menu">
                         <li><a asp-area="admin" asp-action="manageusers" asp-controller="user" class="dropdown-item">Потребители</a></li>
-                        <li><a class="dropdown-item" href="#">ПИН кодове</a></li>
+                        <li><a asp-area="admin" asp-action="pincodes" asp-controller="user" class="dropdown-item">ПИН кодове</a></li>
                     </ul>
                 </li>
 
@@ -54,9 +61,9 @@
                 <!-- Fullscreen -->
                 @*<li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                        <i class="fas fa-expand-arrows-alt"></i>
+                    <i class="fas fa-expand-arrows-alt"></i>
                     </a>
-                </li>*@
+                    </li>*@
 
             </ul>
 
@@ -175,9 +182,10 @@
             <strong>Copyright &copy; 2022-@DateTime.Now.Year <a href="/">ЛСРПО</a>.</strong> All rights reserved.
         </footer>
     </div>
+
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
-    <script src="~/plugins/jquery/jquery.min.js"></script>
+    @*<script src="~/plugins/jquery/jquery.min.js"></script>*@
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/adminlte.min.js"></script>
     <script src="~/plugins/toastr/toastr.min.js"></script>
