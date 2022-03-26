@@ -1,0 +1,47 @@
+﻿@using LSRPO.Core.Models.User
+@model ChangePinViewModel
+@{
+    ViewData["Title"] = "Промяна на ПИН код";
+}
+
+<div class="row">
+    <div class="col-5">
+        <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+
+                <form id="change-pin-form" method="post">
+
+                    <input type="hidden" name="UserId" value="@Model.UserId" />
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <span asp-validation-for="PinCode" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="PinCode" class="form-control" aria-required="true" placeholder="ПИН код" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-block btn-success">Промяна</button>
+                        </div>
+                        <div class="col-6">
+                            <a asp-area="admin" asp-action="PinCodes" asp-controller="User" class="btn btn-block btn-warning">Отказ</a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

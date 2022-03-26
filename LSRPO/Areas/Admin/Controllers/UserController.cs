@@ -147,10 +147,21 @@ namespace LSRPO.Areas.Admin.Controllers
 
         public async Task<IActionResult> DeleteUser(int id)
         {
+            bool result = false;
             var user = await userManager.FindByIdAsync(id.ToString());
-            var result = await userManager.DeleteAsync(user);
+            result = await userService.DeleteUserPin(id);
 
-            if (result.Succeeded)
+            try
+            {
+                await userManager.DeleteAsync(user);
+                result = true;
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+
+            if (result)
             {
                 TempData[MessageConstant.SuccessMessage] = "Успешено изтриване!";
             }
@@ -167,6 +178,35 @@ namespace LSRPO.Areas.Admin.Controllers
             var userPins = await userService.GetPinCodes();
 
             return View(userPins);
+        }
+
+        public async Task<IActionResult> ChangePin(int id)
+        {
+            var model = await userService.GetPinCode(id); 
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePin(ChangePinViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            (bool result, string error) = await userService.ChangePin(model);
+
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешна промяна на ПИН код!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(PinCodes));
         }
 
         public async Task<IActionResult> DeletePin(int id)

@@ -14,13 +14,75 @@ namespace LSRPO.Core.Services.User
         private readonly IApplicatioDbRepository repo;
         private readonly IWebHostEnvironment webHostEnvironment;
 
-        private readonly ApplicationDbContext dbContext;
+        //private readonly ApplicationDbContext dbContext;
 
-        public UserService(IApplicatioDbRepository repo, IWebHostEnvironment webHostEnvironment, ApplicationDbContext dbContext)
+        public UserService(IApplicatioDbRepository repo, IWebHostEnvironment webHostEnvironment) //ApplicationDbContext dbContext
         {
             this.repo = repo;
             this.webHostEnvironment = webHostEnvironment;
-            this.dbContext = dbContext;
+            //this.dbContext = dbContext;
+        }
+
+        public async Task<(bool result, string error)> ChangePin(ChangePinViewModel model)
+        {
+            bool result = false;
+            string error = "Възникна грешка!";
+            NOT_USER_PIN pinCode = null;
+            var existPin = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_PIN == model.PinCode);
+            var user = await repo.All<AUTH_USER>().Where(w => w.Id == model.UserId).Include(i => i.NOT_USER_PIN).FirstOrDefaultAsync(); //.GetByIdAsync<AUTH_USER>(model.UserId);
+
+            if (user != null)
+            {
+                if (existPin != null)
+                {
+                    pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == user.Id);
+
+                    if (pinCode == null || existPin.USR_PIN != pinCode.USR_PIN)
+                    {
+                        return (result, "Този ПИН код вече се използва!");
+                    }
+
+                    return (result, "ПИН кода е същият като предишният!");
+                }
+
+                pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == user.Id);
+
+                if (pinCode != null)
+                {
+                    if (pinCode.USR_PIN != model.PinCode)
+                    {
+                        pinCode.USR_PIN = model.PinCode;
+
+                        try
+                        {
+                            await repo.SaveChangesAsync();
+                            result = true;
+                        }
+                        catch (Exception)
+                        {
+                            error = "Неуспешен запис на промените в Базата данни";
+                        }
+                    }
+                }
+
+                else
+                {
+                    pinCode = new NOT_USER_PIN { USR_PIN = model.PinCode, USR_ID = model.UserId, AUTH_USER = user };
+
+                    try
+                    {
+                        await repo.AddAsync<NOT_USER_PIN>(pinCode);
+                        await repo.SaveChangesAsync();
+                        result = true;
+                    }
+                    catch (Exception)
+                    {
+                        error = "Неуспешен запис на промените в Базата данни";
+                    }
+                }
+            }
+
+            return (result, error);
         }
 
         public async Task<(bool result, string error)> DeletePinCode(int pinId)
@@ -29,20 +91,20 @@ namespace LSRPO.Core.Services.User
             var error = string.Empty;
 
             var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
-            var pinCode2 = await dbContext.NOT_USERS_PIN.FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
+            //var pinCode2 = await dbContext.NOT_USERS_PIN.FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
 
-            if (pinCode2 == null)
+            if (pinCode == null)
             {
                 return (result, "Този потребител няма ПИН код!");
             }
 
             try
             {
-                //await repo.DeleteAsync<NOT_USER_PIN>(pinCode);
-                //await repo.SaveChangesAsync();
+                //dbContext.NOT_USERS_PIN.Remove(pinCode2);
+                //await dbContext.SaveChangesAsync();
 
-                dbContext.Remove(pinCode2);
-                dbContext.SaveChanges();
+                repo.Delete<NOT_USER_PIN>(pinCode);
+                await repo.SaveChangesAsync();
                 result = true;
             }
             catch (Exception)
@@ -50,19 +112,54 @@ namespace LSRPO.Core.Services.User
                 error = "Неуспешен запис на промените в Базата данни";
             }
 
-           return (result, error);
+            return (result, error);
+        }
+
+        public async Task<bool> DeleteUserPin(int id)
+        {
+            bool result = true;
+            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
+
+            if (pinCode == null)
+            {
+                return result;
+            }
+
+            try
+            {
+                repo.Delete<NOT_USER_PIN>(pinCode);
+                await repo.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                result = false;
+            }
+
+            return result;
+        }
+
+        public async Task<ChangePinViewModel> GetPinCode(int id)
+        {
+            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
+
+            if (pinCode == null)
+            {
+                return new ChangePinViewModel { UserId = id };
+            }
+
+            return new ChangePinViewModel { UserId = id, PinCode = pinCode.USR_PIN };
         }
 
         public async Task<IEnumerable<PinCodesViewModel>> GetPinCodes()
         {
             return await repo.All<AUTH_USER>()
-                .Select(s => new PinCodesViewModel 
-                { 
-                    Id = s.Id, 
+                .Select(s => new PinCodesViewModel
+                {
+                    Id = s.Id,
                     PinId = s.NOT_USER_PIN.NOT_USR_ID,
-                    UserName = s.UserName, 
-                    FullName = s.USR_FULLNAME, 
-                    PinCode = s.NOT_USER_PIN.USR_PIN 
+                    UserName = s.UserName,
+                    FullName = s.USR_FULLNAME,
+                    PinCode = s.NOT_USER_PIN.USR_PIN
                 })
                 .ToListAsync();
         }
