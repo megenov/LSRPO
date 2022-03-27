@@ -18,4 +18,11 @@
     <ProjectReference Include="..\LSRPO.Infrastructure\LSRPO.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\NotifyGroup\" />
+    <Folder Include="Models\NotifyObject\" />
+    <Folder Include="Models\NotifyProcess\" />
+    <Folder Include="Models\NotifyStatus\" />
+  </ItemGroup>
+
 </Project>

@@ -24,6 +24,7 @@ using LSRPO.Core.Constants;
 
 namespace LSRPO.Areas.Identity.Pages.Account
 {
+    [Authorize(Roles = UserConstant.Roles.Administrator)]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<AUTH_USER> _signInManager;
