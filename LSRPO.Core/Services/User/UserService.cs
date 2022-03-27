@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using LSRPO.Infrastructure.Data;
+using System.Globalization;
 
 namespace LSRPO.Core.Services.User
 {
@@ -176,7 +177,17 @@ namespace LSRPO.Core.Services.User
 
         public async Task<IEnumerable<UserListViewModel>> GetUsers()
         {
-            return await repo.All<AUTH_USER>().Select(s => new UserListViewModel { Id = s.Id, UserName = s.UserName, FullName = s.USR_FULLNAME }).ToListAsync();
+            return 
+                await repo.All<AUTH_USER>()
+                .Select(s => 
+                new UserListViewModel 
+                { 
+                    Id = s.Id, 
+                    UserName = s.UserName, 
+                    FullName = s.USR_FULLNAME, 
+                    RegDate = s.USR_REG_DATE != null ? s.USR_REG_DATE.Value.ToString("dd/MM/yyyy, HH:mm:ss", CultureInfo.InvariantCulture) : "n/a"
+                })
+                .ToListAsync();
         }
 
         public async Task<(bool result, bool nameEdit, bool imageEdit)> UpdateUser(UserProfileViewModel model, IFormFile image)

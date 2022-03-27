@@ -25,6 +25,7 @@
                                     <th>Потребителско име</th>
                                     <th>Име</th>
                                     <th>Роля</th>
+                                    <th>Дата на добавяне</th>
                                     <th style="width: 205px">Действие</th>
                                 </tr>
                             </thead>
@@ -48,6 +49,8 @@
                                             }
                                         </td>
 
+                                        <td>@user.RegDate</td>
+
                                         <td>
                                             <div class="btn-group">
                                                 <a asp-area="admin" asp-action="EditProfile" asp-controller="user" asp-route-id="@user.Id" class="btn btn-warning">Редактиране</a>
@@ -67,6 +70,7 @@
                                     <th>Потребителско име</th>
                                     <th>Име</th>
                                     <th>Роля</th>
+                                    <th>Дата на добавяне</th>
                                     <th>Действие</th>
                                 </tr>
                             </tfoot>
