@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSRPO.Core", "LSRPO.Core\LS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSRPO.Infrastructure", "LSRPO.Infrastructure\LSRPO.Infrastructure.csproj", "{BB4048F4-5EF7-4BA5-A1E2-C3F31F1C27FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSRPO.Test", "LSRPO.Test\LSRPO.Test.csproj", "{92578E02-1341-43EC-BD53-8617C15561DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BB4048F4-5EF7-4BA5-A1E2-C3F31F1C27FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB4048F4-5EF7-4BA5-A1E2-C3F31F1C27FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB4048F4-5EF7-4BA5-A1E2-C3F31F1C27FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92578E02-1341-43EC-BD53-8617C15561DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92578E02-1341-43EC-BD53-8617C15561DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92578E02-1341-43EC-BD53-8617C15561DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92578E02-1341-43EC-BD53-8617C15561DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
