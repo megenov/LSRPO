@@ -224,15 +224,5 @@ namespace LSRPO.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(PinCodes));
         }
-
-        public async Task<IActionResult> CreateRole()
-        {
-            //await roleManager.CreateAsync(new AUTH_ROLE()
-            //{
-            //    Name = ""
-            //});
-
-            return Ok();
-        }
     }
 }

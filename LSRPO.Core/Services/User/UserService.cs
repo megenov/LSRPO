@@ -27,7 +27,7 @@ namespace LSRPO.Core.Services.User
         {
             bool result = false;
             string error = "Възникна грешка!";
-            NOT_USER_PIN pinCode = null;
+            NOT_USER_PIN? pinCode = null;
             var existPin = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_PIN == model.PinCode);
             var user = await repo.All<AUTH_USER>().Where(w => w.Id == model.UserId).Include(i => i.NOT_USER_PIN).FirstOrDefaultAsync(); //.GetByIdAsync<AUTH_USER>(model.UserId);
 
@@ -103,7 +103,9 @@ namespace LSRPO.Core.Services.User
                 //dbContext.NOT_USERS_PIN.Remove(pinCode2);
                 //await dbContext.SaveChangesAsync();
 
-                repo.Delete<NOT_USER_PIN>(pinCode);
+                //repo.Delete<NOT_USER_PIN>(pinCode);
+
+                await repo.DeleteAsync<NOT_USER_PIN>(pinId);
                 await repo.SaveChangesAsync();
                 result = true;
             }
@@ -127,7 +129,8 @@ namespace LSRPO.Core.Services.User
 
             try
             {
-                repo.Delete<NOT_USER_PIN>(pinCode);
+                //repo.Delete<NOT_USER_PIN>(pinCode);
+                await repo.DeleteAsync<NOT_USER_PIN>(pinCode.NOT_USR_ID);
                 await repo.SaveChangesAsync();
             }
             catch (Exception)
