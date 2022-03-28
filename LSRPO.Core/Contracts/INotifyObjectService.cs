@@ -7,6 +7,14 @@ namespace LSRPO.Core.Contracts
     {
         Task<IEnumerable<NotifyObjectListViewModel>> GetObjects();
 
-        List<SelectListItem> GetTypes();
+        Task<IEnumerable<SelectListItem>> GetTypes();
+
+        Task<(bool result, string error)> AddObject(AddObjectViewModel model);
+
+        Task<(EditObjectViewModel notifyObject, IEnumerable<SelectListItem> types)> GetObjectForEdit(int id);
+
+        Task<(bool result, string error)> EditObject(EditObjectViewModel model);
+
+        Task<(bool result, string error)> DeleteObject(int id);
     }
 }

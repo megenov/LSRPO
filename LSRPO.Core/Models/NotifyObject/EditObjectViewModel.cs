@@ -2,8 +2,10 @@
 
 namespace LSRPO.Core.Models.NotifyObject
 {
-    public class AddObjectViewModel
+    public class EditObjectViewModel
     {
+        public int ObjectId { get; set; }
+
         [Required(ErrorMessage = "Полето {0} е задължително")]
         [StringLength(200, ErrorMessage = "Полето {0} трябва да бъде между {2} и {1} символа.", MinimumLength = 3)]
         [Display(Name = "Име")]

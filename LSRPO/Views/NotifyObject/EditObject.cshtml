@@ -1,8 +1,8 @@
 ﻿@using LSRPO.Core.Models.NotifyObject
-@model AddObjectViewModel
+@model EditObjectViewModel
 
 @{
-    ViewData["Title"] = "Добавяне на нов обект";
+    ViewData["Title"] = "Редактиране на обект";
     var types = (IEnumerable<SelectListItem>)ViewBag.Types;
 }
 
@@ -11,7 +11,8 @@
         <div class="card card-primary card-outline">
             <div class="card-body box-profile">
 
-                <form id="add-new-object" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyObject" asp-action="AddNewObject">
+                <form id="edit-object" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyObject" asp-action="EditObject">
+                    <input type="hidden" name="ObjectId" value="@Model.ObjectId" />
 
                     <div class="card-body" style="display: block;">
 
@@ -54,7 +55,7 @@
 
                     <div class="row">
                         <div class="col-6">
-                            <button id="add-submit" type="submit" class="btn btn-block btn-primary">Добавяне</button>
+                            <button id="edit-submit" type="submit" class="btn btn-block btn-success">Редактиране</button>
                         </div>
                         <div class="col-6">
                             <a asp-area="" asp-action="NotifyObjectList" asp-controller="NotifyObject" class="btn btn-block btn-warning">Отказ</a>
