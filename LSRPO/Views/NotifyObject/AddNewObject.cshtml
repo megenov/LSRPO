@@ -1,0 +1,72 @@
+﻿@using LSRPO.Core.Models.NotifyObject
+@model AddObjectViewModel
+
+@{
+    ViewData["Title"] = "Добавяне на нов обект";
+    var types = (IEnumerable<SelectListItem>)ViewBag.Types;
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+
+                <form id="add-new-object" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyObject" asp-action="AddNewObject">
+
+                    <div class="card-body" style="display: block;">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" aria-required="true" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone1" class="form-label"></label>
+                            <input asp-for="Phone1" class="form-control" aria-required="true" />
+                            <span asp-validation-for="Phone1" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone2" class="form-label"></label>
+                            <input asp-for="Phone2" class="form-control" />
+                            <span asp-validation-for="Phone2" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone3" class="form-label"></label>
+                            <input asp-for="Phone3" class="form-control" />
+                            <span asp-validation-for="Phone3" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone4" class="form-label"></label>
+                            <input asp-for="Phone4" class="form-control" />
+                            <span asp-validation-for="Phone4" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="TypeId" class="form-label"></label>
+                            <select asp-for="TypeId" asp-items="@types" class="custom-select rounded-0">
+                                <option disabled selected>Избор на Тип</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button id="add-submit" type="submit" class="btn btn-block btn-success">Добавяне</button>
+                        </div>
+                        <div class="col-6">
+                            <a asp-area="" asp-action="NotifyObjectList" asp-controller="NotifyObject" class="btn btn-block btn-warning">Отказ</a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}

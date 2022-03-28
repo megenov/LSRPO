@@ -1,5 +1,7 @@
 using LSRPO.Core.Constants;
+using LSRPO.Core.Contracts;
 using LSRPO.Core.Contracts.User;
+using LSRPO.Core.Services;
 using LSRPO.Core.Services.User;
 using LSRPO.Infrastructure.Data;
 using LSRPO.Infrastructure.Data.Models;
@@ -35,6 +37,7 @@ builder.Services.AddControllersWithViews()
 
 builder.Services.AddScoped<IApplicatioDbRepository, ApplicatioDbRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<INotifyObjectService, NotifyObjectService>();
 
 var app = builder.Build();
 

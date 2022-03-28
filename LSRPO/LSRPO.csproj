@@ -27,7 +27,6 @@
     <Folder Include="Views\NotifyProcess\" />
     <Folder Include="Views\NotifyStatus\" />
     <Folder Include="Views\NotifyGroup\" />
-    <Folder Include="Views\NotifyObject\" />
   </ItemGroup>
 
 </Project>

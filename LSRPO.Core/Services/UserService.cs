@@ -1,4 +1,5 @@
-﻿using LSRPO.Core.Contracts.User;
+﻿using LSRPO.Core.Constants;
+using LSRPO.Core.Contracts.User;
 using LSRPO.Core.Models.User;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
@@ -184,7 +185,7 @@ namespace LSRPO.Core.Services.User
                     Id = s.Id, 
                     UserName = s.UserName, 
                     FullName = s.USR_FULLNAME, 
-                    RegDate = s.USR_REG_DATE != null ? s.USR_REG_DATE.Value.ToString("dd/MM/yyyy, HH:mm:ss", CultureInfo.InvariantCulture) : "n/a"
+                    RegDate = s.USR_REG_DATE != null ? s.USR_REG_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "n/a"
                 })
                 .ToListAsync();
         }

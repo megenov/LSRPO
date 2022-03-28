@@ -1,8 +1,8 @@
-﻿@using LSRPO.Core.Models.User
-@model IEnumerable<PinCodesViewModel>
+﻿@using LSRPO.Core.Models.NotifyObject
+@model IEnumerable<NotifyObjectListViewModel>
 
 @{
-    ViewData["Title"] = "ПИН кодове";
+    ViewData["Title"] = "Обекти за оповестяване";
 }
 
 <section class="content">
@@ -11,15 +11,22 @@
             <div class="col-12">
 
                 <div class="card">
+                    <div class="card-header">
+                        <a asp-area="" asp-action="AddNewObject" asp-controller="NotifyObject" class="btn btn-primary">Добавяне на нов обект</a>
+                    </div>
+                    <!-- /.card-header -->
                     <div class="card-body">
                         @*<table id="example1" class="table table-bordered table-striped">*@
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>Потребителско име</th>
                                     <th>Име</th>
-                                    <th>ПИН код</th>
-                                    <th style="width: 205px">Действие ПИН</th>
+                                    <th>Телефон 1</th>
+                                    <th>Телефон 2</th>
+                                    <th>Телефон 3</th>
+                                    <th>Телефон 4</th>
+                                    <th>Тип</th>
+                                    <th style="width: 205px">Действие</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,16 +34,19 @@
                                 {
                                     <tr>
 
-                                        <td>@user.UserName</td>
-                                        <td>@user.FullName</td>
-                                        <td>@user.PinCode</td>
+                                        <td>@user.Name</td>
+                                        <td>@user.Phone1</td>
+                                        <td>@user.Phone2</td>
+                                        <td>@user.Phone3</td>
+                                        <td>@user.Phone4</td>
+                                        <td>@user.TypeDes</td>
                                         <td>
                                             <div class="btn-group">
-                                                <a asp-area="admin" asp-action="ChangePin" asp-controller="user" asp-route-id="@user.Id" class="btn btn-warning">Редактиране</a>
+                                                <a asp-area="" asp-action="EditObject" asp-controller="NotifyObject" asp-route-id="@user.Id" class="btn btn-warning">Редактиране</a>
                                             </div>
                                             <div class="btn-group">
-                                                <form asp-area="admin" asp-action="DeletePin" asp-controller="user" asp-route-id="@user.PinId" method="post">
-                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Потвърждаване изтриването на ПИН код за потребител: @user.FullName')">Изтриване</button>
+                                                <form asp-area="" asp-action="DeleteObject" asp-controller="NotifyObject" asp-route-id="@user.Id" method="post">
+                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Потвърждаване изтриването на Обект: @user.Name')">Изтриване</button>
                                                 </form>
                                             </div>
                                         </td>
@@ -46,10 +56,13 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Потребителско име</th>
                                     <th>Име</th>
-                                    <th>ПИН код</th>
-                                    <th>Действие ПИН</th>
+                                    <th>Телефон 1</th>
+                                    <th>Телефон 2</th>
+                                    <th>Телефон 3</th>
+                                    <th>Телефон 4</th>
+                                    <th>Тип</th>
+                                    <th>Действие</th>
                                 </tr>
                             </tfoot>
                         </table>
