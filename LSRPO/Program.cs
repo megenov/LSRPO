@@ -39,6 +39,7 @@ builder.Services.AddScoped<IApplicatioDbRepository, ApplicatioDbRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<INotifyObjectService, NotifyObjectService>();
 builder.Services.AddScoped<INotifyGroupService, NotifyGroupService>();
+builder.Services.AddScoped<INotifyProcessService, NotifyProcessService>();
 
 var app = builder.Build();
 

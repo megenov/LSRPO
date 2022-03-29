@@ -178,6 +178,62 @@ namespace LSRPO.Core.Services
             return (result, error);
         }
 
+        public async Task<(bool result, string error)> EditPult(EditPultViewModel model)
+        {
+            bool result = false;
+            bool changes = false;
+            string error = "Възникна грешка!";
+
+            var pult = await repo.GetByIdAsync<NOT_PULT>(model.PultId);
+
+            if (pult != null)
+            {
+                if (pult.PULT_NAME != model.Name)
+                {
+                    pult.PULT_NAME = model.Name;
+                    changes = true;
+                }
+
+                if (pult.PULT_DESCR != model.Description)
+                {
+                    pult.PULT_DESCR = model.Description;
+                    changes = true;
+                }
+
+                if (pult.PULT_NUMBER != model.Number)
+                {
+                    pult.PULT_NUMBER = model.Number;
+                    changes = true;
+                }
+
+                if (pult.PULT_IP != model.Ip)
+                {
+                    pult.PULT_IP = model.Ip;
+                    changes = true;
+                }
+
+                if (changes)
+                {
+                    try
+                    {
+                        await repo.SaveChangesAsync();
+                        result = true;
+                    }
+                    catch (Exception)
+                    {
+                        error = "Неуспешен запис на промените в Базата данни";
+                    }
+                }
+
+                else
+                {
+                    error = "Няма направени промени по групата!";
+                }
+            }
+
+            return (result, error);
+        }
+
         public async Task<(EditObjectViewModel notifyObject, IEnumerable<SelectListItem> types)> GetObjectForEdit(int id)
         {
             var notifyObject = await repo.GetByIdAsync<NOTIFY_OBJECT>(id);
@@ -211,6 +267,13 @@ namespace LSRPO.Core.Services
                     TypeDes = nt.NO_TYPE_DESCRIPTION
                 })
                 .ToListAsync();
+        }
+
+        public async Task<EditPultViewModel> GetPultForEdit(int id)
+        {
+            var pult = await repo.GetByIdAsync<NOT_PULT>(id);
+
+            return new EditPultViewModel { PultId = pult.PULT_ID, Name = pult.PULT_NAME, Description = pult.PULT_DESCR, Number = pult.PULT_NUMBER, Ip = pult.PULT_IP };
         }
 
         public async Task<IEnumerable<PultsViewModel>> GetPults()

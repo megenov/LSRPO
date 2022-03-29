@@ -132,9 +132,33 @@ namespace LSRPO.Controllers
             return RedirectToAction(nameof(PultsList));
         }
 
-        public async Task<IActionResult> EditPult()
+        public async Task<IActionResult> EditPult(int id)
         {
-            return View();
+            var model = await notifyObjectService.GetPultForEdit(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditPult(EditPultViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            (bool result, string error) = await notifyObjectService.EditPult(model);
+
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешно редактиран пулт за оповестяване!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(PultsList));
         }
 
         public async Task<IActionResult> DeletePult(int id)

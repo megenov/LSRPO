@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\NotifyProcess\" />
     <Folder Include="Models\NotifyStatus\" />
   </ItemGroup>
 
