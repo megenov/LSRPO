@@ -4,11 +4,6 @@ using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LSRPO.Core.Services
 {
@@ -42,6 +37,27 @@ namespace LSRPO.Core.Services
             return (result, error);
         }
 
+        public async Task<(bool result, string error)> AddPult(AddPultViewModel model)
+        {
+            bool result = false;
+            string error = "Възникна грешка!";
+
+            var pult = new NOT_PULT { PULT_NAME = model.Name, PULT_DESCR = model.Description, PULT_NUMBER = model.Number, PULT_IP = model.Ip };
+
+            try
+            {
+                await repo.AddAsync<NOT_PULT>(pult);
+                await repo.SaveChangesAsync();
+                result = true;
+            }
+            catch (Exception)
+            {
+                error = "Неуспешен запис в Базата данни";
+            }
+
+            return (result, error);
+        }
+
         public async Task<(bool result, string error)> DeleteObject(int id)
         {
             bool result = false;
@@ -57,6 +73,32 @@ namespace LSRPO.Core.Services
             try
             {
                 await repo.DeleteAsync<NOTIFY_OBJECT>(id);
+                await repo.SaveChangesAsync();
+                result = true;
+            }
+            catch (Exception)
+            {
+                error = "Неуспешен запис в Базата данни";
+            }
+
+            return (result, error);
+        }
+
+        public async Task<(bool result, string error)> DeletePult(int id)
+        {
+            bool result = false;
+            var error = "Възникна грешка!";
+
+            var pult = await repo.GetByIdAsync<NOT_PULT>(id);
+
+            if (pult == null)
+            {
+                return (result, "Няма такъв пулт!");
+            }
+
+            try
+            {
+                await repo.DeleteAsync<NOT_PULT>(id);
                 await repo.SaveChangesAsync();
                 result = true;
             }
@@ -141,8 +183,8 @@ namespace LSRPO.Core.Services
             var notifyObject = await repo.GetByIdAsync<NOTIFY_OBJECT>(id);
             var types = await repo.All<NO_TYPE>().Select(s => new SelectListItem() { Text = s.NO_TYPE_DESCRIPTION, Value = s.NO_TYPE_ID.ToString(), Selected = s.NO_TYPE_ID == notifyObject.NO_TYPE }).ToListAsync();
 
-            return
-                ( new EditObjectViewModel
+            return ( 
+                new EditObjectViewModel
                 {
                     ObjectId = notifyObject.NO_ID,
                     Name = notifyObject.NO_NAME,
@@ -167,6 +209,21 @@ namespace LSRPO.Core.Services
                     Phone3 = no.NP_EXT_PHONE2,
                     Phone4 = no.NP_EXT_PHONE1,
                     TypeDes = nt.NO_TYPE_DESCRIPTION
+                })
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<PultsViewModel>> GetPults()
+        {
+            return await repo.All<NOT_PULT>()
+                .Select(s =>
+                new PultsViewModel
+                {
+                    Id = s.PULT_ID,
+                    Name = s.PULT_NAME,
+                    Description = s.PULT_DESCR,
+                    Number = s.PULT_NUMBER,
+                    Ip = s.PULT_IP
                 })
                 .ToListAsync();
         }

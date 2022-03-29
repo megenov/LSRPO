@@ -16,5 +16,11 @@ namespace LSRPO.Core.Contracts
         Task<(bool result, string error)> EditObject(EditObjectViewModel model);
 
         Task<(bool result, string error)> DeleteObject(int id);
+
+        Task<IEnumerable<PultsViewModel>> GetPults();
+
+        Task<(bool result, string error)> AddPult(AddPultViewModel model);
+
+        Task<(bool result, string error)> DeletePult(int id);
     }
 }

@@ -1,0 +1,60 @@
+﻿@using LSRPO.Core.Models.NotifyObject
+@model AddPultViewModel
+
+@{
+    ViewData["Title"] = "Добавяне на нов пулт за оповестяване";
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+
+                <form id="add-new-pult" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyObject" asp-action="AddNewPult">
+
+                    <div class="card-body" style="display: block;">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" aria-required="true" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description" class="form-label"></label>
+                            <input asp-for="Description" class="form-control" aria-required="true" />
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Number" class="form-label"></label>
+                            <input asp-for="Number" class="form-control" />
+                            <span asp-validation-for="Number" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Ip" class="form-label"></label>
+                            <input asp-for="Ip" class="form-control" />
+                            <span asp-validation-for="Ip" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button id="addPult-submit" type="submit" class="btn btn-block btn-primary">Добавяне</button>
+                        </div>
+                        <div class="col-6">
+                            <a asp-area="" asp-action="PultsList" asp-controller="NotifyObject" class="btn btn-block btn-warning">Отказ</a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}

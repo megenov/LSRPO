@@ -1,6 +1,13 @@
-﻿namespace LSRPO.Core.Contracts
+﻿using LSRPO.Core.Models.NotifyGroup;
+
+namespace LSRPO.Core.Contracts
 {
     public interface INotifyGroupService
     {
+        Task<IEnumerable<NotifyGroupListViewModel>> GetGroups();
+
+        Task<EditGroupViewModel> GetGroupForEdit(int id);
+
+        Task<(bool result, string error)> EditGroup(EditGroupViewModel model);
     }
 }

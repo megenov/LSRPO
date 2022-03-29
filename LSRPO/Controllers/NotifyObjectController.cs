@@ -97,5 +97,60 @@ namespace LSRPO.Controllers
 
             return RedirectToAction(nameof(NotifyObjectList));
         }
+
+        public async Task<IActionResult> PultsList()
+        {
+            var pults = await notifyObjectService.GetPults();
+
+            return View(pults);
+        }
+
+        public IActionResult AddNewPult()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddNewPult(AddPultViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            (bool result, string error) = await notifyObjectService.AddPult(model);
+
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешно добавен пулт за оповестяване!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(PultsList));
+        }
+
+        public async Task<IActionResult> EditPult()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> DeletePult(int id)
+        {
+            (bool result, string error) = await notifyObjectService.DeletePult(id);
+
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешено изтриване!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(PultsList));
+        }
     }
 }

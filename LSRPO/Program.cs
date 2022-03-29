@@ -38,6 +38,7 @@ builder.Services.AddControllersWithViews()
 builder.Services.AddScoped<IApplicatioDbRepository, ApplicatioDbRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<INotifyObjectService, NotifyObjectService>();
+builder.Services.AddScoped<INotifyGroupService, NotifyGroupService>();
 
 var app = builder.Build();
 

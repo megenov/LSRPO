@@ -24,9 +24,9 @@
             <a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Конфигурация</a>
             <ul class="dropdown-menu">
                 <li><a asp-area="" asp-action="NotifyObjectList" asp-controller="NotifyObject" class="dropdown-item">Обекти за оповестяване</a></li>
-                <li><a class="dropdown-item" href="#">Групи за оповестяване</a></li>
+                <li><a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="dropdown-item">Групи за оповестяване</a></li>
                 <li><a class="dropdown-item" href="#">Процеси</a></li>
-                <li><a class="dropdown-item" href="#">Пултове</a></li>
+                <li><a asp-area="" asp-action="PultsList" asp-controller="NotifyObject" class="dropdown-item">Пултове</a></li>
             </ul>
         </li>
 
