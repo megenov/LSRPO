@@ -84,6 +84,7 @@ namespace LSRPO.Controllers
             return View(process);
         }
 
+        [HttpPost]
         public async Task<IActionResult> EndProcess(int id)
         {
             (bool result, string error) = await notifyProcessService.EndProcess(id);

@@ -114,7 +114,7 @@ namespace LSRPO.Areas.Admin.Controllers
             return RedirectToAction(nameof(ManageUsers));
         }
 
-        public async Task<IActionResult> ChangePassword(int id)
+        public IActionResult ChangePassword(int id)
         {
             ViewBag.Id = id;
 
@@ -145,6 +145,7 @@ namespace LSRPO.Areas.Admin.Controllers
             return RedirectToAction(nameof(EditProfile), new { id = model.Id });
         }
 
+        [HttpPost]
         public async Task<IActionResult> DeleteUser(int id)
         {
             bool result = false;
@@ -204,11 +205,13 @@ namespace LSRPO.Areas.Admin.Controllers
             else
             {
                 TempData[MessageConstant.ErrorMessage] = error;
+                return RedirectToAction(nameof(ChangePin), new { id = model.UserId });
             }
 
             return RedirectToAction(nameof(PinCodes));
         }
 
+        [HttpPost]
         public async Task<IActionResult> DeletePin(int id)
         {
             (bool result, string error) = await userService.DeletePinCode(id);

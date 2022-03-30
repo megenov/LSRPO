@@ -24,11 +24,6 @@ namespace LSRPO.Controllers
             this.userService = userService;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         public async Task<IActionResult> UserProfile()
         {
             var user = await userManager.GetUserAsync(User);
@@ -80,10 +75,10 @@ namespace LSRPO.Controllers
             if (nameEdit || imageEdit)
             {
                 await signInManager.SignInAsync(user, isPersistent: false);
-                return Redirect("/");
+                return RedirectToAction("Index", "Home");
             }
 
-            return Redirect("/");
+            return RedirectToAction("Index", "Home");
         }
 
         //[Authorize(Roles = UserConstant.Roles.Administrator)]

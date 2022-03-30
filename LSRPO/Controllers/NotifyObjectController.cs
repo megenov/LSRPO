@@ -82,6 +82,7 @@ namespace LSRPO.Controllers
             return RedirectToAction(nameof(NotifyObjectList));
         }
 
+        [HttpPost]
         public async Task<IActionResult> DeleteObject(int id)
         {
             (bool result, string error) = await notifyObjectService.DeleteObject(id);
@@ -161,6 +162,7 @@ namespace LSRPO.Controllers
             return RedirectToAction(nameof(PultsList));
         }
 
+        [HttpPost]
         public async Task<IActionResult> DeletePult(int id)
         {
             (bool result, string error) = await notifyObjectService.DeletePult(id);
