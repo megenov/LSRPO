@@ -1,0 +1,130 @@
+﻿@using LSRPO.Core.Models.NotifyProcess
+@model IEnumerable<ProcessListViewModel>
+
+@{
+    ViewData["Title"] = "Мониторинг на оповестителни процеси";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+
+                    <div class="card-body">
+                        @*<table id="example1" class="table table-bordered table-striped">*@
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Действие</th>
+                                    <th>ID</th>
+                                    <th>Име на група</th>
+                                    <th>Име на лице</th>
+                                    <th>Пулт</th>
+                                    <th>Тип</th>
+                                    <th>Начална дата</th>
+                                    <th>Крайна дата</th>
+                                    <th>Флаг</th>
+                                    <th>Действие</th>
+                                    @*<th style="width: 205px">Действие</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var process in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            <div class="btn-group">
+
+                                                @if (@process.FlagId == 0 || @process.FlagId == 3)
+                                                {
+                                                    <form asp-area="" asp-action="EndProcess" asp-controller="NotifyProcess" asp-route-id="@process.ProcessId" method="post">
+                                                        <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване прекратяването на процес: @process.ProcessId')">Прекрати</button>
+                                                    </form>
+                                                }
+                                                else
+                                                {
+                                                    <button type="button" class="btn btn-block btn-danger disabled">Прекрати</button>
+                                                }
+                                            </div>
+                                        </td>
+                                        <td>@process.ProcessId</td>
+                                        <td>@process.GroupName</td>
+                                        <td>@process.UserName</td>
+                                        <td>@process.PultName</td>
+                                        <td>@process.ProccesTypeName</td>
+                                        <td>@process.StartDate</td>
+                                        <td>@process.EndDate</td>
+                                        <td>@process.FlagName</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info">Детайли</a>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Действие</th>
+                                    <th>ID</th>
+                                    <th>Име на група</th>
+                                    <th>Име на лице</th>
+                                    <th>Пулт</th>
+                                    <th>Тип</th>
+                                    <th>Начална дата</th>
+                                    <th>Крайна дата</th>
+                                    <th>Флаг</th>
+                                    <th>Действие</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<!-- /.content -->
+<!-- DataTables  & Plugins -->
+<script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
+<script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables/jszip/jszip.min.js"></script>
+<script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
+<script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- Page specific script -->
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": true, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+</script>

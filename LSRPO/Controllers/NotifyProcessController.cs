@@ -76,5 +76,28 @@ namespace LSRPO.Controllers
 
             return RedirectToAction(nameof(ProcessTypeList));
         }
+
+        public async Task<IActionResult> ProcessList()
+        {
+            var process = await notifyProcessService.GetProcess();
+
+            return View(process);
+        }
+
+        public async Task<IActionResult> EndProcess(int id)
+        {
+            (bool result, string error) = await notifyProcessService.EndProcess(id);
+
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = "Успешено прекратен процес!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(ProcessList));
+        }
     }
 }

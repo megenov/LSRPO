@@ -40,6 +40,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<INotifyObjectService, NotifyObjectService>();
 builder.Services.AddScoped<INotifyGroupService, NotifyGroupService>();
 builder.Services.AddScoped<INotifyProcessService, NotifyProcessService>();
+builder.Services.AddScoped<INotifyStatusService, NotifyStatusService>();
 
 var app = builder.Build();
 

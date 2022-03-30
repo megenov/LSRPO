@@ -11,5 +11,9 @@ namespace LSRPO.Core.Contracts
         Task<EditProcessTypeViewModel> GetProcessTypeForEdit(int id);
 
         Task<(bool result, string error)> EditProcessType(EditProcessTypeViewModel model);
+
+        Task<IEnumerable<ProcessListViewModel>> GetProcess();
+
+        Task<(bool result, string error)> EndProcess(int id);
     }
 }
