@@ -1,8 +1,8 @@
-﻿@using LSRPO.Core.Models.NotifyProcess
-@model IEnumerable<ProcessListViewModel>
+﻿@using LSRPO.Core.Models.NotifyStatus
+@model IEnumerable<ProcessListAllViewModel>
 
 @{
-    ViewData["Title"] = "Мониторинг на оповестителни процеси";
+    ViewData["Title"] = "Справка за всички оповестителни процеси";
 }
 
 <section class="content">
@@ -18,7 +18,6 @@
                             <thead>
                                 <tr>
                                     <th hidden>Hidden</th>
-                                    <th>Действие</th>
                                     <th>ID</th>
                                     <th>Име на група</th>
                                     <th>Име на лице</th>
@@ -37,21 +36,6 @@
                                     <tr>
 
                                         <td hidden>Hidden</td>
-                                        <td>
-                                            <div class="btn-group">
-
-                                                @if (@process.FlagId == 0 || @process.FlagId == 3)
-                                                {
-                                                    <form asp-area="" asp-action="EndProcess" asp-controller="NotifyProcess" asp-route-id="@process.ProcessId" method="post">
-                                                        <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване прекратяването на процес: @process.ProcessId')">Прекрати</button>
-                                                    </form>
-                                                }
-                                                else
-                                                {
-                                                    <button type="button" class="btn btn-block btn-danger disabled">Прекрати</button>
-                                                }
-                                            </div>
-                                        </td>
                                         <td>@process.ProcessId</td>
                                         <td>@process.GroupName</td>
                                         <td>@process.UserName</td>
@@ -71,7 +55,6 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Действие</th>
                                     <th>ID</th>
                                     <th>Име на група</th>
                                     <th>Име на лице</th>

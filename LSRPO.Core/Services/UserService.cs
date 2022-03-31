@@ -145,13 +145,14 @@ namespace LSRPO.Core.Services.User
         public async Task<ChangePinViewModel> GetPinCode(int id)
         {
             var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
+            var user = await repo.GetByIdAsync<AUTH_USER>(id);
 
             if (pinCode == null)
             {
-                return new ChangePinViewModel { UserId = id };
+                return new ChangePinViewModel { UserId = id, UserName = user.USR_FULLNAME };
             }
 
-            return new ChangePinViewModel { UserId = id, PinCode = pinCode.USR_PIN };
+            return new ChangePinViewModel { UserId = id, PinCode = pinCode.USR_PIN, UserName = user.USR_FULLNAME };
         }
 
         public async Task<IEnumerable<PinCodesViewModel>> GetPinCodes()

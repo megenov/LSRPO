@@ -15,8 +15,16 @@ namespace LSRPO.Controllers
         public async Task<IActionResult> ProcessDetails(int id)
         {
             var process = await notifyStatusService.GetProcessDetails(id);
+            ViewBag.ProcessId = id;
 
             return View(process);
+        }
+
+        public async Task<IActionResult> ProcessListAll()
+        {
+            var processAll = await notifyStatusService.GetProcessAll();
+
+            return View(processAll);
         }
     }
 }

@@ -5,5 +5,7 @@ namespace LSRPO.Core.Contracts
     public interface INotifyStatusService
     {
         Task<IEnumerable<ProcessDetailsViewModel>> GetProcessDetails(int id);
+
+        Task<IEnumerable<ProcessListAllViewModel>> GetProcessAll();
     }
 }

@@ -64,10 +64,19 @@ namespace LSRPO.Core.Services
             var error = "Възникна грешка!";
 
             var notifyObject = await repo.GetByIdAsync<NOTIFY_OBJECT>(id);
+            var notifyStatus = await repo.All<NOT_STATUS>().Where(w => w.NO_ID == id).ToListAsync();
 
             if (notifyObject == null)
             {
                 return (result, "Няма такъв обект!");
+            }
+
+            if (notifyStatus.Count > 0)
+            {
+                foreach (var item in notifyStatus)
+                {
+                    item.NO_ID = null;
+                }
             }
 
             try
