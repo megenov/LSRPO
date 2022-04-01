@@ -1,0 +1,118 @@
+﻿@using LSRPO.Core.Models.NotifyGroup
+@model IEnumerable<EditGroupObjectsViewModel>
+
+@{
+    ViewData["Title"] = $"Редактиране на обектите в {ViewBag.GroupName}";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="card">
+
+                    <form id="edit-group-objects" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyGroup" asp-action="EditGroupObjects">
+
+                    <div class="card-header">
+                        @*<a asp-area="" asp-action="EditGroupObjects" asp-controller="NotifyGroup" class="btn btn-primary">Запис на обектите</a>*@
+                        <button id="editGroupObjects-submit" type="submit" class="btn btn-primary">Редактиране</button>
+                    </div>
+                    <!-- /.card-header -->
+
+                    <div class="card-body">
+                        @*<table id="example1" class="table table-bordered table-striped">*@
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Име на обект</th>
+                                    <th>Телефон 1</th>
+                                    <th>Телефон 2</th>
+                                    <th>Телефон 3</th>
+                                    <th>Телефон 4</th>
+                                    @*<th style="width: 205px">Действие</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var notifyObject in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="@notifyObject.ObjectId" name="@notifyObject.IsChecked">
+                                                <label for="@notifyObject.ObjectId">
+                                                </label>
+                                            </div>
+                                        </td>
+
+                                        <td>@notifyObject.ObjectName</td>
+                                        <td>@notifyObject.Phone1</td>
+                                        <td>@notifyObject.Phone2</td>
+                                        <td>@notifyObject.Phone3</td>
+                                        <td>@notifyObject.Phone4</td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th>Име на обект</th>
+                                    <th>Телефон 1</th>
+                                    <th>Телефон 2</th>
+                                    <th>Телефон 3</th>
+                                    <th>Телефон 4</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+
+                    </form>
+
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+
+<!-- /.content -->
+<!-- DataTables  & Plugins -->
+<script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
+<script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="~/plugins/datatables/jszip/jszip.min.js"></script>
+<script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
+<script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- Page specific script -->
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": true, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+</script>

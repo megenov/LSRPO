@@ -57,11 +57,22 @@ namespace LSRPO.Controllers
             return View();
         }
 
-        public async Task<IActionResult> EditGroupObjects()
+        public async Task<IActionResult> EditGroupObjects(int id)
+        {
+            var groupName = await notifyGroupService.GetGroupName(id);
+            var model = await notifyGroupService.GetObjects(id);
+
+            ViewBag.GroupName = groupName;
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult EditGroupObjects(IEnumerable<EditGroupObjectsViewModel> model)
         {
 
 
-            return View();
+            return RedirectToAction(nameof(NotifyGroupList));
         }
     }
 }

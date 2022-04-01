@@ -76,6 +76,13 @@ namespace LSRPO.Core.Services
             return new EditGroupViewModel { GroupId = notifyGroup.NG_ID, Name = notifyGroup.NG_NAME, Description = notifyGroup.NG_DESCRIPTION, Number = notifyGroup.NG_NUMBER };
         }
 
+        public async Task<string> GetGroupName(int id)
+        {
+            var groupName = await repo.All<NOTIFY_GROUP>().Where(w => w.NG_ID == id).Select(s => s.NG_DESCRIPTION).FirstOrDefaultAsync();
+
+            return groupName;
+        }
+
         public async Task<IEnumerable<NotifyGroupListViewModel>> GetGroups()
         {
             return await repo.All<NOTIFY_GROUP>()
@@ -88,6 +95,23 @@ namespace LSRPO.Core.Services
                     Number = s.NG_NUMBER,
                     DateOfChange = s.NG_REG_DATE != null ? s.NG_REG_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "n/a",
                     Flag = s.NG_MOD_FLAG
+                })
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<EditGroupObjectsViewModel>> GetObjects(int id)
+        {
+            return await repo.All<NOTIFY_OBJECT>()
+                .Select(s =>
+                new EditGroupObjectsViewModel
+                {
+                    GroupId = id,
+                    ObjectId = s.NO_ID,
+                    ObjectName = s.NO_NAME,
+                    Phone1 = s.NO_INT_PHONE,
+                    Phone2 = s.NP_MOB_PHONE,
+                    Phone3 = s.NP_EXT_PHONE2,
+                    Phone4 = s.NP_EXT_PHONE1
                 })
                 .ToListAsync();
         }

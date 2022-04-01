@@ -9,5 +9,9 @@ namespace LSRPO.Core.Contracts
         Task<EditGroupViewModel> GetGroupForEdit(int id);
 
         Task<(bool result, string error)> EditGroup(EditGroupViewModel model);
+
+        Task<string> GetGroupName(int id);
+
+        Task<IEnumerable<EditGroupObjectsViewModel>> GetObjects(int id);
     }
 }

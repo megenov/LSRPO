@@ -122,9 +122,9 @@ namespace LSRPO.Core.Services
                 GroupName = groups.Where(w => w.NG_ID == s.NG_ID).Select(g => g.NG_NAME).FirstOrDefault(),
                 UserName = users.Where(w => w.Id == s.USR_ID).Select(u => u.USR_FULLNAME).FirstOrDefault(),
                 PultName = pults.Where(w => w.PULT_NUMBER == s.PULT_NUMBER).Select(p => p.PULT_DESCR).FirstOrDefault(),
-                ProccesTypeName = s.NPR_TYPE.NTP_DESCRIPTION,
-                StartDate = s.NPR_DATE != null ? s.NPR_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "n/a",
-                EndDate = s.NPR_END_DATE != null ? s.NPR_END_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "n/a",
+                ProccesTypeName = s.NPR_TYPE != null ? s.NPR_TYPE.NTP_DESCRIPTION : "N/A",
+                StartDate = s.NPR_DATE != null ? s.NPR_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "N/A",
+                EndDate = s.NPR_END_DATE != null ? s.NPR_END_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "N/A",
                 FlagName = flags.Where(w => w.ST_ID.ToString() == s.NPR_FLAG).Select(f => f.ST_DESC).FirstOrDefault(),
                 FlagId = flags.Where(w => w.ST_ID.ToString() == s.NPR_FLAG).Select(f => f.ST_ID).FirstOrDefault(),
             }).ToList();
