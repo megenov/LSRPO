@@ -2,9 +2,9 @@
 {
     public class EditGroupObjectsViewModel
     {
-        public int? GroupId { get; set; }
+        public int GroupId { get; set; }
 
-        public int? ObjectId { get; set; }
+        public int ObjectId { get; set; }
 
         public string? ObjectName { get; set; }
 
@@ -16,6 +16,8 @@
 
         public string? Phone4 { get; set; }
 
-        public bool IsChecked { get; set; }
+        public bool IsSelected { get; set; } = false;
+
+        public IList<int> ObjectIds { get; set; } = new List<int>();
     }
 }

@@ -17,6 +17,39 @@ namespace LSRPO.Core.Services
             this.repo = repo;
         }
 
+        public async Task<(bool result, string error)> ClearGroupObjects(int id)
+        {
+            bool result = false;
+            string error = "Възникна грешка!";
+
+            var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
+            var ngnps = await repo.All<NG_NP>().Where(w => w.NG_ID == id).ToListAsync();
+
+            if (notifyGroup != null)
+            {
+                if (ngnps.Count > 0)
+                {
+                    try
+                    {
+                        repo.DeleteRange<NG_NP>(ngnps);
+                        await repo.SaveChangesAsync();
+                        result = true;
+                    }
+                    catch (Exception)
+                    {
+                        error = "Неуспешен запис на промените в Базата данни!";
+                    }
+                }
+
+                else
+                {
+                    error = $"Няма обекти в {notifyGroup.NG_DESCRIPTION}!";
+                }
+            }
+
+            return (result, error);
+        }
+
         public async Task<(bool result, string error)> EditGroup(EditGroupViewModel model)
         {
             bool result = false;
@@ -69,6 +102,78 @@ namespace LSRPO.Core.Services
             return (result, error);
         }
 
+        public async Task<(bool result, string error)> EditGroupObjects(EditGroupObjectsViewModel model)
+        {
+            bool result = false;
+            bool changes = false;
+            string error = "Възникна грешка!";
+
+            var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(model.GroupId);
+            var ngnps = await repo.All<NG_NP>().Where(w => w.NG_ID == model.GroupId).ToListAsync();
+
+            if (notifyGroup != null)
+            {
+                if (ngnps.Count > 0)
+                {
+                    try
+                    {
+                        repo.DeleteRange<NG_NP>(ngnps);
+                    }
+                    catch (Exception)
+                    {
+                        return (result, error);
+                    }
+
+                    changes = true;
+                }
+
+                if (model.ObjectIds.Count > 0)
+                {
+                    var notifyGroupObjects = new List<NG_NP>();
+
+                    foreach (var id in model.ObjectIds)
+                    {
+                        //var notifyObject = await repo.GetByIdAsync<NOTIFY_OBJECT>(id);
+                        //var ngnp = new NG_NP { NOTIFY_GROUP = notifyGroup, NOTIFY_OBJECT = notifyObject };
+
+                        var ngnp = new NG_NP { NOTIFY_GROUP = notifyGroup, NO_ID = id };
+                        notifyGroupObjects.Add(ngnp);
+                    }
+
+                    try
+                    {
+                        await repo.AddRangeAsync<NG_NP>(notifyGroupObjects);
+                    }
+                    catch (Exception)
+                    {
+                        return (result, error);
+                    }
+
+                    changes = true;
+                }
+
+                if (changes)
+                {
+                    try
+                    {
+                        await repo.SaveChangesAsync();
+                        result = true;
+                    }
+                    catch (Exception)
+                    {
+                        error = "Неуспешен запис в Базата данни";
+                    }
+                }
+
+                else
+                {
+                    error = $"Няма редактирани обекти в {notifyGroup.NG_DESCRIPTION}!";
+                }
+            }
+
+            return (result, error);
+        }
+
         public async Task<EditGroupViewModel> GetGroupForEdit(int id)
         {
             var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
@@ -111,8 +216,10 @@ namespace LSRPO.Core.Services
                     Phone1 = s.NO_INT_PHONE,
                     Phone2 = s.NP_MOB_PHONE,
                     Phone3 = s.NP_EXT_PHONE2,
-                    Phone4 = s.NP_EXT_PHONE1
+                    Phone4 = s.NP_EXT_PHONE1,
+                    IsSelected = s.NG_NPS.Where(w => w.NG_ID == id).Any(a => a.NO_ID == s.NO_ID)
                 })
+                .OrderBy(o => o.ObjectName)
                 .ToListAsync();
         }
     }

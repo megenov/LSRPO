@@ -62,17 +62,50 @@ namespace LSRPO.Controllers
             var groupName = await notifyGroupService.GetGroupName(id);
             var model = await notifyGroupService.GetObjects(id);
 
+            ViewBag.GroupId = id;
             ViewBag.GroupName = groupName;
 
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult EditGroupObjects(IEnumerable<EditGroupObjectsViewModel> model)
+        public async Task<IActionResult> EditGroupObjects(EditGroupObjectsViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
+            (bool result, string error) = await notifyGroupService.EditGroupObjects(model);
+            var groupName = await notifyGroupService.GetGroupName(model.GroupId);
 
-            return RedirectToAction(nameof(NotifyGroupList));
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = $"Успешно редактирани обекти в {groupName}!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(EditGroupObjects), new { id = model.GroupId });
+        }
+
+        public async Task<IActionResult> ClearGroupObjects(int id)
+        {
+            (bool result, string error) = await notifyGroupService.ClearGroupObjects(id);
+            var groupName = await notifyGroupService.GetGroupName(id);
+
+            if (result)
+            {
+                TempData[MessageConstant.SuccessMessage] = $"Успешно изчистени обекти от {groupName}!";
+            }
+            else
+            {
+                TempData[MessageConstant.ErrorMessage] = error;
+            }
+
+            return RedirectToAction(nameof(EditGroupObjects), new { id = id });
         }
     }
 }
