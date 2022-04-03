@@ -28,7 +28,7 @@ namespace LSRPO.Controllers
         {
             var user = await userManager.GetUserAsync(User);
             var model = await userService.GetUserForProfileEdit(user.Id);
-            ViewBag.Roles = await userManager.GetRolesAsync(user);
+            ViewBag.Role = userManager.GetRolesAsync(user).Result.FirstOrDefault();
 
             return View(model);
         }

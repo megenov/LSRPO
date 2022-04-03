@@ -15,10 +15,7 @@
                 </div>
                 <h3 class="profile-username text-center">@Model.FullName</h3>
                 <p class="text-muted text-center">
-                    @foreach (var item in ViewBag.Roles)
-                    {
-                        @item
-                    }
+                    @ViewBag.Role
                 </p>
                 <a asp-area="admin" asp-action="ChangePassword" asp-controller="user" asp-route-id="@Model.Id" class="btn btn-primary btn-block"><b>Промяна на парола</b></a>
             </div>

@@ -49,7 +49,7 @@ namespace LSRPO.Areas.Admin.Controllers
         {
             var user = await userManager.FindByIdAsync(id.ToString());
             var model = await userService.GetUserForProfileEdit(id);
-            ViewBag.Roles = userManager.GetRolesAsync(user).Result;
+            ViewBag.Role = userManager.GetRolesAsync(user).Result.FirstOrDefault();
             ViewBag.RoleItems = roleManager.Roles
                 .ToList()
                 .Select(s => new SelectListItem()
