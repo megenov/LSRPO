@@ -1,8 +1,8 @@
 ﻿@using LSRPO.Core.Models.NotifyGroup
-@model IEnumerable<EditGroupObjectsViewModel>
+@model IEnumerable<EditGroupUsersViewModel>
 
 @{
-    ViewData["Title"] = $"Редактиране на обекти в {ViewBag.GroupName}";
+    ViewData["Title"] = $"Редактиране на потребители в {ViewBag.GroupName}";
 }
 
 <section class="content">
@@ -12,13 +12,13 @@
 
                 <div class="card">
 
-                    <form id="edit-group-objects" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyGroup" asp-action="EditGroupObjects">
+                    <form id="edit-group-users" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyGroup" asp-action="EditGroupUsers">
 
                     <input type="hidden" name="GroupId" value="@ViewBag.GroupId" />
 
                     <div class="card-header">
-                        <button id="editGroupObjects-submit" type="submit" class="btn btn-success">Запис на обекти</button>
-                        <a asp-area="" asp-action="ClearGroupObjects" asp-controller="NotifyGroup" asp-route-id="@ViewBag.GroupId" class="btn btn-primary">Изчистване на обекти</a>
+                        <button id="editGroupUsers-submit" type="submit" class="btn btn-success">Запис на потребители</button>
+                        <a asp-area="" asp-action="ClearGroupUsers" asp-controller="NotifyGroup" asp-route-id="@ViewBag.GroupId" class="btn btn-primary">Изчистване на потребители</a>
                         <a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="btn btn-warning">Връщане към всички групи</a>
                     </div>
                     <!-- /.card-header -->
@@ -29,30 +29,26 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px"></th>
-                                    <th>Име на обект</th>
-                                    <th>Телефон 1</th>
-                                    <th>Телефон 2</th>
-                                    <th>Телефон 3</th>
-                                    <th>Телефон 4</th>
+                                    <th>Потребителско име</th>
+                                    <th>Име</th>
+                                    <th>Роля</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var notifyObject in Model)
+                                @foreach (var notifyUser in Model)
                                 {
                                     <tr>
 
                                         <td>
                                             <div class="icheck-primary d-inline">
-                                                <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
-                                                <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                                <input type="checkbox" id="@notifyUser.UserId" name="UserIds" value=@notifyUser.UserId @(notifyUser.IsSelected ? "checked" : "")>
+                                                <label for="@notifyUser.UserId"><text hidden>@notifyUser.IsSelected</text></label>
                                             </div>
                                         </td>
 
-                                        <td>@notifyObject.ObjectName</td>
-                                        <td>@notifyObject.Phone1</td>
-                                        <td>@notifyObject.Phone2</td>
-                                        <td>@notifyObject.Phone3</td>
-                                        <td>@notifyObject.Phone4</td>
+                                        <td>@notifyUser.UserName</td>
+                                        <td>@notifyUser.FullName</td>
+                                        <td>@notifyUser.UserRole</td>
 
                                     </tr>
                                 }
@@ -60,11 +56,9 @@
                             <tfoot>
                                 <tr>
                                     <th></th>
-                                    <th>Име на обект</th>
-                                    <th>Телефон 1</th>
-                                    <th>Телефон 2</th>
-                                    <th>Телефон 3</th>
-                                    <th>Телефон 4</th>
+                                    <th>Потребителско име</th>
+                                    <th>Име</th>
+                                    <th>Роля</th>
                                 </tr>
                             </tfoot>
                         </table>

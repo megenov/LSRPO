@@ -3,6 +3,7 @@ using LSRPO.Core.Contracts;
 using LSRPO.Core.Models.NotifyGroup;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
@@ -11,10 +12,12 @@ namespace LSRPO.Core.Services
     public class NotifyGroupService : INotifyGroupService
     {
         private readonly IApplicatioDbRepository repo;
+        private readonly UserManager<AUTH_USER> userManager;
 
-        public NotifyGroupService(IApplicatioDbRepository repo)
+        public NotifyGroupService(IApplicatioDbRepository repo, UserManager<AUTH_USER> userManager)
         {
             this.repo = repo;
+            this.userManager = userManager;
         }
 
         public async Task<(bool result, string error)> ClearGroupObjects(int id)
@@ -44,6 +47,39 @@ namespace LSRPO.Core.Services
                 else
                 {
                     error = $"Няма обекти в {notifyGroup.NG_DESCRIPTION}!";
+                }
+            }
+
+            return (result, error);
+        }
+
+        public async Task<(bool result, string error)> ClearGroupUsers(int id)
+        {
+            bool result = false;
+            string error = "Възникна грешка!";
+
+            var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
+            var ngusrs = await repo.All<NG_USR>().Where(w => w.NG_ID == id).ToListAsync();
+
+            if (notifyGroup != null)
+            {
+                if (ngusrs.Count > 0)
+                {
+                    try
+                    {
+                        repo.DeleteRange<NG_USR>(ngusrs);
+                        await repo.SaveChangesAsync();
+                        result = true;
+                    }
+                    catch (Exception)
+                    {
+                        error = "Неуспешен запис на промените в Базата данни!";
+                    }
+                }
+
+                else
+                {
+                    error = $"Няма потребители в {notifyGroup.NG_DESCRIPTION}!";
                 }
             }
 
@@ -115,6 +151,13 @@ namespace LSRPO.Core.Services
             {
                 if (ngnps.Count > 0)
                 {
+                    var isEqual = ngnps.All(a => model.ObjectIds.Contains(a.NO_ID)) && ngnps.Count == model.ObjectIds.Count;
+
+                    if (isEqual)
+                    {
+                        return (result, $"Обектите в {notifyGroup.NG_DESCRIPTION} са същите като предишните!");
+                    }
+
                     try
                     {
                         repo.DeleteRange<NG_NP>(ngnps);
@@ -174,6 +217,82 @@ namespace LSRPO.Core.Services
             return (result, error);
         }
 
+        public async Task<(bool result, string error)> EditGroupUsers(EditGroupUsersViewModel model)
+        {
+            bool result = false;
+            bool changes = false;
+            string error = "Възникна грешка!";
+
+            var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(model.GroupId);
+            var ngusrs = await repo.All<NG_USR>().Where(w => w.NG_ID == model.GroupId).ToListAsync();
+
+            if (notifyGroup != null)
+            {
+                if (ngusrs.Count > 0)
+                {
+                    var isEqual = ngusrs.All(a => model.UserIds.Contains(a.USR_ID != null ? (int)a.USR_ID : 0 )) && ngusrs.Count == model.UserIds.Count;
+
+                    if (isEqual)
+                    {
+                        return (result, $"Потребителите в {notifyGroup.NG_DESCRIPTION} са същите като предишните!");
+                    }
+
+                    try
+                    {
+                        repo.DeleteRange<NG_USR>(ngusrs);
+                    }
+                    catch (Exception)
+                    {
+                        return (result, error);
+                    }
+
+                    changes = true;
+                }
+
+                if (model.UserIds.Count > 0)
+                {
+                    var notifyGroupUsers = new List<NG_USR>();
+
+                    foreach (var id in model.UserIds)
+                    {
+                        var ngusr = new NG_USR { NOTIFY_GROUP = notifyGroup, USR_ID = id };
+                        notifyGroupUsers.Add(ngusr);
+                    }
+
+                    try
+                    {
+                        await repo.AddRangeAsync<NG_USR>(notifyGroupUsers);
+                    }
+                    catch (Exception)
+                    {
+                        return (result, error);
+                    }
+
+                    changes = true;
+                }
+
+                if (changes)
+                {
+                    try
+                    {
+                        await repo.SaveChangesAsync();
+                        result = true;
+                    }
+                    catch (Exception)
+                    {
+                        error = "Неуспешен запис в Базата данни";
+                    }
+                }
+
+                else
+                {
+                    error = $"Няма редактирани потребители в {notifyGroup.NG_DESCRIPTION}!";
+                }
+            }
+
+            return (result, error);
+        }
+
         public async Task<EditGroupViewModel> GetGroupForEdit(int id)
         {
             var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
@@ -221,6 +340,25 @@ namespace LSRPO.Core.Services
                 })
                 .OrderBy(o => o.ObjectName)
                 .ToListAsync();
+        }
+
+        public IEnumerable<EditGroupUsersViewModel> GetUsers(int id)
+        {
+            return repo.All<AUTH_USER>()
+                .Include(i => i.NG_USRS)
+                .ToList()
+                .Select(s =>
+                new EditGroupUsersViewModel
+                {
+                    GroupId = id,
+                    UserId = s.Id,
+                    UserName = s.UserName,
+                    FullName = s.USR_FULLNAME,
+                    UserRole = userManager.GetRolesAsync(s).Result.FirstOrDefault(),
+                    IsSelected = s.NG_USRS.Where(w => w.NG_ID == id).Any(a => a.USR_ID == s.Id)
+                })
+                .OrderBy(o => o.FullName)
+                .ToList();
         }
     }
 }

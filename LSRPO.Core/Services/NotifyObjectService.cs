@@ -273,7 +273,8 @@ namespace LSRPO.Core.Services
                     Phone2 = no.NP_MOB_PHONE,
                     Phone3 = no.NP_EXT_PHONE2,
                     Phone4 = no.NP_EXT_PHONE1,
-                    TypeDes = nt.NO_TYPE_DESCRIPTION
+                    TypeDes = nt.NO_TYPE_DESCRIPTION,
+                    TypeId = nt.NO_TYPE_ID
                 })
                 .ToListAsync();
         }

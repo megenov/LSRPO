@@ -118,29 +118,29 @@ namespace LSRPO.Core.Services.User
             return (result, error);
         }
 
-        public async Task<bool> DeleteUserPin(int id)
-        {
-            bool result = true;
-            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
+        //public async Task<bool> DeleteUserPin(int id)
+        //{
+        //    bool result = true;
+        //    var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
 
-            if (pinCode == null)
-            {
-                return result;
-            }
+        //    if (pinCode == null)
+        //    {
+        //        return result;
+        //    }
 
-            try
-            {
-                //repo.Delete<NOT_USER_PIN>(pinCode);
-                await repo.DeleteAsync<NOT_USER_PIN>(pinCode.NOT_USR_ID);
-                await repo.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                result = false;
-            }
+        //    try
+        //    {
+        //        //repo.Delete<NOT_USER_PIN>(pinCode);
+        //        await repo.DeleteAsync<NOT_USER_PIN>(pinCode.NOT_USR_ID);
+        //        await repo.SaveChangesAsync();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        result = false;
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
 
         public async Task<ChangePinViewModel> GetPinCode(int id)
         {
@@ -189,6 +189,34 @@ namespace LSRPO.Core.Services.User
                     RegDate = s.USR_REG_DATE != null ? s.USR_REG_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "n/a"
                 })
                 .ToListAsync();
+        }
+
+        public async Task<(bool result, List<string>)> HasGroup(int id)
+        {
+            bool result = false;
+
+            var groups = await repo.All<NG_USR>().Where(w => w.USR_ID == id).Select(s => s.NOTIFY_GROUP.NG_DESCRIPTION).ToListAsync();
+
+            if (groups.Count > 0)
+            {
+                result = true;
+            }
+
+            return (result, groups);
+        }
+
+        public async Task<bool> HasPinCode(int id)
+        {
+            bool result = false;
+
+            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
+
+            if (pinCode != null)
+            {
+                result = true;
+            }
+
+            return result;
         }
 
         public async Task<(bool result, bool nameEdit, bool imageEdit)> UpdateUser(UserProfileViewModel model, IFormFile image)

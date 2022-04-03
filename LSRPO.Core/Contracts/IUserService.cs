@@ -13,12 +13,16 @@ namespace LSRPO.Core.Contracts.User
 
         Task<IEnumerable<PinCodesViewModel>> GetPinCodes();
 
-        Task<(bool result, string error)> DeletePinCode(int pinId);
-
-        Task<bool> DeleteUserPin(int id);
-
         Task<ChangePinViewModel> GetPinCode(int id);
 
         Task<(bool result, string error)> ChangePin(ChangePinViewModel model);
+
+        Task<(bool result, string error)> DeletePinCode(int pinId);
+
+        //Task<bool> DeleteUserPin(int id);
+
+        Task<bool> HasPinCode(int id);
+
+        Task<(bool result, List<string>)> HasGroup(int id);
     }
 }

@@ -1,55 +1,31 @@
-﻿<nav class="mt-2">
-    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <!-- Add icons to the links using the .nav-icon class
-             with font-awesome or any other icon font library -->
+﻿@using LSRPO.Core.Constants
 
-        @*<li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        @*<li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="fas fa-user-edit"></i>
             <p>
-            Starter Pages
-            <i class="right fas fa-angle-left"></i>
+            Профил
+            <i class="fas fa-angle-left right"></i>
             </p>
             </a>
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview" style="display: none;">
             <li class="nav-item">
-            <a href="#" class="nav-link active">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Active Page</p>
+            <a href="/" class="nav-link">
+            <i class="nav-icon fas fa-edit"></i>
+            <p>Редактиране</p>
             </a>
             </li>
             <li class="nav-item">
-            <a href="#" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>Inactive Page</p>
+            <a href="/" class="nav-link">
+            <i class="nav-icon fas fa-edit"></i>
+            <p>Парола</p>
             </a>
             </li>
             </ul>
             </li>*@
-
-        @*<li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="fas fa-user-edit"></i>
-                <p>
-                    Профил
-                    <i class="fas fa-angle-left right"></i>
-                </p>
-            </a>
-            <ul class="nav nav-treeview" style="display: none;">
-                <li class="nav-item">
-                    <a href="../forms/general.html" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
-                        <p>Редактиране</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="../forms/advanced.html" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
-                        <p>Парола</p>
-                    </a>
-                </li>
-            </ul>
-        </li>*@
 
         <li class="nav-item">
             <a href="/" class="nav-link">
@@ -60,23 +36,74 @@
             </a>
         </li>
 
-        <li class="nav-item">
-            <a asp-area="" asp-action="NotifyObjectList" asp-controller="NotifyObject" class="nav-link">
-                <i class="fas fa-users"></i>
-                <p>
-                    Обекти за оповестяване
-                </p>
-            </a>
-        </li>
+        @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
+        {
+            <li class="nav-item">
+                <a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="nav-link">
+                    <i class="fas fa-layer-group"></i>
+                    <p>
+                        Групи за оповестяване
+                    </p>
+                </a>
+            </li>
 
-        <li class="nav-item">
-            <a href="/" class="nav-link">
-                <i class="fas fa-layer-group"></i>
-                <p>
-                    Група 20
-                </p>
-            </a>
-        </li>
+            <li class="nav-item">
+                <a asp-area="" asp-action="EditGroupUsers" asp-controller="NotifyGroup" asp-route-id="30" class="nav-link">
+                    <i class="fas fa-layer-group"></i>
+                    <p>
+                        Група 30
+                    </p>
+                </a>
+            </li>
+        }
+
+        else
+        {
+            <li class="nav-item">
+                <a asp-area="" asp-action="NotifyObjectList" asp-controller="NotifyObject" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <p>
+                        Обекти за оповестяване
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a asp-area="" asp-action="EditGroupUsers" asp-controller="NotifyGroup" asp-route-id="20" class="nav-link">
+                    <i class="fas fa-layer-group"></i>
+                    <p>
+                        Група 20
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a asp-area="" asp-action="EditGroupUsers" asp-controller="NotifyGroup" asp-route-id="21" class="nav-link">
+                    <i class="fas fa-layer-group"></i>
+                    <p>
+                        Група 21
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a asp-area="" asp-action="EditGroupUsers" asp-controller="NotifyGroup" asp-route-id="22" class="nav-link">
+                    <i class="fas fa-layer-group"></i>
+                    <p>
+                        Група 22
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a asp-area="" asp-action="EditGroupUsers" asp-controller="NotifyGroup" asp-route-id="23" class="nav-link">
+                    <i class="fas fa-layer-group"></i>
+                    <p>
+                        Група 23
+                    </p>
+                </a>
+            </li>
+        }
 
         <li class="nav-item">
             <a asp-area="" asp-action="ProcessList" asp-controller="NotifyProcess" class="nav-link">

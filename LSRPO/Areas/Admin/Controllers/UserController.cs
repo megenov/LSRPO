@@ -148,27 +148,47 @@ namespace LSRPO.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            bool result = false;
+            var error = string.Empty;
             var user = await userManager.FindByIdAsync(id.ToString());
-            result = await userService.DeleteUserPin(id);
+            //result = await userService.DeleteUserPin(id);
 
-            try
+            var hasPin = await userService.HasPinCode(id);
+            (var hasGroup, var groups) = await userService.HasGroup(id);
+
+            if (hasPin && hasGroup)
             {
-                await userManager.DeleteAsync(user);
-                result = true;
-            }
-            catch (Exception)
-            {
-                result = false;
+                error = $"Потребител {user.USR_FULLNAME} има ПИН код и е свързан към: {string.Join(", ", groups)}";
             }
 
-            if (result)
+            else if (hasPin)
+            {
+                error = $"Потребител {user.USR_FULLNAME} има ПИН код";
+            }
+
+            else if (hasGroup)
+            {
+                error = $"Потребител {user.USR_FULLNAME} е свързан към: {string.Join(", ", groups)}";
+            }
+
+            else
+            {
+                try
+                {
+                    await userManager.DeleteAsync(user);
+                }
+                catch (Exception)
+                {
+                    error = "Възникна грешка!";
+                }
+            }
+
+            if (error == string.Empty)
             {
                 TempData[MessageConstant.SuccessMessage] = "Успешено изтриване!";
             }
             else
             {
-                TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+                TempData[MessageConstant.ErrorMessage] = error;
             }
 
             return RedirectToAction(nameof(ManageUsers));

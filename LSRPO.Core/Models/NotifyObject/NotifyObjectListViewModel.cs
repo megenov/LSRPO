@@ -15,5 +15,7 @@
         public string? Phone4 { get; set; }
 
         public string? TypeDes { get; set; }
+
+        public byte? TypeId { get; set; }
     }
 }

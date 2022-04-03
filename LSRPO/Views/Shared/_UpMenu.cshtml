@@ -23,8 +23,12 @@
             <ul class="dropdown-menu">
                 <li><a asp-area="" asp-action="NotifyObjectList" asp-controller="NotifyObject" class="dropdown-item">Обекти за оповестяване</a></li>
                 <li><a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="dropdown-item">Групи за оповестяване</a></li>
-                <li><a asp-area="" asp-action="ProcessTypeList" asp-controller="NotifyProcess" class="dropdown-item">Тип процеси</a></li>
-                <li><a asp-area="" asp-action="PultsList" asp-controller="NotifyObject" class="dropdown-item">Пултове</a></li>
+
+                @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
+                {
+                    <li><a asp-area="" asp-action="ProcessTypeList" asp-controller="NotifyProcess" class="dropdown-item">Тип процеси</a></li>
+                    <li><a asp-area="" asp-action="PultsList" asp-controller="NotifyObject" class="dropdown-item">Пултове</a></li>
+                }
             </ul>
         </li>
 
