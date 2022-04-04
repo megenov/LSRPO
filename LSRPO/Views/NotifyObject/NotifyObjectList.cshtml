@@ -66,13 +66,17 @@
 
                                                 @if (@notifyObject.TypeId == 2)
                                                 {
-                                                    <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
+                                                    <form asp-area="" asp-action="DeleteObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" method="post">
+                                                        <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
+                                                    </form>
                                                 }
                                                 else
                                                 {
                                                     @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
                                                     {
-                                                        <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
+                                                        <form asp-area="" asp-action="DeleteObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" method="post">
+                                                            <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
+                                                        </form>
                                                     }
                                                     else
                                                     {

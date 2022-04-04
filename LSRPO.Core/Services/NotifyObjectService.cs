@@ -279,6 +279,11 @@ namespace LSRPO.Core.Services
                 .ToListAsync();
         }
 
+        public async Task<IEnumerable<SelectListItem>> GetOperatorTypes()
+        {
+            return await repo.All<NO_TYPE>().Where(w => w.NO_TYPE_ID == 2).Select(s => new SelectListItem() { Text = s.NO_TYPE_DESCRIPTION, Value = s.NO_TYPE_ID.ToString() }).ToListAsync();
+        }
+
         public async Task<EditPultViewModel> GetPultForEdit(int id)
         {
             var pult = await repo.GetByIdAsync<NOT_PULT>(id);

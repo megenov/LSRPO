@@ -24,6 +24,12 @@ namespace LSRPO.Controllers
         public async Task<IActionResult> AddNewObject()
         {
             var types = await notifyObjectService.GetTypes();
+
+            if (!User.IsInRole(UserConstant.Roles.Administrator))
+            {
+                types = await notifyObjectService.GetOperatorTypes();
+            }
+
             ViewBag.Types = types;
 
             return View();

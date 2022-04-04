@@ -9,6 +9,8 @@ namespace LSRPO.Core.Contracts
 
         Task<IEnumerable<SelectListItem>> GetTypes();
 
+        Task<IEnumerable<SelectListItem>> GetOperatorTypes();
+
         Task<(bool result, string error)> AddObject(AddObjectViewModel model);
 
         Task<(EditObjectViewModel notifyObject, IEnumerable<SelectListItem> types)> GetObjectForEdit(int id);
