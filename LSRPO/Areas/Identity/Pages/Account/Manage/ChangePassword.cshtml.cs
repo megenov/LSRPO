@@ -2,18 +2,17 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
 using LSRPO.Core.Constants;
 using LSRPO.Infrastructure.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSRPO.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize(Roles = $"{UserConstant.Roles.Administrator},{UserConstant.Roles.Operator}")]
     public class ChangePasswordModel : PageModel
     {
         private readonly UserManager<AUTH_USER> _userManager;
@@ -112,10 +111,7 @@ namespace LSRPO.Areas.Identity.Pages.Account.Manage
             var changePasswordResult = await _userManager.ChangePasswordAsync(user, Input.OldPassword, Input.NewPassword);
             if (!changePasswordResult.Succeeded)
             {
-                foreach (var error in changePasswordResult.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
+                ModelState.AddModelError(string.Empty, "Невалидна парола");
                 return Page();
             }
 

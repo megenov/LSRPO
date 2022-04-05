@@ -1,11 +1,13 @@
 ﻿using LSRPO.Core.Constants;
 using LSRPO.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace LSRPO.Controllers
 {
-    public class HomeController : BaseController
+    [Authorize]
+    public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -19,11 +21,13 @@ namespace LSRPO.Controllers
             return View();
         }
 
+        [Authorize(Roles = $"{UserConstant.Roles.Administrator},{UserConstant.Roles.Operator}")]
         public IActionResult Privacy()
         {
             return View();
         }
 
+        [Authorize(Roles = $"{UserConstant.Roles.Administrator},{UserConstant.Roles.Operator}")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

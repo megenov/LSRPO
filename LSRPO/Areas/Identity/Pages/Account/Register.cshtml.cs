@@ -73,6 +73,7 @@ namespace LSRPO.Areas.Identity.Pages.Account
             [Required(ErrorMessage = "Полето {0} е задължително")]
             [Display(Name = "Потребителско име")]
             [StringLength(20, ErrorMessage = "Полето {0} трябва да бъде между {2} и {1} символа.", MinimumLength = 4)]
+            [RegularExpression("^[a-zA-Z0-9]*$", ErrorMessage = "Позволени символи: Латински букви и цифри")]
             public string UserName { get; set; }
 
             /// <summary>
@@ -128,10 +129,11 @@ namespace LSRPO.Areas.Identity.Pages.Account
                     TempData[MessageConstant.SuccessMessage] = $"Успешно създаден потребител {Input.USR_FULLNAME}!";
                     return RedirectToAction("EditProfile", "User", new { id = userId, area = "Admin" });
                 }
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
+                //foreach (var error in result.Errors)
+                //{
+                //    ModelState.AddModelError(string.Empty, error.Description);
+                //}
+                ModelState.AddModelError(string.Empty, "Невалиден потребител");
             }
 
             // If we got this far, something failed, redisplay form
