@@ -36,8 +36,8 @@ namespace LSRPO.Areas.Admin.Controllers
             foreach (var item in users)
             {
                 var user = await userManager.FindByIdAsync(item.Id.ToString());
-                IList<string> rolesList = await userManager.GetRolesAsync(user);
-                roles[item.Id] = rolesList.FirstOrDefault();
+                var role = await userManager.GetRolesAsync(user);
+                roles[item.Id] = role.FirstOrDefault();
             }
 
             ViewBag.Roles = roles;
@@ -47,9 +47,11 @@ namespace LSRPO.Areas.Admin.Controllers
 
         public async Task<IActionResult> EditProfile(int id)
         {
-            var user = await userManager.FindByIdAsync(id.ToString());
             var model = await userService.GetUserForProfileEdit(id);
-            ViewBag.Role = userManager.GetRolesAsync(user).Result.FirstOrDefault();
+            var user = await userManager.FindByIdAsync(id.ToString());
+            var role = await userManager.GetRolesAsync(user);
+
+            ViewBag.Role = role.FirstOrDefault();
             ViewBag.RoleItems = roleManager.Roles
                 .ToList()
                 .Select(s => new SelectListItem()

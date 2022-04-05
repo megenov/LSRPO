@@ -18,7 +18,7 @@
 
                     <div class="card-header">
                         <button id="editGroupUsers-submit" type="submit" class="btn btn-success">Запис на потребители</button>
-                        <a asp-area="" asp-action="ClearGroupUsers" asp-controller="NotifyGroup" asp-route-id="@ViewBag.GroupId" class="btn btn-primary">Изчистване на потребители</a>
+                        <a asp-area="" asp-action="ClearGroupUsers" asp-controller="NotifyGroup" asp-route-id="@ViewBag.GroupId" class="btn btn-primary" onclick="return confirm('Потвърждаване изчистването на потребители от @ViewBag.GroupName: ')">Изчистване на потребители</a>
                         <a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="btn btn-warning">Връщане към всички групи</a>
                     </div>
                     <!-- /.card-header -->
