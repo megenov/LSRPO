@@ -114,6 +114,12 @@ namespace LSRPO.Core.Services
                     changes = true;
                 }
 
+                if (notifyGroup.NG_MOD_FLAG != model.Flag)
+                {
+                    notifyGroup.NG_MOD_FLAG = model.Flag;
+                    changes = true;
+                }
+
                 if (changes)
                 {
                     notifyGroup.NG_REG_DATE = DateTime.Now;
@@ -297,7 +303,14 @@ namespace LSRPO.Core.Services
         {
             var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
 
-            return new EditGroupViewModel { GroupId = notifyGroup.NG_ID, Name = notifyGroup.NG_NAME, Description = notifyGroup.NG_DESCRIPTION, Number = notifyGroup.NG_NUMBER };
+            return new EditGroupViewModel
+            {
+                GroupId = notifyGroup.NG_ID,
+                Name = notifyGroup.NG_NAME,
+                Description = notifyGroup.NG_DESCRIPTION,
+                Number = notifyGroup.NG_NUMBER,
+                Flag = notifyGroup.NG_MOD_FLAG != null ? (bool)notifyGroup.NG_MOD_FLAG : false
+            };
         }
 
         public async Task<string> GetGroupName(int id)
@@ -332,6 +345,7 @@ namespace LSRPO.Core.Services
                     GroupId = id,
                     ObjectId = s.NO_ID,
                     ObjectName = s.NO_NAME,
+                    ObjectType = s.NO_TYPE,
                     Phone1 = s.NO_INT_PHONE,
                     Phone2 = s.NP_MOB_PHONE,
                     Phone3 = s.NP_EXT_PHONE2,

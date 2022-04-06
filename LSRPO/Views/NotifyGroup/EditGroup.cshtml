@@ -32,7 +32,18 @@
                             <input asp-for="Number" class="form-control" />
                             <span asp-validation-for="Number" class="text-danger"></span>
                         </div>
-                        
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="icheck-primary">
+                                    <input class="form-check-input" asp-for="Flag" />
+                                    <label asp-for="Flag" class="form-label">
+                                        Права на Оператор за редактиране на Обекти в @Model.Description
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="row">

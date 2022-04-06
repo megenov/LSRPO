@@ -8,6 +8,8 @@
 
         public string? ObjectName { get; set; }
 
+        public byte? ObjectType { get; set; }
+
         public string? Phone1 { get; set; }
 
         public string? Phone2 { get; set; }

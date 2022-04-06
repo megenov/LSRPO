@@ -19,5 +19,7 @@ namespace LSRPO.Core.Models.NotifyGroup
         [StringLength(20, ErrorMessage = "Полето {0} трябва да бъде между {2} и {1} символа.", MinimumLength = 3)]
         [Display(Name = "Номер")]
         public string? Number { get; set; }
+
+        public bool Flag { get; set; }
     }
 }
