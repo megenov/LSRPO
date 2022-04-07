@@ -299,6 +299,13 @@ namespace LSRPO.Core.Services
             return (result, error);
         }
 
+        public async Task<bool?> GetGroupFlag(int id)
+        {
+            var groupFlag = await repo.All<NOTIFY_GROUP>().Where(w => w.NG_ID == id).Select(s => s.NG_MOD_FLAG).FirstOrDefaultAsync();
+
+            return groupFlag;
+        }
+
         public async Task<EditGroupViewModel> GetGroupForEdit(int id)
         {
             var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
@@ -313,7 +320,7 @@ namespace LSRPO.Core.Services
             };
         }
 
-        public async Task<string> GetGroupName(int id)
+        public async Task<string?> GetGroupName(int id)
         {
             var groupName = await repo.All<NOTIFY_GROUP>().Where(w => w.NG_ID == id).Select(s => s.NG_DESCRIPTION).FirstOrDefaultAsync();
 

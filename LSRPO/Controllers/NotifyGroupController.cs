@@ -104,7 +104,13 @@ namespace LSRPO.Controllers
         public async Task<IActionResult> EditGroupObjects(int id)
         {
             var groupName = await notifyGroupService.GetGroupName(id);
+            var groupFlag = await notifyGroupService.GetGroupFlag(id);
             var model = await notifyGroupService.GetObjects(id);
+
+            if (User.IsInRole(UserConstant.Roles.Operator) && (!groupFlag ?? false))
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
 
             ViewBag.GroupId = id;
             ViewBag.GroupName = groupName;
