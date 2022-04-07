@@ -1,6 +1,7 @@
 ﻿using LSRPO.Core.Constants;
 using LSRPO.Core.Contracts;
 using LSRPO.Core.Models.NotifyObject;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LSRPO.Controllers
@@ -61,6 +62,12 @@ namespace LSRPO.Controllers
         public async Task<IActionResult> EditObject(int id)
         {
             (var model, var types) = await notifyObjectService.GetObjectForEdit(id);
+
+            if (User.IsInRole(UserConstant.Roles.Operator) && model.TypeId != 2)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
             ViewBag.Types = types;
 
             return View(model);
@@ -105,6 +112,7 @@ namespace LSRPO.Controllers
             return RedirectToAction(nameof(NotifyObjectList));
         }
 
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> PultsList()
         {
             var pults = await notifyObjectService.GetPults();
@@ -112,12 +120,14 @@ namespace LSRPO.Controllers
             return View(pults);
         }
 
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public IActionResult AddNewPult()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> AddNewPult(AddPultViewModel model)
         {
             if (!ModelState.IsValid)
@@ -139,6 +149,7 @@ namespace LSRPO.Controllers
             return RedirectToAction(nameof(PultsList));
         }
 
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditPult(int id)
         {
             var model = await notifyObjectService.GetPultForEdit(id);
@@ -147,6 +158,7 @@ namespace LSRPO.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditPult(EditPultViewModel model)
         {
             if (!ModelState.IsValid)
@@ -169,6 +181,7 @@ namespace LSRPO.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> DeletePult(int id)
         {
             (bool result, string error) = await notifyObjectService.DeletePult(id);

@@ -1,6 +1,7 @@
 ﻿using LSRPO.Core.Constants;
 using LSRPO.Core.Contracts;
 using LSRPO.Core.Models.NotifyProcess;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LSRPO.Controllers
@@ -14,6 +15,7 @@ namespace LSRPO.Controllers
             this.notifyProcessService = notifyProcessService;
         }
 
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> ProcessTypeList()
         {
             var processTypes = await notifyProcessService.GetProcessTypes();
@@ -21,12 +23,14 @@ namespace LSRPO.Controllers
             return View(processTypes);
         }
 
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public IActionResult AddNewProcessType()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> AddNewProcessType(AddProcessTypeViewModel model)
         {
             if (!ModelState.IsValid)
@@ -48,6 +52,7 @@ namespace LSRPO.Controllers
             return RedirectToAction(nameof(ProcessTypeList));
         }
 
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditProcessType(int id)
         {
             var model = await notifyProcessService.GetProcessTypeForEdit(id);
@@ -56,6 +61,7 @@ namespace LSRPO.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditProcessType(EditProcessTypeViewModel model)
         {
             if (!ModelState.IsValid)
