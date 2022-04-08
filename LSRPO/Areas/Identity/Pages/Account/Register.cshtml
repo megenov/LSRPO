@@ -24,12 +24,22 @@
                         </div>
                     </div>
 
-                    <span asp-validation-for="Input.USR_FULLNAME" class="text-danger"></span>
+                    <span asp-validation-for="Input.UserFullName" class="text-danger"></span>
                     <div class="input-group mb-3">
-                        <input asp-for="Input.USR_FULLNAME" class="form-control" autocomplete="fullname" aria-required="true" placeholder="Име">
+                        <input asp-for="Input.UserFullName" class="form-control" autocomplete="fullname" aria-required="true" placeholder="Име">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user-tie"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span asp-validation-for="Input.UserDescription" class="text-danger"></span>
+                    <div class="input-group mb-3">
+                        <input asp-for="Input.UserDescription" class="form-control" autocomplete="description" placeholder="Описание">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-sticky-note"></span>
                             </div>
                         </div>
                     </div>

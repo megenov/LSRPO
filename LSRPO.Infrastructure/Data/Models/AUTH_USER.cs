@@ -30,6 +30,9 @@ namespace LSRPO.Infrastructure.Data.Models
         public string USR_FULLNAME { get; set; }
 
         [StringLength(200)]
+        public string? USR_DESC { get; set; }
+
+        [StringLength(200)]
         public string? IMAGE_URL { get; set; }
 
         public DateTime? USR_REG_DATE { get; set; }

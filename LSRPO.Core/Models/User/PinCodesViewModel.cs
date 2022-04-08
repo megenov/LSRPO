@@ -10,6 +10,8 @@
 
         public string? FullName { get; set; }
 
+        public string? Description { get; set; }
+
         public string? PinCode { get; set; }
     }
 }

@@ -2,7 +2,6 @@
 using LSRPO.Core.Contracts.User;
 using LSRPO.Core.Models.User;
 using LSRPO.Infrastructure.Data.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -15,20 +14,21 @@ namespace LSRPO.Controllers
         private readonly UserManager<AUTH_USER> userManager;
         private readonly SignInManager<AUTH_USER> signInManager;
         private readonly IUserService userService;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public UserController(RoleManager<AUTH_ROLE> roleManager, UserManager<AUTH_USER> userManager, SignInManager<AUTH_USER> signInManager, IUserService userService)
+        public UserController(RoleManager<AUTH_ROLE> roleManager, UserManager<AUTH_USER> userManager, SignInManager<AUTH_USER> signInManager, IUserService userService, IWebHostEnvironment webHostEnvironment)
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.userService = userService;
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         public async Task<IActionResult> UserProfile()
         {
             var user = await userManager.GetUserAsync(User);
             var model = await userService.GetUserForProfileEdit(user.Id);
-            ViewBag.Role = userManager.GetRolesAsync(user).Result.FirstOrDefault();
 
             return View(model);
         }
@@ -41,38 +41,94 @@ namespace LSRPO.Controllers
                 return View(model);
             }
 
-            (bool result, bool nameEdit, bool imageEdit) = await userService.UpdateUser(model, image);
-
+            var result = true;
             var user = await userManager.GetUserAsync(User);
+            (bool nameEdit, string error) = await userService.UpdateName(model);
 
             if (nameEdit)
             {
                 var newClaim = new Claim(ClaimConstant.FullName, model.FullName);
                 var userClaims = await userManager.GetClaimsAsync(user);
-                var claim = userClaims.First(a => a.Type == ClaimConstant.FullName);
-                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                var claim = userClaims.FirstOrDefault(f => f.Type == ClaimConstant.FullName);
+
+                if (claim != null)
+                {
+                    try
+                    {
+                        await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
+
+                else
+                {
+                    try
+                    {
+                        await userManager.AddClaimAsync(user, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
             }
 
-            if (imageEdit)
+            if (image != null)
             {
+                string detailPath = Path.Combine(@"\img", image.FileName);
+                using (var stream = new FileStream(webHostEnvironment.WebRootPath + detailPath, FileMode.Create))
+                {
+                    await image.CopyToAsync(stream);
+                }
+
+                user.IMAGE_URL = image.FileName;
                 var newClaim = new Claim(ClaimConstant.ImageUrl, image.FileName);
                 var userClaims = await userManager.GetClaimsAsync(user);
-                var claim = userClaims.First(a => a.Type == ClaimConstant.ImageUrl);
-                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                var claim = userClaims.FirstOrDefault(f => f.Type == ClaimConstant.ImageUrl);
+
+                if (claim != null)
+                {
+                    try
+                    {
+                        await userManager.UpdateAsync(user);
+                        await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
+
+                else
+                {
+                    try
+                    {
+                        await userManager.AddClaimAsync(user, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
             }
 
             if (result)
             {
-                //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
                 TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
             }
             else
             {
-                //ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
                 TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
             }
 
-            if (nameEdit || imageEdit)
+            if (nameEdit || image != null)
             {
                 await signInManager.SignInAsync(user, isPersistent: false);
                 return RedirectToAction("Index", "Home");

@@ -3,8 +3,6 @@ using LSRPO.Core.Contracts.User;
 using LSRPO.Core.Models.User;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
@@ -13,15 +11,10 @@ namespace LSRPO.Core.Services.User
     public class UserService : IUserService
     {
         private readonly IApplicatioDbRepository repo;
-        private readonly IWebHostEnvironment webHostEnvironment;
 
-        //private readonly ApplicationDbContext dbContext;
-
-        public UserService(IApplicatioDbRepository repo, IWebHostEnvironment webHostEnvironment) //ApplicationDbContext dbContext
+        public UserService(IApplicatioDbRepository repo)
         {
             this.repo = repo;
-            this.webHostEnvironment = webHostEnvironment;
-            //this.dbContext = dbContext;
         }
 
         public async Task<(bool result, string error)> ChangePin(ChangePinViewModel model)
@@ -30,7 +23,7 @@ namespace LSRPO.Core.Services.User
             string error = "Възникна грешка!";
             NOT_USER_PIN? pinCode = null;
             var existPin = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_PIN == model.PinCode);
-            var user = await repo.All<AUTH_USER>().Where(w => w.Id == model.UserId).Include(i => i.NOT_USER_PIN).FirstOrDefaultAsync(); //.GetByIdAsync<AUTH_USER>(model.UserId);
+            var user = await repo.All<AUTH_USER>().Where(w => w.Id == model.UserId).Include(i => i.NOT_USER_PIN).FirstOrDefaultAsync();
 
             if (user != null)
             {
@@ -92,7 +85,6 @@ namespace LSRPO.Core.Services.User
             var error = string.Empty;
 
             var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
-            //var pinCode2 = await dbContext.NOT_USERS_PIN.FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
 
             if (pinCode == null)
             {
@@ -101,11 +93,6 @@ namespace LSRPO.Core.Services.User
 
             try
             {
-                //dbContext.NOT_USERS_PIN.Remove(pinCode2);
-                //await dbContext.SaveChangesAsync();
-
-                //repo.Delete<NOT_USER_PIN>(pinCode);
-
                 await repo.DeleteAsync<NOT_USER_PIN>(pinId);
                 await repo.SaveChangesAsync();
                 result = true;
@@ -164,6 +151,7 @@ namespace LSRPO.Core.Services.User
                     PinId = s.NOT_USER_PIN.NOT_USR_ID,
                     UserName = s.UserName,
                     FullName = s.USR_FULLNAME,
+                    Description = s.USR_DESC,
                     PinCode = s.NOT_USER_PIN.USR_PIN
                 })
                 .ToListAsync();
@@ -173,19 +161,20 @@ namespace LSRPO.Core.Services.User
         {
             var user = await repo.GetByIdAsync<AUTH_USER>(id);
 
-            return new UserProfileViewModel { Id = user.Id, UserName = user.UserName, FullName = user.USR_FULLNAME, Image = user.IMAGE_URL };
+            return new UserProfileViewModel { Id = user.Id, UserName = user.UserName, FullName = user.USR_FULLNAME, Description = user.USR_DESC, Image = user.IMAGE_URL };
         }
 
         public async Task<IEnumerable<UserListViewModel>> GetUsers()
         {
-            return 
+            return
                 await repo.All<AUTH_USER>()
-                .Select(s => 
-                new UserListViewModel 
-                { 
-                    Id = s.Id, 
-                    UserName = s.UserName, 
-                    FullName = s.USR_FULLNAME, 
+                .Select(s =>
+                new UserListViewModel
+                {
+                    Id = s.Id,
+                    UserName = s.UserName,
+                    FullName = s.USR_FULLNAME,
+                    Description = s.USR_DESC,
                     RegDate = s.USR_REG_DATE != null ? s.USR_REG_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "n/a"
                 })
                 .ToListAsync();
@@ -219,48 +208,47 @@ namespace LSRPO.Core.Services.User
             return result;
         }
 
-        public async Task<(bool result, bool nameEdit, bool imageEdit)> UpdateUser(UserProfileViewModel model, IFormFile image)
+        public async Task<(bool result, string error)> UpdateName(UserProfileViewModel model)
         {
+            bool changes = false;
             bool result = false;
-            bool nameEdit = false;
-            bool imageEdit = false;
+            string error = string.Empty;
             var user = await repo.GetByIdAsync<AUTH_USER>(model.Id);
 
-            if (image != null)
-            {
-                string detailPath = Path.Combine(@"\img", image.FileName);
-                using (var stream = new FileStream(webHostEnvironment.WebRootPath + detailPath, FileMode.Create))
-                {
-                    await image.CopyToAsync(stream);
-                }
-
-                if (user != null)
-                {
-                    if (user.USR_FULLNAME != model.FullName)
-                    {
-                        user.USR_FULLNAME = model.FullName;
-                        nameEdit = true;
-                    }
-
-                    user.IMAGE_URL = image.FileName;
-                    await repo.SaveChangesAsync();
-                    result = true;
-                    imageEdit = true;
-                }
-            }
-
-            else if (user != null)
+            if (user != null)
             {
                 if (user.USR_FULLNAME != model.FullName)
                 {
                     user.USR_FULLNAME = model.FullName;
-                    await repo.SaveChangesAsync();
-                    nameEdit = true;
+                    changes = true;
                 }
-                result = true;
+
+                if (user.USR_DESC != model.Description)
+                {
+                    user.USR_DESC = model.Description;
+                    changes = true;
+                }
+
+                if (changes)
+                {
+                    try
+                    {
+                        await repo.SaveChangesAsync();
+                        result = true;
+                    }
+                    catch (Exception)
+                    {
+                        error = "Неуспешен запис в Базата данни!";
+                    }
+                }
             }
 
-            return (result, nameEdit, imageEdit);
+            else
+            {
+                return (result, "Възникна грешка!");
+            }
+
+            return (result, error);
         }
     }
 }

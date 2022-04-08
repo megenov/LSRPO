@@ -14,6 +14,10 @@ namespace LSRPO.Core.Models.User
         [Display(Name = "Име")]
         public string? FullName { get; set; }
 
+        [StringLength(200, ErrorMessage = "Полето {0} трябва да бъде до {1} символа.")]
+        [Display(Name = "Описание")]
+        public string? Description { get; set; }
+
         [Display(Name = "Снимка")]
         public string? Image { get; set; }
 

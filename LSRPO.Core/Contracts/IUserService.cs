@@ -1,5 +1,4 @@
 ﻿using LSRPO.Core.Models.User;
-using Microsoft.AspNetCore.Http;
 
 namespace LSRPO.Core.Contracts.User
 {
@@ -9,7 +8,7 @@ namespace LSRPO.Core.Contracts.User
 
         Task<UserProfileViewModel> GetUserForProfileEdit(int id);
 
-        Task<(bool result, bool nameEdit, bool imageEdit)> UpdateUser(UserProfileViewModel model, IFormFile image);
+        Task<(bool result, string error)> UpdateName(UserProfileViewModel model);
 
         Task<IEnumerable<PinCodesViewModel>> GetPinCodes();
 

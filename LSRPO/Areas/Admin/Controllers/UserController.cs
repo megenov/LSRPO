@@ -14,12 +14,14 @@ namespace LSRPO.Areas.Admin.Controllers
         private readonly RoleManager<AUTH_ROLE> roleManager;
         private readonly UserManager<AUTH_USER> userManager;
         private readonly IUserService userService;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public UserController(RoleManager<AUTH_ROLE> roleManager, UserManager<AUTH_USER> userManager, IUserService userService)
+        public UserController(RoleManager<AUTH_ROLE> roleManager, UserManager<AUTH_USER> userManager, IUserService userService, IWebHostEnvironment webHostEnvironment)
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
             this.userService = userService;
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
@@ -49,9 +51,7 @@ namespace LSRPO.Areas.Admin.Controllers
         {
             var model = await userService.GetUserForProfileEdit(id);
             var user = await userManager.FindByIdAsync(id.ToString());
-            var role = await userManager.GetRolesAsync(user);
 
-            ViewBag.Role = role.FirstOrDefault();
             ViewBag.RoleItems = roleManager.Roles
                 .ToList()
                 .Select(s => new SelectListItem()
@@ -72,24 +72,82 @@ namespace LSRPO.Areas.Admin.Controllers
                 return View(model);
             }
 
-            (bool result, bool nameEdit, bool imageEdit) = await userService.UpdateUser(model, image);
-
+            var result = true;
             var user = await userManager.FindByIdAsync(model.Id.ToString());
+            (bool nameEdit, string error) = await userService.UpdateName(model);
 
             if (nameEdit)
             {
                 var newClaim = new Claim(ClaimConstant.FullName, model.FullName);
                 var userClaims = await userManager.GetClaimsAsync(user);
-                var claim = userClaims.First(a => a.Type == ClaimConstant.FullName);
-                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                var claim = userClaims.FirstOrDefault(f => f.Type == ClaimConstant.FullName);
+
+                if (claim != null)
+                {
+                    try
+                    {
+                        await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
+
+                else
+                {
+                    try
+                    {
+                        await userManager.AddClaimAsync(user, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
             }
 
-            if (imageEdit)
+            if (image != null)
             {
+                string detailPath = Path.Combine(@"\img", image.FileName);
+                using (var stream = new FileStream(webHostEnvironment.WebRootPath + detailPath, FileMode.Create))
+                {
+                    await image.CopyToAsync(stream);
+                }
+
+                user.IMAGE_URL = image.FileName;
                 var newClaim = new Claim(ClaimConstant.ImageUrl, image.FileName);
                 var userClaims = await userManager.GetClaimsAsync(user);
-                var claim = userClaims.First(a => a.Type == ClaimConstant.ImageUrl);
-                await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                var claim = userClaims.FirstOrDefault(f => f.Type == ClaimConstant.ImageUrl);
+
+                if (claim != null)
+                {
+                    try
+                    {
+                        await userManager.UpdateAsync(user);
+                        await userManager.ReplaceClaimAsync(user, claim, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
+
+                else
+                {
+                    try
+                    {
+                        await userManager.AddClaimAsync(user, newClaim);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
             }
 
             if (model.RoleName != null)
@@ -97,20 +155,39 @@ namespace LSRPO.Areas.Admin.Controllers
                 var userRoles = await userManager.GetRolesAsync(user);
                 if (userRoles.Count > 0)
                 {
-                    await userManager.RemoveFromRolesAsync(user, userRoles);
+                    try
+                    {
+                        await userManager.RemoveFromRolesAsync(user, userRoles);
+                        await userManager.AddToRoleAsync(user, model.RoleName);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
                 }
-                await userManager.AddToRoleAsync(user, model.RoleName);
+
+                else
+                {
+                    try
+                    {
+                        await userManager.AddToRoleAsync(user, model.RoleName);
+                    }
+                    catch (Exception)
+                    {
+                        error = "Възникна грешка!";
+                        result = false;
+                    }
+                }
             }
 
             if (result)
             {
-                //ViewData[MessageConstant.SuccessMessage] = "Успешен запис!";
                 TempData[MessageConstant.SuccessMessage] = "Успешен запис!";
             }
             else
             {
-                //ViewData[MessageConstant.ErrorMessage] = "Възникна грешка!";
-                TempData[MessageConstant.ErrorMessage] = "Възникна грешка!";
+                TempData[MessageConstant.ErrorMessage] = error;
             }
 
             return RedirectToAction(nameof(ManageUsers));

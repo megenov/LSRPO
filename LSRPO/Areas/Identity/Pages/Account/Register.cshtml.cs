@@ -66,15 +66,19 @@ namespace LSRPO.Areas.Identity.Pages.Account
             //public string Email { get; set; }
 
             [Required(ErrorMessage = "Полето {0} е задължително")]
-            [StringLength(100, ErrorMessage = "Полето {0} трябва да бъде между {2} и {1} символа.", MinimumLength = 4)]
-            [Display(Name = "Име")]
-            public string USR_FULLNAME { get; set; }
-
-            [Required(ErrorMessage = "Полето {0} е задължително")]
             [Display(Name = "Потребителско име")]
             [StringLength(20, ErrorMessage = "Полето {0} трябва да бъде между {2} и {1} символа.", MinimumLength = 4)]
             [RegularExpression("^[a-zA-Z0-9]*$", ErrorMessage = "Позволени символи: Латински букви и цифри")]
             public string UserName { get; set; }
+
+            [Required(ErrorMessage = "Полето {0} е задължително")]
+            [StringLength(100, ErrorMessage = "Полето {0} трябва да бъде между {2} и {1} символа.", MinimumLength = 4)]
+            [Display(Name = "Име")]
+            public string UserFullName { get; set; }
+
+            [StringLength(200, ErrorMessage = "Полето {0} трябва да бъде до {1} символа.")]
+            [Display(Name = "Описание")]
+            public string UserDescription { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -109,7 +113,8 @@ namespace LSRPO.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
 
-                user.USR_FULLNAME = Input.USR_FULLNAME;
+                user.USR_FULLNAME = Input.UserFullName;
+                user.USR_DESC = Input.UserDescription;
                 user.USR_REG_DATE = DateTime.Now;
                 user.IMAGE_URL = "user.png";
 
@@ -126,7 +131,7 @@ namespace LSRPO.Areas.Identity.Pages.Account
 
                     var userId = await _userManager.GetUserIdAsync(user);
 
-                    TempData[MessageConstant.SuccessMessage] = $"Успешно създаден потребител {Input.USR_FULLNAME}!";
+                    TempData[MessageConstant.SuccessMessage] = $"Успешно създаден потребител {Input.UserFullName}!";
                     return RedirectToAction("EditProfile", "User", new { id = userId, area = "Admin" });
                 }
                 //foreach (var error in result.Errors)
