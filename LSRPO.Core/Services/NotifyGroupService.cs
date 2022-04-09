@@ -12,12 +12,10 @@ namespace LSRPO.Core.Services
     public class NotifyGroupService : INotifyGroupService
     {
         private readonly IApplicatioDbRepository repo;
-        private readonly UserManager<AUTH_USER> userManager;
 
-        public NotifyGroupService(IApplicatioDbRepository repo, UserManager<AUTH_USER> userManager)
+        public NotifyGroupService(IApplicatioDbRepository repo)
         {
             this.repo = repo;
-            this.userManager = userManager;
         }
 
         public async Task<(bool result, string error)> ClearGroupObjects(int id)
@@ -375,7 +373,7 @@ namespace LSRPO.Core.Services
                     UserId = s.Id,
                     UserName = s.UserName,
                     FullName = s.USR_FULLNAME,
-                    UserRole = userManager.GetRolesAsync(s).Result.FirstOrDefault(),
+                    UserDescription = s.USR_DESC,
                     IsSelected = s.NG_USRS.Where(w => w.NG_ID == id).Any(a => a.USR_ID == s.Id)
                 })
                 .OrderBy(o => o.FullName)

@@ -11,13 +11,15 @@
             <div class="col-12">
 
                 <div class="card">
-
+                    <div class="card-header">
+                        <div class="float-right ml-3" id="buttons"></div>
+                    </div>
+                    <!-- /.card-header -->
                     <div class="card-body">
                         @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="ui celled table display" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th hidden>Hidden</th>
                                     <th>ID</th>
                                     <th>Име на група</th>
                                     <th>Име на лице</th>
@@ -27,15 +29,12 @@
                                     <th>Крайна дата</th>
                                     <th>Флаг</th>
                                     <th>Действие</th>
-                                    @*<th style="width: 205px">Действие</th>*@
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach (var process in Model)
                                 {
                                     <tr>
-
-                                        <td hidden>Hidden</td>
                                         <td>@process.ProcessId</td>
                                         <td>@process.GroupName</td>
                                         <td>@process.UserName</td>
@@ -46,7 +45,7 @@
                                         <td>@process.FlagName</td>
                                         <td>
                                             <div class="btn-group">
-                                                <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info">Детайли</a>
+                                                <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info btn-sm">Детайли</a>
                                             </div>
                                         </td>
 
@@ -79,25 +78,11 @@
     </div>
     <!-- /.container-fluid -->
 </section>
-
 <!-- /.content -->
-<!-- DataTables  & Plugins -->
-<script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
-<script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/jszip/jszip.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 <!-- Page specific script -->
 <script>
-    $(function () {
+    $(document).ready(function () {
       $("#example1").DataTable({
         "responsive": true, "lengthChange": true, "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -107,11 +92,13 @@
         "lengthChange": true,
         "searching": true,
         "ordering": true,
+        "order": [[ 0, "desc" ]],
         "info": true,
         "autoWidth": false,
         "responsive": true,
         "pageLength": 100,
         "lengthMenu": [10, 25, 50, 100, 200, 500, 1000],
-      });
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#buttons');
     });
 </script>

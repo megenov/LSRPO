@@ -14,10 +14,9 @@
 
                     <div class="card-body">
                         @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="ui celled table display" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th hidden>Hidden</th>
                                     <th>Действие</th>
                                     <th>ID</th>
                                     <th>Име на група</th>
@@ -35,20 +34,18 @@
                                 @foreach (var process in Model)
                                 {
                                     <tr>
-
-                                        <td hidden>Hidden</td>
                                         <td>
                                             <div class="btn-group">
 
                                                 @if (@process.FlagId == 0 || @process.FlagId == 3)
                                                 {
                                                     <form asp-area="" asp-action="EndProcess" asp-controller="NotifyProcess" asp-route-id="@process.ProcessId" method="post">
-                                                        <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване прекратяването на процес: @process.ProcessId')">Прекрати</button>
+                                                        <button type="submit" class="btn btn-block btn-danger btn-sm" onclick="return confirm('Потвърждаване прекратяването на процес: @process.ProcessId')">Прекрати</button>
                                                     </form>
                                                 }
                                                 else
                                                 {
-                                                    <button type="button" class="btn btn-block btn-danger disabled">Прекрати</button>
+                                                    <button type="button" class="btn btn-block btn-danger btn-sm disabled">Прекрати</button>
                                                 }
                                             </div>
                                         </td>
@@ -62,7 +59,7 @@
                                         <td>@process.FlagName</td>
                                         <td>
                                             <div class="btn-group">
-                                                <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info">Детайли</a>
+                                                <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info btn-sm">Детайли</a>
                                             </div>
                                         </td>
 
@@ -96,25 +93,11 @@
     </div>
     <!-- /.container-fluid -->
 </section>
-
 <!-- /.content -->
-<!-- DataTables  & Plugins -->
-<script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
-<script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/jszip/jszip.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 <!-- Page specific script -->
 <script>
-    $(function () {
+    $(document).ready(function () {
       $("#example1").DataTable({
         "responsive": true, "lengthChange": true, "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -124,6 +107,7 @@
         "lengthChange": true,
         "searching": true,
         "ordering": true,
+        "order": [[ 1, "desc" ]],
         "info": true,
         "autoWidth": false,
         "responsive": true,

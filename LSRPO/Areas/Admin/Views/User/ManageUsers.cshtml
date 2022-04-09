@@ -15,11 +15,13 @@
                 <div class="card">
                     <div class="card-header">
                         <a asp-area="Identity" asp-action="Register" asp-controller="Account" class="btn btn-primary">Добавяне на нов потребител</a>
+                        <div class="float-right ml-3" id="buttons"></div>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="table table-bordered table-hover">
+                        @*<table id="example2" class="ui selectable celled striped table " style="width:100%">*@
+                        <table id="example2" class="ui celled table display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Потребителско име</th>
@@ -27,7 +29,7 @@
                                     <th>Описание</th>
                                     <th>Роля</th>
                                     <th>Дата на добавяне</th>
-                                    <th style="width: 205px">Действие</th>
+                                    <th style="width:15%">Действие</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,20 +59,20 @@
                                             @if ((user.UserName == "admin") || (User.Identity.Name == user.UserName))
                                             {
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-block btn-warning disabled">Редактиране</button>
+                                                    <button type="button" class="btn btn-block btn-warning btn-sm disabled">Редактиране</button>
                                                 </div>
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-block btn-danger disabled">Изтриване</button>
+                                                    <button type="button" class="btn btn-block btn-danger btn-sm disabled">Изтриване</button>
                                                 </div>
                                             }
                                             else
                                             {
                                                 <div class="btn-group">
-                                                    <a asp-area="admin" asp-action="EditProfile" asp-controller="user" asp-route-id="@user.Id" class="btn btn-warning">Редактиране</a>
+                                                    <a asp-area="admin" asp-action="EditProfile" asp-controller="user" asp-route-id="@user.Id" class="btn btn-warning btn-sm">Редактиране</a>
                                                 </div>
                                                 <div class="btn-group">
                                                     <form asp-area="admin" asp-action="DeleteUser" asp-controller="user" asp-route-id="@user.Id" method="post">
-                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Потвърждаване изтриването на потребител: @user.FullName')">Изтриване</button>
+                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Потвърждаване изтриването на потребител: @user.FullName')">Изтриване</button>
                                                     </form>
                                                 </div>
                                             }
@@ -104,23 +106,9 @@
 </section>
 
 <!-- /.content -->
-<!-- DataTables  & Plugins -->
-<script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
-<script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/jszip/jszip.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
-
 <!-- Page specific script -->
 <script>
-    $(function () {
+    $(document).ready(function () {
       $("#example1").DataTable({
         "responsive": true, "lengthChange": true, "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -134,7 +122,8 @@
         "autoWidth": false,
         "responsive": true,
         "pageLength": 100,
-        "lengthMenu": [10, 25, 50, 100, 200, 500, 1000],
-      });
+        "lengthMenu": [10, 25, 50, 100, 200, 500, 1000, "All"],
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#buttons');
     });
 </script>

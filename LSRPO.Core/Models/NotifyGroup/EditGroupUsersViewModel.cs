@@ -10,7 +10,7 @@
 
         public string? FullName { get; set; }
 
-        public string? UserRole { get; set; }
+        public string? UserDescription { get; set; }
 
         public bool IsSelected { get; set; } = false;
 

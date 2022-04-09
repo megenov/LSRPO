@@ -12,6 +12,7 @@ namespace LSRPO.Core.Models.User
         [Display(Name = "Парола")]
         public string Password { get; set; }
 
+        [Required(ErrorMessage = "Полето {0} е задължително")]
         [DataType(DataType.Password)]
         [Display(Name = "Потвърждаване на паролата")]
         [Compare("Password", ErrorMessage = "Паролите не съвпадат")]

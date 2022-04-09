@@ -14,11 +14,12 @@
                 <div class="card">
                     <div class="card-header">
                         <a asp-area="" asp-action="AddNewObject" asp-controller="NotifyObject" class="btn btn-primary">Добавяне на нов обект</a>
+                        <div class="float-right ml-3" id="buttons"></div>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="example2" class="ui celled table display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Име</th>
@@ -27,7 +28,7 @@
                                     <th>Телефон 3</th>
                                     <th>Телефон 4</th>
                                     <th>Тип</th>
-                                    <th style="width: 205px">Действие</th>
+                                    <th style="width:15%">Действие</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,17 +47,17 @@
 
                                                 @if (@notifyObject.TypeId == 2)
                                                 {
-                                                    <a asp-area="" asp-action="EditObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" class="btn btn-block btn-warning">Редактиране</a>
+                                                    <a asp-area="" asp-action="EditObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" class="btn btn-block btn-warning btn-sm">Редактиране</a>
                                                 }
                                                 else
                                                 {
                                                     @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
                                                     {
-                                                        <a asp-area="" asp-action="EditObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" class="btn btn-block btn-warning">Редактиране</a>
+                                                        <a asp-area="" asp-action="EditObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" class="btn btn-block btn-warning btn-sm">Редактиране</a>
                                                     }
                                                     else
                                                     {
-                                                        <button type="button" class="btn btn-block btn-warning disabled">Редактиране</button>
+                                                        <button type="button" class="btn btn-block btn-warning disabled btn-sm">Редактиране</button>
                                                     }
                                                 }
 
@@ -67,7 +68,7 @@
                                                 @if (@notifyObject.TypeId == 2)
                                                 {
                                                     <form asp-area="" asp-action="DeleteObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" method="post">
-                                                        <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
+                                                        <button type="submit" class="btn btn-block btn-danger btn-sm" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
                                                     </form>
                                                 }
                                                 else
@@ -75,12 +76,12 @@
                                                     @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
                                                     {
                                                         <form asp-area="" asp-action="DeleteObject" asp-controller="NotifyObject" asp-route-id="@notifyObject.Id" method="post">
-                                                            <button type="submit" class="btn btn-block btn-danger" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
+                                                            <button type="submit" class="btn btn-block btn-danger btn-sm" onclick="return confirm('Потвърждаване изтриването на Обект: @notifyObject.Name')">Изтриване</button>
                                                         </form>
                                                     }
                                                     else
                                                     {
-                                                        <button type="button" class="btn btn-block btn-danger disabled">Изтриване</button>
+                                                        <button type="button" class="btn btn-block btn-danger btn-sm disabled">Изтриване</button>
                                                     }
                                                 }
 
@@ -114,25 +115,11 @@
     </div>
     <!-- /.container-fluid -->
 </section>
-
 <!-- /.content -->
-<!-- DataTables  & Plugins -->
-<script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
-<script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/jszip/jszip.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 <!-- Page specific script -->
 <script>
-    $(function () {
+    $(document).ready(function () {
       $("#example1").DataTable({
         "responsive": true, "lengthChange": true, "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -147,6 +134,7 @@
         "responsive": true,
         "pageLength": 100,
         "lengthMenu": [10, 25, 50, 100, 200, 500, 1000],
-      });
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#buttons');
     });
 </script>

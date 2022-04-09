@@ -21,15 +21,17 @@
                             <button id="editGroupObjects-submit" type="submit" class="btn btn-success">Запис на обекти</button>
                             <a asp-area="" asp-action="ClearGroupObjects" asp-controller="NotifyGroup" asp-route-id="@ViewBag.GroupId" class="btn btn-primary" onclick="return confirm('Потвърждаване изчистването на обекти от @ViewBag.GroupName: ')">Изчистване на обекти</a>
                             <a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="btn btn-warning">Връщане към всички групи</a>
+
+                            <div class="float-right ml-3" id="buttons"></div>
                         </div>
                         <!-- /.card-header -->
 
                         <div class="card-body">
                             @*<table id="example1" class="table table-bordered table-striped">*@
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example2" class="ui celled table display" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th style="width: 10px"></th>
+                                        <th style="width:3%"></th>
                                         <th>Име на обект</th>
                                         <th>Телефон 1</th>
                                         <th>Телефон 2</th>
@@ -105,25 +107,11 @@
     </div>
     <!-- /.container-fluid -->
 </section>
-
 <!-- /.content -->
-<!-- DataTables  & Plugins -->
-<script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
-<script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="~/plugins/datatables/jszip/jszip.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
-<script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 <!-- Page specific script -->
 <script>
-    $(function () {
+    $(document).ready(function () {
       $("#example1").DataTable({
         "responsive": true, "lengthChange": true, "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
@@ -137,6 +125,7 @@
         "info": true,
         "autoWidth": false,
         "responsive": true,
-      });
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#buttons');
     });
 </script>

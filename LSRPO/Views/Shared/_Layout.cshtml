@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <link rel="stylesheet" href="~/css/adminlte.min.css">
     <link rel="stylesheet" href="~/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="~/plugins/datatables/datatables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="~/plugins/datatables/datatables/semantic.min.css">
+    @*<link rel="stylesheet" href="~/plugins/datatables/datatables/dataTables.semanticui.min.css">*@
     <link rel="stylesheet" href="~/plugins/datatables/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="~/plugins/datatables/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="~/plugins/datatables/datatables-buttons/css/buttons.bootstrap4.min.css">
@@ -27,9 +30,8 @@
     <div class="wrapper">
 
         <!-- Navbar -->
-            <partial name="_UpMenu" />
+        <partial name="_UpMenu" />
         <!-- /.navbar -->
-
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
@@ -69,7 +71,6 @@
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-
             <!-- Main content -->
             <div class="content">
                 <div class="container-fluid">
@@ -79,7 +80,6 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-
         <!-- Main Footer -->
         <footer class="main-footer">
             <!-- To the right -->
@@ -92,12 +92,27 @@
     </div>
 
     <!-- ./wrapper -->
+
     <!-- REQUIRED SCRIPTS -->
     @*<script src="~/plugins/jquery/jquery.min.js"></script>*@
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/adminlte.min.js"></script>
     <script src="~/plugins/toastr/toastr.min.js"></script>
     <script src="~/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables/jszip/jszip.min.js"></script>
+    <script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
+    <script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
+    <script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
 
     <partial name="_UserMessages" />
     @await RenderSectionAsync("Scripts", required: false)
