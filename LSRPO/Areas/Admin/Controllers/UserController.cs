@@ -49,7 +49,14 @@ namespace LSRPO.Areas.Admin.Controllers
 
         public async Task<IActionResult> EditProfile(int id)
         {
-            var model = await userService.GetUserForProfileEdit(id);
+            (var result, var model) = await userService.GetUserForProfileEdit(id);
+
+            if (!result)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден потребител!";
+                return RedirectToAction(nameof(ManageUsers));
+            }
+
             var user = await userManager.FindByIdAsync(id.ToString());
 
             ViewBag.RoleItems = roleManager.Roles
@@ -282,7 +289,17 @@ namespace LSRPO.Areas.Admin.Controllers
 
         public async Task<IActionResult> ChangePin(int id)
         {
-            var model = await userService.GetPinCode(id); 
+            var model = new ChangePinViewModel();
+
+            try
+            {
+                model = await userService.GetPinCode(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(PinCodes));
+            }
 
             return View(model);
         }

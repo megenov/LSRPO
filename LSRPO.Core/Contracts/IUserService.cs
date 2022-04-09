@@ -6,7 +6,7 @@ namespace LSRPO.Core.Contracts.User
     {
         Task<IEnumerable<UserListViewModel>> GetUsers();
 
-        Task<UserProfileViewModel> GetUserForProfileEdit(int id);
+        Task<(bool, UserProfileViewModel)> GetUserForProfileEdit(int id);
 
         Task<(bool result, string error)> UpdateName(UserProfileViewModel model);
 

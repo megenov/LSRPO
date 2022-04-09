@@ -28,7 +28,13 @@ namespace LSRPO.Controllers
         public async Task<IActionResult> UserProfile()
         {
             var user = await userManager.GetUserAsync(User);
-            var model = await userService.GetUserForProfileEdit(user.Id);
+            (var result, var model) = await userService.GetUserForProfileEdit(user.Id);
+
+            if (!result)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден потребител!";
+                return RedirectToAction("Index", "Home");
+            }
 
             return View(model);
         }

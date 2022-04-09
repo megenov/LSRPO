@@ -84,7 +84,7 @@ namespace LSRPO.Core.Services.User
             bool result = false;
             var error = string.Empty;
 
-            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.NOT_USR_ID == pinId);
+            var pinCode = await repo.GetByIdAsync<NOT_USER_PIN>(pinId);
 
             if (pinCode == null)
             {
@@ -131,8 +131,14 @@ namespace LSRPO.Core.Services.User
 
         public async Task<ChangePinViewModel> GetPinCode(int id)
         {
-            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
             var user = await repo.GetByIdAsync<AUTH_USER>(id);
+
+            if (user == null)
+            {
+                throw new ArgumentException("Невалиден потребител!");
+            }
+
+            var pinCode = await repo.All<NOT_USER_PIN>().FirstOrDefaultAsync(f => f.USR_ID == id);
 
             if (pinCode == null)
             {
@@ -157,11 +163,18 @@ namespace LSRPO.Core.Services.User
                 .ToListAsync();
         }
 
-        public async Task<UserProfileViewModel> GetUserForProfileEdit(int id)
+        public async Task<(bool, UserProfileViewModel)> GetUserForProfileEdit(int id)
         {
+            var model = new UserProfileViewModel();
             var user = await repo.GetByIdAsync<AUTH_USER>(id);
 
-            return new UserProfileViewModel { Id = user.Id, UserName = user.UserName, FullName = user.USR_FULLNAME, Description = user.USR_DESC, Image = user.IMAGE_URL };
+            if (user != null)
+            {
+                model = new UserProfileViewModel { Id = user.Id, UserName = user.UserName, FullName = user.USR_FULLNAME, Description = user.USR_DESC, Image = user.IMAGE_URL };
+                return (true, model);
+            }
+
+            return (false, model);
         }
 
         public async Task<IEnumerable<UserListViewModel>> GetUsers()
