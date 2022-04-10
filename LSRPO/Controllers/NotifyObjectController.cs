@@ -3,6 +3,7 @@ using LSRPO.Core.Contracts;
 using LSRPO.Core.Models.NotifyObject;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LSRPO.Controllers
 {
@@ -61,7 +62,18 @@ namespace LSRPO.Controllers
 
         public async Task<IActionResult> EditObject(int id)
         {
-            (var model, var types) = await notifyObjectService.GetObjectForEdit(id);
+            EditObjectViewModel model = new EditObjectViewModel();
+            IEnumerable<SelectListItem> types = new List<SelectListItem>();
+
+            try
+            {
+                (model, types) = await notifyObjectService.GetObjectForEdit(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyObjectList));
+            }
 
             if (User.IsInRole(UserConstant.Roles.Operator) && model.TypeId != 2)
             {
@@ -152,7 +164,17 @@ namespace LSRPO.Controllers
         [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditPult(int id)
         {
-            var model = await notifyObjectService.GetPultForEdit(id);
+            var model = new EditPultViewModel();
+
+            try
+            {
+                model = await notifyObjectService.GetPultForEdit(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(PultsList));
+            }
 
             return View(model);
         }

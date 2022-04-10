@@ -12,7 +12,7 @@ using System.Collections.Generic;
 
 namespace LSRPO.Test
 {
-    public class Tests
+    public class UserServiceTest
     {
         private ServiceProvider serviceProvider;
         private InMemoryDbContext dbContext;

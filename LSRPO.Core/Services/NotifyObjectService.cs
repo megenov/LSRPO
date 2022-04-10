@@ -21,6 +21,11 @@ namespace LSRPO.Core.Services
             bool result = false;
             string error = "Възникна грешка!";
 
+            if (model == null)
+            {
+                return (result, error);
+            }
+
             var notifyObject = new NOTIFY_OBJECT { NO_NAME = model.Name, NO_INT_PHONE = model.Phone1, NP_MOB_PHONE = model.Phone2, NP_EXT_PHONE2 = model.Phone3, NP_EXT_PHONE1 = model.Phone4, NO_TYPE = model.TypeId };
 
             try
@@ -41,6 +46,11 @@ namespace LSRPO.Core.Services
         {
             bool result = false;
             string error = "Възникна грешка!";
+
+            if (model == null)
+            {
+                return (result, error);
+            }
 
             var pult = new NOT_PULT { PULT_NAME = model.Name, PULT_DESCR = model.Description, PULT_NUMBER = model.Number, PULT_IP = model.Ip };
 
@@ -236,7 +246,7 @@ namespace LSRPO.Core.Services
 
                 else
                 {
-                    error = "Няма направени промени по групата!";
+                    error = "Няма направени промени по пулта!";
                 }
             }
 
@@ -246,6 +256,12 @@ namespace LSRPO.Core.Services
         public async Task<(EditObjectViewModel notifyObject, IEnumerable<SelectListItem> types)> GetObjectForEdit(int id)
         {
             var notifyObject = await repo.GetByIdAsync<NOTIFY_OBJECT>(id);
+
+            if (notifyObject == null)
+            {
+                throw new ArgumentException("Невалиден обект!");
+            }
+
             var types = await repo.All<NO_TYPE>().Select(s => new SelectListItem() { Text = s.NO_TYPE_DESCRIPTION, Value = s.NO_TYPE_ID.ToString(), Selected = s.NO_TYPE_ID == notifyObject.NO_TYPE }).ToListAsync();
 
             return ( 
@@ -287,6 +303,11 @@ namespace LSRPO.Core.Services
         public async Task<EditPultViewModel> GetPultForEdit(int id)
         {
             var pult = await repo.GetByIdAsync<NOT_PULT>(id);
+
+            if (pult == null)
+            {
+                throw new ArgumentException("Невалиден пулт!");
+            }
 
             return new EditPultViewModel { PultId = pult.PULT_ID, Name = pult.PULT_NAME, Description = pult.PULT_DESCR, Number = pult.PULT_NUMBER, Ip = pult.PULT_IP };
         }
