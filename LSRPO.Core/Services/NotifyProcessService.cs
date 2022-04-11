@@ -22,6 +22,11 @@ namespace LSRPO.Core.Services
             bool result = false;
             string error = "Възникна грешка!";
 
+            if (model == null)
+            {
+                return (result, error);
+            }
+
             var processType = new NPR_TYPE { NTP_DESCRIPTION = model.Description };
 
             try
@@ -133,6 +138,11 @@ namespace LSRPO.Core.Services
         public async Task<EditProcessTypeViewModel> GetProcessTypeForEdit(int id)
         {
             var processType = await repo.GetByIdAsync<NPR_TYPE>(id);
+
+            if (processType == null)
+            {
+                throw new ArgumentException("Невалиден тип процес!");
+            }
 
             return new EditProcessTypeViewModel { ProcessTypeId = processType.NTP_ID, Description = processType.NTP_DESCRIPTION };
         }

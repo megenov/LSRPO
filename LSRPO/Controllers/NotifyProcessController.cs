@@ -55,7 +55,17 @@ namespace LSRPO.Controllers
         [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditProcessType(int id)
         {
-            var model = await notifyProcessService.GetProcessTypeForEdit(id);
+            var model = new EditProcessTypeViewModel();
+
+            try
+            {
+                model = await notifyProcessService.GetProcessTypeForEdit(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(ProcessTypeList));
+            }
 
             return View(model);
         }
