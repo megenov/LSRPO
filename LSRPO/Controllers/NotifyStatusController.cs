@@ -1,4 +1,6 @@
-﻿using LSRPO.Core.Contracts;
+﻿using LSRPO.Core.Constants;
+using LSRPO.Core.Contracts;
+using LSRPO.Core.Models.NotifyStatus;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LSRPO.Controllers
@@ -14,7 +16,18 @@ namespace LSRPO.Controllers
 
         public async Task<IActionResult> ProcessDetails(int id)
         {
-            var process = await notifyStatusService.GetProcessDetails(id);
+            IEnumerable<ProcessDetailsViewModel> process = new List<ProcessDetailsViewModel>();
+
+            try
+            {
+                process = await notifyStatusService.GetProcessDetails(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(ProcessListAll));
+            }
+
             ViewBag.ProcessId = id;
 
             return View(process);

@@ -43,6 +43,12 @@ namespace LSRPO.Core.Services
 
         public async Task<IEnumerable<ProcessDetailsViewModel>> GetProcessDetails(int id)
         {
+            var process = await repo.GetByIdAsync<NOT_PROCESS>(id);
+            if (process == null)
+            {
+                throw new ArgumentException("Невалиден процес!");
+            }
+
             var phoneStates = await repo.All<NOT_STATUS_PHONE_STATE>().ToListAsync();
             var finalStates = await repo.All<NOT_STATUS_STATE>().ToListAsync();
             var statusStates = await repo.All<STATUS_STATE>().ToListAsync();
