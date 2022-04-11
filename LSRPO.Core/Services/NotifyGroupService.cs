@@ -308,6 +308,11 @@ namespace LSRPO.Core.Services
         {
             var notifyGroup = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
 
+            if (notifyGroup == null)
+            {
+                throw new ArgumentException("Невалидна група!");
+            }
+
             return new EditGroupViewModel
             {
                 GroupId = notifyGroup.NG_ID,
@@ -320,9 +325,14 @@ namespace LSRPO.Core.Services
 
         public async Task<string?> GetGroupName(int id)
         {
-            var groupName = await repo.All<NOTIFY_GROUP>().Where(w => w.NG_ID == id).Select(s => s.NG_DESCRIPTION).FirstOrDefaultAsync();
+            var group = await repo.GetByIdAsync<NOTIFY_GROUP>(id);
 
-            return groupName;
+            if (group == null)
+            {
+                throw new ArgumentException($"Няма група с Id {id}!");
+            }
+
+            return group.NG_DESCRIPTION;
         }
 
         public async Task<IEnumerable<NotifyGroupListViewModel>> GetGroups()
@@ -361,11 +371,9 @@ namespace LSRPO.Core.Services
                 .ToListAsync();
         }
 
-        public IEnumerable<EditGroupUsersViewModel> GetUsers(int id)
+        public async Task<IEnumerable<EditGroupUsersViewModel>> GetUsers(int id)
         {
-            return repo.All<AUTH_USER>()
-                .Include(i => i.NG_USRS)
-                .ToList()
+            return await repo.All<AUTH_USER>()
                 .Select(s =>
                 new EditGroupUsersViewModel
                 {
@@ -377,7 +385,7 @@ namespace LSRPO.Core.Services
                     IsSelected = s.NG_USRS.Where(w => w.NG_ID == id).Any(a => a.USR_ID == s.Id)
                 })
                 .OrderBy(o => o.FullName)
-                .ToList();
+                .ToListAsync();
         }
     }
 }

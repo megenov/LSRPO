@@ -25,7 +25,17 @@ namespace LSRPO.Controllers
         [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditGroup(int id)
         {
-            var model = await notifyGroupService.GetGroupForEdit(id);
+            var model = new EditGroupViewModel();
+
+            try
+            {
+                model = await notifyGroupService.GetGroupForEdit(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyGroupList));
+            }
 
             return View(model);
         }
@@ -56,8 +66,19 @@ namespace LSRPO.Controllers
         [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> EditGroupUsers(int id)
         {
-            var groupName = await notifyGroupService.GetGroupName(id);
-            var model = notifyGroupService.GetUsers(id);
+            string? groupName = string.Empty;
+
+            try
+            {
+                groupName = await notifyGroupService.GetGroupName(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyGroupList));
+            }
+
+            var model = await notifyGroupService.GetUsers(id);
 
             ViewBag.GroupId = id;
             ViewBag.GroupName = groupName;
@@ -109,6 +130,18 @@ namespace LSRPO.Controllers
 
         public async Task<IActionResult> EditGroupObjects(int id)
         {
+            string? groupName = string.Empty;
+
+            try
+            {
+                groupName = await notifyGroupService.GetGroupName(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyGroupList));
+            }
+
             var groupFlag = await notifyGroupService.GetGroupFlag(id);
 
             if (User.IsInRole(UserConstant.Roles.Operator) && (!groupFlag ?? false))
@@ -116,7 +149,6 @@ namespace LSRPO.Controllers
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
-            var groupName = await notifyGroupService.GetGroupName(id);
             var model = await notifyGroupService.GetObjects(id);
 
             ViewBag.GroupId = id;

@@ -1,15 +1,15 @@
-﻿using LSRPO.Infrastructure.Data.Models;
+﻿using LSRPO.Core.Contracts;
+using LSRPO.Core.Models.NotifyObject;
+using LSRPO.Core.Services;
+using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
-using System.Linq;
-using System.Threading.Tasks;
 using System;
 using System.Collections.Generic;
-using LSRPO.Core.Contracts;
-using LSRPO.Core.Services;
-using LSRPO.Core.Models.NotifyObject;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace LSRPO.Test
 {

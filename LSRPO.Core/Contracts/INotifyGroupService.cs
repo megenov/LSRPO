@@ -20,7 +20,7 @@ namespace LSRPO.Core.Contracts
 
         Task<(bool result, string error)> ClearGroupObjects(int id);
 
-        IEnumerable<EditGroupUsersViewModel> GetUsers(int id);
+        Task<IEnumerable<EditGroupUsersViewModel>> GetUsers(int id);
 
         Task<(bool result, string error)> EditGroupUsers(EditGroupUsersViewModel model);
 
