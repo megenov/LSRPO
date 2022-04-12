@@ -4,6 +4,7 @@ using LSRPO.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LSRPO.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220412135709_GroupsSeed")]
+    partial class GroupsSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -156,7 +158,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasIndex("NO_ID");
 
-                    b.ToTable("NG_NP", (string)null);
+                    b.ToTable("NG_NP");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NG_USR", b =>
@@ -179,7 +181,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasIndex("USR_ID");
 
-                    b.ToTable("NG_USR", (string)null);
+                    b.ToTable("NG_USR");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NO_TYPE", b =>
@@ -193,7 +195,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("NO_TYPE_ID");
 
-                    b.ToTable("NO_TYPES", (string)null);
+                    b.ToTable("NO_TYPES");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_PROCES_STATE", b =>
@@ -207,7 +209,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("ST_ID");
 
-                    b.ToTable("NOT_PROCES_STATES", (string)null);
+                    b.ToTable("NOT_PROCES_STATES");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_PROCESS", b =>
@@ -252,7 +254,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasIndex("NTP_ID");
 
-                    b.ToTable("NOT_PROCESS", (string)null);
+                    b.ToTable("NOT_PROCESS");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_PULT", b =>
@@ -281,7 +283,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("PULT_ID");
 
-                    b.ToTable("NOT_PULTS", (string)null);
+                    b.ToTable("NOT_PULTS");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_STATUS", b =>
@@ -366,7 +368,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasIndex("NPR_ID");
 
-                    b.ToTable("NOT_STATUS", (string)null);
+                    b.ToTable("NOT_STATUS");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_STATUS_PHONE_STATE", b =>
@@ -380,7 +382,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("ST_ID");
 
-                    b.ToTable("NOT_STATUS_PHONE_STATES", (string)null);
+                    b.ToTable("NOT_STATUS_PHONE_STATES");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_STATUS_STATE", b =>
@@ -394,7 +396,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("ST_ID");
 
-                    b.ToTable("NOT_STATUS_STATES", (string)null);
+                    b.ToTable("NOT_STATUS_STATES");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_USER_PIN", b =>
@@ -422,7 +424,7 @@ namespace LSRPO.Infrastructure.Migrations
                         .IsUnique()
                         .HasFilter("[USR_PIN] IS NOT NULL");
 
-                    b.ToTable("NOT_USERS_PIN", (string)null);
+                    b.ToTable("NOT_USERS_PIN");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOTIFY_GROUP", b =>
@@ -454,7 +456,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("NG_ID");
 
-                    b.ToTable("NOTIFY_GROUPS", (string)null);
+                    b.ToTable("NOTIFY_GROUPS");
 
                     b.HasData(
                         new
@@ -817,7 +819,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasIndex("PULT_ID");
 
-                    b.ToTable("NOTIFY_OBJECTS", (string)null);
+                    b.ToTable("NOTIFY_OBJECTS");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NPR_TYPE", b =>
@@ -834,7 +836,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("NTP_ID");
 
-                    b.ToTable("NPR_TYPES", (string)null);
+                    b.ToTable("NPR_TYPES");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.STATUS_STATE", b =>
@@ -848,7 +850,7 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.HasKey("ST_ID");
 
-                    b.ToTable("STATUS_STATES", (string)null);
+                    b.ToTable("STATUS_STATES");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

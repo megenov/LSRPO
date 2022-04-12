@@ -1,4 +1,5 @@
 ﻿using LSRPO.Infrastructure.Data.Models;
+using LSRPO.Infrastructure.InitialSeed;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -45,6 +46,8 @@ namespace LSRPO.Infrastructure.Data
         {
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_PIN).IsUnique();
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_ID).IsUnique();
+
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOTIFY_GROUP>(@"InitialSeed/NOTIFY_GROUPS.json"));
 
             base.OnModelCreating(modelBuilder);
         }
