@@ -16,16 +16,16 @@ namespace LSRPO.Infrastructure.InitialSeed
 
         public void Configure(EntityTypeBuilder<T> builder)
         {
-            System.Text.EncodingProvider ppp = System.Text.CodePagesEncodingProvider.Instance;
-            Encoding.RegisterProvider(ppp);
+            //System.Text.EncodingProvider ppp = System.Text.CodePagesEncodingProvider.Instance;
+            //Encoding.RegisterProvider(ppp);
 
             string? jsonData = GetFromFile();
 
             if (jsonData != null)
             {
-                var utfBytes = Encoding.Convert(Encoding.GetEncoding("ISO-8859-5"), Encoding.UTF8, Encoding.UTF8.GetBytes(jsonData));
-                string encoded = Encoding.UTF8.GetString(utfBytes);
-                List<T> data = JsonConvert.DeserializeObject<List<T>>(encoded);
+                //var utfBytes = Encoding.Convert(Encoding.GetEncoding("ISO-8859-5"), Encoding.UTF8, Encoding.UTF8.GetBytes(jsonData));
+                //string encoded = Encoding.UTF8.GetString(utfBytes);
+                List<T> data = JsonConvert.DeserializeObject<List<T>>(jsonData);
 
                 builder.HasData(data);
             }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LSRPO.Infrastructure.Migrations
 {
-    public partial class InitalMigration : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,6 +31,7 @@ namespace LSRPO.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     USR_FULLNAME = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    USR_DESC = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     IMAGE_URL = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     USR_REG_DATE = table.Column<DateTime>(type: "datetime2", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),

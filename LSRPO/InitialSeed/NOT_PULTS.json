@@ -1,0 +1,79 @@
+[
+  {
+    "PULT_ID": 1,
+    "PULT_NAME": "КП ЦУА",
+    "PULT_DESCR": "КП ЦУА",
+    "PULT_IP": "10.10.0.31",
+    "PULT_NUMBER": "8100"
+  },
+  {
+    "PULT_ID": 2,
+    "PULT_NAME": "КП СТК",
+    "PULT_DESCR": "КП СТК",
+    "PULT_IP": "10.10.0.51",
+    "PULT_NUMBER": "8101"
+  },
+  {
+    "PULT_ID": 3,
+    "PULT_NAME": "КП БЩУ 5",
+    "PULT_DESCR": "КП БЩУ 5",
+    "PULT_IP": "172.16.1.250",
+    "PULT_NUMBER": "8102"
+  },
+  {
+    "PULT_ID": 4,
+    "PULT_NAME": "КП ГД АЕЦ",
+    "PULT_DESCR": "КП ГД АЕЦ",
+    "PULT_IP": "10.10.0.81",
+    "PULT_NUMBER": "8103"
+  },
+  {
+    "PULT_ID": 5,
+    "PULT_NAME": "КП БЩУ 6",
+    "PULT_DESCR": "КП БЩУ 6",
+    "PULT_IP": "172.16.1.251",
+    "PULT_NUMBER": "8104"
+  },
+  {
+    "PULT_ID": 6,
+    "PULT_NAME": "КП СИМУЛАТОР",
+    "PULT_DESCR": "КП СИМУЛАТОР",
+    "PULT_IP": "10.10.0.251",
+    "PULT_NUMBER": "8105"
+  },
+  {
+    "PULT_ID": 7,
+    "PULT_NAME": "PRIZM",
+    "PULT_DESCR": "PRIZM",
+    "PULT_IP": "10.10.0.6",
+    "PULT_NUMBER": "1111"
+  },
+  {
+    "PULT_ID": 8,
+    "PULT_NAME": "КП СТК Тест",
+    "PULT_DESCR": "КП СТК Тест",
+    "PULT_IP": "172.31.98.196",
+    "PULT_NUMBER": "8106"
+  },
+  {
+    "PULT_ID": 9,
+    "PULT_NAME": "КП МИЗИЯ",
+    "PULT_DESCR": "КП Мизия",
+    "PULT_IP": "10.10.1.108",
+    "PULT_NUMBER": "8053"
+  },
+  {
+    "PULT_ID": 10,
+    "PULT_NAME": "КП КОЗЛОДУЙ",
+    "PULT_DESCR": "КП Козлодуй",
+    "PULT_IP": "10.10.1.109",
+    "PULT_NUMBER": "8054"
+  },
+  {
+    "PULT_ID": 11,
+    "PULT_NAME": "КП НЦУА",
+    "PULT_DESCR": "КП НЦУА",
+    "PULT_IP": "10.10.0.53",
+    "PULT_NUMBER": "8107"
+  }
+]

@@ -1,0 +1,3962 @@
+[
+  {
+    "NO_ID": 1,
+    "NO_NAME": "СТОЛОВА - ЕП 1",
+    "NO_INT_PHONE": "8001",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 2,
+    "NO_NAME": "СБК 2",
+    "NO_INT_PHONE": "8002",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 3,
+    "NO_NAME": "ИНВЕСТИЦИИ 3",
+    "NO_INT_PHONE": "8003",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 4,
+    "NO_NAME": "КПП3",
+    "NO_INT_PHONE": "8004",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 5,
+    "NO_NAME": "ОРУ",
+    "NO_INT_PHONE": "8005",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 6,
+    "NO_NAME": "ЦПС3",
+    "NO_INT_PHONE": "8006",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 7,
+    "NO_NAME": "Сграда РОС",
+    "NO_INT_PHONE": "8007",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 8,
+    "NO_NAME": "ЦАС",
+    "NO_INT_PHONE": "8008",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 9,
+    "NO_NAME": "ЦЕХ РАО",
+    "NO_INT_PHONE": "8009",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 10,
+    "NO_NAME": "БПС",
+    "NO_INT_PHONE": "8010",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 11,
+    "NO_NAME": "КПП ХЪРЛЕЦ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 12,
+    "NO_NAME": "с. ХЪРЛЕЦ",
+    "NO_INT_PHONE": "8012",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 13,
+    "NO_NAME": "гр. МИЗИЯ",
+    "NO_INT_PHONE": "8013",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 14,
+    "NO_NAME": "с. СОФРОНИЕВО",
+    "NO_INT_PHONE": "8014",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 15,
+    "NO_NAME": "с.БУТАН",
+    "NO_INT_PHONE": "8015",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 16,
+    "NO_NAME": "КУЛА БТК",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 17,
+    "NO_NAME": "с. ВОЙВОДОВО",
+    "NO_INT_PHONE": "8017",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 18,
+    "NO_NAME": "с.ГЛОЖЕНЕ",
+    "NO_INT_PHONE": "8018",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 19,
+    "NO_NAME": "с. САРАЕВО",
+    "NO_INT_PHONE": "8019",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 20,
+    "NO_NAME": "ОБЩЕЖИТИЕ АЕЦ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 21,
+    "NO_NAME": "КМЕТСТВО ГР.КОЗЛОДУЙ",
+    "NO_INT_PHONE": "8021",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 22,
+    "NO_NAME": "у-ще В. ЛЕВСКИ",
+    "NO_INT_PHONE": "8022",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 23,
+    "NO_NAME": "у-ще ХР. БОТЕВ",
+    "NO_INT_PHONE": "8023",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 24,
+    "NO_NAME": "ПГЯЕ",
+    "NO_INT_PHONE": "8024",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 25,
+    "NO_NAME": "ЦУА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 26,
+    "NO_NAME": "Симулатор",
+    "NO_INT_PHONE": "8041",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 27,
+    "NO_NAME": "Оператор СТК",
+    "NO_INT_PHONE": "2110",
+    "NP_MOB_PHONE": "6207",
+    "NP_EXT_PHONE1": "4461",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 28,
+    "NO_NAME": "РАДИОУРЕДБА",
+    "NO_INT_PHONE": "8061",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 29,
+    "NO_NAME": "КП БЩУ 5",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 30,
+    "NO_NAME": "КП ГДАЕЦ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 31,
+    "NO_NAME": "АНТОН НАЙДЕНОВ АНТОВ",
+    "NO_INT_PHONE": "00898602524",
+    "NP_MOB_PHONE": "00879148126",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2335",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 32,
+    "NO_NAME": "ВЛАДИМИР ИЛИЕВ ДИМОВ",
+    "NO_INT_PHONE": "00888099299",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3151",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 33,
+    "NO_NAME": "СТАНИСЛАВ ДИМОВ ХРИСТАКИЕВ",
+    "NO_INT_PHONE": "00893574037",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6549",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 34,
+    "NO_NAME": "МАРИНА СЕРГЕЕВНА ХАДЖИЕВА",
+    "NO_INT_PHONE": "00886400606",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2045",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 35,
+    "NO_NAME": "ВАЛЕНТИН ЦВЕТАНОВ ПАНЬОВСКИ",
+    "NO_INT_PHONE": "00887805845",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3664",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 36,
+    "NO_NAME": "НИКОЛАЙ ГЕОРГИЕВ ПЕНЕВ",
+    "NO_INT_PHONE": "00889366881",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6412",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 37,
+    "NO_NAME": "ЖИВКА ПЕТРОВА КОЖУХАРОВА",
+    "NO_INT_PHONE": "00885046435",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3915",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 38,
+    "NO_NAME": "АНТОАНЕТА ВАЛЕНТИНОВА КЯТИНА",
+    "NO_INT_PHONE": "00879890711",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2623",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 39,
+    "NO_NAME": "ДИАНА ЕНЧЕВА ЕДРЕВА",
+    "NO_INT_PHONE": "00888692211",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3759",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 40,
+    "NO_NAME": "ВАЛЕРИ МОНОВ ПЕТРОВ",
+    "NO_INT_PHONE": "00888453055",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3800",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 41,
+    "NO_NAME": "ЕМИЛИЯН ГЕОРГИЕВ ЕДРЕВ",
+    "NO_INT_PHONE": "00888906258",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6263",
+    "NP_EXT_PHONE2": "2763",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 42,
+    "NO_NAME": "РОСЕН АСЕНОВ КАЗАКОВ",
+    "NO_INT_PHONE": "00877566608",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2741",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 43,
+    "NO_NAME": "ИВАН ДОШЕВ КАРААБОВ",
+    "NO_INT_PHONE": "00888945210",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3058",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 44,
+    "NO_NAME": "МАРИЯ ИГОРЕВНА ВЕЛИЧКОВА",
+    "NO_INT_PHONE": "00888907571",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6137",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 45,
+    "NO_NAME": "ВАЛЕНТИНА КОЛЕВА СТАНЧЕВА",
+    "NO_INT_PHONE": "00888991362",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3607",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 46,
+    "NO_NAME": "ВАЛЕНТИН ТОШКОВ ВЛАДИНОВ",
+    "NO_INT_PHONE": "00878203811",
+    "NP_MOB_PHONE": "00888203810",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3850",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 47,
+    "NO_NAME": "РУСИЯН ХЕРНАНИ ЦИБРАНСКИ",
+    "NO_INT_PHONE": "00888429133",
+    "NP_MOB_PHONE": "00878201076",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2796",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 48,
+    "NO_NAME": "ЦВЕТАНКА ДИМИТРОВА КАПКОВА",
+    "NO_INT_PHONE": "00877660912",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2198",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 49,
+    "NO_NAME": "КРАСИМИР МИТКОВ КАМЕНОВ",
+    "NO_INT_PHONE": "00897698897",
+    "NP_MOB_PHONE": "00878591131",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3775",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 50,
+    "NO_NAME": "КАЛИН АЛЕКСАНДРОВ СТОЯНОВ",
+    "NO_INT_PHONE": "00885112599",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3630",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 51,
+    "NO_NAME": "МИЛЕНА ЙОРДАНОВА НОВАК",
+    "NO_INT_PHONE": "00889521241",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6452",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 52,
+    "NO_NAME": "КРАСИМИР БОРИСОВ ВЕЛИЧКОВ",
+    "NO_INT_PHONE": "00879503101",
+    "NP_MOB_PHONE": "00899003962",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4224",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 53,
+    "NO_NAME": "РУМЕН ЦВЕТАНОВ ЦОНЕВ",
+    "NO_INT_PHONE": "00879979668",
+    "NP_MOB_PHONE": "00888461727",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2517",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 54,
+    "NO_NAME": "ЗДРАВКО ВАСИЛЕВ ЦВЕТАНОВ",
+    "NO_INT_PHONE": "00888766419",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6233",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 55,
+    "NO_NAME": "МИРОСЛАВ БОЖИДАРОВ БУКОЕВ",
+    "NO_INT_PHONE": "00879503105",
+    "NP_MOB_PHONE": "00887799069",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3895",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 56,
+    "NO_NAME": "ГАЛИН МАРИНОВ ПРОДАНОВ",
+    "NO_INT_PHONE": "00889808380",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2741",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 57,
+    "NO_NAME": "ЕМИЛИЯ АНГЕЛОВА ДОНЧЕВА",
+    "NO_INT_PHONE": "00888829896",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6548",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 58,
+    "NO_NAME": "ДАНИЕЛА ГЕОРГИЕВА ЦВЕТАНОВА",
+    "NO_INT_PHONE": "00888616787",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6643",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 59,
+    "NO_NAME": "МИРОСЛАВ АНГЕЛОВ КАШЕВ",
+    "NO_INT_PHONE": "00887957359",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3935",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 60,
+    "NO_NAME": "ЕВГЕНИ МИЛАНОВ ДОНЧЕВ",
+    "NO_INT_PHONE": "00887409601",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6884",
+    "NP_EXT_PHONE2": "3261",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 61,
+    "NO_NAME": "ГЕОРГИ ДИМИТРОВ МИХАЙЛОВ",
+    "NO_INT_PHONE": "00899938492",
+    "NP_MOB_PHONE": "00889500402",
+    "NP_EXT_PHONE1": "6075",
+    "NP_EXT_PHONE2": "3175",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 62,
+    "NO_NAME": "ИВО ВЕЛИЧКОВ НАЕВ",
+    "NO_INT_PHONE": "00887739927",
+    "NP_MOB_PHONE": "00889500386",
+    "NP_EXT_PHONE1": "6617",
+    "NP_EXT_PHONE2": "2557",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 63,
+    "NO_NAME": "РОСЛАВА СВИЛЕНОВА ТОНЧЕВА",
+    "NO_INT_PHONE": "00885741737",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4176",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 64,
+    "NO_NAME": "ВЕСЕЛИН ЙОРДАНОВ АНГЕЛОВ",
+    "NO_INT_PHONE": "00879503102",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2517",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 65,
+    "NO_NAME": "АСЕН ГЕОРГИЕВ АЛЕКСАНДРОВ",
+    "NO_INT_PHONE": "00888314376",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3535",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 66,
+    "NO_NAME": "ЛЮБОМИР АЛЕКСАНДРОВ ПОПОВ",
+    "NO_INT_PHONE": "00899126522",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2198",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 67,
+    "NO_NAME": "АЛЕКСАНДЪР ДИМИТРОВ ЗЛАТАНОВ",
+    "NO_INT_PHONE": "00878203040",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3500",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 68,
+    "NO_NAME": "ИРЕНА КРУМОВА ХРИСТОВА",
+    "NO_INT_PHONE": "00887835850",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2198",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 69,
+    "NO_NAME": "ВИОЛИНА ВАЛЕНТИНОВА СЕМКОВА-ПЕШУНОВА",
+    "NO_INT_PHONE": "00886445984",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6443",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 70,
+    "NO_NAME": "ПЕТЯ СВЕТОЗАРОВА ДИМИТРОВА",
+    "NO_INT_PHONE": "00886684645",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2198",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 71,
+    "NO_NAME": "МИРОСЛАВА ПЕТРОВА РУСИНОВА",
+    "NO_INT_PHONE": "00884143567",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3278",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 72,
+    "NO_NAME": "ЕНЬО ВАСИЛЕВ БРАТОВАНОВ",
+    "NO_INT_PHONE": "00888199168",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6143",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 73,
+    "NO_NAME": "ДИЛЯНА ПАВЛОВА ЗВЕЗДАРСКА",
+    "NO_INT_PHONE": "00878833323",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2091",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 74,
+    "NO_NAME": "МАЯ БЛАГОЕВА ГЕОРГИЕВА",
+    "NO_INT_PHONE": "00888128495",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2091",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 75,
+    "NO_NAME": "АСПАРУХ ИВАНОВ ПЪРВАНОВ",
+    "NO_INT_PHONE": "00887097808",
+    "NP_MOB_PHONE": "00879911646",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3786",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 76,
+    "NO_NAME": "НИКОЛАЙ ПЕТРОВ БОНОВ",
+    "NO_INT_PHONE": "00888622227",
+    "NP_MOB_PHONE": "00888141400",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6277",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 77,
+    "NO_NAME": "ЗДРАВКО ЕНЧЕВ ЯНКОВ",
+    "NO_INT_PHONE": "00893003533",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3019",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 78,
+    "NO_NAME": "ПЕТЪР ДИМИТРОВ МИТОВ",
+    "NO_INT_PHONE": "00888145115",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2866",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 79,
+    "NO_NAME": "НИКОЛА ВИЛИЕВ ХРИСТОВ",
+    "NO_INT_PHONE": "00879121674",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3333",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 80,
+    "NO_NAME": "МАРИЯ ПЕКОВА СТОЙЧЕВА",
+    "NO_INT_PHONE": "00888315516",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2273",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 81,
+    "NO_NAME": "ГЕОРГИ АТАНАСОВ ДРАГАНОВ",
+    "NO_INT_PHONE": "00886193720",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2741",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 82,
+    "NO_NAME": "ЕЛИЦА ЛЮБЕНОВА ЕВГЕНИЕВА",
+    "NO_INT_PHONE": "00879503111",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3636",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 83,
+    "NO_NAME": "АЛЕКСАНДЪР НИКОЛАЕВ РУПЧАНСКИ",
+    "NO_INT_PHONE": "00879486451",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2091",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 84,
+    "NO_NAME": "КАТЯ  ВАЛЕНТИНОВА  ТОНЧЕВА",
+    "NO_INT_PHONE": "00885670726",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2485",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 85,
+    "NO_NAME": "АЛЕКСАНДЪР ДИМИТРОВ ТОМОВ",
+    "NO_INT_PHONE": "00887330889",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3385",
+    "NP_EXT_PHONE2": "2550",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 86,
+    "NO_NAME": "НИКОЛАЙ ВАСИЛЕВ ИВАНОВ",
+    "NO_INT_PHONE": "00898334993",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3385",
+    "NP_EXT_PHONE2": "2550",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 87,
+    "NO_NAME": "АЛЕКСАНДЪР НИКОЛОВ",
+    "NO_INT_PHONE": "00879996699",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6333",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 88,
+    "NO_NAME": "АНЕЛИ МИТКОВ ЦОЛОВ",
+    "NO_INT_PHONE": "00878940955",
+    "NP_MOB_PHONE": "00877355938",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6223",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 89,
+    "NO_NAME": "МИГЛЕНА ЦВЕТАНОВА ИВАНОВА",
+    "NO_INT_PHONE": "00887578778",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2061",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 90,
+    "NO_NAME": "КАТЯ ВАЛЕНТИНОВА ТОНЧЕВА - СД",
+    "NO_INT_PHONE": "00885670726",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2485",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 91,
+    "NO_NAME": "ЕМИЛИЯ  ВАСИЛЕВА ВЛАДИМИРОВА - СД",
+    "NO_INT_PHONE": "00889990041",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3390",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 92,
+    "NO_NAME": "ТАТЯНА МИХАЙЛОВНА МАНЕВА - СД",
+    "NO_INT_PHONE": "00899860573",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3499",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 93,
+    "NO_NAME": "АННА СТОЯНОВА ЙОРДАНОВА - СД",
+    "NO_INT_PHONE": "00888863004",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "085010",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 94,
+    "NO_NAME": "НАДЯ ПЕТРОВА АНГЕЛОВА - СД",
+    "NO_INT_PHONE": "00889363889",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3095",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 95,
+    "NO_NAME": "ВЕНИСЛАВА ИВАНОВА ВАСИЛЕВА - СД",
+    "NO_INT_PHONE": "00887116370",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2052",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 96,
+    "NO_NAME": "ПЕТЯ БОРИСОВА ЦЕКОВА - СД",
+    "NO_INT_PHONE": "00888388890",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2008",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 97,
+    "NO_NAME": "ГЕОРГИ БЛАГОЕВ ГЕОРГИЕВ",
+    "NO_INT_PHONE": "00885367131",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3034",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 98,
+    "NO_NAME": "МЕЛИНА ТОНИЕВА ТОМОВА",
+    "NO_INT_PHONE": "00877443001",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3278",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 99,
+    "NO_NAME": "ГРЕТА РУСИНОВА НЕДЕЛЧЕВА",
+    "NO_INT_PHONE": "00886312403",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3278",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 100,
+    "NO_NAME": "БИСЕР ЙОРДАНОВ ТОДОРОВ",
+    "NO_INT_PHONE": "00898858800",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4277",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 101,
+    "NO_NAME": "МАРГАРИТА КАЧОВА КАМЕНОВА",
+    "NO_INT_PHONE": "00888797467",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3534",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 102,
+    "NO_NAME": "ВАЛЕНТИНА ЦВЕТАНОВА ЛАЗАРОВА",
+    "NO_INT_PHONE": "00887714464",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3537",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 103,
+    "NO_NAME": "КРАСИМИРА ТОДОРОВА КУЗМАНОВА",
+    "NO_INT_PHONE": "00878202366",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4265",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 104,
+    "NO_NAME": "РУМЕН ДИМИТРОВ ХРИСТОВ",
+    "NO_INT_PHONE": "00888012119",
+    "NP_MOB_PHONE": "00879979660",
+    "NP_EXT_PHONE1": "6959",
+    "NP_EXT_PHONE2": "3367",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 105,
+    "NO_NAME": "СТЕФКА ГЕОРГИЕВА ВАКЛИНОВА",
+    "NO_INT_PHONE": "00888822933",
+    "NP_MOB_PHONE": "00889500372",
+    "NP_EXT_PHONE1": "6903",
+    "NP_EXT_PHONE2": "3170",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 106,
+    "NO_NAME": "МИХАИЛ ГЕННАДИЕВИЧ АБРАМОВ",
+    "NO_INT_PHONE": "00884323423",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3471",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 107,
+    "NO_NAME": "ЯСЕН САВЕВ БОНЕВ",
+    "NO_INT_PHONE": "00885040374",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3208",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 108,
+    "NO_NAME": "ПЕТЪР ДРАГАНОВ ДЖОРОВ",
+    "NO_INT_PHONE": "00899551134",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3427",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 109,
+    "NO_NAME": "СТОЯН ЛЮБОМИРОВ КРЪСТЕВ",
+    "NO_INT_PHONE": "00886144221",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2677",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 110,
+    "NO_NAME": "ИЛИН ТОДОРОВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00878232475",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2860",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 111,
+    "NO_NAME": "ЗОЯ ХРИСТОВА ИВАНОВА",
+    "NO_INT_PHONE": "00878823728",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3441",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 112,
+    "NO_NAME": "БОРИСЛАВ КИРИЛОВ БОГОЕВ",
+    "NO_INT_PHONE": "00885512291",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3396",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 113,
+    "NO_NAME": "ДАНИЕЛ СТЕФАНОВ ХРИСТОВ",
+    "NO_INT_PHONE": "00886560869",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3033",
+    "NP_EXT_PHONE2": "3275",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 114,
+    "NO_NAME": "ДАНИЕЛА ПЕНЧЕВА КАЛЧЕВА - СД",
+    "NO_INT_PHONE": "00899137319",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2043",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 115,
+    "NO_NAME": "ГЕРГАНА РОМАНОВА ГЕОРГИЕВА",
+    "NO_INT_PHONE": "00896039903",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4016",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 116,
+    "NO_NAME": "ПЕТЯ ИВАНОВА БАШЛИЕВА",
+    "NO_INT_PHONE": "00889287480",
+    "NP_MOB_PHONE": "00879845446",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4034",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 117,
+    "NO_NAME": "КП СТК",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 118,
+    "NO_NAME": "КП БЩУ 6",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 119,
+    "NO_NAME": "КП ЦУА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 120,
+    "NO_NAME": "ЦВЕТОМИР ХРИСТОВ ГАНЧЕВ",
+    "NO_INT_PHONE": "00888232636",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6040",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 121,
+    "NO_NAME": "ИВАЙЛО ЗВЕЗДОМИРОВ ПЕТКОВ",
+    "NO_INT_PHONE": "00878682250",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3625",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 122,
+    "NO_NAME": "МИРОСЛАВ ТОШКОВ САРАЧИНОВ",
+    "NO_INT_PHONE": "00889505056",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4552",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 123,
+    "NO_NAME": "ИВАЙЛО ВЕЛИЧКОВ БУКОЕВ",
+    "NO_INT_PHONE": "00888767042",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4138",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 124,
+    "NO_NAME": "АНТОАНЕТА ТОДОРОВА МАНОВА",
+    "NO_INT_PHONE": "00879690288",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4118",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 125,
+    "NO_NAME": "ЛОРА ХРИСТОВА ГЕОРГИЕВА - СД",
+    "NO_INT_PHONE": "00885001420",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4017",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 126,
+    "NO_NAME": "АНТОАНЕТА ТОДОРОВА МАНОВА - СД",
+    "NO_INT_PHONE": "00879690288",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4118",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 127,
+    "NO_NAME": "ВЕРА ГЕОРГИЕВА МАРИНОВА - СД",
+    "NO_INT_PHONE": "00886520030",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3365",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 128,
+    "NO_NAME": "ДАНИЕЛА ПЕТРОВА ГЕНЧЕВА - СД",
+    "NO_INT_PHONE": "00885459310",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3479",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 129,
+    "NO_NAME": "ПЕТКО БОРИСОВ АНГЕЛОВ",
+    "NO_INT_PHONE": "00888210400",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3256",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 130,
+    "NO_NAME": "ДАРИН СИМЕОНОВ СТОЕВ",
+    "NO_INT_PHONE": "00888662560",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4218",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 131,
+    "NO_NAME": "МАРГАРИТА ГЕОРГИЕВА ГЕРГОВА",
+    "NO_INT_PHONE": "00877190471",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3278",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 132,
+    "NO_NAME": "КРАСЕН ПЕТКОВ РАШКОВ",
+    "NO_INT_PHONE": "00888407409",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2050",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 133,
+    "NO_NAME": "ДИНЧО РУМЕНОВ СТЕФАНОВ",
+    "NO_INT_PHONE": "00885252896",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4217",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 134,
+    "NO_NAME": "ЛЮБЕН ЦВЕТАНОВ ТАШЕВ",
+    "NO_INT_PHONE": "00888288860",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3108",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 135,
+    "NO_NAME": "КП СИМУЛАТОР",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 136,
+    "NO_NAME": "ЕМИЛ МАРИНОВ СТЕФАНОВ",
+    "NO_INT_PHONE": "00888213061",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6196",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 137,
+    "NO_NAME": "ВАЛЕРИ СЛАВЧЕВ МИЛОШЕВ",
+    "NO_INT_PHONE": "00889717231",
+    "NP_MOB_PHONE": "00886113758",
+    "NP_EXT_PHONE1": "6677",
+    "NP_EXT_PHONE2": "6676",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 138,
+    "NO_NAME": "ИВАН ВАЛЕНТИНОВ ИВАНОВ",
+    "NO_INT_PHONE": "00886910263",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3909",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 139,
+    "NO_NAME": "ОГНЯН ДИМИТРОВ КАМЕНОВ",
+    "NO_INT_PHONE": "00888799197",
+    "NP_MOB_PHONE": "00878555442",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2581",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 140,
+    "NO_NAME": "СТАНИСЛАВ ПЕТЕВ ЛАЗАРОВ",
+    "NO_INT_PHONE": "00888986200",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "5746",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 141,
+    "NO_NAME": "ИВАЙЛО ТРАЯНОВ НИНОВ",
+    "NO_INT_PHONE": "00899679036",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3639",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 142,
+    "NO_NAME": "МИРОСЛАВ НИКОЛАЕВ РУПЧАНСКИ",
+    "NO_INT_PHONE": "00879698852",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "5760",
+    "NP_EXT_PHONE2": "5758",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 143,
+    "NO_NAME": "КИРИЛ ЦВЕТАНОВ МАРИНОВ",
+    "NO_INT_PHONE": "00887402894",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2147",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 144,
+    "NO_NAME": "ЕМИЛ ВАСИЛЕВ ГЕОРГИЕВ",
+    "NO_INT_PHONE": "00886089871",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4552",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 145,
+    "NO_NAME": "АНГЕЛ ПЕТРОВ ЯНЧЕВ",
+    "NO_INT_PHONE": "00886838687",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3612",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 146,
+    "NO_NAME": "ДИМИТРИНКА РОЗЕНОВА КАРАПЕТКОВА",
+    "NO_INT_PHONE": "00878963540",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2273",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 147,
+    "NO_NAME": "АЛЕКСАНДЪР ВАЛЕНТИНОВ СТОЙКОВ",
+    "NO_INT_PHONE": "00888061525",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3938",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 148,
+    "NO_NAME": "КРЪСТЬО ИВАНОВ МАРИНОВ",
+    "NO_INT_PHONE": "00889915644",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3646",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 149,
+    "NO_NAME": "ВЕНЕЛИН ЦВЕТАНОВ ОВЧАРОВ",
+    "NO_INT_PHONE": "00887098075",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4380",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 150,
+    "NO_NAME": "ПЕТЪР БОРИСОВ ДОНЧЕВ",
+    "NO_INT_PHONE": "00889500377",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3624",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 151,
+    "NO_NAME": "ЕМИЛ ИЛИЕВ НИНОВ",
+    "NO_INT_PHONE": "00887846287",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4380",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 152,
+    "NO_NAME": "ЛЮБИМА ИЛИЯНОВА ЯРОСЛАВОВА",
+    "NO_INT_PHONE": "00886446019",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2273",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 153,
+    "NO_NAME": "ИЛИЯН САШКОВ АЛЕКСАНДРОВ",
+    "NO_INT_PHONE": "00889910671",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3621",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 154,
+    "NO_NAME": "ИСКРЕН ГЕОРГИЕВ КОЕВ",
+    "NO_INT_PHONE": "00887497631",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3824",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 155,
+    "NO_NAME": "PRIZM",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 156,
+    "NO_NAME": "ТОДОР АТАНАСОВ ДЪЛБОКОВ",
+    "NO_INT_PHONE": "00888010909",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3386",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 157,
+    "NO_NAME": "ПЛАМЕН КИРИЛОВ ПЕТКОВ",
+    "NO_INT_PHONE": "00887099748",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6954",
+    "NP_EXT_PHONE2": "2224",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 158,
+    "NO_NAME": "ВЕСЕЛИН ИВАНОВ НИКОЛОВ",
+    "NO_INT_PHONE": "00886817903",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6189",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 159,
+    "NO_NAME": "ГАЛИНА ЙОРДАНОВА КОСТАДИНОВА",
+    "NO_INT_PHONE": "00888918096",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6996",
+    "NP_EXT_PHONE2": "6513",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 160,
+    "NO_NAME": "МИЛЕН КИРИЛОВ МЛАДЕНОВ",
+    "NO_INT_PHONE": "00885274046",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3067",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 161,
+    "NO_NAME": "ЦЕЦКА ПЕТКОВА МИЛАНОВА",
+    "NO_INT_PHONE": "00886608486",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3256",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 162,
+    "NO_NAME": "БОРИСЛАВ ЦВЕТАНОВ ДОБРИНОВ",
+    "NO_INT_PHONE": "00879651507",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3033",
+    "NP_EXT_PHONE2": "3275",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 163,
+    "NO_NAME": "КАТЕРИНА КОЛЕВА КОСТАДИНОВА",
+    "NO_INT_PHONE": "00888575664",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4412",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 164,
+    "NO_NAME": "ОГНЯН ВЛАДИМИРОВ ТРИЧКОВ",
+    "NO_INT_PHONE": "00885587378",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6508",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 165,
+    "NO_NAME": "АНИТА ХРИСТОВА ВЕЛКОВА",
+    "NO_INT_PHONE": "00877900427",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3631",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 166,
+    "NO_NAME": "ОРЛИН САШКОВ СТОЯНОВ",
+    "NO_INT_PHONE": "00888140867",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2143",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 167,
+    "NO_NAME": "ОЛЕСЯ ВИКТОРОВНА ЙОРДАНОВА",
+    "NO_INT_PHONE": "00899815620",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2536",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 168,
+    "NO_NAME": "ГАБРИЕЛА ВАЛЕРИЕВА ЦВЕТАНОВА",
+    "NO_INT_PHONE": "00888366460",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2533",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 169,
+    "NO_NAME": "ХРИСТО КЪНЧЕВ ХРИСТОВ",
+    "NO_INT_PHONE": "00889504858",
+    "NP_MOB_PHONE": "00889500368",
+    "NP_EXT_PHONE1": "6237",
+    "NP_EXT_PHONE2": "3098",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 170,
+    "NO_NAME": "АЛЕКСАНДЪР ХРИСТОВ НИКОЛОВ",
+    "NO_INT_PHONE": "00879996699",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6333",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 171,
+    "NO_NAME": "ИВАЙЛО ПЛАМЕНОВ БИНЧЕВ",
+    "NO_INT_PHONE": "00888649715",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6904",
+    "NP_EXT_PHONE2": "6528",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 172,
+    "NO_NAME": "ВИОЛЕТА ИГНАТОВА ВЛАШКА - СД",
+    "NO_INT_PHONE": "00889750006",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4354",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 173,
+    "NO_NAME": "ГАБРИЕЛА ВАЛЕРИЕВА ЦВЕТАНОВА - СД",
+    "NO_INT_PHONE": "00888366460",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2533",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 174,
+    "NO_NAME": "ИЛИАНА ЦЕНОВА СЛАВЧЕВА - СД",
+    "NO_INT_PHONE": "00889396357",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2008",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 175,
+    "NO_NAME": "КАТЯ ВЕЛИЗАРОВА МЕТОДИЕВА - СД",
+    "NO_INT_PHONE": "00878663653",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4417",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 176,
+    "NO_NAME": "МАРГАРИТА СПАСОВА ПАСКАЛЕВА - СД",
+    "NO_INT_PHONE": "00898757306",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3076",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 177,
+    "NO_NAME": "МАРИАНА РОСЕНОВА МАРИНОВА - СД",
+    "NO_INT_PHONE": "00889573384",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6378",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 178,
+    "NO_NAME": "СОНЯ ДИМИТРОВА АБРАШЕВА-ПАТРОЕВА - СД",
+    "NO_INT_PHONE": "00878685084",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3576",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 179,
+    "NO_NAME": "ДАРИУШ МАРЕК НОВАК",
+    "NO_INT_PHONE": "00888903537",
+    "NP_MOB_PHONE": "00888000116",
+    "NP_EXT_PHONE1": "6016",
+    "NP_EXT_PHONE2": "3870",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 180,
+    "NO_NAME": "КП МИЗИЯ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 181,
+    "NO_NAME": "КП КОЗЛОДУЙ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 182,
+    "NO_NAME": "РАДОСЛАВ ВАЛЕНТИНОВ ГЕОРГИЕВ",
+    "NO_INT_PHONE": "00886046497",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3646",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 183,
+    "NO_NAME": "АЛЕКСАНДЪР ИВАНОВ КАЗАКОВ",
+    "NO_INT_PHONE": "00898490868",
+    "NP_MOB_PHONE": "00889655090",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2629",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 184,
+    "NO_NAME": "ВИОЛИН ПЕТРОВ РАЙКОВ",
+    "NO_INT_PHONE": "00884673777",
+    "NP_MOB_PHONE": "00878858403",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2899",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 185,
+    "NO_NAME": "СТИЛЯНА ТОДОРОВА МЛАДЕНОВА",
+    "NO_INT_PHONE": "00896844850",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3880",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 186,
+    "NO_NAME": "ЦВЕТОМИР ВЕНЕЛИНОВ НЕНОВ",
+    "NO_INT_PHONE": "00878541341",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3427",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 187,
+    "NO_NAME": "МАРГАРИТА БОРИСЛАВОВА ГОЛЕМАНОВА",
+    "NO_INT_PHONE": "00893441707",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "5719",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 188,
+    "NO_NAME": "ПЕТЪР ПЛАМЕНОВ БЕЧЕВ",
+    "NO_INT_PHONE": "00885531302",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4517",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 189,
+    "NO_NAME": "МИРОСЛАВ ЕВГЕНИЕВ ГЕНОВ",
+    "NO_INT_PHONE": "00878181488",
+    "NP_MOB_PHONE": "00878404108",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3603",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 190,
+    "NO_NAME": "БОЯН ВЕЛИЧКОВ МАРИНОВ",
+    "NO_INT_PHONE": "00887804642",
+    "NP_MOB_PHONE": "00889230309",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3656",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 191,
+    "NO_NAME": "МИРОСЛАВ ЦВЕТАНОВ МАРИНОВ",
+    "NO_INT_PHONE": "00888235969",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6910",
+    "NP_EXT_PHONE2": "2270",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 192,
+    "NO_NAME": "СВЕТЛАНА ДИМИТРОВА КИТАНОВА",
+    "NO_INT_PHONE": "00889520156",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3208",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 193,
+    "NO_NAME": "ИВАН ИВАНОВ КОЛАРОВ",
+    "NO_INT_PHONE": "00888009843",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "4518",
+    "NP_EXT_PHONE2": "6618",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 194,
+    "NO_NAME": "СТМ - РОСЕН БЕЛЧЕВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888909458",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 195,
+    "NO_NAME": "СТМ - ПЕТЯ СТОЯНОВСКА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888922298",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 196,
+    "NO_NAME": "СТМ - БОРИСЛАВ ХАЙТОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887425207",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 197,
+    "NO_NAME": "СТМ - ИВО ПОПОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00894687168",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 198,
+    "NO_NAME": "СТМ - МАЛИНА ИВАНОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00884539714",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 199,
+    "NO_NAME": "СТМ - ТЕТЯНА ЮРЕВИЧ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887764840",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 200,
+    "NO_NAME": "СТМ - БОЙКА ОВЕДЕНСКА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888414341",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "00888256291",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 201,
+    "NO_NAME": "СТМ - ДАНИЕЛА МЕТОДИЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887741099",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 202,
+    "NO_NAME": "СТМ - БОРЯНА СТОЙНОВСКА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887508153",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 203,
+    "NO_NAME": "СТМ - ВИОЛИН КРУШОВЕНСКИ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00889966908",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 204,
+    "NO_NAME": "СТМ - ЕВГЕНИЯ ГЕТОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887233355",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 205,
+    "NO_NAME": "СТМ - СИМЕОНКА СИМЕОНОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887700424",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 206,
+    "NO_NAME": "СТМ - ГЕОРГИ ВОДЕНИЧАРСКИ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00886857890",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 207,
+    "NO_NAME": "СТМ - ЕМИЛИЯ ЛЕБЕДОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00885444631",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 208,
+    "NO_NAME": "СТМ - НЕВЕНА СТОЯНОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00886890242",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 209,
+    "NO_NAME": "СТМ - ПЕТЯ ГАНЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887686586",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 210,
+    "NO_NAME": "СТМ - КАТЯ РИБАРСКА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00886529350",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 211,
+    "NO_NAME": "СТМ - МАЯ ПЕТКОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00886004200",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 212,
+    "NO_NAME": "СТМ - ПЕТЯ ЦЕНКОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00889720667",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 213,
+    "NO_NAME": "СТМ - МИГЛЕНА АНГЕЛОВА-ВАСИЛЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00885194934",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 214,
+    "NO_NAME": "СТМ - НАТАЛИЯ СТАНЧЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888775518",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 215,
+    "NO_NAME": "СТМ - ДАНИЕЛА ХРИСТОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887608088",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 216,
+    "NO_NAME": "СТМ - НЕЛИ ЦВЕТКОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00894708525",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 217,
+    "NO_NAME": "СТМ - МИЛЕНА ДИМИТРОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00884223295",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 218,
+    "NO_NAME": "СТМ - ВЕНЕТА БАНУЦОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00887164892",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 219,
+    "NO_NAME": "СТМ - АНДРЕЙ ТАБАКОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888829826",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 220,
+    "NO_NAME": "СТМ - КРАСИМИР ПАЧЕВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00889714121",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 221,
+    "NO_NAME": "СТМ - ЕВГЕНИ АВРАМОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888897638",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 222,
+    "NO_NAME": "СТМ - СЛАВЕЙ ИЛИЕВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00885934554",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 223,
+    "NO_NAME": "СТМ - МИХАИЛ ЦЕНОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888308382",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 224,
+    "NO_NAME": "СТМ - ВЛАДИМИР ВЕЛИКОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00886588849",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 225,
+    "NO_NAME": "СТМ - ЕМИЛ КОПРАЛЕВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00885206356",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 226,
+    "NO_NAME": "СТМ - ИРЕНА ЦЕНОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00878625466",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 227,
+    "NO_NAME": "СТМ - ПЛАМЕН ПЪРВАНОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888435455",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 228,
+    "NO_NAME": "СТМ - ИВАЛИНА ЦВЕТКОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00885400784",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 229,
+    "NO_NAME": "СТМ - КОНСТАНТИН ГМИТРИЧОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888047837",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 230,
+    "NO_NAME": "СТМ - ВЕНЦИСЛАВ ИВАНОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00876287114",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 231,
+    "NO_NAME": "СТМ - СВЕТЛА КИРОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00879804847",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 232,
+    "NO_NAME": "СТМ - АНЕТА МЕТОДИЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00885248776",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 233,
+    "NO_NAME": "СТМ - ЛИДИЯ СЛАВЧЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00886853182",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 234,
+    "NO_NAME": "СТМ - МАРИЕЛА ЗАХАРИЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00889572051",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 235,
+    "NO_NAME": "СТМ - НИНА МИРЧЕВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00886434476",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 236,
+    "NO_NAME": "АЛЕКСАНДЪР ПАВЛОВ АВРАМОВ",
+    "NO_INT_PHONE": "00883352573",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2452",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 237,
+    "NO_NAME": "ПЕТКО АНГЕЛОВ ПЕТКОВ",
+    "NO_INT_PHONE": "00878899077",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6958",
+    "NP_EXT_PHONE2": "3558",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 238,
+    "NO_NAME": "ЦВЕТАН ГЕОРГИЕВ ЦАЛОВ",
+    "NO_INT_PHONE": "00898582580",
+    "NP_MOB_PHONE": "00879913971",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 239,
+    "NO_NAME": "СТЕФАН ИВАНОВ СТЕФАНОВ",
+    "NO_INT_PHONE": "00885565285",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 240,
+    "NO_NAME": "АНГЕЛ ИЛИЕВ ЧАРАПАНСКИ",
+    "NO_INT_PHONE": "00886841924",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 241,
+    "NO_NAME": "МАРИЯН МИНКОВ ПАРАСКЕВОВ",
+    "NO_INT_PHONE": "00877359977",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 242,
+    "NO_NAME": "МАРТИН ИВАЙЛОВ АЛЕКСАНДРОВ",
+    "NO_INT_PHONE": "00899935434",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 243,
+    "NO_NAME": "ВЕНЦИСЛАВ ЙОРДАНОВ КАЛУШЕВ",
+    "NO_INT_PHONE": "00878311227",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "5707",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 244,
+    "NO_NAME": "ВИКТОР КУНЧЕВ НИКОЛОВ",
+    "NO_INT_PHONE": "00896828187",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 245,
+    "NO_NAME": "ИВАЙЛО АСЕНОВ ИВАНОВ",
+    "NO_INT_PHONE": "00878760081",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 246,
+    "NO_NAME": "ХРИСТО ДИМИТРОВ ХРИСТОВ",
+    "NO_INT_PHONE": "00885568711",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 247,
+    "NO_NAME": "ДИМИТЪР ИВАНОВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00876302410",
+    "NP_MOB_PHONE": "00879979658",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3177",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 248,
+    "NO_NAME": "МАРТИН ХРИСТОВ МАРИНОВ",
+    "NO_INT_PHONE": "00886430992",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 249,
+    "NO_NAME": "СТОЯН НИКОЛОВ ВИТАНОВ",
+    "NO_INT_PHONE": "00876308281",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3662",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 250,
+    "NO_NAME": "ВАЛЕРИ ИВАНЧЕВ ИВАНОВ",
+    "NO_INT_PHONE": "00885043460",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6330",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 251,
+    "NO_NAME": "ЛЪЧЕЗАР ЕНЧЕВ АНГЕЛОВ",
+    "NO_INT_PHONE": "00878241007",
+    "NP_MOB_PHONE": "00888220225",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2864",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 252,
+    "NO_NAME": "ВЕСЕЛИН СТЕФАНОВ МАРКОВ",
+    "NO_INT_PHONE": "00886393227",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2692",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 253,
+    "NO_NAME": "ЧАВДАР ПЕТРОВ СТЪНГАЧЕВ",
+    "NO_INT_PHONE": "00886480105",
+    "NP_MOB_PHONE": "00878756314",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2692",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 254,
+    "NO_NAME": "ЛИЛЯНА БОРИСЛАВОВА ДИМИТРОВА",
+    "NO_INT_PHONE": "00889226311",
+    "NP_MOB_PHONE": "00878756301",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2692",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 255,
+    "NO_NAME": "БОЯН ВЕСЕЛИНОВ БАНКОВ",
+    "NO_INT_PHONE": "00886290508",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3003",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 256,
+    "NO_NAME": "АТАНАС ГЕОРГИЕВ АТАНАСОВ",
+    "NO_INT_PHONE": "00887443238",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6600",
+    "NP_EXT_PHONE2": "3281",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 257,
+    "NO_NAME": "ЕВГЕНИЙ ВАСИЛЕВ БОГОЕВ",
+    "NO_INT_PHONE": "00888905357",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2772",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 258,
+    "NO_NAME": "КАТРИН ГЕОРГИЕВА ВЛАДОВА",
+    "NO_INT_PHONE": "00887715578",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3256",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 259,
+    "NO_NAME": "ВАЛЕРИ ВАНЬОВ ЕФТИМОВ",
+    "NO_INT_PHONE": "00888154322",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 260,
+    "NO_NAME": "АНТОН ПАВЛОВ СТОИЛОВ",
+    "NO_INT_PHONE": "00888887172",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3286",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 261,
+    "NO_NAME": "ТЕМЕНУЖКА ВЕСЕЛИНОВА СТОЯНОВА",
+    "NO_INT_PHONE": "00886849108",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3441",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 262,
+    "NO_NAME": "ВАСИЛ ИВАНОВ МИЛЕВ",
+    "NO_INT_PHONE": "00877280108",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3441",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 263,
+    "NO_NAME": "ВЯРА НИКОЛАЕВА ИЛИЕВА",
+    "NO_INT_PHONE": "00885043410",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2020",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 264,
+    "NO_NAME": "ИЛИЯН ГЕОРГИЕВ ТОМОВ",
+    "NO_INT_PHONE": "00889377589",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3560",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 265,
+    "NO_NAME": "МИГЛЕНА ГЕОРГИЕВА ЦВЕТКОВСКА",
+    "NO_INT_PHONE": "00883539953",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2020",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 266,
+    "NO_NAME": "ВАЛЕРИ ВАСИЛЕВ ТОДОРОВ",
+    "NO_INT_PHONE": "00876051094",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2869",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 267,
+    "NO_NAME": "БИАНКА СТОЯНОВА КАЛЧЕВА",
+    "NO_INT_PHONE": "00898328465",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2100",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 268,
+    "NO_NAME": "ЙОРДАНКА ВАЛЕРИЕВА СТОЙНЕВА",
+    "NO_INT_PHONE": "00879006619",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "2550",
+    "NP_EXT_PHONE2": "3385",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 269,
+    "NO_NAME": "ТОДОР СВЕТОСЛАВОВ ТОДОРОВ",
+    "NO_INT_PHONE": "00889920256",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3256",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 270,
+    "NO_NAME": "ДИМИТЪР ТОДОРОВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00878232474",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2513",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 271,
+    "NO_NAME": "ИРЕНА ПЛАМЕНОВА НИКОЛОВА - МИТОВА",
+    "NO_INT_PHONE": "00886293826",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3394",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 272,
+    "NO_NAME": "ЕМИЛИЯ ВАСИЛЕВА ВЛАДИМИРОВА",
+    "NO_INT_PHONE": "00889990041",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "2477",
+    "NP_EXT_PHONE2": "2945",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 273,
+    "NO_NAME": "АТАНАС ДИМИТРОВ ИВАНОВ",
+    "NO_INT_PHONE": "00884767604",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3595",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 274,
+    "NO_NAME": "ДИМИТЪР ИГНАТОВ ПИРЧЕВ",
+    "NO_INT_PHONE": "00899857570",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2743",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 275,
+    "NO_NAME": "АЛЕКСАНДЪР ЙОРДАНОВ НИКОЛОВ",
+    "NO_INT_PHONE": "00898610157",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2174",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 276,
+    "NO_NAME": "ЦВЕТАН КРЪСТЕВ МАРИНОВ",
+    "NO_INT_PHONE": "00878838112",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6984",
+    "NP_EXT_PHONE2": "2723",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 277,
+    "NO_NAME": "ПЕТЬО ГЕНОВ ПЕНЕВ",
+    "NO_INT_PHONE": "00889500387",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6872",
+    "NP_EXT_PHONE2": "3612",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 278,
+    "NO_NAME": "ЦВЕТОСЛАВ ГЕОРГИЕВ ХРИСТОВ",
+    "NO_INT_PHONE": "00885708595",
+    "NP_MOB_PHONE": "00879911645",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2704",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 279,
+    "NO_NAME": "ДАНАИЛ ЛЮДМИЛОВ ДИКОВ",
+    "NO_INT_PHONE": "00888879494",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "2556",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 280,
+    "NO_NAME": "НИКОЛАЙ ИВАНОВ НИКОЛОВ",
+    "NO_INT_PHONE": "00899446859",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3591",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 281,
+    "NO_NAME": "БОРИС ВОЛОДИЕВ ЦЕНОВ",
+    "NO_INT_PHONE": "00896416306",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 282,
+    "NO_NAME": "ИЛКО ЛЪЧЕЗАРОВ НАЙДЕНОВ",
+    "NO_INT_PHONE": "00889802168",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4179",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 283,
+    "NO_NAME": "ТАНКА ИВАНОВА БОЕВА",
+    "NO_INT_PHONE": "00889500370",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2224",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 284,
+    "NO_NAME": "БОЯН ВЕНЕЛИНОВ КОЛИНОВ",
+    "NO_INT_PHONE": "00888833132",
+    "NP_MOB_PHONE": "00879554305",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2060",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 285,
+    "NO_NAME": "СВЕТОСЛАВ ИВАИЛОВ ЛАШКОВ",
+    "NO_INT_PHONE": "00887545956",
+    "NP_MOB_PHONE": "00879963292",
+    "NP_EXT_PHONE1": "6965",
+    "NP_EXT_PHONE2": "3523",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 286,
+    "NO_NAME": "СВЕТОСЛАВ ЕМИЛОВ НАЙДЕНОВ",
+    "NO_INT_PHONE": "00896868669",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3730",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 287,
+    "NO_NAME": "ЛЮДМИЛ АТАНАСОВ ЦОЛОВ",
+    "NO_INT_PHONE": "00887272987",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3046",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 288,
+    "NO_NAME": "РАДОСЛАВ КИРИЛОВ МАРИНОВ",
+    "NO_INT_PHONE": "00877225262",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3494",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 289,
+    "NO_NAME": "ЛЮБОМИР ПЕТРОВ КАНДОВ",
+    "NO_INT_PHONE": "00899876638",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6152",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 290,
+    "NO_NAME": "СОФИЯ КИРИЛОВА ПЕТКОВА",
+    "NO_INT_PHONE": "00889407815",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3740",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 291,
+    "NO_NAME": "ВЕСЕЛИНА ГЕОРГИЕВА ДИМИТРОВА",
+    "NO_INT_PHONE": "00888606103",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6514",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 292,
+    "NO_NAME": "БИЛЯНА ДИМИТРОВА СПАСОВА",
+    "NO_INT_PHONE": "00888062471",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2248",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 293,
+    "NO_NAME": "ПЛАМЕН ЕМИЛОВ ГОРАНОВ",
+    "NO_INT_PHONE": "00888433742",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3385",
+    "NP_EXT_PHONE2": "2550",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 294,
+    "NO_NAME": "ИВАЙЛО ЕВСТАТИЕВ КРАЛЧЕВ",
+    "NO_INT_PHONE": "00889788164",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6250",
+    "NP_EXT_PHONE2": "3205",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 295,
+    "NO_NAME": "НИКОЛАЙ СТЕФАНОВ ПЕТРОВ",
+    "NO_INT_PHONE": "00888011288",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6685",
+    "NP_EXT_PHONE2": "3559",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 296,
+    "NO_NAME": "ГЕОРГИ АТАНАСОВ МИХАЙЛОВ",
+    "NO_INT_PHONE": "00889224450",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2065",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 297,
+    "NO_NAME": "РАИСА КИРИЛОВА ПОПОВА - БОРИСОВА",
+    "NO_INT_PHONE": "00888865095",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3115",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 298,
+    "NO_NAME": "ДИМИТЪР АСПАРУХОВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00888297373",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3140",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 299,
+    "NO_NAME": "ИВАЙЛО ВЛАДКОВ ПЕТКОВ",
+    "NO_INT_PHONE": "00898769921",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2974",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 300,
+    "NO_NAME": "МАРТИН ПЛАМЕНОВ СТОЯНОВ",
+    "NO_INT_PHONE": "00879441761",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2456",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 301,
+    "NO_NAME": "НЕЛИ СИМЕОНОВА ИВАНОВА",
+    "NO_INT_PHONE": "00878630215",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2502",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 302,
+    "NO_NAME": "НИКОЛАЙ КОНСТАНТИНОВ ДОБРЕВ",
+    "NO_INT_PHONE": "00879363800",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3935",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 303,
+    "NO_NAME": "МИРОСЛАВ МЛАДЕНОВ ЦАНКОВ",
+    "NO_INT_PHONE": "00878367065",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2866",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 304,
+    "NO_NAME": "ЦВЕТЕЛИН ИВОВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00877992404",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3529",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 305,
+    "NO_NAME": "ИВАЛИНА РУМЕНОВА ДРАГАНИНСКА",
+    "NO_INT_PHONE": "00879188767",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6476",
+    "NP_EXT_PHONE2": "3441",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 306,
+    "NO_NAME": "ВЛАДИМИР ЙОТОВ ЙОТОВ",
+    "NO_INT_PHONE": "00889136326",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2091",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 307,
+    "NO_NAME": "ТРЕНДАФИЛ ДИМИТРОВ ПЕТРИНОВ",
+    "NO_INT_PHONE": "00898608274",
+    "NP_MOB_PHONE": "00877155688",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2091",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 308,
+    "NO_NAME": "РОСЕН ТРИФОНОВ ГЕОРГИЕВ",
+    "NO_INT_PHONE": "00899146206",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2273",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 309,
+    "NO_NAME": "ДАНИЕЛА ЙОСИФОВА МИТКОВА",
+    "NO_INT_PHONE": "00895734403",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3389",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 310,
+    "NO_NAME": "ЯВОР МАРИНОВ СТОЕВ",
+    "NO_INT_PHONE": "00890420850",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2771",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 311,
+    "NO_NAME": "МЛАДЕН ЙОРДАНОВ НИКОЛОВ",
+    "NO_INT_PHONE": "00889377536",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3724",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 312,
+    "NO_NAME": "ВЕЛИЗАР НИКОЛОВ МЕТОДИЕВ",
+    "NO_INT_PHONE": "00887727485",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2504",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 313,
+    "NO_NAME": "АНЖЕЛА ЦВЕТАНОВА ОРЛОВА",
+    "NO_INT_PHONE": "00886334450",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3557",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 314,
+    "NO_NAME": "ВАЛЕНТИН СТЕФАНОВ СЕРАФИМОВ",
+    "NO_INT_PHONE": "00889416927",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2181",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 315,
+    "NO_NAME": "КАЛИН КОНСТАНТИНОВ СЕРАФИМОВ",
+    "NO_INT_PHONE": "00887623548",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "5741",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 316,
+    "NO_NAME": "МИТКО СТОЯНОВ КАЦАРОВ",
+    "NO_INT_PHONE": "00899301767",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2864",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 317,
+    "NO_NAME": "ГЕОРГИ ЙОРДАНОВ ЙОРДАНОВ",
+    "NO_INT_PHONE": "00898447301",
+    "NP_MOB_PHONE": "00878756311",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 318,
+    "NO_NAME": "ЕМИЛ ЦВЕТАНОВ МЛАДЕНОВ",
+    "NO_INT_PHONE": "00889114298",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 319,
+    "NO_NAME": "САШКО ЛЪЧЕЗАРОВ ИЛИЕВ",
+    "NO_INT_PHONE": "00893522409",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3662",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 320,
+    "NO_NAME": "ИРЕНА ГЕОРГИЕВА ИВАНОВА",
+    "NO_INT_PHONE": "00878386391",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2091",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 321,
+    "NO_NAME": "ЕМИЛ ВАСИЛЕВ ВАСИЛЕВ",
+    "NO_INT_PHONE": "00877363404",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 322,
+    "NO_NAME": "ХРИСТО ГЕОРГИЕВ ХРИСТОВ",
+    "NO_INT_PHONE": "00895870989",
+    "NP_MOB_PHONE": "00879979497",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2299",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 323,
+    "NO_NAME": "МАРИЕЛА ЕМИЛОВА СТАМЕНОВА",
+    "NO_INT_PHONE": "00888272087",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6100",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 324,
+    "NO_NAME": "ИВАЙЛО АТАНАСОВ ХРИСТОВ",
+    "NO_INT_PHONE": "00887606505",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6541",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 325,
+    "NO_NAME": "ЕМИЛ ЙОРДАНОВ ШЕРБАНОВ",
+    "NO_INT_PHONE": "00888228616",
+    "NP_MOB_PHONE": "00889500383",
+    "NP_EXT_PHONE1": "6930",
+    "NP_EXT_PHONE2": "2230",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 326,
+    "NO_NAME": "СИМО АНДРЕЕВ СИМЕОНОВ",
+    "NO_INT_PHONE": "00886838099",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "4255",
+    "NP_EXT_PHONE2": "3255",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 327,
+    "NO_NAME": "ПЛАМЕН ТРИФОНОВ ПЕТРОВ",
+    "NO_INT_PHONE": "00898467220",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3436",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 328,
+    "NO_NAME": "ДИМИТЪР БОРИСОВ ГЕОРГИЕВ",
+    "NO_INT_PHONE": "00887424678",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2741",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 329,
+    "NO_NAME": "ПЕТЯ БОРИСОВА ЦЕКОВА",
+    "NO_INT_PHONE": "00888388890",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2008",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 330,
+    "NO_NAME": "ТАНЯ ИВАНОВА АТАНАСОВА",
+    "NO_INT_PHONE": "00882286575",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6698",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 331,
+    "NO_NAME": "ЕМИЛ НИКОЛОВ ЦАКЕВ",
+    "NO_INT_PHONE": "00886891950",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "2566",
+    "NP_EXT_PHONE2": "2692",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 332,
+    "NO_NAME": "ЕМИЛ ИВАНОВ МАРИНОВ",
+    "NO_INT_PHONE": "00893528562",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 333,
+    "NO_NAME": "СТМ - НИКОЛИНА ХРИСТОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00888853285",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 334,
+    "NO_NAME": "СТМ - МАЯ ЯНКОВА ЖИВКОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00878613856",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 335,
+    "NO_NAME": "СТМ - БОЙКО ТОДОРОВ НИКОЛОВ",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00895742789",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 336,
+    "NO_NAME": "СТМ - ЙОАНА РАДОСЛАВОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00889982945",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 337,
+    "NO_NAME": "СТМ - ЛОРА ПЕТЬОВА БРЕЗОЙКОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00885156964",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 338,
+    "NO_NAME": "СТМ - НАНСИ СТЕФЧОВА СИМЕОНОВА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "00894822544",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 339,
+    "NO_NAME": "СВЕТОЗАР ИВАНОВ ВАСИЛЕВ",
+    "NO_INT_PHONE": "00879979661",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "2501",
+    "NP_EXT_PHONE2": "3596",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 340,
+    "NO_NAME": "КИРИЛ ВАНЬОВ КИРИЛОВ",
+    "NO_INT_PHONE": "00887435199",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4162",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 341,
+    "NO_NAME": "ЦВЕТАН РАДОСЛАВОВ НИКОЛОВ",
+    "NO_INT_PHONE": "00888317277",
+    "NP_MOB_PHONE": "00878612331",
+    "NP_EXT_PHONE1": "6987",
+    "NP_EXT_PHONE2": "3181",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 342,
+    "NO_NAME": "ИВО АЛЕКСИЕВ МЕТОДИЕВ",
+    "NO_INT_PHONE": "00898986188",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6497",
+    "NP_EXT_PHONE2": "3445",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 343,
+    "NO_NAME": "ИЛИАНА ЦЕНОВА СЛАВЧЕВА",
+    "NO_INT_PHONE": "00889396357",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2008",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 344,
+    "NO_NAME": "ПАВЕЛ ИВАНОВ МИЛЕТИЕВ",
+    "NO_INT_PHONE": "00877345522",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "5759",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 345,
+    "NO_NAME": "БОРЯНА СТЕФАНОВА НАЙДЕНОВА",
+    "NO_INT_PHONE": "00879438877",
+    "NP_MOB_PHONE": "00878756306",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2894",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 346,
+    "NO_NAME": "НИКОЛАЙ ДИМИТРОВ ПАУНОВ",
+    "NO_INT_PHONE": "00886014822",
+    "NP_MOB_PHONE": "00878756307",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 347,
+    "NO_NAME": "ПЛАМЕН ДИМИТРОВ НЕХРИЗОВ",
+    "NO_INT_PHONE": "00878807791",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 348,
+    "NO_NAME": "КОСТАДИНКА ЕВСТАТИЕВА ПРУНЕЧЕВА",
+    "NO_INT_PHONE": "00884722073",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2530",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 349,
+    "NO_NAME": "ВЛАДИМИР ВАСИЛЕВ ЯНКОВ",
+    "NO_INT_PHONE": "00888296771",
+    "NP_MOB_PHONE": "00878889220",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2385",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 350,
+    "NO_NAME": "ДАНАИЛ ВАСИЛЕВ ХРИСТОВ",
+    "NO_INT_PHONE": "00898715060",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2045",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 351,
+    "NO_NAME": "МАРИН НИКОЛАЕВ СТОЯНОВ",
+    "NO_INT_PHONE": "00887514107",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3385",
+    "NP_EXT_PHONE2": "2550",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 352,
+    "NO_NAME": "МАКСИМ ХРИСТОВ ИВАНОВ",
+    "NO_INT_PHONE": "00888540457",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6473",
+    "NP_EXT_PHONE2": "3714",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 353,
+    "NO_NAME": "ВАЛЕНТИН ВАСИЛЕВ СТЕФАНОВ",
+    "NO_INT_PHONE": "00895669310",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4186",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 354,
+    "NO_NAME": "АНЕЛИЯ БОРИСЛАВОВА МАРТИНОВА",
+    "NO_INT_PHONE": "00896746844",
+    "NP_MOB_PHONE": "00878272705",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3436",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 355,
+    "NO_NAME": "ТЕОДОСИ ЦВЕТАНОВ ТОДОРОВ",
+    "NO_INT_PHONE": "00884395482",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2741",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 356,
+    "NO_NAME": "ДЕТЕЛИН СЛАВЧЕВ ОПРИЦОВ",
+    "NO_INT_PHONE": "00889160639",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3256",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 357,
+    "NO_NAME": "КАТЯ СИМЕОНОВА БАЛИЕВА",
+    "NO_INT_PHONE": "00889502708",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6443",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 358,
+    "NO_NAME": "СЛАВКА ПЕТРОВА ИВАНОВА-МАРИНОВА",
+    "NO_INT_PHONE": "00888655124",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2768",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 359,
+    "NO_NAME": "АЛЕКСАНДЪР ЙОРДАНОВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00898610157",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2864",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 360,
+    "NO_NAME": "МИРОСЛАВ ВЪРБАНОВ ХРИСТОВ",
+    "NO_INT_PHONE": "00878949087",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 361,
+    "NO_NAME": "ГЕОРГИ ТОДОРОВ ЦОЛОВ",
+    "NO_INT_PHONE": "00886430411",
+    "NP_MOB_PHONE": "00877745279",
+    "NP_EXT_PHONE1": "6988",
+    "NP_EXT_PHONE2": "4246",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 362,
+    "NO_NAME": "КРАСИМИР НАСКОВ ОРМАНОВ",
+    "NO_INT_PHONE": "00885252477",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3411",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 363,
+    "NO_NAME": "МИРОСЛАВ ЦВЕТАНОВ ЦЕНОВ",
+    "NO_INT_PHONE": "00877741600",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3812",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 364,
+    "NO_NAME": "АЛЕКСАНДЪР ХРИСТОВ СТОЯНОВ",
+    "NO_INT_PHONE": "00878677729",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2510",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 365,
+    "NO_NAME": "СОНЯ ДИМИТРОВА АБРАШЕВА",
+    "NO_INT_PHONE": "00878765430",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3576",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 366,
+    "NO_NAME": "ИВАЙЛО БОРИСОВ ИВАНОВ",
+    "NO_INT_PHONE": "00886887612",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 367,
+    "NO_NAME": "РАДОСЛАВ НИКОЛОВ ГЕТОВ",
+    "NO_INT_PHONE": "00887257974",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 368,
+    "NO_NAME": "КАТЯ ПЕПИЕВА КРЪСТЕВА",
+    "NO_INT_PHONE": "00884565333",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3516",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 369,
+    "NO_NAME": "НИКОЛАЙ ВЕНЕЛИНОВ КОЛЕВ",
+    "NO_INT_PHONE": "00888010022",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2866",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 370,
+    "NO_NAME": "РАДОСЛАВА ДИМИТРОВА ЕВТИМОВА",
+    "NO_INT_PHONE": "00879011879",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2831",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 371,
+    "NO_NAME": "АННА СТОЯНОВА ЙОРДАНОВА",
+    "NO_INT_PHONE": "00888863004",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "085010",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 372,
+    "NO_NAME": "ПАВЕЛ ВЕНЦИСЛАВОВ РАДУЛОВ",
+    "NO_INT_PHONE": "00888201754",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6882",
+    "NP_EXT_PHONE2": "2436",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 373,
+    "NO_NAME": "ЛЮБОМИР СТОЯНОВ ШЕХТОВ",
+    "NO_INT_PHONE": "00899720158",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3760",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 374,
+    "NO_NAME": "БОЯН БОЙЧЕВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00899359444",
+    "NP_MOB_PHONE": "00889500409",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2178",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 375,
+    "NO_NAME": "НАТАЛИЯ ИГНАТОВА ПЕТРОВА",
+    "NO_INT_PHONE": "00886617876",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2198",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 376,
+    "NO_NAME": "ЯНИСЛАВ ВАЛЕНТИНОВ ЦУРОВ",
+    "NO_INT_PHONE": "00888011886",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2044",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 377,
+    "NO_NAME": "КРЪСТЬО ВЕНКОВ РУЙНОВ",
+    "NO_INT_PHONE": "00893020062",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 378,
+    "NO_NAME": "ЕЛЕНА АНТОНЧОВА АТАНАСОВА",
+    "NO_INT_PHONE": "00889067874",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "2550",
+    "NP_EXT_PHONE2": "3385",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 379,
+    "NO_NAME": "БОЙКО ЦВЕТАНОВ ЛИКУРИЕВ",
+    "NO_INT_PHONE": "00878555377",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6964",
+    "NP_EXT_PHONE2": "3060",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 380,
+    "NO_NAME": "ИВАН КОЧЕВ НЕЧКОВ",
+    "NO_INT_PHONE": "00884766360",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "4380",
+    "NP_EXT_PHONE2": "2051",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 381,
+    "NO_NAME": "МИТКО АНТОНОВ МИЛЬОВСКИ",
+    "NO_INT_PHONE": "00883307493",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2198",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 382,
+    "NO_NAME": "СТАНИСЛАВ КОЛЕВ СЪМЕНОВ",
+    "NO_INT_PHONE": "00888779843",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3256",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 383,
+    "NO_NAME": "ЕВГЕНИ ВАСИЛЕВ ГЪЛЪБОВ",
+    "NO_INT_PHONE": "00878352288",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3144",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 384,
+    "NO_NAME": "НАДЯ ПЕТРОВА АНГЕЛОВА",
+    "NO_INT_PHONE": "00889363889",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3095",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 385,
+    "NO_NAME": "АНДРЕЙ АЛЕКСАНДРОВИЧ КРАСНОЧАРОВ",
+    "NO_INT_PHONE": "00888697974",
+    "NP_MOB_PHONE": "00887002986",
+    "NP_EXT_PHONE1": "6944",
+    "NP_EXT_PHONE2": "3144",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 386,
+    "NO_NAME": "Пламен Георгиев Маргоевски",
+    "NO_INT_PHONE": "00884161676",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6880",
+    "NP_EXT_PHONE2": "3560",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 387,
+    "NO_NAME": "ИВАН ГЕОРГИЕВ ВАСИЛЕВ",
+    "NO_INT_PHONE": "00888489962",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3626",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 388,
+    "NO_NAME": "Валентин Георгиев  Аврамов",
+    "NO_INT_PHONE": "00888998686",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2091",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 389,
+    "NO_NAME": "ДИМИТЪР ЛЪЧЕЗАРОВ ЛАЗАРОВ",
+    "NO_INT_PHONE": "00888253249",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "2550",
+    "NP_EXT_PHONE2": "3385",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 390,
+    "NO_NAME": "ДЕСИСЛАВА СТОЯНОВА ЗАНЕВА",
+    "NO_INT_PHONE": "00894030302",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2036",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 391,
+    "NO_NAME": "ОЛГА НИКОЛАЕВНА МАРИНОВА",
+    "NO_INT_PHONE": "00887178680",
+    "NP_MOB_PHONE": "00889709670",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2821",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 392,
+    "NO_NAME": "СТАНИСЛАВ МИХАЙЛОВ ЙОРДАНОВ",
+    "NO_INT_PHONE": "00878756315",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 393,
+    "NO_NAME": "СЛАВЯН ПЕТРОВ ЛАЧЕВ",
+    "NO_INT_PHONE": "00878580042",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2453",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 394,
+    "NO_NAME": "СРЕБРИН ТОШКОВ КОЛЕВ",
+    "NO_INT_PHONE": "00884318456",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2248",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 395,
+    "NO_NAME": "ПЛАМЕН СИМЕОНОВ ТОШЕВ",
+    "NO_INT_PHONE": "00886852443",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3256",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 396,
+    "NO_NAME": "ТИХОМИР АНГЕЛОВ ТРИФОНОВ",
+    "NO_INT_PHONE": "00888137985",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "5764",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 397,
+    "NO_NAME": "СВЕТЛОМИР ЕМАНУИЛОВ МИТКОВ",
+    "NO_INT_PHONE": "00895707853",
+    "NP_MOB_PHONE": "00879979663",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2098",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 398,
+    "NO_NAME": "ВИОЛЕТА ИГНАТОВА ВЛАШКА",
+    "NO_INT_PHONE": "00889750006",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4354",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 399,
+    "NO_NAME": "МИГЛЕНА ПЛАМЕНОВА ВЪРБАНОВА",
+    "NO_INT_PHONE": "00886150206",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3935",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 400,
+    "NO_NAME": "РУМЕН ХРИСТОВ НЕДЯЛКОВ",
+    "NO_INT_PHONE": "00887628607",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6498",
+    "NP_EXT_PHONE2": "6638",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 401,
+    "NO_NAME": "БИСЕР ИВАНОВ БОРИСОВ",
+    "NO_INT_PHONE": "00878456695",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6294",
+    "NP_EXT_PHONE2": "3731",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 402,
+    "NO_NAME": "АНАТОЛИ ПЕТРОВ ИЛИЕВ",
+    "NO_INT_PHONE": "00885133165",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 403,
+    "NO_NAME": "ИРИНА ВИЛИЯНОВА ИВАНОВА",
+    "NO_INT_PHONE": "00885166888",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3385",
+    "NP_EXT_PHONE2": "2550",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 404,
+    "NO_NAME": "ПЛАМЕН ЦЕНОВ ПЕТКОВ",
+    "NO_INT_PHONE": "00896859941",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6963",
+    "NP_EXT_PHONE2": "3342",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 405,
+    "NO_NAME": "АНТОН ЦАНКОВ ЦАРЯНСКИ",
+    "NO_INT_PHONE": "00886838684",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "4208",
+    "NP_EXT_PHONE2": "6624",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 406,
+    "NO_NAME": "ТАНЯ ТОДОРОВА ТОДОРОВА",
+    "NO_INT_PHONE": "00887732801",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3580",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 407,
+    "NO_NAME": "ВЛАДИСЛАВ ЦВЕТАНОВ ЯНЬОВСКИ",
+    "NO_INT_PHONE": "00878930117",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3633",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 408,
+    "NO_NAME": "РУМЕН ЦЕНКОВ ДРАГАНОВ",
+    "NO_INT_PHONE": "00877348884",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3494",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 409,
+    "NO_NAME": "НАТАЛИЯ НИКОЛАЕВА НИКОЛОВА",
+    "NO_INT_PHONE": "00899688175",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3436",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 410,
+    "NO_NAME": "РУМЕН ДЕКОВ КОШУТАНСКИ",
+    "NO_INT_PHONE": "00889188997",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3635",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 411,
+    "NO_NAME": "ВАЛЕРИ ЙОНЧЕВ ГЕОРГИЕВ",
+    "NO_INT_PHONE": "00896315325",
+    "NP_MOB_PHONE": "2056",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 412,
+    "NO_NAME": "АНГЕЛ АЛЕКСАНДРОВ ЗАХАРИЕВ",
+    "NO_INT_PHONE": "00888882674",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3445",
+    "NP_EXT_PHONE2": "3024",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 413,
+    "NO_NAME": "ЛИЛИЯН ГЕОРГИЕВ МЛАДЕНОВ",
+    "NO_INT_PHONE": "00879148122",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6653",
+    "NP_EXT_PHONE2": "6366",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 414,
+    "NO_NAME": "ПЛАМЕН ПЕТРОВ ПАРАСКЕВОВ",
+    "NO_INT_PHONE": "00899580635",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3529",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 415,
+    "NO_NAME": "ДЕСИСЛАВА СИМЕОНОВА ЦОЛОВА",
+    "NO_INT_PHONE": "00888196437",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2831",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 416,
+    "NO_NAME": "ЕЛЕОНОРА КРУМОВА ПЕТКОВА",
+    "NO_INT_PHONE": "00889741056",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2026",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 417,
+    "NO_NAME": "СТОЯН ЙОРДАНОВ ПЕТРОВ",
+    "NO_INT_PHONE": "00878756313",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2692",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 418,
+    "NO_NAME": "Диана Иванова Кашева",
+    "NO_INT_PHONE": "00888397879",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2667",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 419,
+    "NO_NAME": "РОСЕН ЛЮБЕНОВ ЛАЗАРОВ",
+    "NO_INT_PHONE": "00887593459",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 420,
+    "NO_NAME": "РАДИОУРЕДБА НЦУА",
+    "NO_INT_PHONE": "8062",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 421,
+    "NO_NAME": "КП НЦУА",
+    "NO_INT_PHONE": "",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 422,
+    "NO_NAME": "ИВАН ПЕТРОВ ИВАНОВ",
+    "NO_INT_PHONE": "00886890937",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3612",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 423,
+    "NO_NAME": "СОНЯ ИЛМАНОВА МОШОЛОВА",
+    "NO_INT_PHONE": "00885228996",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3590",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 424,
+    "NO_NAME": "ГАЛЯ ЦВЕТАНОВА ЧЕРГАНСКА",
+    "NO_INT_PHONE": "00887739653",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "3389",
+    "NP_EXT_PHONE2": "2269",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 425,
+    "NO_NAME": "МИРОСЛАВ КРУМОВ ВЪЛЧЕВ",
+    "NO_INT_PHONE": "00877341122",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2337",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 426,
+    "NO_NAME": "СЕРЬОЖА ИВАНОВ ПУНГОВ",
+    "NO_INT_PHONE": "00887595810",
+    "NP_MOB_PHONE": "00878637300",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 427,
+    "NO_NAME": "ТИХОМИР ИВОВ ПЕТРОВ",
+    "NO_INT_PHONE": "00889004024",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3560",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 428,
+    "NO_NAME": "НЕЛИ ТАНЕВА КОСТОВА",
+    "NO_INT_PHONE": "00878350007",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3529",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 429,
+    "NO_NAME": "ЯНКО ИВАНОВ ТОШЕВ",
+    "NO_INT_PHONE": "00888910117",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "6902",
+    "NP_EXT_PHONE2": "3002",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 430,
+    "NO_NAME": "ОГНЯН ПЛАМЕНОВ СТЕФАНОВ",
+    "NO_INT_PHONE": "00884493539",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3806",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 431,
+    "NO_NAME": "МИРОСЛАВ ГЕОРГИЕВ ГЕОРГИЕВ",
+    "NO_INT_PHONE": "00888203841",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2566",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 432,
+    "NO_NAME": "СТИЛЯН КРАСИМИРОВ ПАСКОВ",
+    "NO_INT_PHONE": "00888887163",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4280",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 433,
+    "NO_NAME": "КАМЕЛИЯ ПЕТРОВА КРАСНОЧАРОВА",
+    "NO_INT_PHONE": "00888697356",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2792",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 434,
+    "NO_NAME": "АЛЕКСАНДЪР ЕМИЛОВ ДИМИТРОВ",
+    "NO_INT_PHONE": "00878680200",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "4244",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 435,
+    "NO_NAME": "ЛЮБОМИРА АНГЕЛОВА ТРИФОНОВА",
+    "NO_INT_PHONE": "00885716671",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3436",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 436,
+    "NO_NAME": "STK TestObject",
+    "NO_INT_PHONE": "8051",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "",
+    "NO_TYPE": 1
+  },
+  {
+    "NO_ID": 437,
+    "NO_NAME": "КРАСИМИР СТЕФАНОВ КРЪСТЕВ",
+    "NO_INT_PHONE": "00899110633",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2056",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 438,
+    "NO_NAME": "НИКОЛАЙ БОРИСОВ ГЕРЧЕВ",
+    "NO_INT_PHONE": "00888219372",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "3328",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 439,
+    "NO_NAME": "АНИТА АНАТОЛИЕВА ГЕОРГИЕВА",
+    "NO_INT_PHONE": "00882997889",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "2525",
+    "NO_TYPE": 2
+  },
+  {
+    "NO_ID": 440,
+    "NO_NAME": "ГАБРИЕЛ БОРИСЛАВОВ СТАМЕНОВ",
+    "NO_INT_PHONE": "00887510020",
+    "NP_MOB_PHONE": "",
+    "NP_EXT_PHONE1": "",
+    "NP_EXT_PHONE2": "6252",
+    "NO_TYPE": 2
+  }
+]

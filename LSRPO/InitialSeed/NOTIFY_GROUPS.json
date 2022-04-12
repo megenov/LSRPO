@@ -1,0 +1,282 @@
+[
+  {
+    "NG_ID": 1,
+    "NG_NAME": "Зона АЕЦ",
+    "NG_DESCRIPTION": "Площадка ",
+    "NG_NUMBER": "8811",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 2,
+    "NG_NAME": "12км.  АЕЦ",
+    "NG_DESCRIPTION": "Площадка АЕЦ + 12км. зона",
+    "NG_NUMBER": "8812",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 3,
+    "NG_NAME": "Group3",
+    "NG_DESCRIPTION": "Група 3",
+    "NG_NUMBER": "8813",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 4,
+    "NG_NAME": "Group4",
+    "NG_DESCRIPTION": "Група 4",
+    "NG_NUMBER": "8814",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 5,
+    "NG_NAME": "Group5",
+    "NG_DESCRIPTION": "Група 5",
+    "NG_NUMBER": "8815",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 6,
+    "NG_NAME": "Group6",
+    "NG_DESCRIPTION": "Група 6",
+    "NG_NUMBER": "8816",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 7,
+    "NG_NAME": "Group7",
+    "NG_DESCRIPTION": "Група 7",
+    "NG_NUMBER": "8817",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 8,
+    "NG_NAME": "Group8",
+    "NG_DESCRIPTION": "гр. Козлодуй",
+    "NG_NUMBER": "8818",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 9,
+    "NG_NAME": "Group9",
+    "NG_DESCRIPTION": "гр. Козлодуй + общ. Козлодуй",
+    "NG_NUMBER": "8819",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 10,
+    "NG_NAME": "Group10",
+    "NG_DESCRIPTION": "Група 10",
+    "NG_NUMBER": "8820",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 11,
+    "NG_NAME": "Group11",
+    "NG_DESCRIPTION": "Група 11",
+    "NG_NUMBER": "8821",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 12,
+    "NG_NAME": "Group12",
+    "NG_DESCRIPTION": "Група 12",
+    "NG_NUMBER": "8822",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 13,
+    "NG_NAME": "Group13",
+    "NG_DESCRIPTION": "Група 13",
+    "NG_NUMBER": "8823",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 14,
+    "NG_NAME": "Group14",
+    "NG_DESCRIPTION": "Сигнал 2",
+    "NG_NUMBER": "8824",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 15,
+    "NG_NAME": "Group15",
+    "NG_DESCRIPTION": "Група 15",
+    "NG_NUMBER": "8825",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 16,
+    "NG_NAME": "Group16",
+    "NG_DESCRIPTION": "Група 16",
+    "NG_NUMBER": "8826",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 17,
+    "NG_NAME": "Group17",
+    "NG_DESCRIPTION": "Група 17",
+    "NG_NUMBER": "8827",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 18,
+    "NG_NAME": "Group18",
+    "NG_DESCRIPTION": "Група 18",
+    "NG_NUMBER": "8828",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 19,
+    "NG_NAME": "Group19",
+    "NG_DESCRIPTION": "Група 19",
+    "NG_NUMBER": "8829",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 20,
+    "NG_NAME": "Group20",
+    "NG_DESCRIPTION": "Група Дежурни по АП",
+    "NG_NUMBER": "8830",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 21,
+    "NG_NAME": "Group21",
+    "NG_DESCRIPTION": "Група Резервен ав. екип",
+    "NG_NUMBER": "8831",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 22,
+    "NG_NAME": "Group22",
+    "NG_DESCRIPTION": "Група 22",
+    "NG_NUMBER": "8832",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 23,
+    "NG_NAME": "Group23",
+    "NG_DESCRIPTION": "Група СТМ",
+    "NG_NUMBER": "8833",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 24,
+    "NG_NAME": "Group24",
+    "NG_DESCRIPTION": "Група СанДружина",
+    "NG_NUMBER": "8834",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 25,
+    "NG_NAME": "Group25",
+    "NG_DESCRIPTION": "Група 25",
+    "NG_NUMBER": "8835",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 26,
+    "NG_NAME": "Group26",
+    "NG_DESCRIPTION": "Група 26",
+    "NG_NUMBER": "8836",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 27,
+    "NG_NAME": "Group27",
+    "NG_DESCRIPTION": "Група 27",
+    "NG_NUMBER": "8837",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 28,
+    "NG_NAME": "Group28",
+    "NG_DESCRIPTION": "Група 28",
+    "NG_NUMBER": "8838",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 29,
+    "NG_NAME": "Group29",
+    "NG_DESCRIPTION": "Група 29",
+    "NG_NUMBER": "8839",
+    "NG_MOD_FLAG": 1
+  },
+  {
+    "NG_ID": 30,
+    "NG_NAME": "Group30",
+    "NG_DESCRIPTION": "TECT",
+    "NG_NUMBER": "8840",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 31,
+    "NG_NAME": "Group31",
+    "NG_DESCRIPTION": "Група 31",
+    "NG_NUMBER": "8841",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 32,
+    "NG_NAME": "Group32",
+    "NG_DESCRIPTION": "Група 32",
+    "NG_NUMBER": "8842",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 33,
+    "NG_NAME": "Group33",
+    "NG_DESCRIPTION": "Група 33",
+    "NG_NUMBER": "8843",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 34,
+    "NG_NAME": "Group34",
+    "NG_DESCRIPTION": "Група 34",
+    "NG_NUMBER": "8844",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 35,
+    "NG_NAME": "Group35",
+    "NG_DESCRIPTION": "гр. Мизия",
+    "NG_NUMBER": "8845",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 36,
+    "NG_NAME": "Group36",
+    "NG_DESCRIPTION": "гр. Мизия + общ. Мизия",
+    "NG_NUMBER": "8846",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 37,
+    "NG_NAME": "Group37",
+    "NG_DESCRIPTION": "Група 37",
+    "NG_NUMBER": "8847",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 38,
+    "NG_NAME": "Group38",
+    "NG_DESCRIPTION": "Група 12 км зона",
+    "NG_NUMBER": "8848",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 39,
+    "NG_NAME": "Group39",
+    "NG_DESCRIPTION": "Група Площадка АЕЦ",
+    "NG_NUMBER": "8849",
+    "NG_MOD_FLAG": 0
+  },
+  {
+    "NG_ID": 40,
+    "NG_NAME": "Group40",
+    "NG_DESCRIPTION": "Група АЕЦ + 12км зона",
+    "NG_NUMBER": "8850",
+    "NG_MOD_FLAG": 0
+  }
+]

@@ -1,0 +1,574 @@
+[
+  {
+    "NTP_ID": 1,
+    "NTP_DESCRIPTION": "Радиоактивно Замърсяване"
+  },
+  {
+    "NTP_ID": 2,
+    "NTP_DESCRIPTION": "Химическа Опасност"
+  },
+  {
+    "NTP_ID": 3,
+    "NTP_DESCRIPTION": "Опасност от наводнение"
+  },
+  {
+    "NTP_ID": 4,
+    "NTP_DESCRIPTION": "Въздушна опасност"
+  },
+  {
+    "NTP_ID": 5,
+    "NTP_DESCRIPTION": "Отбой"
+  },
+  {
+    "NTP_ID": 6,
+    "NTP_DESCRIPTION": "Гласово съобщение"
+  },
+  {
+    "NTP_ID": 7,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 8,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 9,
+    "NTP_DESCRIPTION": "Техническа проверка"
+  },
+  {
+    "NTP_ID": 10,
+    "NTP_DESCRIPTION": "Техническа проверка по аварийния план"
+  },
+  {
+    "NTP_ID": 11,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 12,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 13,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 14,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 15,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 16,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 17,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 18,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 19,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 20,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 21,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 22,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 23,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 24,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 25,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 26,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 27,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 28,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 29,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 30,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 31,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 32,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 33,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 34,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 35,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 36,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 37,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 38,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 39,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 40,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 41,
+    "NTP_DESCRIPTION": "Тревога Козлодуй/Мизия"
+  },
+  {
+    "NTP_ID": 42,
+    "NTP_DESCRIPTION": "Въздушна опасност Козлодуй/Мизия"
+  },
+  {
+    "NTP_ID": 43,
+    "NTP_DESCRIPTION": "Отбой Козлодуй/Мизия"
+  },
+  {
+    "NTP_ID": 44,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 45,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 46,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 47,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 48,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 49,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 50,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 51,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 52,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 53,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 54,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 55,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 56,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 57,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 58,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 59,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 60,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 61,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 62,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 63,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 64,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 65,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 66,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 67,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 68,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 69,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 70,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 71,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 72,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 73,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 74,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 75,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 76,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 77,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 78,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 79,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 80,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 81,
+    "NTP_DESCRIPTION": "Техническа проверка"
+  },
+  {
+    "NTP_ID": 82,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 83,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 84,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 85,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 86,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 87,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 88,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 89,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 90,
+    "NTP_DESCRIPTION": " "
+  },
+  {
+    "NTP_ID": 91,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 92,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 93,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 94,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 95,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 96,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 97,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 98,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 99,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 100,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 101,
+    "NTP_DESCRIPTION": "Техническа проверка"
+  },
+  {
+    "NTP_ID": 102,
+    "NTP_DESCRIPTION": "Локална авария. Укриване."
+  },
+  {
+    "NTP_ID": 103,
+    "NTP_DESCRIPTION": "Местна авария. Укриване"
+  },
+  {
+    "NTP_ID": 104,
+    "NTP_DESCRIPTION": "Местна авария. Укриване и йодна профилактика."
+  },
+  {
+    "NTP_ID": 105,
+    "NTP_DESCRIPTION": "Местна авария. Евакуация"
+  },
+  {
+    "NTP_ID": 106,
+    "NTP_DESCRIPTION": "Местна авария. Евакуация и йодна профилактика."
+  },
+  {
+    "NTP_ID": 107,
+    "NTP_DESCRIPTION": "Обща авария. Укриване и йодна профилактика."
+  },
+  {
+    "NTP_ID": 108,
+    "NTP_DESCRIPTION": "Обща авария. Евакуация и йодна профилактика."
+  },
+  {
+    "NTP_ID": 109,
+    "NTP_DESCRIPTION": "Местна авария. Укриване на населението."
+  },
+  {
+    "NTP_ID": 110,
+    "NTP_DESCRIPTION": "Край на аварийната обстановка."
+  },
+  {
+    "NTP_ID": 111,
+    "NTP_DESCRIPTION": "Общо аварийното учение."
+  },
+  {
+    "NTP_ID": 112,
+    "NTP_DESCRIPTION": "Край на аварийното учение."
+  },
+  {
+    "NTP_ID": 113,
+    "NTP_DESCRIPTION": "Локална авария без радиоактивно замърсяване."
+  },
+  {
+    "NTP_ID": 114,
+    "NTP_DESCRIPTION": "Обща авария с опасност от радиоактивно замърсяване."
+  },
+  {
+    "NTP_ID": 115,
+    "NTP_DESCRIPTION": "Резервен авариен екип."
+  },
+  {
+    "NTP_ID": 116,
+    "NTP_DESCRIPTION": "Сборен пункт на резервния авариен екип."
+  },
+  {
+    "NTP_ID": 117,
+    "NTP_DESCRIPTION": "Техническа проверка. Лица."
+  },
+  {
+    "NTP_ID": 118,
+    "NTP_DESCRIPTION": "Аварийна тренировка. Оповестяване лица и сандружина."
+  },
+  {
+    "NTP_ID": 119,
+    "NTP_DESCRIPTION": "Аварийна ситуация. Оповестяване лица и сандружина."
+  },
+  {
+    "NTP_ID": 120,
+    "NTP_DESCRIPTION": "Локална авария. Евакуация."
+  },
+  {
+    "NTP_ID": 121,
+    "NTP_DESCRIPTION": "-"
+  },
+  {
+    "NTP_ID": 122,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 123,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 124,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 125,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 126,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 127,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 128,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 129,
+    "NTP_DESCRIPTION": "N/A"
+  },
+  {
+    "NTP_ID": 130,
+    "NTP_DESCRIPTION": "-"
+  },
+  {
+    "NTP_ID": 131,
+    "NTP_DESCRIPTION": "-"
+  },
+  {
+    "NTP_ID": 132,
+    "NTP_DESCRIPTION": "-"
+  },
+  {
+    "NTP_ID": 133,
+    "NTP_DESCRIPTION": "-"
+  },
+  {
+    "NTP_ID": 134,
+    "NTP_DESCRIPTION": "02.06 Въздушна опасност"
+  },
+  {
+    "NTP_ID": 135,
+    "NTP_DESCRIPTION": "Тест НСРПО"
+  },
+  {
+    "NTP_ID": 136,
+    "NTP_DESCRIPTION": "Общо аварийно учение"
+  },
+  {
+    "NTP_ID": 137,
+    "NTP_DESCRIPTION": "Общо аварийно учение Сандружина"
+  },
+  {
+    "NTP_ID": 138,
+    "NTP_DESCRIPTION": "Аварийна тренировка"
+  },
+  {
+    "NTP_ID": 139,
+    "NTP_DESCRIPTION": "-"
+  },
+  {
+    "NTP_ID": 140,
+    "NTP_DESCRIPTION": "-"
+  },
+  {
+    "NTP_ID": 141,
+    "NTP_DESCRIPTION": "Начало аварийно учение Защита 2014"
+  },
+  {
+    "NTP_ID": 142,
+    "NTP_DESCRIPTION": "Аварийно учение. Евакуация"
+  },
+  {
+    "NTP_ID": 143,
+    "NTP_DESCRIPTION": "Край аварийно учение Защита 2014"
+  }
+]

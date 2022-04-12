@@ -1,0 +1,18 @@
+[
+  {
+    "NO_TYPE_ID": 1,
+    "NO_TYPE_DESCRIPTION": "Оповестителен обект"
+  },
+  {
+    "NO_TYPE_ID": 2,
+    "NO_TYPE_DESCRIPTION": "Лице"
+  },
+  {
+    "NO_TYPE_ID": 3,
+    "NO_TYPE_DESCRIPTION": "Сигнал 2"
+  },
+  {
+    "NO_TYPE_ID": 4,
+    "NO_TYPE_DESCRIPTION": "Радио уредба"
+  }
+]
