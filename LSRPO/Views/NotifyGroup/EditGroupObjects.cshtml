@@ -7,125 +7,107 @@
 }
 
 <section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+    <div class="row">
+        <div class="col-12">
 
-                <div class="card">
+            <div class="card">
+                <form id="edit-group-objects" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyGroup" asp-action="EditGroupObjects">
+                    <input type="hidden" name="GroupId" value="@ViewBag.GroupId" />
+                    <div class="card-header">
+                        <button id="editGroupObjects-submit" type="submit" class="btn btn-success">Запис на обекти</button>
+                        <a asp-area="" asp-action="ClearGroupObjects" asp-controller="NotifyGroup" asp-route-id="@ViewBag.GroupId" class="btn btn-primary" onclick="return confirm('Потвърждаване изчистването на обекти от @ViewBag.GroupName: ')">Изчистване на обекти</a>
+                        <a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="btn btn-warning">Връщане към всички групи</a>
+                        <div class="float-right ml-3" id="buttons"></div>
+                    </div>
+                    <!-- /.card-header -->
 
-                    <form id="edit-group-objects" method="post" enctype="multipart/form-data" asp-area="" asp-controller="NotifyGroup" asp-action="EditGroupObjects">
+                    <div class="card-body">
+                        <table id="datatable" class="display" style="width:100%">
 
-                        <input type="hidden" name="GroupId" value="@ViewBag.GroupId" />
+                            <thead>
+                                <tr>
+                                    <th style="width:3%"></th>
+                                    <th>Име на обект</th>
+                                    <th>Телефон 1</th>
+                                    <th>Телефон 2</th>
+                                    <th>Телефон 3</th>
+                                    <th>Телефон 4</th>
+                                </tr>
+                            </thead>
 
-                        <div class="card-header">
-                            <button id="editGroupObjects-submit" type="submit" class="btn btn-success">Запис на обекти</button>
-                            <a asp-area="" asp-action="ClearGroupObjects" asp-controller="NotifyGroup" asp-route-id="@ViewBag.GroupId" class="btn btn-primary" onclick="return confirm('Потвърждаване изчистването на обекти от @ViewBag.GroupName: ')">Изчистване на обекти</a>
-                            <a asp-area="" asp-action="NotifyGroupList" asp-controller="NotifyGroup" class="btn btn-warning">Връщане към всички групи</a>
-
-                            <div class="float-right ml-3" id="buttons"></div>
-                        </div>
-                        <!-- /.card-header -->
-
-                        <div class="card-body">
-                            @*<table id="example1" class="table table-bordered table-striped">*@
-                            <table id="example2" class="ui celled table display" style="width:100%">
-                                <thead>
+                            <tbody>
+                                @foreach (var notifyObject in Model)
+                                {
                                     <tr>
-                                        <th style="width:3%"></th>
-                                        <th>Име на обект</th>
-                                        <th>Телефон 1</th>
-                                        <th>Телефон 2</th>
-                                        <th>Телефон 3</th>
-                                        <th>Телефон 4</th>
+                                        @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
+                                        {
+                                            <td>
+                                                <div class="icheck-primary d-inline">
+                                                    <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
+                                                    <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                                </div>
+                                            </td>
+                                        }
+                                        else if (@notifyObject.ObjectType == 2)
+                                        {
+                                            <td>
+                                                <div class="icheck-primary d-inline">
+                                                    <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
+                                                    <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                                </div>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                <div class="icheck-primary d-inline">
+                                                    <input type="checkbox" id="@notifyObject.ObjectId" onclick="return false;" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
+                                                    <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                                </div>
+                                            </td>
+                                        }
+                                        <td>@notifyObject.ObjectName</td>
+                                        <td>@notifyObject.Phone1</td>
+                                        <td>@notifyObject.Phone2</td>
+                                        <td>@notifyObject.Phone3</td>
+                                        <td>@notifyObject.Phone4</td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var notifyObject in Model)
-                                    {
-                                        <tr>
+                                }
+                            </tbody>
 
-                                            @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
-                                            {
-                                                <td>
-                                                    <div class="icheck-primary d-inline">
-                                                        <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
-                                                        <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
-                                                    </div>
-                                                </td>
-                                            }
-                                            else if (@notifyObject.ObjectType == 2)
-                                            {
-                                                <td>
-                                                    <div class="icheck-primary d-inline">
-                                                        <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
-                                                        <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
-                                                    </div>
-                                                </td>
-                                            }
-                                            else
-                                            {
-                                                <td>
-                                                    <div class="icheck-primary d-inline">
-                                                        <input type="checkbox" id="@notifyObject.ObjectId" onclick="return false;" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
-                                                        <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
-                                                    </div>
-                                                </td>
-                                            }
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th>Име на обект</th>
+                                    <th>Телефон 1</th>
+                                    <th>Телефон 2</th>
+                                    <th>Телефон 3</th>
+                                    <th>Телефон 4</th>
+                                </tr>
+                            </tfoot>
 
-                                            <td>@notifyObject.ObjectName</td>
-                                            <td>@notifyObject.Phone1</td>
-                                            <td>@notifyObject.Phone2</td>
-                                            <td>@notifyObject.Phone3</td>
-                                            <td>@notifyObject.Phone4</td>
-
-                                        </tr>
-                                    }
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th></th>
-                                        <th>Име на обект</th>
-                                        <th>Телефон 1</th>
-                                        <th>Телефон 2</th>
-                                        <th>Телефон 3</th>
-                                        <th>Телефон 4</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <!-- /.card-body -->
-
-                    </form>
-
-                </div>
-                <!-- /.card -->
-
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.col -->
+            <!-- /.card -->
+
         </div>
-        <!-- /.row -->
+        <!-- /.col -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.row -->
 </section>
 <!-- /.content -->
 
 <!-- Page specific script -->
 <script>
-    $(document).ready(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": false,
-        "lengthChange": true,
-        "searching": false,
-        "ordering": true,
-        "order": [[ 0, "desc" ]],
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#buttons');
-    });
+    $(document).ready(function() {
+        $('#datatable').DataTable({
+            "paging": false,
+            "searching": false,
+            "order": [[ 0, "desc" ]],
+            "buttons": ["copy", "csv", "excel", "pdf", "print"]
+        }).buttons().container().appendTo('#buttons');
+    } );
 </script>

@@ -6,84 +6,70 @@
 }
 
 <section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6">
+    <div class="row">
+        <div class="col-6">
 
-                <div class="card">
-
-                    <div class="card-header">
-                        <a asp-area="" asp-action="AddNewProcessType" asp-controller="NotifyProcess" class="btn btn-primary">Добавяне на нов тип процес</a>
-                        <div class="float-right ml-3" id="buttons"></div>
-                    </div>
-                    <!-- /.card-header -->
-
-                    <div class="card-body">
-                        @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="ui celled table display" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th style="width:5%">ID</th>
-                                    <th>Описание</th>
-                                    <th style="width:10%">Действие</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var processType in Model)
-                                {
-                                    <tr>
-
-                                        <td>@processType.Id</td>
-                                        <td>@processType.Description</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a asp-area="" asp-action="EditProcessType" asp-controller="NotifyProcess" asp-route-id="@processType.Id" class="btn btn-block btn-warning btn-sm">Редактиране</a>
-                                            </div>
-                                        </td>
-
-                                    </tr>
-                                }
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Описание</th>
-                                    <th>Действие</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
+            <div class="card">
+                <div class="card-header">
+                    <a asp-area="" asp-action="AddNewProcessType" asp-controller="NotifyProcess" class="btn btn-primary">Добавяне на нов тип процес</a>
+                    <div class="float-right ml-3" id="buttons"></div>
                 </div>
-                <!-- /.card -->
+                <!-- /.card-header -->
 
+                <div class="card-body">
+                    <table id="datatable" class="display" style="width:100%">
+
+                        <thead>
+                            <tr>
+                                <th style="width:5%">ID</th>
+                                <th>Описание</th>
+                                <th style="width:10%">Действие</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var processType in Model)
+                            {
+                                <tr>
+                                    <td>@processType.Id</td>
+                                    <td>@processType.Description</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a asp-area="" asp-action="EditProcessType" asp-controller="NotifyProcess" asp-route-id="@processType.Id" class="btn btn-block btn-warning btn-sm">Редактиране</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>Описание</th>
+                                <th>Действие</th>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+                <!-- /.card-body -->
             </div>
-            <!-- /.col -->
+            <!-- /.card -->
+
         </div>
-        <!-- /.row -->
+        <!-- /.col -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.row -->
 </section>
 <!-- /.content -->
 
 <!-- Page specific script -->
 <script>
-    $(document).ready(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        "pageLength": 100,
-        "lengthMenu": [10, 25, 50, 100, 200, 500, 1000],
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#buttons');
-    });
+    $(document).ready(function() {
+        $('#datatable').DataTable({
+            "pageLength": 100,
+            "lengthMenu": [[10, 25, 50, 100, 250, 500, -1], [10, 25, 50, 100, 250, 500, "All"]],
+            "buttons": ["copy", "csv", "excel", "pdf", "print"]
+        }).buttons().container().appendTo('#buttons');
+    } );
 </script>

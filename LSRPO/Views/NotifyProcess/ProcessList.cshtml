@@ -6,111 +6,97 @@
 }
 
 <section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+    <div class="row">
+        <div class="col-12">
 
-                <div class="card">
+            <div class="card">
+                <div class="card-body">
+                    <table id="datatable" class="display" style="width:100%">
 
-                    <div class="card-body">
-                        @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="ui celled table display" style="width:100%">
-                            <thead>
+                        <thead>
+                            <tr>
+                                <th>Действие</th>
+                                <th>ID</th>
+                                <th>Име на група</th>
+                                <th>Име на лице</th>
+                                <th>Пулт</th>
+                                <th>Тип</th>
+                                <th>Начална дата</th>
+                                <th>Крайна дата</th>
+                                <th>Флаг</th>
+                                <th>Действие</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var process in Model)
+                            {
                                 <tr>
-                                    <th>Действие</th>
-                                    <th>ID</th>
-                                    <th>Име на група</th>
-                                    <th>Име на лице</th>
-                                    <th>Пулт</th>
-                                    <th>Тип</th>
-                                    <th>Начална дата</th>
-                                    <th>Крайна дата</th>
-                                    <th>Флаг</th>
-                                    <th>Действие</th>
-                                    @*<th style="width: 205px">Действие</th>*@
+                                    <td>
+                                        <div class="btn-group">
+                                            @if (@process.FlagId == 0 || @process.FlagId == 3)
+                                            {
+                                                <form asp-area="" asp-action="EndProcess" asp-controller="NotifyProcess" asp-route-id="@process.ProcessId" method="post">
+                                                    <button type="submit" class="btn btn-block btn-danger btn-sm" onclick="return confirm('Потвърждаване прекратяването на процес: @process.ProcessId')">Прекрати</button>
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                <button type="button" class="btn btn-block btn-danger btn-sm disabled">Прекрати</button>
+                                            }
+                                        </div>
+                                    </td>
+                                    <td>@process.ProcessId</td>
+                                    <td>@process.GroupName</td>
+                                    <td>@process.UserName</td>
+                                    <td>@process.PultName</td>
+                                    <td>@process.ProccesTypeName</td>
+                                    <td>@process.StartDate</td>
+                                    <td>@process.EndDate</td>
+                                    <td>@process.FlagName</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info btn-sm">Детайли</a>
+                                        </div>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var process in Model)
-                                {
-                                    <tr>
-                                        <td>
-                                            <div class="btn-group">
+                            }
+                        </tbody>
 
-                                                @if (@process.FlagId == 0 || @process.FlagId == 3)
-                                                {
-                                                    <form asp-area="" asp-action="EndProcess" asp-controller="NotifyProcess" asp-route-id="@process.ProcessId" method="post">
-                                                        <button type="submit" class="btn btn-block btn-danger btn-sm" onclick="return confirm('Потвърждаване прекратяването на процес: @process.ProcessId')">Прекрати</button>
-                                                    </form>
-                                                }
-                                                else
-                                                {
-                                                    <button type="button" class="btn btn-block btn-danger btn-sm disabled">Прекрати</button>
-                                                }
-                                            </div>
-                                        </td>
-                                        <td>@process.ProcessId</td>
-                                        <td>@process.GroupName</td>
-                                        <td>@process.UserName</td>
-                                        <td>@process.PultName</td>
-                                        <td>@process.ProccesTypeName</td>
-                                        <td>@process.StartDate</td>
-                                        <td>@process.EndDate</td>
-                                        <td>@process.FlagName</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info btn-sm">Детайли</a>
-                                            </div>
-                                        </td>
+                        <tfoot>
+                            <tr>
+                                <th>Действие</th>
+                                <th>ID</th>
+                                <th>Име на група</th>
+                                <th>Име на лице</th>
+                                <th>Пулт</th>
+                                <th>Тип</th>
+                                <th>Начална дата</th>
+                                <th>Крайна дата</th>
+                                <th>Флаг</th>
+                                <th>Действие</th>
+                            </tr>
+                        </tfoot>
 
-                                    </tr>
-                                }
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Действие</th>
-                                    <th>ID</th>
-                                    <th>Име на група</th>
-                                    <th>Име на лице</th>
-                                    <th>Пулт</th>
-                                    <th>Тип</th>
-                                    <th>Начална дата</th>
-                                    <th>Крайна дата</th>
-                                    <th>Флаг</th>
-                                    <th>Действие</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
+                    </table>
                 </div>
-                <!-- /.card -->
-
+                <!-- /.card-body -->
             </div>
-            <!-- /.col -->
+            <!-- /.card -->
+
         </div>
-        <!-- /.row -->
+        <!-- /.col -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.row -->
 </section>
 <!-- /.content -->
 
 <!-- Page specific script -->
 <script>
-    $(document).ready(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": false,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "order": [[ 1, "desc" ]],
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
+    $(document).ready(function() {
+        $('#datatable').DataTable({
+            "paging": false,
+            "order": [[ 1, "desc" ]]
+        });
+    } );
 </script>

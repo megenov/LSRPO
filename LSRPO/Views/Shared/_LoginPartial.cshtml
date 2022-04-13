@@ -15,7 +15,7 @@
           <img src="~/img/@User.FindFirst(ClaimConstant.ImageUrl)?.Value" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a asp-area="" asp-action="UserProfile" asp-controller="User" class="d-block">@User.FindFirst(ClaimConstant.FullName)?.Value</a> @*@UserManager.GetUserAsync(User).Result.USR_FULLNAME*@
+          <a asp-area="" asp-action="UserProfile" asp-controller="User" class="d-block">@User.Identity.Name</a> @*@User.FindFirst(ClaimConstant.FullName)?.Value*@ @*@UserManager.GetUserAsync(User).Result.USR_FULLNAME*@ @*style="font-size:13px"*@
         </div>
       </div>
 }

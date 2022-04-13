@@ -7,127 +7,114 @@
 }
 
 <section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+    <div class="row">
+        <div class="col-12">
 
-                <div class="card">
-                    <div class="card-header">
-                        <div class="float-right ml-3" id="buttons"></div>
-                    </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="float-right ml-3" id="buttons"></div>
+                </div>
 
-                    <div class="card-body">
-                        @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="ui celled table display" style="width:100%">
-                            <thead>
+                <div class="card-body">
+                    <table id="datatable" class="display" style="width:100%">
+
+                        <thead>
+                            <tr>
+                                <th style="width:5%">Номер</th>
+                                <th>Име</th>
+                                <th>Описание</th>
+                                <th>Номер</th>
+                                <th>Последна промяна</th>
+                                <th style="width:20%">Действие</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var notifyGroup in Model)
+                            {
                                 <tr>
-                                    <th style="width:5%">Номер</th>
-                                    <th>Име</th>
-                                    <th>Описание</th>
-                                    <th>Номер</th>
-                                    <th>Последна промяна</th>
-                                    <th style="width:20%">Действие</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var notifyGroup in Model)
-                                {
-                                    <tr>
+                                    <td>@notifyGroup.Id</td>
+                                    <td>@notifyGroup.Name</td>
+                                    <td>@notifyGroup.Description</td>
+                                    <td>@notifyGroup.Number</td>
+                                    <td>@notifyGroup.DateOfChange</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
+                                            {
+                                                <a asp-area="" asp-action="EditGroup" asp-controller="NotifyGroup" asp-route-id="@notifyGroup.Id" class="btn btn-block btn-warning btn-sm">Редактиране</a>
+                                            }
+                                            else
+                                            {
+                                                <button type="button" class="btn btn-block btn-warning btn-sm disabled">Редактиране</button>
+                                            }
+                                        </div>
 
-                                        <td>@notifyGroup.Id</td>
-                                        <td>@notifyGroup.Name</td>
-                                        <td>@notifyGroup.Description</td>
-                                        <td>@notifyGroup.Number</td>
-                                        <td>@notifyGroup.DateOfChange</td>
-                                        <td>
-                                            <div class="btn-group">
+                                        <div class="btn-group">
+                                            @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
+                                            {
+                                                <a asp-area="" asp-action="EditGroupUsers" asp-controller="NotifyGroup" asp-route-id="@notifyGroup.Id" class="btn btn-block btn-info btn-sm">Потребители</a>
+                                            }
+                                            else
+                                            {
+                                                <button type="button" class="btn btn-block btn-info btn-sm disabled">Потребители</button>
+                                            }
+                                        </div>
+
+                                        <div class="btn-group">
+                                            @if (@notifyGroup.Flag == false)
+                                            {
                                                 @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
-                                                {
-                                                    <a asp-area="" asp-action="EditGroup" asp-controller="NotifyGroup" asp-route-id="@notifyGroup.Id" class="btn btn-block btn-warning btn-sm">Редактиране</a>
-                                                }
-                                                else
-                                                {
-                                                    <button type="button" class="btn btn-block btn-warning btn-sm disabled">Редактиране</button>
-                                                }
-                                            </div>
-
-                                            <div class="btn-group">
-                                                @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
-                                                {
-                                                    <a asp-area="" asp-action="EditGroupUsers" asp-controller="NotifyGroup" asp-route-id="@notifyGroup.Id" class="btn btn-block btn-info btn-sm">Потребители</a>
-                                                }
-                                                else
-                                                {
-                                                    <button type="button" class="btn btn-block btn-info btn-sm disabled">Потребители</button>
-                                                }
-                                            </div>
-
-                                            <div class="btn-group">
-                                                @if (@notifyGroup.Flag == false)
-                                                {
-                                                    @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
-                                                    {
-                                                        <a asp-area="" asp-action="EditGroupObjects" asp-controller="NotifyGroup" asp-route-id="@notifyGroup.Id" class="btn btn-block btn-info btn-sm">Обекти</a>
-                                                    }
-                                                    else
-                                                    {
-                                                        <button type="button" class="btn btn-block btn-info btn-sm disabled">Обекти</button>
-                                                    }
-                                                }
-                                                else
                                                 {
                                                     <a asp-area="" asp-action="EditGroupObjects" asp-controller="NotifyGroup" asp-route-id="@notifyGroup.Id" class="btn btn-block btn-info btn-sm">Обекти</a>
                                                 }
+                                                else
+                                                {
+                                                    <button type="button" class="btn btn-block btn-info btn-sm disabled">Обекти</button>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <a asp-area="" asp-action="EditGroupObjects" asp-controller="NotifyGroup" asp-route-id="@notifyGroup.Id" class="btn btn-block btn-info btn-sm">Обекти</a>
+                                            }
 
-                                            </div>
-                                        </td>
-
-                                    </tr>
-                                }
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Номер</th>
-                                    <th>Име</th>
-                                    <th>Описание</th>
-                                    <th>Номер</th>
-                                    <th>Последна промяна</th>
-                                    <th>Действие</th>
+                                        </div>
+                                    </td>
                                 </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
+                            }
+                        </tbody>
 
+                        <tfoot>
+                            <tr>
+                                <th>Номер</th>
+                                <th>Име</th>
+                                <th>Описание</th>
+                                <th>Номер</th>
+                                <th>Последна промяна</th>
+                                <th>Действие</th>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+                <!-- /.card-body -->
             </div>
-            <!-- /.col -->
+            <!-- /.card -->
+
         </div>
-        <!-- /.row -->
+        <!-- /.col -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.row -->
 </section>
 <!-- /.content -->
 
 <!-- Page specific script -->
 <script>
-    $(document).ready(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        "pageLength": 100,
-        "lengthMenu": [10, 25, 50, 100, 200, 500, 1000],
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#buttons');
-    });
+    $(document).ready(function() {
+        $('#datatable').DataTable({
+            "pageLength": 100,
+            "lengthMenu": [[10, 25, 50, 100, 250, 500, -1], [10, 25, 50, 100, 250, 500, "All"]],
+            "buttons": ["copy", "csv", "excel", "pdf", "print"]
+        }).buttons().container().appendTo('#buttons');
+    } );
 </script>

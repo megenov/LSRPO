@@ -1,104 +1,154 @@
 ﻿@using LSRPO.Core.Models.NotifyStatus
 @model IEnumerable<ProcessListAllViewModel>
 
+<style type='text/css'>
+    thead input {
+        width: 100%;
+    }
+</style>
+
 @{
     ViewData["Title"] = "Справка за всички оповестителни процеси";
 }
 
 <section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+    <div class="row">
+        <div class="col-12">
 
-                <div class="card">
-                    <div class="card-header">
-                        <div class="float-right ml-3" id="buttons"></div>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        @*<table id="example1" class="table table-bordered table-striped">*@
-                        <table id="example2" class="ui celled table display" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Име на група</th>
-                                    <th>Име на лице</th>
-                                    <th>Пулт</th>
-                                    <th>Тип</th>
-                                    <th>Начална дата</th>
-                                    <th>Крайна дата</th>
-                                    <th>Флаг</th>
-                                    <th>Действие</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var process in Model)
-                                {
-                                    <tr>
-                                        <td>@process.ProcessId</td>
-                                        <td>@process.GroupName</td>
-                                        <td>@process.UserName</td>
-                                        <td>@process.PultName</td>
-                                        <td>@process.ProccesTypeName</td>
-                                        <td>@process.StartDate</td>
-                                        <td>@process.EndDate</td>
-                                        <td>@process.FlagName</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info btn-sm">Детайли</a>
-                                            </div>
-                                        </td>
-
-                                    </tr>
-                                }
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Име на група</th>
-                                    <th>Име на лице</th>
-                                    <th>Пулт</th>
-                                    <th>Тип</th>
-                                    <th>Начална дата</th>
-                                    <th>Крайна дата</th>
-                                    <th>Флаг</th>
-                                    <th>Действие</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="float-right ml-3" id="buttons"></div>
                 </div>
-                <!-- /.card -->
+                <!-- /.card-header -->
 
+                <div class="card-body">
+                    <table id="datatable" class="display" style="width:100%">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Име на група</th>
+                                <th>Име на лице</th>
+                                <th>Пулт</th>
+                                <th>Тип</th>
+                                <th>Начална дата</th>
+                                <th>Крайна дата</th>
+                                <th>Флаг</th>
+                                <th>Действие</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var process in Model)
+                            {
+                                <tr>
+                                    <td>@process.ProcessId</td>
+                                    <td>@process.GroupName</td>
+                                    <td>@process.UserName</td>
+                                    <td>@process.PultName</td>
+                                    <td>@process.ProccesTypeName</td>
+                                    <td>@process.StartDate</td>
+                                    <td>@process.EndDate</td>
+                                    <td>@process.FlagName</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a asp-area="" asp-action="ProcessDetails" asp-controller="NotifyStatus" asp-route-id="@process.ProcessId" class="btn btn-block btn-info btn-sm">Детайли</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <th>ID</th>
+                                <th>Име на група</th>
+                                <th>Име на лице</th>
+                                <th>Пулт</th>
+                                <th>Тип</th>
+                                <th>Начална дата</th>
+                                <th>Крайна дата</th>
+                                <th>Флаг</th>
+                                <th>Действие</th>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+                <!-- /.card-body -->
             </div>
-            <!-- /.col -->
+            <!-- /.card -->
+
         </div>
-        <!-- /.row -->
+        <!-- /.col -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.row -->
 </section>
 <!-- /.content -->
 
 <!-- Page specific script -->
 <script>
     $(document).ready(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "order": [[ 0, "desc" ]],
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        "pageLength": 100,
-        "lengthMenu": [10, 25, 50, 100, 200, 500, 1000],
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#buttons');
+        // Setup - add a text input to each footer cell
+        $('#datatable thead tr')
+            .clone(true)
+            .addClass('filters')
+            .appendTo('#datatable thead');
+
+        var table = $('#datatable').DataTable({
+            orderCellsTop: true,
+            fixedHeader: true,
+            initComplete: function () {
+                var api = this.api();
+
+                // For each column
+                api
+                    .columns()
+                    .eq(0)
+                    .each(function (colIdx) {
+                        // Set the header cell to contain the input element
+                        var cell = $('.filters th').eq(
+                            $(api.column(colIdx).header()).index()
+                        );
+                        var title = $(cell).text();
+                        $(cell).html('<input type="text" placeholder="' + title + '" />');
+
+                        // On every keypress in this input
+                        $(
+                            'input',
+                            $('.filters th').eq($(api.column(colIdx).header()).index())
+                        )
+                            .off('keyup change')
+                            .on('keyup change', function (e) {
+                                e.stopPropagation();
+
+                                // Get the search value
+                                $(this).attr('title', $(this).val());
+                                var regexr = '({search})'; //$(this).parents('th').find('select').val();
+
+                                var cursorPosition = this.selectionStart;
+                                // Search the column for that value
+                                api
+                                    .column(colIdx)
+                                    .search(
+                                        this.value != ''
+                                            ? regexr.replace('{search}', '(((' + this.value + ')))')
+                                            : '',
+                                        this.value != '',
+                                        this.value == ''
+                                    )
+                                    .draw();
+
+                                $(this)
+                                    .focus()[0]
+                                    .setSelectionRange(cursorPosition, cursorPosition);
+                            });
+                    });
+            },
+            "order": [[ 0, "desc" ]],
+            "pageLength": 100,
+            "lengthMenu": [[10, 25, 50, 100, 250, 500, -1], [10, 25, 50, 100, 250, 500, "All"]],
+            "buttons": ["copy", "csv", "excel", "pdf", "print"]
+        }).buttons().container().appendTo('#buttons');
     });
 </script>

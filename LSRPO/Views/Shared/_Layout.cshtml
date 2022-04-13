@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewData["Title"] - ЛСРПО</title>
 
-    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">*@
-    <link rel="stylesheet" href="~/css/googlefonts.css">
-    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/adminlte.min.css">
-    <link rel="stylesheet" href="~/plugins/toastr/toastr.min.css">
-    <link rel="stylesheet" href="~/plugins/datatables/datatables/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="~/plugins/datatables/datatables/semantic.min.css">
-    @*<link rel="stylesheet" href="~/plugins/datatables/datatables/dataTables.semanticui.min.css">*@
-    <link rel="stylesheet" href="~/plugins/datatables/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="~/plugins/datatables/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="~/plugins/datatables/datatables-buttons/css/buttons.bootstrap4.min.css">
-
+    <link rel="stylesheet" href="~/css/googlefonts.css" />
+    <link rel="stylesheet" href="~/css/adminlte.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/plugins/toastr/toastr.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
-    <!-- jQuery -->
-    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- Datatables -->
+    <link rel="stylesheet" href="~/plugins/datatables/jquery.dataTables.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/plugins/datatables/fixedHeader.dataTables.min.css" />
+    <link rel="stylesheet" href="~/plugins/datatables/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="~/plugins/datatables/datatables-buttons/css/buttons.bootstrap4.min.css" />
+
+     <!-- jQuery -->
+    <script src="~/js/jquery-3.5.1.js"></script>
+    <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
 
     @await RenderSectionAsync("Head", required: false)
 </head>
@@ -32,6 +32,7 @@
         <!-- Navbar -->
         <partial name="_UpMenu" />
         <!-- /.navbar -->
+
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
@@ -71,6 +72,7 @@
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
+
             <!-- Main content -->
             <div class="content">
                 <div class="container-fluid">
@@ -80,6 +82,7 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
+
         <!-- Main Footer -->
         <footer class="main-footer">
             <!-- To the right -->
@@ -90,29 +93,22 @@
             <strong>Copyright &copy; 2022-@DateTime.Now.Year <a href="/">ЛСРПО</a>.</strong> All rights reserved.
         </footer>
     </div>
-
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
-    @*<script src="~/plugins/jquery/jquery.min.js"></script>*@
-    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/adminlte.min.js"></script>
     <script src="~/plugins/toastr/toastr.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 
-    <!-- DataTables  & Plugins -->
-    <script src="~/plugins/datatables/datatables/jquery.dataTables.min.js"></script>
-    <script src="~/plugins/datatables/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="~/plugins/datatables/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="~/plugins/datatables/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- DataTables Buttons -->
     <script src="~/plugins/datatables/datatables-buttons/js/dataTables.buttons.min.js"></script>
     <script src="~/plugins/datatables/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="~/plugins/datatables/jszip/jszip.min.js"></script>
     <script src="~/plugins/datatables/pdfmake/pdfmake.min.js"></script>
     <script src="~/plugins/datatables/pdfmake/vfs_fonts.js"></script>
-    <script src="~/plugins/datatables/datatables-buttons/js/buttons.html5.min.js"></script>
-    <script src="~/plugins/datatables/datatables-buttons/js/buttons.print.min.js"></script>
-    <script src="~/plugins/datatables/datatables-buttons/js/buttons.colVis.min.js"></script>
 
     <partial name="_UserMessages" />
     @await RenderSectionAsync("Scripts", required: false)
