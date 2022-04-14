@@ -22,6 +22,12 @@ namespace LSRPO.Controllers
         }
 
         [Authorize(Roles = $"{UserConstant.Roles.Administrator},{UserConstant.Roles.Operator}")]
+        public IActionResult Messages()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = $"{UserConstant.Roles.Administrator},{UserConstant.Roles.Operator}")]
         public IActionResult Privacy()
         {
             return View();

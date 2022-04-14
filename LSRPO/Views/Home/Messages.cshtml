@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Съобщения";
+}
+
+<div class="col-4"><input type="hidden" value="@User.Identity.Name" id="userInput" /></div>
+
+<div class="row">&nbsp;</div>
+
+<div class="col-sm-6">
+    <div class="form-group">
+        <textarea class="form-control" type="text" rows="3" id="messageInput" placeholder="Съобщение ..."></textarea>
+    </div>
+</div>
+
+<div class="col-sm-6">
+    <div class="form-group">
+        <input type="button" class="btn btn-block btn-info" id="sendButton" value="Изпрати съобщение" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
+
+<script src="~/js/signalr/signalr.min.js"></script>
+<script src="~/js/signalr/chat.js"></script>

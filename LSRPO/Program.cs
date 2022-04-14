@@ -3,6 +3,7 @@ using LSRPO.Core.Contracts;
 using LSRPO.Core.Contracts.User;
 using LSRPO.Core.Services;
 using LSRPO.Core.Services.User;
+using LSRPO.Hubs;
 using LSRPO.Infrastructure.Data;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
@@ -40,6 +41,7 @@ builder.Services.AddControllersWithViews()
         options.ModelBinderProviders.Insert(2, new DoubleModelBinderProvider());
     });
 
+builder.Services.AddSignalR();
 builder.Services.AddScoped<IApplicatioDbRepository, ApplicatioDbRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<INotifyObjectService, NotifyObjectService>();
@@ -79,5 +81,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();
