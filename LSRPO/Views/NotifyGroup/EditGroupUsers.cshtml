@@ -82,4 +82,13 @@
             "buttons": ["copy", "csv", "excel", "pdf", "print"]
         }).buttons().container().appendTo('#buttons');
     } );
+
+    $('#datatable tr *').click(function(e) {
+        var $cb = $(this).parent('tr').find('input[type=checkbox]');
+        var c = $cb.prop('checked');
+        if (c === undefined)
+            e.stopPropagation();
+        else
+            $cb.prop('checked', !c);
+    });
 </script>
