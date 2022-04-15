@@ -95,8 +95,19 @@ namespace LSRPO.Controllers
                 return View(model);
             }
 
+            string? groupName = string.Empty;
+
+            try
+            {
+                groupName = await notifyGroupService.GetGroupName(model.GroupId);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyGroupList));
+            }
+
             (bool result, string error) = await notifyGroupService.EditGroupUsers(model);
-            var groupName = await notifyGroupService.GetGroupName(model.GroupId);
 
             if (result)
             {
@@ -113,8 +124,19 @@ namespace LSRPO.Controllers
         [Authorize(Roles = UserConstant.Roles.Administrator)]
         public async Task<IActionResult> ClearGroupUsers(int id)
         {
+            string? groupName = string.Empty;
+
+            try
+            {
+                groupName = await notifyGroupService.GetGroupName(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyGroupList));
+            }
+
             (bool result, string error) = await notifyGroupService.ClearGroupUsers(id);
-            var groupName = await notifyGroupService.GetGroupName(id);
 
             if (result)
             {
@@ -165,8 +187,19 @@ namespace LSRPO.Controllers
                 return View(model);
             }
 
+            string? groupName = string.Empty;
+
+            try
+            {
+                groupName = await notifyGroupService.GetGroupName(model.GroupId);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyGroupList));
+            }
+
             (bool result, string error) = await notifyGroupService.EditGroupObjects(model);
-            var groupName = await notifyGroupService.GetGroupName(model.GroupId);
 
             if (result)
             {
@@ -182,8 +215,19 @@ namespace LSRPO.Controllers
 
         public async Task<IActionResult> ClearGroupObjects(int id)
         {
+            string? groupName = string.Empty;
+
+            try
+            {
+                groupName = await notifyGroupService.GetGroupName(id);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[MessageConstant.ErrorMessage] = ex.Message;
+                return RedirectToAction(nameof(NotifyGroupList));
+            }
+
             (bool result, string error) = await notifyGroupService.ClearGroupObjects(id);
-            var groupName = await notifyGroupService.GetGroupName(id);
 
             if (result)
             {
