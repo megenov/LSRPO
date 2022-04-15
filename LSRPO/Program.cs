@@ -9,6 +9,7 @@ using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
 using LSRPO.ModelBinders;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,6 +40,7 @@ builder.Services.AddControllersWithViews()
         options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
         options.ModelBinderProviders.Insert(1, new DateTimeModelBinderProvider(FormatingConstant.NormalDateFormat));
         options.ModelBinderProviders.Insert(2, new DoubleModelBinderProvider());
+        options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
     });
 
 builder.Services.AddSignalR();
