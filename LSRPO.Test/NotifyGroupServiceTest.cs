@@ -206,7 +206,7 @@ namespace LSRPO.Test
             var service = serviceProvider.GetService<INotifyGroupService>();
 
             var model = new EditGroupObjectsViewModel { GroupId = 1, ObjectId = 1, ObjectName = "Пешо", ObjectType = 2, Phone1 = "1234", Phone2 = "4321", Phone3 = "5678", Phone4 = "8765", IsSelected = true };
-            var objects = await service.GetObjects(1);
+            var objects = await service.GetObjects(1, false);
 
             Assert.AreEqual(objects.FirstOrDefault(f => f.ObjectId == 1).ObjectId, model.ObjectId);
             Assert.AreEqual(objects.FirstOrDefault(f => f.ObjectId == 1).GroupId, model.GroupId);
@@ -225,7 +225,7 @@ namespace LSRPO.Test
             var service = serviceProvider.GetService<INotifyGroupService>();
 
             var model = new EditGroupObjectsViewModel { GroupId = 1, ObjectId = 2, ObjectName = "БПС", ObjectType = 1, Phone1 = "8888", IsSelected = false };
-            var objects = await service.GetObjects(1);
+            var objects = await service.GetObjects(1, false);
 
             Assert.AreEqual(objects.FirstOrDefault(f => f.ObjectId == 2).ObjectId, model.ObjectId);
             Assert.AreEqual(objects.FirstOrDefault(f => f.ObjectId == 2).GroupId, model.GroupId);
@@ -240,11 +240,23 @@ namespace LSRPO.Test
         {
             var service = serviceProvider.GetService<INotifyGroupService>();
 
-            var objects = await service.GetObjects(1);
+            var objects = await service.GetObjects(1, false);
             Assert.AreEqual(objects.Count(), 2);
 
-            var objects2 = await service.GetObjects(2);
+            var objects2 = await service.GetObjects(2, false);
             Assert.AreEqual(objects2.Count(), 2);
+        }
+
+        [Test]
+        public async Task GetObjectsCountSuccess2Test()
+        {
+            var service = serviceProvider.GetService<INotifyGroupService>();
+
+            var objects = await service.GetObjects(1, true);
+            Assert.AreEqual(objects.Count(), 1);
+
+            var objects2 = await service.GetObjects(2, true);
+            Assert.AreEqual(objects2.Count(), 1);
         }
 
         [Test]
@@ -258,7 +270,7 @@ namespace LSRPO.Test
             Assert.AreEqual(result, false);
             Assert.AreEqual(error, "Обектите в Група 1 са същите като предишните!");
 
-            var objects = await service.GetObjects(1);
+            var objects = await service.GetObjects(1, false);
             Assert.AreEqual(objects.Where(w => w.IsSelected == true).Count(), 1);
         }
 
@@ -273,7 +285,7 @@ namespace LSRPO.Test
             Assert.AreEqual(result, true);
             Assert.AreEqual(error, "Възникна грешка!");
 
-            var objects = await service.GetObjects(1);
+            var objects = await service.GetObjects(1, false);
             Assert.AreEqual(objects.Where(w => w.IsSelected == true).Count(), 0);
         }
 
@@ -288,7 +300,7 @@ namespace LSRPO.Test
             Assert.AreEqual(result, false);
             Assert.AreEqual(error, "Няма редактирани обекти в Група 3!");
 
-            var objects = await service.GetObjects(3);
+            var objects = await service.GetObjects(3, false);
             Assert.AreEqual(objects.Where(w => w.IsSelected == true).Count(), 0);
         }
 
@@ -303,7 +315,7 @@ namespace LSRPO.Test
             Assert.AreEqual(result, true);
             Assert.AreEqual(error, "Възникна грешка!");
 
-            var objects = await service.GetObjects(3);
+            var objects = await service.GetObjects(3, false);
             Assert.AreEqual(objects.Where(w => w.IsSelected == true).Count(), 2);
         }
 
@@ -318,7 +330,7 @@ namespace LSRPO.Test
             Assert.AreEqual(result, true);
             Assert.AreEqual(error, "Възникна грешка!");
 
-            var objects = await service.GetObjects(1);
+            var objects = await service.GetObjects(1, false);
             Assert.AreEqual(objects.Where(w => w.IsSelected == true).Count(), 2);
         }
 
@@ -344,7 +356,7 @@ namespace LSRPO.Test
             Assert.AreEqual(result, true);
             Assert.AreEqual(error, "Възникна грешка!");
 
-            var objects = await service.GetObjects(1);
+            var objects = await service.GetObjects(1, false);
             Assert.AreEqual(objects.Where(w => w.IsSelected == true).Count(), 0);
         }
 
@@ -358,7 +370,7 @@ namespace LSRPO.Test
             Assert.AreEqual(result, false);
             Assert.AreEqual(error, "Няма обекти в Група 3!");
 
-            var objects = await service.GetObjects(3);
+            var objects = await service.GetObjects(3, false);
             Assert.AreEqual(objects.Where(w => w.IsSelected == true).Count(), 0);
         }
 

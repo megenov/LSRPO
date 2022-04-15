@@ -171,7 +171,9 @@ namespace LSRPO.Controllers
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
-            var model = await notifyGroupService.GetObjects(id);
+            var isOperator = User.IsInRole(UserConstant.Roles.Operator);
+
+            var model = await notifyGroupService.GetObjects(id, isOperator);
 
             ViewBag.GroupId = id;
             ViewBag.GroupName = groupName;
@@ -197,6 +199,13 @@ namespace LSRPO.Controllers
             {
                 TempData[MessageConstant.ErrorMessage] = ex.Message;
                 return RedirectToAction(nameof(NotifyGroupList));
+            }
+
+            var groupFlag = await notifyGroupService.GetGroupFlag(model.GroupId);
+
+            if (User.IsInRole(UserConstant.Roles.Operator) && (!groupFlag ?? false))
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
             (bool result, string error) = await notifyGroupService.EditGroupObjects(model);
@@ -225,6 +234,13 @@ namespace LSRPO.Controllers
             {
                 TempData[MessageConstant.ErrorMessage] = ex.Message;
                 return RedirectToAction(nameof(NotifyGroupList));
+            }
+
+            var groupFlag = await notifyGroupService.GetGroupFlag(id);
+
+            if (User.IsInRole(UserConstant.Roles.Operator) && (!groupFlag ?? false))
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
             (bool result, string error) = await notifyGroupService.ClearGroupObjects(id);

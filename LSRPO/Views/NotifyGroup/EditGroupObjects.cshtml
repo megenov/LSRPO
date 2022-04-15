@@ -39,33 +39,41 @@
                                 @foreach (var notifyObject in Model)
                                 {
                                     <tr>
-                                        @if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
-                                        {
+
+                                        @*@if ((User.Identity?.IsAuthenticated ?? false) && (User.IsInRole(UserConstant.Roles.Administrator)))
+                                            {
                                             <td>
-                                                <div class="icheck-primary d-inline">
-                                                    <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
-                                                    <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
-                                                </div>
+                                            <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
+                                            <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                            </div>
                                             </td>
-                                        }
-                                        else if (@notifyObject.ObjectType == 2)
-                                        {
+                                            }
+                                            else if (@notifyObject.ObjectType == 2)
+                                            {
                                             <td>
-                                                <div class="icheck-primary d-inline">
-                                                    <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
-                                                    <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
-                                                </div>
+                                            <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
+                                            <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                            </div>
                                             </td>
-                                        }
-                                        else
-                                        {
+                                            }
+                                            else
+                                            {
                                             <td>
-                                                <div class="icheck-primary d-inline">
-                                                    <input type="checkbox" id="@notifyObject.ObjectId" onclick="return false;" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
-                                                    <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
-                                                </div>
+                                            <div class="icheck-primary d-inline">
+                                            <input type="checkbox" id="@notifyObject.ObjectId" onclick="return false;" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
+                                            <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                            </div>
                                             </td>
-                                        }
+                                            }*@
+
+                                        <td>
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="@notifyObject.ObjectId" name="ObjectIds" value=@notifyObject.ObjectId @(notifyObject.IsSelected ? "checked" : "")>
+                                                <label for="@notifyObject.ObjectId"><text hidden>@notifyObject.IsSelected</text></label>
+                                            </div>
+                                        </td>
                                         <td>@notifyObject.ObjectName</td>
                                         <td>@notifyObject.Phone1</td>
                                         <td>@notifyObject.Phone2</td>

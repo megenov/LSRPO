@@ -351,9 +351,14 @@ namespace LSRPO.Core.Services
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<EditGroupObjectsViewModel>> GetObjects(int id)
+        public async Task<IEnumerable<EditGroupObjectsViewModel>> GetObjects(int id, bool isOperator)
         {
-            return await repo.All<NOTIFY_OBJECT>()
+            var objects = new List<EditGroupObjectsViewModel>();
+
+            if (isOperator)
+            {
+                objects = await repo.All<NOTIFY_OBJECT>()
+                .Where(w => w.NO_TYPE == 2)
                 .Select(s =>
                 new EditGroupObjectsViewModel
                 {
@@ -369,6 +374,29 @@ namespace LSRPO.Core.Services
                 })
                 .OrderBy(o => o.ObjectName)
                 .ToListAsync();
+            }
+
+            else
+            {
+                objects = await repo.All<NOTIFY_OBJECT>()
+                .Select(s =>
+                new EditGroupObjectsViewModel
+                {
+                    GroupId = id,
+                    ObjectId = s.NO_ID,
+                    ObjectName = s.NO_NAME,
+                    ObjectType = s.NO_TYPE,
+                    Phone1 = s.NO_INT_PHONE,
+                    Phone2 = s.NP_MOB_PHONE,
+                    Phone3 = s.NP_EXT_PHONE2,
+                    Phone4 = s.NP_EXT_PHONE1,
+                    IsSelected = s.NG_NPS.Where(w => w.NG_ID == id).Any(a => a.NO_ID == s.NO_ID)
+                })
+                .OrderBy(o => o.ObjectName)
+                .ToListAsync();
+            }
+
+            return objects;
         }
 
         public async Task<IEnumerable<EditGroupUsersViewModel>> GetUsers(int id)

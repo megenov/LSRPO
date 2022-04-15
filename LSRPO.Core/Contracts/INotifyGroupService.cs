@@ -14,7 +14,7 @@ namespace LSRPO.Core.Contracts
 
         Task<bool?> GetGroupFlag(int id);
 
-        Task<IEnumerable<EditGroupObjectsViewModel>> GetObjects(int id);
+        Task<IEnumerable<EditGroupObjectsViewModel>> GetObjects(int id, bool isOperator);
 
         Task<(bool result, string error)> EditGroupObjects(EditGroupObjectsViewModel model);
 
