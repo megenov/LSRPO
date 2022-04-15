@@ -69,7 +69,31 @@
         $('#datatable').DataTable({
             "pageLength": 100,
             "lengthMenu": [[10, 25, 50, 100, 250, 500, -1], [10, 25, 50, 100, 250, 500, "All"]],
-            "buttons": ["copy", "csv", "excel", "pdf", "print"]
+            buttons: [
+            {
+                extend: 'copyHtml5',
+                exportOptions: {
+                    columns: [ 0, 1 ]
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: [ 0, 1 ]
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                exportOptions: {
+                    columns: [ 0, 1 ]
+                }
+            },
+            {
+                extend: "print",
+                exportOptions: {
+                    columns: [ 0, 1 ]
+                }
+            }]
         }).buttons().container().appendTo('#buttons');
     } );
 </script>
