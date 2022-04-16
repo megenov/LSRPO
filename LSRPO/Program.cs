@@ -5,6 +5,7 @@ using LSRPO.Core.Services;
 using LSRPO.Core.Services.User;
 using LSRPO.Hubs;
 using LSRPO.Infrastructure.Data;
+using LSRPO.Infrastructure.Data.Extensions;
 using LSRPO.Infrastructure.Data.Models;
 using LSRPO.Infrastructure.Data.Repositories;
 using LSRPO.ModelBinders;
@@ -52,6 +53,8 @@ builder.Services.AddScoped<INotifyProcessService, NotifyProcessService>();
 builder.Services.AddScoped<INotifyStatusService, NotifyStatusService>();
 
 var app = builder.Build();
+
+app.PrepareDatabase();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
