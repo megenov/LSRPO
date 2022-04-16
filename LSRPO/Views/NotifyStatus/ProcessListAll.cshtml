@@ -1,15 +1,18 @@
 ﻿@using LSRPO.Core.Models.NotifyStatus
 @model IEnumerable<ProcessListAllViewModel>
 
+@{
+    ViewData["Title"] = "Справка за всички оповестителни процеси";
+}
+
 <style type='text/css'>
     thead input {
         width: 100%;
     }
-</style>
 
-@{
-    ViewData["Title"] = "Справка за всички оповестителни процеси";
-}
+    th { font-size: 14px; }
+    td { font-size: 14px; }
+</style>
 
 <section class="content">
     <div class="row">
@@ -22,11 +25,11 @@
                 <!-- /.card-header -->
 
                 <div class="card-body">
-                    <table id="datatable" class="display" style="width:100%">
+                    <table id="datatable" class="display compact nowrap" style="width:100%">
 
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th style="width:5%">ID</th>
                                 <th>Име на група</th>
                                 <th>Име на лице</th>
                                 <th>Пулт</th>
@@ -34,7 +37,7 @@
                                 <th>Начална дата</th>
                                 <th>Крайна дата</th>
                                 <th>Флаг</th>
-                                <th>Действие</th>
+                                <th style="width:5%">Действие</th>
                             </tr>
                         </thead>
 

@@ -5,6 +5,11 @@
     ViewData["Title"] = $"Детайлно състояние на оповестителен процес {ViewBag.ProcessId}";
 }
 
+<style type='text/css'>
+    th { font-size: 14px; }
+    td { font-size: 13px; }
+</style>
+
 <section class="content">
     <div class="row">
         <div class="col-12">
@@ -16,7 +21,7 @@
                 <!-- /.card-header -->
 
                 <div class="card-body">
-                    <table id="datatable" class="display" style="width:100%">
+                    <table id="datatable" class="display compact" style="width:100%">
 
                         <thead>
                             <tr>

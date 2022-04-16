@@ -98,6 +98,7 @@ namespace LSRPO.Core.Services
             else if (process.NPR_FLAG == "0" || process.NPR_FLAG == "3")
             {
                 process.NPR_FLAG = "2";
+                process.NPR_END_DATE = DateTime.Now;
 
                 try
                 {
