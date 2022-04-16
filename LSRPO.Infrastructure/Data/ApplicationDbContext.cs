@@ -47,17 +47,17 @@ namespace LSRPO.Infrastructure.Data
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_PIN).IsUnique();
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_ID).IsUnique();
 
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOTIFY_GROUP>(@"InitialSeed/NOTIFY_GROUPS.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOTIFY_OBJECT>(@"InitialSeed/NOTIFY_OBJECTS.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NPR_TYPE>(@"InitialSeed/NPR_TYPES.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_PROCESS>(@"InitialSeed/NOT_PROCESS.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NO_TYPE>(@"InitialSeed/NO_TYPES.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_PULT>(@"InitialSeed/NOT_PULTS.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_PROCES_STATE>(@"InitialSeed/NOT_PROCES_STATES.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_STATUS_PHONE_STATE>(@"InitialSeed/NOT_STATUS_PHONE_STATES.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_STATUS_STATE>(@"InitialSeed/NOT_STATUS_STATES.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<STATUS_STATE>(@"InitialSeed/STATUS_STATES.json"));
-            modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_STATUS>(@"InitialSeed/NOT_STATUS.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOTIFY_GROUP>(@"InitialSeed/NOTIFY_GROUPS.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOTIFY_OBJECT>(@"InitialSeed/NOTIFY_OBJECTS.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NPR_TYPE>(@"InitialSeed/NPR_TYPES.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_PROCESS>(@"InitialSeed/NOT_PROCESS.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NO_TYPE>(@"InitialSeed/NO_TYPES.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_PULT>(@"InitialSeed/NOT_PULTS.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_PROCES_STATE>(@"InitialSeed/NOT_PROCES_STATES.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_STATUS_PHONE_STATE>(@"InitialSeed/NOT_STATUS_PHONE_STATES.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_STATUS_STATE>(@"InitialSeed/NOT_STATUS_STATES.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<STATUS_STATE>(@"InitialSeed/STATUS_STATES.json"));
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_STATUS>(@"InitialSeed/NOT_STATUS.json"));
 
             base.OnModelCreating(modelBuilder);
         }

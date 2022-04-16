@@ -59,6 +59,11 @@ namespace LSRPO.Areas.Admin.Controllers
 
             var user = await userManager.FindByIdAsync(id.ToString());
 
+            if (id == 1 || User.Identity?.Name == user.UserName)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
             ViewBag.RoleItems = roleManager.Roles
                 .ToList()
                 .Select(s => new SelectListItem()
@@ -81,6 +86,18 @@ namespace LSRPO.Areas.Admin.Controllers
 
             var result = true;
             var user = await userManager.FindByIdAsync(model.Id.ToString());
+
+            if (user == null)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден потребител!";
+                return RedirectToAction(nameof(ManageUsers));
+            }
+
+            if (model.Id == 1 || User.Identity?.Name == user.UserName)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
             (bool nameEdit, string error) = await userService.UpdateName(model);
 
             if (nameEdit)
@@ -200,8 +217,21 @@ namespace LSRPO.Areas.Admin.Controllers
             return RedirectToAction(nameof(ManageUsers));
         }
 
-        public IActionResult ChangePassword(int id)
+        public async Task<IActionResult> ChangePassword(int id)
         {
+            var user = await userManager.FindByIdAsync(id.ToString());
+
+            if (user == null)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден потребител!";
+                return RedirectToAction(nameof(ManageUsers));
+            }
+
+            if (id == 1 || User.Identity?.Name == user.UserName)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
             ViewBag.Id = id;
 
             return View();
@@ -216,6 +246,18 @@ namespace LSRPO.Areas.Admin.Controllers
             }
 
             var user = await userManager.FindByIdAsync(model.Id.ToString());
+
+            if (user == null)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден потребител!";
+                return RedirectToAction(nameof(ManageUsers));
+            }
+
+            if (model.Id == 1 || User.Identity?.Name == user.UserName)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
             var token = await userManager.GeneratePasswordResetTokenAsync(user);
             var result = await userManager.ResetPasswordAsync(user, token, model.ConfirmPassword);
 
@@ -236,6 +278,18 @@ namespace LSRPO.Areas.Admin.Controllers
         {
             var error = string.Empty;
             var user = await userManager.FindByIdAsync(id.ToString());
+
+            if (user == null)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден потребител!";
+                return RedirectToAction(nameof(ManageUsers));
+            }
+
+            if (id == 1 || User.Identity?.Name == user.UserName)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
             //result = await userService.DeleteUserPin(id);
 
             var hasPin = await userService.HasPinCode(id);

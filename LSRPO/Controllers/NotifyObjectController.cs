@@ -45,6 +45,11 @@ namespace LSRPO.Controllers
                 return View(model);
             }
 
+            if (User.IsInRole(UserConstant.Roles.Operator) && model.TypeId != 2)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
             (bool result, string error) = await notifyObjectService.AddObject(model);
 
             if (result)
@@ -91,6 +96,11 @@ namespace LSRPO.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
+            }
+
+            if (User.IsInRole(UserConstant.Roles.Operator) && model.TypeId != 2)
+            {
+                return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
             (bool result, string error) = await notifyObjectService.EditObject(model);
