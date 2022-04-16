@@ -19,19 +19,13 @@ namespace LSRPO.Controllers
             return View();
         }
 
+        public IActionResult Error()
+        {
+            return View();
+        }
+
         [Authorize(Roles = $"{UserConstant.Roles.Administrator},{UserConstant.Roles.Operator}")]
         public IActionResult Messages()
-        {
-            return View();
-        }
-
-        [Authorize(Roles = $"{UserConstant.Roles.Administrator},{UserConstant.Roles.Operator}")]
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult Error()
         {
             return View();
         }

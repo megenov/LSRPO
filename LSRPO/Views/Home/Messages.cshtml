@@ -2,19 +2,19 @@
     ViewData["Title"] = "Съобщения";
 }
 
-<div class="col-4">
-    <input type="hidden" value="@User.Identity.Name" id="userInput" />
-</div>
+<div class="row">
+    <div class="col-sm-12 col-lg-6 col-xl-5">
 
-<div class="col-sm-6">
-    <div class="form-group">
-        <textarea class="form-control" type="text" rows="3" id="messageInput" placeholder="Съобщение ..."></textarea>
-    </div>
-</div>
+        <input type="hidden" value="@User.Identity.Name" id="userInput" />
 
-<div class="col-sm-6">
-    <div class="form-group">
-        <input type="button" class="btn btn-block btn-info" id="sendButton" value="Изпрати съобщение" />
+        <div class="form-group">
+            <textarea class="form-control" type="text" rows="3" id="messageInput" placeholder="Съобщение ..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="button" class="btn btn-block btn-info" id="sendButton" value="Изпрати съобщение" />
+        </div>
+
     </div>
 </div>
 
@@ -25,7 +25,7 @@
 </div>
 
 <div class="row">
-    <div class="col-6">
+    <div class="col-sm-12 col-lg-6 col-xl-5">
         <ul id="messagesList"></ul>
     </div>
 </div>
