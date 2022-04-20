@@ -94,8 +94,8 @@ namespace LSRPO.Infrastructure.Data.Extensions
 
             new AUTH_USER
             {
-                UserName = "nvhristov",
-                Email = "nvhristov@stk.local",
+                UserName = "nviliev",
+                Email = "nviliev@stk.local",
                 USR_FULLNAME = "Никола Вилиев Христов",
                 USR_DESC = "Експерт ТКС",
                 USR_REG_DATE = DateTime.Now,
@@ -114,8 +114,8 @@ namespace LSRPO.Infrastructure.Data.Extensions
 
             new AUTH_USER
             {
-                UserName = "vcyanyovski",
-                Email = "vcyanyovski@stk.local",
+                UserName = "yanyovski",
+                Email = "yanyovski@stk.local",
                 USR_FULLNAME = "Владислав Цветанов Яньовски",
                 USR_DESC = "Инженер ЦКС",
                 USR_REG_DATE = DateTime.Now,
@@ -134,8 +134,8 @@ namespace LSRPO.Infrastructure.Data.Extensions
 
             new AUTH_USER
             {
-                UserName = "ahvelkova",
-                Email = "ahvelkova@stk.local",
+                UserName = "ahangelova",
+                Email = "ahangelova@stk.local",
                 USR_FULLNAME = "Анита Христова Велкова",
                 USR_DESC = "Инженер ЦКС",
                 USR_REG_DATE = DateTime.Now,
@@ -187,8 +187,8 @@ namespace LSRPO.Infrastructure.Data.Extensions
 
             new AUTH_USER
             {
-                UserName = "dtbalieva",
-                Email = "dtbalieva@stk.local",
+                UserName = "dtparvolova",
+                Email = "dtparvolova@stk.local",
                 USR_FULLNAME = "Деница Тодорова Балиева",
                 USR_DESC = "Оператор СТК",
                 USR_REG_DATE = DateTime.Now,
@@ -255,7 +255,8 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Владимир Николов Проданов",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 18, USR_PIN = "179528" }
             },
 
            new AUTH_USER
@@ -265,7 +266,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Георги Петков Костов",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 19,
+                USR_PIN = "218479" }
             },
 
            new AUTH_USER
@@ -275,7 +278,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Ивайло Спиридонов Генов",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 20,
+                USR_PIN = "759621" }
             },
 
            new AUTH_USER
@@ -285,7 +290,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Иво Милчев Иванов",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 21,
+                USR_PIN = "150462" }
             },
 
            new AUTH_USER
@@ -295,7 +302,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Калоян Филков Николов",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 22,
+                USR_PIN = "964801" }
             },
 
            new AUTH_USER
@@ -305,7 +314,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Крум Димитров Крумов",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 23,
+                USR_PIN = "465237" }
             },
 
            new AUTH_USER
@@ -315,7 +326,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Никифор Сашков Илиев",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 24,
+                USR_PIN = "870165" }
             },
 
            new AUTH_USER
@@ -325,7 +338,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Явор Иванов Йорданов",
                 USR_DESC = "ГДАЕЦ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 25,
+                USR_PIN = "968714" }
             },
 
            new AUTH_USER
@@ -335,7 +350,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Лилиян Георгиев Младенов",
                 USR_DESC = "ГТЕ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 26,
+                USR_PIN = "935817" }
             },
 
            new AUTH_USER
@@ -345,7 +362,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Валери Славчев Милошев",
                 USR_DESC = "ГТЕ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 27,
+                USR_PIN = "518263" }
             },
 
            new AUTH_USER
@@ -355,7 +374,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Евгени Василев Гълъбов",
                 USR_DESC = "Н-к о-л Инженеринг и анализи",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 28,
+                USR_PIN = "924367" }
             },
 
            new AUTH_USER
@@ -365,7 +386,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Милен Емилов Кръстев",
                 USR_DESC = "Главен механик ИР",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 29,
+                USR_PIN = "140359" }
             },
 
            new AUTH_USER
@@ -375,7 +398,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Анатоли Иваилов Лашков",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 30,
+                USR_PIN = "847563" }
             },
 
            new AUTH_USER
@@ -385,7 +410,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Билян Асенов Меджов",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 31,
+                USR_PIN = "397418" }
             },
 
            new AUTH_USER
@@ -395,7 +422,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Благой Николов Николов",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 32,
+                USR_PIN = "407659" }
             },
 
            new AUTH_USER
@@ -405,7 +434,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Борис Тодоров Евстатиев",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 33,
+                USR_PIN = "861230" }
             },
 
            new AUTH_USER
@@ -415,7 +446,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Борислав Огнянов Евгениев",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 34,
+                USR_PIN = "309842" }
             },
 
            new AUTH_USER
@@ -425,7 +458,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Иван Георгиев Младенов",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 35,
+                USR_PIN = "519068" }
             },
 
            new AUTH_USER
@@ -435,7 +470,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Красимир Христов Николов",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 36,
+                USR_PIN = "103698" }
             },
 
            new AUTH_USER
@@ -445,7 +482,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Мая Цекова Костова",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 37,
+                USR_PIN = "182704" }
             },
 
            new AUTH_USER
@@ -455,7 +494,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Мирослав Христинов Христов",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 38,
+                USR_PIN = "218307" }
             },
 
            new AUTH_USER
@@ -465,7 +506,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Светослав Атанасов Съйков",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 39,
+                USR_PIN = "526480" }
             },
 
            new AUTH_USER
@@ -475,7 +518,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Сергей Валериевич Гошев",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 40,
+                USR_PIN = "803421" }
             },
 
            new AUTH_USER
@@ -485,7 +530,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Станимир Георгиев Калбуров",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 41,
+                USR_PIN = "450736" }
             },
 
            new AUTH_USER
@@ -495,7 +542,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Тодор Петров Григоров",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 42,
+                USR_PIN = "693241" }
             },
 
            new AUTH_USER
@@ -505,7 +554,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Тодор Петров Оприцов",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 43,
+                USR_PIN = "610748" }
             },
 
            new AUTH_USER
@@ -515,7 +566,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Юлиян Емилов Хърлечанов",
                 USR_DESC = "ДАЕБ",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 44,
+                USR_PIN = "280391" }
             },
 
            new AUTH_USER
@@ -525,7 +578,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Николай Хараламбиев Томовски",
                 USR_DESC = "Началник отдел Симулатор",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 45,
+                USR_PIN = "683015" }
             },
 
            new AUTH_USER
@@ -535,7 +590,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Иван Кирилов Иванов",
                 USR_DESC = "РС СО",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 46,
+                USR_PIN = "420968" }
             },
 
            new AUTH_USER
@@ -545,7 +602,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Страхил Павлов Станков",
                 USR_DESC = "Инструктор - оператор за ВВЕР 1000",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 47,
+                USR_PIN = "578293" }
             },
 
            new AUTH_USER
@@ -555,7 +614,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Цветан Петров Мизия",
                 USR_DESC = "Община Мизия",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 48,
+                USR_PIN = "823461" }
             },
 
            new AUTH_USER
@@ -565,7 +626,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Стефан Каменовски Мизия",
                 USR_DESC = "Община Мизия",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 49,
+                USR_PIN = "206837" }
             },
 
            new AUTH_USER
@@ -575,7 +638,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Валя Берчева Мизия",
                 USR_DESC = "Община Мизия",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 50,
+                USR_PIN = "456782" }
             },
 
            new AUTH_USER
@@ -585,7 +650,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Георги Кирков Козлодуй",
                 USR_DESC = "Община Козлодуй",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 51,
+                USR_PIN = "745918" }
             },
 
            new AUTH_USER
@@ -595,7 +662,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Иван Вачов Козлодуй",
                 USR_DESC = "Община Козлодуй",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 52,
+                USR_PIN = "384519" }
             },
 
            new AUTH_USER
@@ -605,7 +674,9 @@ namespace LSRPO.Infrastructure.Data.Extensions
                 USR_FULLNAME = "Маринела Николова Козлодуй",
                 USR_DESC = "Община Козлодуй",
                 USR_REG_DATE = DateTime.Now,
-                IMAGE_URL = "user.png"
+                IMAGE_URL = "user.png",
+                NOT_USER_PIN = new NOT_USER_PIN() { USR_ID = 53,
+                USR_PIN = "154627" }
             },
         };
     }
