@@ -54,7 +54,7 @@ builder.Services.AddScoped<INotifyStatusService, NotifyStatusService>();
 
 var app = builder.Build();
 
-app.PrepareDatabase();
+//app.PrepareDatabase();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

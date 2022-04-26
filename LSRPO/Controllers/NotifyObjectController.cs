@@ -50,6 +50,30 @@ namespace LSRPO.Controllers
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
+            if (User.IsInRole(UserConstant.Roles.Operator) && model.Phone1.Length != 11)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                var types = await notifyObjectService.GetTypes();
+                if (!User.IsInRole(UserConstant.Roles.Administrator))
+                {
+                    types = await notifyObjectService.GetOperatorTypes();
+                }
+                ViewBag.Types = types;
+                return View(model);
+            }
+
+            if (model.Phone1.Length != 11 && model.TypeId == 2)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                var types = await notifyObjectService.GetTypes();
+                if (!User.IsInRole(UserConstant.Roles.Administrator))
+                {
+                    types = await notifyObjectService.GetOperatorTypes();
+                }
+                ViewBag.Types = types;
+                return View(model);
+            }
+
             (bool result, string error) = await notifyObjectService.AddObject(model);
 
             if (result)
@@ -101,6 +125,30 @@ namespace LSRPO.Controllers
             if (User.IsInRole(UserConstant.Roles.Operator) && model.TypeId != 2)
             {
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
+            }
+
+            if (User.IsInRole(UserConstant.Roles.Operator) && model.Phone1.Length != 11)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                var types = await notifyObjectService.GetTypes();
+                if (!User.IsInRole(UserConstant.Roles.Administrator))
+                {
+                    types = await notifyObjectService.GetOperatorTypes();
+                }
+                ViewBag.Types = types;
+                return View(model);
+            }
+
+            if (model.Phone1.Length != 11 && model.TypeId == 2)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                var types = await notifyObjectService.GetTypes();
+                if (!User.IsInRole(UserConstant.Roles.Administrator))
+                {
+                    types = await notifyObjectService.GetOperatorTypes();
+                }
+                ViewBag.Types = types;
+                return View(model);
             }
 
             (bool result, string error) = await notifyObjectService.EditObject(model);
