@@ -5,6 +5,7 @@
 @{
     ViewData["Title"] = "Редактиране на обект";
     var types = (IEnumerable<SelectListItem>)ViewBag.Types;
+    var positions = (IEnumerable<SelectListItem>)ViewBag.Positions;
 }
 
 <div class="row">
@@ -24,6 +25,15 @@
                             <input asp-for="Name" class="form-control" aria-required="true" />
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
+
+                        <div class="form-group">
+                            <label asp-for="PositionId" class="form-label"></label>
+                            <select asp-for="PositionId" asp-items="@positions" class="custom-select rounded-0">
+                                <option value="" selected>Избор на Пост</option>
+                            </select>
+                            <span asp-validation-for="PositionId" class="text-danger"></span>
+                        </div>
+
                         <div class="form-group">
                             <label asp-for="Phone1" class="form-label"></label>
                             <input asp-for="Phone1" class="form-control" aria-required="true" />

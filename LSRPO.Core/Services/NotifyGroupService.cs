@@ -370,9 +370,12 @@ namespace LSRPO.Core.Services
                     Phone2 = s.NP_MOB_PHONE,
                     Phone3 = s.NP_EXT_PHONE2,
                     Phone4 = s.NP_EXT_PHONE1,
+                    PositionId = s.POSITION_ID,
+                    PositionName = s.NOT_POSITION.POSITION_NAME,
                     IsSelected = s.NG_NPS.Where(w => w.NG_ID == id).Any(a => a.NO_ID == s.NO_ID)
                 })
-                .OrderBy(o => o.ObjectName)
+                .OrderBy(o => o.PositionId != null ? o.PositionId : 999)
+                .ThenBy(o => o.ObjectName)
                 .ToListAsync();
             }
 
@@ -390,9 +393,12 @@ namespace LSRPO.Core.Services
                     Phone2 = s.NP_MOB_PHONE,
                     Phone3 = s.NP_EXT_PHONE2,
                     Phone4 = s.NP_EXT_PHONE1,
+                    PositionId = s.POSITION_ID,
+                    PositionName = s.NOT_POSITION.POSITION_NAME,
                     IsSelected = s.NG_NPS.Where(w => w.NG_ID == id).Any(a => a.NO_ID == s.NO_ID)
                 })
-                .OrderBy(o => o.ObjectName)
+                .OrderBy(o => o.PositionId != null ? o.PositionId : 999)
+                .ThenBy(o => o.ObjectName)
                 .ToListAsync();
             }
 

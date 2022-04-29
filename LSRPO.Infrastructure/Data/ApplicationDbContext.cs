@@ -32,6 +32,8 @@ namespace LSRPO.Infrastructure.Data
 
         public virtual DbSet<NOT_PULT> NOT_PULTS { get; set; }
 
+        public virtual DbSet<NOT_POSITION> NOT_POSITIONS { get; set; }
+
         public virtual DbSet<NO_TYPE> NO_TYPES { get; set; }
 
         public virtual DbSet<NOT_PROCES_STATE> NOT_PROCES_STATES { get; set; }
@@ -47,6 +49,7 @@ namespace LSRPO.Infrastructure.Data
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_PIN).IsUnique();
             modelBuilder.Entity<NOT_USER_PIN>().HasIndex(i => i.USR_ID).IsUnique();
 
+            //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOT_POSITION>(@"InitialSeed/NOT_POSITION.json"));
             //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOTIFY_GROUP>(@"InitialSeed/NOTIFY_GROUPS.json"));
             //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NOTIFY_OBJECT>(@"InitialSeed/NOTIFY_OBJECTS.json"));
             //modelBuilder.ApplyConfiguration(new InitialDataConfiguration<NPR_TYPE>(@"InitialSeed/NPR_TYPES.json"));

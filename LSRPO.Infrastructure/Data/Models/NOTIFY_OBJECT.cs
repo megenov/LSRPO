@@ -36,6 +36,10 @@ namespace LSRPO.Infrastructure.Data.Models
         public int? PULT_ID { get; set; }
         public NOT_PULT NOT_PULT { get; set; }
 
+        [ForeignKey(nameof(NOT_POSITION))]
+        public int? POSITION_ID { get; set; }
+        public NOT_POSITION NOT_POSITION { get; set; }
+
         public ICollection<NOT_STATUS> NOT_STATUS { get; set; }
 
         public ICollection<NG_NP> NG_NPS { get; set; }

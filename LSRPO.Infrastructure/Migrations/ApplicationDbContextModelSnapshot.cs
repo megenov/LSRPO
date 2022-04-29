@@ -218,6 +218,300 @@ namespace LSRPO.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_POSITION", b =>
+                {
+                    b.Property<int>("POSITION_ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("POSITION_ID"), 1L, 1);
+
+                    b.Property<string>("POSITION_DESCR")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("POSITION_NAME")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("POSITION_ID");
+
+                    b.ToTable("NOT_POSITIONS");
+
+                    b.HasData(
+                        new
+                        {
+                            POSITION_ID = 1,
+                            POSITION_DESCR = "Ръководител на аварийните работи",
+                            POSITION_NAME = "ГР1"
+                        },
+                        new
+                        {
+                            POSITION_ID = 2,
+                            POSITION_DESCR = "Заместник ръководител на аварийните работи",
+                            POSITION_NAME = "ГР2"
+                        },
+                        new
+                        {
+                            POSITION_ID = 3,
+                            POSITION_DESCR = "Ръководител Група за анализи и прогнози",
+                            POSITION_NAME = "ГР3"
+                        },
+                        new
+                        {
+                            POSITION_ID = 4,
+                            POSITION_DESCR = "Ръководител Радиационен контрол",
+                            POSITION_NAME = "ГР4"
+                        },
+                        new
+                        {
+                            POSITION_ID = 5,
+                            POSITION_DESCR = "Ръководител Спасителни служби",
+                            POSITION_NAME = "ГР5"
+                        },
+                        new
+                        {
+                            POSITION_ID = 6,
+                            POSITION_DESCR = "Ръководител Служби за поддръжка",
+                            POSITION_NAME = "ГР6"
+                        },
+                        new
+                        {
+                            POSITION_ID = 7,
+                            POSITION_DESCR = "Главен секретар",
+                            POSITION_NAME = "ГР7"
+                        },
+                        new
+                        {
+                            POSITION_ID = 8,
+                            POSITION_DESCR = "Технически секретар",
+                            POSITION_NAME = "ГР8"
+                        },
+                        new
+                        {
+                            POSITION_ID = 9,
+                            POSITION_DESCR = "Специалист Анализ и оценка",
+                            POSITION_NAME = "ГАП1"
+                        },
+                        new
+                        {
+                            POSITION_ID = 10,
+                            POSITION_DESCR = "Специалист Реакторно физични разчети",
+                            POSITION_NAME = "ГАП2"
+                        },
+                        new
+                        {
+                            POSITION_ID = 11,
+                            POSITION_DESCR = "Специалист Контролиращ физик",
+                            POSITION_NAME = "ГАП3"
+                        },
+                        new
+                        {
+                            POSITION_ID = 12,
+                            POSITION_DESCR = "Специалист Електрооборудване",
+                            POSITION_NAME = "ГАП4"
+                        },
+                        new
+                        {
+                            POSITION_ID = 13,
+                            POSITION_DESCR = "Специалист СКУ",
+                            POSITION_NAME = "ГАП5"
+                        },
+                        new
+                        {
+                            POSITION_ID = 14,
+                            POSITION_DESCR = "Специалист Реакторно оборудване",
+                            POSITION_NAME = "ГАП6"
+                        },
+                        new
+                        {
+                            POSITION_ID = 15,
+                            POSITION_DESCR = "Специалист Турбинно оборудване",
+                            POSITION_NAME = "ГАП7"
+                        },
+                        new
+                        {
+                            POSITION_ID = 16,
+                            POSITION_DESCR = "Специалист СКиХТС",
+                            POSITION_NAME = "ГАП8"
+                        },
+                        new
+                        {
+                            POSITION_ID = 17,
+                            POSITION_DESCR = "Специалист Химия",
+                            POSITION_NAME = "ГАП9"
+                        },
+                        new
+                        {
+                            POSITION_ID = 18,
+                            POSITION_DESCR = "Специалист Радиохимия",
+                            POSITION_NAME = "ГАП10"
+                        },
+                        new
+                        {
+                            POSITION_ID = 19,
+                            POSITION_DESCR = "Специалист ХОГ",
+                            POSITION_NAME = "ГАП11"
+                        },
+                        new
+                        {
+                            POSITION_ID = 20,
+                            POSITION_DESCR = "Специалист ОРУ",
+                            POSITION_NAME = "ГАП12"
+                        },
+                        new
+                        {
+                            POSITION_ID = 21,
+                            POSITION_DESCR = "Специалист Прогнози на рад. последствия",
+                            POSITION_NAME = "РК1"
+                        },
+                        new
+                        {
+                            POSITION_ID = 22,
+                            POSITION_DESCR = "Специалист АИСВРК и СММ",
+                            POSITION_NAME = "РК2"
+                        },
+                        new
+                        {
+                            POSITION_ID = 23,
+                            POSITION_DESCR = "Дозиметрист Мониторинг на площадката",
+                            POSITION_NAME = "РК3"
+                        },
+                        new
+                        {
+                            POSITION_ID = 24,
+                            POSITION_DESCR = "Спациалист Радиационен мониторинг на ЗНЗМ",
+                            POSITION_NAME = "РК4"
+                        },
+                        new
+                        {
+                            POSITION_ID = 25,
+                            POSITION_DESCR = "Дозиметрист Мониторинг на площадката",
+                            POSITION_NAME = "РК5"
+                        },
+                        new
+                        {
+                            POSITION_ID = 26,
+                            POSITION_DESCR = "Специалист Радиационен мониторинг на ОС",
+                            POSITION_NAME = "РК6"
+                        },
+                        new
+                        {
+                            POSITION_ID = 27,
+                            POSITION_DESCR = "Специалист Анализ на проби от ОС",
+                            POSITION_NAME = "РК7"
+                        },
+                        new
+                        {
+                            POSITION_ID = 28,
+                            POSITION_DESCR = "Дозиметрист ТЛД",
+                            POSITION_NAME = "РК8"
+                        },
+                        new
+                        {
+                            POSITION_ID = 29,
+                            POSITION_DESCR = "Дозиметрист ИДК",
+                            POSITION_NAME = "РК9"
+                        },
+                        new
+                        {
+                            POSITION_ID = 30,
+                            POSITION_DESCR = "Специалист Цифрови комуникационни с-ми",
+                            POSITION_NAME = "Г-ЦУА1"
+                        },
+                        new
+                        {
+                            POSITION_ID = 31,
+                            POSITION_DESCR = "Оператор СТК",
+                            POSITION_NAME = "Г-ЦУА2"
+                        },
+                        new
+                        {
+                            POSITION_ID = 32,
+                            POSITION_DESCR = "Оператор Радиокомуникационни с-ми",
+                            POSITION_NAME = "Г-ЦУА3"
+                        },
+                        new
+                        {
+                            POSITION_ID = 33,
+                            POSITION_DESCR = "Специалист ИСиКТ ЦУА",
+                            POSITION_NAME = "Г-ЦУА4"
+                        },
+                        new
+                        {
+                            POSITION_ID = 34,
+                            POSITION_DESCR = "Отговорник Първа долекарска помощ ЦУА",
+                            POSITION_NAME = "Г-ЦУА5"
+                        },
+                        new
+                        {
+                            POSITION_ID = 35,
+                            POSITION_DESCR = "Специалист Вентилационни системи ЦУА",
+                            POSITION_NAME = "Г-ЦУА6"
+                        },
+                        new
+                        {
+                            POSITION_ID = 36,
+                            POSITION_DESCR = "Специалист Дизел агрегат ЦУА",
+                            POSITION_NAME = "Г-ЦУА7"
+                        },
+                        new
+                        {
+                            POSITION_ID = 37,
+                            POSITION_DESCR = "Специалист Връзки с обществеността",
+                            POSITION_NAME = "Г-ЦУА8"
+                        },
+                        new
+                        {
+                            POSITION_ID = 38,
+                            POSITION_DESCR = "Специалист Техническа поддръжка на ИИЦ",
+                            POSITION_NAME = "Г-ЦУА9"
+                        },
+                        new
+                        {
+                            POSITION_ID = 39,
+                            POSITION_DESCR = "Специалист Дежурен в Дом на енергетика",
+                            POSITION_NAME = "Г-ЦУА10"
+                        },
+                        new
+                        {
+                            POSITION_ID = 40,
+                            POSITION_DESCR = "Специалист Дизел агрегат ПРУ-ИЛК",
+                            POSITION_NAME = "Г-ЦУА11"
+                        },
+                        new
+                        {
+                            POSITION_ID = 41,
+                            POSITION_DESCR = "Група Автотранспорт - оперативен дежурен",
+                            POSITION_NAME = "Г-АТ1"
+                        },
+                        new
+                        {
+                            POSITION_ID = 42,
+                            POSITION_DESCR = "Група Автотранспорт - водач на автобус",
+                            POSITION_NAME = "Г-АТ2"
+                        },
+                        new
+                        {
+                            POSITION_ID = 43,
+                            POSITION_DESCR = "Група Автотранспорт - водач на лек автомобил",
+                            POSITION_NAME = "Г-АТ3"
+                        },
+                        new
+                        {
+                            POSITION_ID = 44,
+                            POSITION_DESCR = "Група Автотранспорт - водач на влекач",
+                            POSITION_NAME = "Г-АТ4"
+                        },
+                        new
+                        {
+                            POSITION_ID = 45,
+                            POSITION_DESCR = "Група Автотранспорт - водач па трактор",
+                            POSITION_NAME = "Г-АТ5"
+                        });
+                });
+
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_PROCES_STATE", b =>
                 {
                     b.Property<byte>("ST_ID")
@@ -2643,10 +2937,15 @@ namespace LSRPO.Infrastructure.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<int?>("POSITION_ID")
+                        .HasColumnType("int");
+
                     b.Property<int?>("PULT_ID")
                         .HasColumnType("int");
 
                     b.HasKey("NO_ID");
+
+                    b.HasIndex("POSITION_ID");
 
                     b.HasIndex("PULT_ID");
 
@@ -2699,7 +2998,7 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 7,
                             NO_INT_PHONE = "8007",
-                            NO_NAME = "Сграда РОС",
+                            NO_NAME = "СГРАДА РОС",
                             NO_TYPE = (byte)1
                         },
                         new
@@ -2733,28 +3032,28 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 12,
                             NO_INT_PHONE = "8012",
-                            NO_NAME = "с. ХЪРЛЕЦ",
+                            NO_NAME = "С. ХЪРЛЕЦ",
                             NO_TYPE = (byte)1
                         },
                         new
                         {
                             NO_ID = 13,
                             NO_INT_PHONE = "8013",
-                            NO_NAME = "гр. МИЗИЯ",
+                            NO_NAME = "ГР. МИЗИЯ",
                             NO_TYPE = (byte)1
                         },
                         new
                         {
                             NO_ID = 14,
                             NO_INT_PHONE = "8014",
-                            NO_NAME = "с. СОФРОНИЕВО",
+                            NO_NAME = "С. СОФРОНИЕВО",
                             NO_TYPE = (byte)1
                         },
                         new
                         {
                             NO_ID = 15,
                             NO_INT_PHONE = "8015",
-                            NO_NAME = "с.БУТАН",
+                            NO_NAME = "С. БУТАН",
                             NO_TYPE = (byte)1
                         },
                         new
@@ -2767,21 +3066,21 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 17,
                             NO_INT_PHONE = "8017",
-                            NO_NAME = "с. ВОЙВОДОВО",
+                            NO_NAME = "С. ВОЙВОДОВО",
                             NO_TYPE = (byte)1
                         },
                         new
                         {
                             NO_ID = 18,
                             NO_INT_PHONE = "8018",
-                            NO_NAME = "с.ГЛОЖЕНЕ",
+                            NO_NAME = "С. ГЛОЖЕНЕ",
                             NO_TYPE = (byte)1
                         },
                         new
                         {
                             NO_ID = 19,
                             NO_INT_PHONE = "8019",
-                            NO_NAME = "с. САРАЕВО",
+                            NO_NAME = "С. САРАЕВО",
                             NO_TYPE = (byte)1
                         },
                         new
@@ -2801,14 +3100,14 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 22,
                             NO_INT_PHONE = "8022",
-                            NO_NAME = "у-ще В. ЛЕВСКИ",
+                            NO_NAME = "У-ЩЕ В. ЛЕВСКИ",
                             NO_TYPE = (byte)1
                         },
                         new
                         {
                             NO_ID = 23,
                             NO_INT_PHONE = "8023",
-                            NO_NAME = "у-ще ХР. БОТЕВ",
+                            NO_NAME = "У-ЩЕ ХР. БОТЕВ",
                             NO_TYPE = (byte)1
                         },
                         new
@@ -2828,14 +3127,14 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 26,
                             NO_INT_PHONE = "8041",
-                            NO_NAME = "Симулатор",
+                            NO_NAME = "СИМУЛАТОР",
                             NO_TYPE = (byte)1
                         },
                         new
                         {
                             NO_ID = 27,
                             NO_INT_PHONE = "2110",
-                            NO_NAME = "Оператор СТК",
+                            NO_NAME = "ОПЕРАТОР СТК",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "4461",
                             NP_MOB_PHONE = "6207"
@@ -2922,7 +3221,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00879890711",
                             NO_NAME = "АНТОАНЕТА ВАЛЕНТИНОВА КЯТИНА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2623"
+                            NP_EXT_PHONE2 = "2623",
+                            POSITION_ID = 8
                         },
                         new
                         {
@@ -2947,7 +3247,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ЕМИЛИЯН ГЕОРГИЕВ ЕДРЕВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6263",
-                            NP_EXT_PHONE2 = "2763"
+                            NP_EXT_PHONE2 = "2763",
+                            POSITION_ID = 1
                         },
                         new
                         {
@@ -2979,7 +3280,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888991362",
                             NO_NAME = "ВАЛЕНТИНА КОЛЕВА СТАНЧЕВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3607"
+                            NP_EXT_PHONE2 = "3607",
+                            POSITION_ID = 4
                         },
                         new
                         {
@@ -2988,7 +3290,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ВАЛЕНТИН ТОШКОВ ВЛАДИНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "3850",
-                            NP_MOB_PHONE = "00888203810"
+                            NP_MOB_PHONE = "00888203810",
+                            POSITION_ID = 5
                         },
                         new
                         {
@@ -3065,7 +3368,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "МИРОСЛАВ БОЖИДАРОВ БУКОЕВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "3895",
-                            NP_MOB_PHONE = "00887799069"
+                            NP_MOB_PHONE = "00887799069",
+                            POSITION_ID = 5
                         },
                         new
                         {
@@ -3081,7 +3385,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888829896",
                             NO_NAME = "ЕМИЛИЯ АНГЕЛОВА ДОНЧЕВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "6548"
+                            NP_EXT_PHONE2 = "6548",
+                            POSITION_ID = 7
                         },
                         new
                         {
@@ -3089,7 +3394,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888616787",
                             NO_NAME = "ДАНИЕЛА ГЕОРГИЕВА ЦВЕТАНОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "6643"
+                            NP_EXT_PHONE2 = "6643",
+                            POSITION_ID = 8
                         },
                         new
                         {
@@ -3240,7 +3546,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "НИКОЛАЙ ПЕТРОВ БОНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "6277",
-                            NP_MOB_PHONE = "00888141400"
+                            NP_MOB_PHONE = "00888141400",
+                            POSITION_ID = 6
                         },
                         new
                         {
@@ -3435,7 +3742,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00898858800",
                             NO_NAME = "БИСЕР ЙОРДАНОВ ТОДОРОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "4277"
+                            NP_EXT_PHONE2 = "4277",
+                            POSITION_ID = 6
                         },
                         new
                         {
@@ -3469,7 +3777,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6959",
                             NP_EXT_PHONE2 = "3367",
-                            NP_MOB_PHONE = "00879979660"
+                            NP_MOB_PHONE = "00879979660",
+                            POSITION_ID = 2
                         },
                         new
                         {
@@ -3511,7 +3820,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00886144221",
                             NO_NAME = "СТОЯН ЛЮБОМИРОВ КРЪСТЕВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2677"
+                            NP_EXT_PHONE2 = "2677",
+                            POSITION_ID = 6
                         },
                         new
                         {
@@ -3675,7 +3985,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888662560",
                             NO_NAME = "ДАРИН СИМЕОНОВ СТОЕВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "4218"
+                            NP_EXT_PHONE2 = "4218",
+                            POSITION_ID = 3
                         },
                         new
                         {
@@ -3691,7 +4002,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888407409",
                             NO_NAME = "КРАСЕН ПЕТКОВ РАШКОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2050"
+                            NP_EXT_PHONE2 = "2050",
+                            POSITION_ID = 3
                         },
                         new
                         {
@@ -3721,7 +4033,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888213061",
                             NO_NAME = "ЕМИЛ МАРИНОВ СТЕФАНОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "6196"
+                            NP_EXT_PHONE2 = "6196",
+                            POSITION_ID = 7
                         },
                         new
                         {
@@ -3731,7 +4044,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6677",
                             NP_EXT_PHONE2 = "6676",
-                            NP_MOB_PHONE = "00886113758"
+                            NP_MOB_PHONE = "00886113758",
+                            POSITION_ID = 2
                         },
                         new
                         {
@@ -3748,7 +4062,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ОГНЯН ДИМИТРОВ КАМЕНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "2581",
-                            NP_MOB_PHONE = "00878555442"
+                            NP_MOB_PHONE = "00878555442",
+                            POSITION_ID = 5
                         },
                         new
                         {
@@ -3837,7 +4152,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00889500377",
                             NO_NAME = "ПЕТЪР БОРИСОВ ДОНЧЕВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3624"
+                            NP_EXT_PHONE2 = "3624",
+                            POSITION_ID = 2
                         },
                         new
                         {
@@ -3869,7 +4185,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00887497631",
                             NO_NAME = "ИСКРЕН ГЕОРГИЕВ КОЕВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3824"
+                            NP_EXT_PHONE2 = "3824",
+                            POSITION_ID = 6
                         },
                         new
                         {
@@ -3900,7 +4217,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00886817903",
                             NO_NAME = "ВЕСЕЛИН ИВАНОВ НИКОЛОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "6189"
+                            NP_EXT_PHONE2 = "6189",
+                            POSITION_ID = 7
                         },
                         new
                         {
@@ -3934,7 +4252,7 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "БОРИСЛАВ ЦВЕТАНОВ ДОБРИНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "3033",
-                            NP_EXT_PHONE2 = "3275"
+                            NP_EXT_PHONE2 = "3441"
                         },
                         new
                         {
@@ -3942,7 +4260,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888575664",
                             NO_NAME = "КАТЕРИНА КОЛЕВА КОСТАДИНОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "4412"
+                            NP_EXT_PHONE2 = "4412",
+                            POSITION_ID = 4
                         },
                         new
                         {
@@ -3966,7 +4285,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888140867",
                             NO_NAME = "ОРЛИН САШКОВ СТОЯНОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2143"
+                            NP_EXT_PHONE2 = "2143",
+                            POSITION_ID = 4
                         },
                         new
                         {
@@ -3974,7 +4294,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00899815620",
                             NO_NAME = "ОЛЕСЯ ВИКТОРОВНА ЙОРДАНОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2536"
+                            NP_EXT_PHONE2 = "2536",
+                            POSITION_ID = 4
                         },
                         new
                         {
@@ -3992,7 +4313,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6237",
                             NP_EXT_PHONE2 = "3098",
-                            NP_MOB_PHONE = "00889500368"
+                            NP_MOB_PHONE = "00889500368",
+                            POSITION_ID = 3
                         },
                         new
                         {
@@ -4000,7 +4322,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00879996699",
                             NO_NAME = "АЛЕКСАНДЪР ХРИСТОВ НИКОЛОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "6333"
+                            NP_EXT_PHONE2 = "6333",
+                            POSITION_ID = 1
                         },
                         new
                         {
@@ -4075,7 +4398,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6016",
                             NP_EXT_PHONE2 = "3870",
-                            NP_MOB_PHONE = "00888000116"
+                            NP_MOB_PHONE = "00888000116",
+                            POSITION_ID = 1
                         },
                         new
                         {
@@ -4104,7 +4428,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "АЛЕКСАНДЪР ИВАНОВ КАЗАКОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "2629",
-                            NP_MOB_PHONE = "00889655090"
+                            NP_MOB_PHONE = "00889655090",
+                            POSITION_ID = 5
                         },
                         new
                         {
@@ -4113,7 +4438,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ВИОЛИН ПЕТРОВ РАЙКОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "2899",
-                            NP_MOB_PHONE = "00878858403"
+                            NP_MOB_PHONE = "00878858403",
+                            POSITION_ID = 5
                         },
                         new
                         {
@@ -4121,7 +4447,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00896844850",
                             NO_NAME = "СТИЛЯНА ТОДОРОВА МЛАДЕНОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3880"
+                            NP_EXT_PHONE2 = "3880",
+                            POSITION_ID = 2
                         },
                         new
                         {
@@ -4659,7 +4986,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "АТАНАС ГЕОРГИЕВ АТАНАСОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6600",
-                            NP_EXT_PHONE2 = "3281"
+                            NP_EXT_PHONE2 = "3281",
+                            POSITION_ID = 1
                         },
                         new
                         {
@@ -4691,7 +5019,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888887172",
                             NO_NAME = "АНТОН ПАВЛОВ СТОИЛОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3286"
+                            NP_EXT_PHONE2 = "3286",
+                            POSITION_ID = 3
                         },
                         new
                         {
@@ -4715,7 +5044,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00885043410",
                             NO_NAME = "ВЯРА НИКОЛАЕВА ИЛИЕВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2020"
+                            NP_EXT_PHONE2 = "2020",
+                            POSITION_ID = 8
                         },
                         new
                         {
@@ -4731,7 +5061,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00883539953",
                             NO_NAME = "МИГЛЕНА ГЕОРГИЕВА ЦВЕТКОВСКА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2020"
+                            NP_EXT_PHONE2 = "2020",
+                            POSITION_ID = 8
                         },
                         new
                         {
@@ -4805,7 +5136,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00899857570",
                             NO_NAME = "ДИМИТЪР ИГНАТОВ ПИРЧЕВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2743"
+                            NP_EXT_PHONE2 = "2743",
+                            POSITION_ID = 6
                         },
                         new
                         {
@@ -4822,7 +5154,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ЦВЕТАН КРЪСТЕВ МАРИНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6984",
-                            NP_EXT_PHONE2 = "2723"
+                            NP_EXT_PHONE2 = "2723",
+                            POSITION_ID = 4
                         },
                         new
                         {
@@ -4848,7 +5181,7 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888879494",
                             NO_NAME = "ДАНАИЛ ЛЮДМИЛОВ ДИКОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE1 = "2556",
+                            NP_EXT_PHONE1 = "2566",
                             NP_EXT_PHONE2 = "2056"
                         },
                         new
@@ -4890,7 +5223,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "БОЯН ВЕНЕЛИНОВ КОЛИНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "2060",
-                            NP_MOB_PHONE = "00879554305"
+                            NP_MOB_PHONE = "00879554305",
+                            POSITION_ID = 1
                         },
                         new
                         {
@@ -4900,7 +5234,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6965",
                             NP_EXT_PHONE2 = "3523",
-                            NP_MOB_PHONE = "00879963292"
+                            NP_MOB_PHONE = "00879963292",
+                            POSITION_ID = 2
                         },
                         new
                         {
@@ -4908,7 +5243,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00896868669",
                             NO_NAME = "СВЕТОСЛАВ ЕМИЛОВ НАЙДЕНОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3730"
+                            NP_EXT_PHONE2 = "3730",
+                            POSITION_ID = 3
                         },
                         new
                         {
@@ -4916,7 +5252,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00887272987",
                             NO_NAME = "ЛЮДМИЛ АТАНАСОВ ЦОЛОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3046"
+                            NP_EXT_PHONE2 = "3046",
+                            POSITION_ID = 4
                         },
                         new
                         {
@@ -4924,7 +5261,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00877225262",
                             NO_NAME = "РАДОСЛАВ КИРИЛОВ МАРИНОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3494"
+                            NP_EXT_PHONE2 = "3494",
+                            POSITION_ID = 5
                         },
                         new
                         {
@@ -4940,7 +5278,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00889407815",
                             NO_NAME = "СОФИЯ КИРИЛОВА ПЕТКОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3740"
+                            NP_EXT_PHONE2 = "3740",
+                            POSITION_ID = 8
                         },
                         new
                         {
@@ -5212,7 +5551,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888272087",
                             NO_NAME = "МАРИЕЛА ЕМИЛОВА СТАМЕНОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "6100"
+                            NP_EXT_PHONE2 = "6100",
+                            POSITION_ID = 7
                         },
                         new
                         {
@@ -5339,7 +5679,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "СВЕТОЗАР ИВАНОВ ВАСИЛЕВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "2501",
-                            NP_EXT_PHONE2 = "3596"
+                            NP_EXT_PHONE2 = "3596",
+                            POSITION_ID = 1
                         },
                         new
                         {
@@ -5347,7 +5688,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00887435199",
                             NO_NAME = "КИРИЛ ВАНЬОВ КИРИЛОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "4162"
+                            NP_EXT_PHONE2 = "4162",
+                            POSITION_ID = 7
                         },
                         new
                         {
@@ -5425,7 +5767,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ВЛАДИМИР ВАСИЛЕВ ЯНКОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "2385",
-                            NP_MOB_PHONE = "00878889220"
+                            NP_MOB_PHONE = "00878889220",
+                            POSITION_ID = 5
                         },
                         new
                         {
@@ -5707,7 +6050,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00878352288",
                             NO_NAME = "ЕВГЕНИ ВАСИЛЕВ ГЪЛЪБОВ",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3144"
+                            NP_EXT_PHONE2 = "3144",
+                            POSITION_ID = 3
                         },
                         new
                         {
@@ -5725,13 +6069,14 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6944",
                             NP_EXT_PHONE2 = "3144",
-                            NP_MOB_PHONE = "00887002986"
+                            NP_MOB_PHONE = "00887002986",
+                            POSITION_ID = 3
                         },
                         new
                         {
                             NO_ID = 386,
                             NO_INT_PHONE = "00884161676",
-                            NO_NAME = "Пламен Георгиев Маргоевски",
+                            NO_NAME = "ПЛАМЕН ГЕОРГИЕВ МАРГОЕВСКИ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6880",
                             NP_EXT_PHONE2 = "3560"
@@ -5748,7 +6093,7 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 388,
                             NO_INT_PHONE = "00888998686",
-                            NO_NAME = "Валентин Георгиев  Аврамов",
+                            NO_NAME = "ВАЛЕНТИН ГЕОРГИЕВ  АВРАМОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "2091"
                         },
@@ -5902,7 +6247,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00887732801",
                             NO_NAME = "ТАНЯ ТОДОРОВА ТОДОРОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "3580"
+                            NP_EXT_PHONE2 = "3580",
+                            POSITION_ID = 8
                         },
                         new
                         {
@@ -5960,7 +6306,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ЛИЛИЯН ГЕОРГИЕВ МЛАДЕНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6653",
-                            NP_EXT_PHONE2 = "6366"
+                            NP_EXT_PHONE2 = "6366",
+                            POSITION_ID = 2
                         },
                         new
                         {
@@ -5998,7 +6345,7 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 418,
                             NO_INT_PHONE = "00888397879",
-                            NO_NAME = "Диана Иванова Кашева",
+                            NO_NAME = "ДИАНА ИВАНОВА КАШЕВА",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "2667"
                         },
@@ -6088,7 +6435,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ЯНКО ИВАНОВ ТОШЕВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE1 = "6902",
-                            NP_EXT_PHONE2 = "3002"
+                            NP_EXT_PHONE2 = "3002",
+                            POSITION_ID = 1
                         },
                         new
                         {
@@ -6120,7 +6468,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00888697356",
                             NO_NAME = "КАМЕЛИЯ ПЕТРОВА КРАСНОЧАРОВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2792"
+                            NP_EXT_PHONE2 = "2792",
+                            POSITION_ID = 7
                         },
                         new
                         {
@@ -6142,7 +6491,7 @@ namespace LSRPO.Infrastructure.Migrations
                         {
                             NO_ID = 436,
                             NO_INT_PHONE = "8051",
-                            NO_NAME = "STK TestObject",
+                            NO_NAME = "STK TESTOBJECT",
                             NO_TYPE = (byte)1
                         },
                         new
@@ -6167,7 +6516,8 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_INT_PHONE = "00882997889",
                             NO_NAME = "АНИТА АНАТОЛИЕВА ГЕОРГИЕВА",
                             NO_TYPE = (byte)2,
-                            NP_EXT_PHONE2 = "2525"
+                            NP_EXT_PHONE2 = "2525",
+                            POSITION_ID = 8
                         },
                         new
                         {
@@ -6176,6 +6526,33 @@ namespace LSRPO.Infrastructure.Migrations
                             NO_NAME = "ГАБРИЕЛ БОРИСЛАВОВ СТАМЕНОВ",
                             NO_TYPE = (byte)2,
                             NP_EXT_PHONE2 = "6252"
+                        },
+                        new
+                        {
+                            NO_ID = 441,
+                            NO_INT_PHONE = "00898732018",
+                            NO_NAME = "НАДЯ ЧАВДАРОВА ЗАНЕВА",
+                            NO_TYPE = (byte)2,
+                            NP_EXT_PHONE2 = "6336",
+                            POSITION_ID = 8
+                        },
+                        new
+                        {
+                            NO_ID = 442,
+                            NO_INT_PHONE = "00887421239",
+                            NO_NAME = "БОЖИДАР ИВАНОВ РАЧЕВ",
+                            NO_TYPE = (byte)2,
+                            NP_EXT_PHONE2 = "6314",
+                            NP_MOB_PHONE = "00879148119",
+                            POSITION_ID = 7
+                        },
+                        new
+                        {
+                            NO_ID = 443,
+                            NO_INT_PHONE = "00889210224",
+                            NO_NAME = "ДАРИНА ХРИСТОВА ДИМИТРОВА",
+                            NO_TYPE = (byte)2,
+                            NP_EXT_PHONE2 = "4554"
                         });
                 });
 
@@ -7141,9 +7518,15 @@ namespace LSRPO.Infrastructure.Migrations
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOTIFY_OBJECT", b =>
                 {
+                    b.HasOne("LSRPO.Infrastructure.Data.Models.NOT_POSITION", "NOT_POSITION")
+                        .WithMany("NOTIFY_OBJECTS")
+                        .HasForeignKey("POSITION_ID");
+
                     b.HasOne("LSRPO.Infrastructure.Data.Models.NOT_PULT", "NOT_PULT")
                         .WithMany("NOTIFY_OBJECTS")
                         .HasForeignKey("PULT_ID");
+
+                    b.Navigation("NOT_POSITION");
 
                     b.Navigation("NOT_PULT");
                 });
@@ -7205,6 +7588,11 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.Navigation("NOT_USER_PIN")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_POSITION", b =>
+                {
+                    b.Navigation("NOTIFY_OBJECTS");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_PROCESS", b =>

@@ -18,6 +18,10 @@
 
         public string? Phone4 { get; set; }
 
+        public int? PositionId { get; set; }
+
+        public string? PositionName { get; set; }
+
         public bool IsSelected { get; set; } = false;
 
         public IList<int> ObjectIds { get; set; } = new List<int>();

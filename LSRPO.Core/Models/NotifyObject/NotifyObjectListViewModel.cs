@@ -17,5 +17,9 @@
         public string? TypeDes { get; set; }
 
         public byte? TypeId { get; set; }
+
+        public int? PositionId { get; set; }
+
+        public string? PositionName { get; set; }
     }
 }

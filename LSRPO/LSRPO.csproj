@@ -23,8 +23,4 @@
     <ProjectReference Include="..\LSRPO.Core\LSRPO.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="InitialSeed\" />
-  </ItemGroup>
-
 </Project>

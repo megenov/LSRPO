@@ -2,13 +2,67 @@
 @model IEnumerable<ProcessDetailsViewModel>
 
 @{
-    ViewData["Title"] = $"Детайлно състояние на оповестителен процес {ViewBag.ProcessId}";
+    var process = (ProcessListAllViewModel)ViewBag.Status;
+    var processString = ViewBag.ProcessString;
+    ViewData["Title"] = $"Детайлно състояние на оповестителен процес {process.ProcessId}";
 }
+
+<input type="hidden" asp-for=@processString id="processString">
 
 <style type='text/css'>
     th { font-size: 14px; }
     td { font-size: 13px; }
 </style>
+
+<div id="printableArea">
+
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+
+                <div class="card-body">
+                    <table id="datatableProcess" class="table" align="center" style="margin-left: auto; margin-right: auto; width:100%">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Име на група</th>
+                                <th>Име на лице</th>
+                                <th>Пулт</th>
+                                <th>Тип</th>
+                                <th>Начална дата</th>
+                                <th>Крайна дата</th>
+                                <th>Флаг</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>@process.ProcessId</td>
+                                <td>@process.GroupName</td>
+                                <td>@process.UserName</td>
+                                <td>@process.PultName</td>
+                                <td>@process.ProccesTypeName</td>
+                                <td>@process.StartDate</td>
+                                <td>@process.EndDate</td>
+                                <td>@process.FlagName</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
 
 <section class="content">
     <div class="row">
@@ -28,13 +82,13 @@
                                 <th>ID</th>
                                 <th>Статус флаг</th>
                                 <th>Обект</th>
-                                <th>Телефон 1</th>
+                                <th style="width:9%">Тел. Обект/ Мобилен 1</th>
                                 <th>Флаг</th>
-                                <th>Телефон 2</th>
+                                <th>Мобилен 2</th>
                                 <th>Флаг</th>
-                                <th>Телефон 3</th>
+                                <th>Служебен 1</th>
                                 <th>Флаг</th>
-                                <th>Телефон 4</th>
+                                <th>Служебен 2</th>
                                 <th>Флаг</th>
                                 <th>Крайно състояние</th>
                             </tr>
@@ -65,13 +119,13 @@
                                 <th>ID</th>
                                 <th>Статус флаг</th>
                                 <th>Обект</th>
-                                <th>Телефон 1</th>
+                                <th>Тел. Обект/ Мобилен 1</th>
                                 <th>Флаг</th>
-                                <th>Телефон 2</th>
+                                <th>Мобилен 2</th>
                                 <th>Флаг</th>
-                                <th>Телефон 3</th>
+                                <th>Служебен 1</th>
                                 <th>Флаг</th>
-                                <th>Телефон 4</th>
+                                <th>Служебен 2</th>
                                 <th>Флаг</th>
                                 <th>Крайно състояние</th>
                             </tr>
@@ -90,22 +144,32 @@
 </section>
 <!-- /.content -->
 
+</div>
+
 <!-- Page specific script -->
 @section Scripts {
 <script>
+    var processString = document.getElementById('processString').value;
+
     $(document).ready(function() {
         $('#datatable').DataTable({
             "pageLength": 100,
             "lengthMenu": [[10, 25, 50, 100, 250, 500, -1], [10, 25, 50, 100, 250, 500, "All"]],
             "responsive": true,
-            buttons: [ 'copyHtml5', 'excelHtml5',
+            buttons: [ 'copyHtml5',
+            {
+                extend: 'excelHtml5',
+                messageTop: processString
+            },
             {
                 extend: 'pdfHtml5',
+                messageTop: processString,
                 orientation: 'landscape',
                 pageSize: 'LEGAL'
             },
             {
                 extend: "print",
+                messageTop: processString,
                 customize: function(win)
                 {
                     var last = null;

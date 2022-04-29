@@ -26,6 +26,7 @@ namespace LSRPO.Controllers
         public async Task<IActionResult> AddNewObject()
         {
             var types = await notifyObjectService.GetTypes();
+            var positions = await notifyObjectService.GetPositions();
 
             if (!User.IsInRole(UserConstant.Roles.Administrator))
             {
@@ -33,6 +34,7 @@ namespace LSRPO.Controllers
             }
 
             ViewBag.Types = types;
+            ViewBag.Positions = positions;
 
             return View();
         }
@@ -50,27 +52,47 @@ namespace LSRPO.Controllers
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
-            if (User.IsInRole(UserConstant.Roles.Operator) && model.Phone1.Length != 11)
+            if (User.IsInRole(UserConstant.Roles.Operator) && model.Phone1 != null && model.Phone1.Length != 11)
             {
-                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Тел. Обект / Мобилен 1";
                 var types = await notifyObjectService.GetTypes();
+                var positions = await notifyObjectService.GetPositions();
                 if (!User.IsInRole(UserConstant.Roles.Administrator))
                 {
                     types = await notifyObjectService.GetOperatorTypes();
                 }
                 ViewBag.Types = types;
+                ViewBag.Positions = positions;
                 return View(model);
             }
 
-            if (model.Phone1.Length != 11 && model.TypeId == 2)
+            if (model.Phone1 != null && model.Phone1.Length != 11 && model.TypeId == 2)
             {
-                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Тел. Обект / Мобилен 1";
                 var types = await notifyObjectService.GetTypes();
+                var positions = await notifyObjectService.GetPositions();
                 if (!User.IsInRole(UserConstant.Roles.Administrator))
                 {
                     types = await notifyObjectService.GetOperatorTypes();
                 }
                 ViewBag.Types = types;
+                ViewBag.Positions = positions;
+                return View(model);
+            }
+
+            if (model.TypeId != 2 && model.PositionId != null)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден Пост";
+                var types = await notifyObjectService.GetTypes();
+                var positions = await notifyObjectService.GetPositions();
+                if (!User.IsInRole(UserConstant.Roles.Administrator))
+                {
+                    types = await notifyObjectService.GetOperatorTypes();
+                }
+                ViewBag.Types = types;
+                ViewBag.Positions = positions;
+                model.PositionId = null;
+
                 return View(model);
             }
 
@@ -109,7 +131,10 @@ namespace LSRPO.Controllers
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
+            var positions = await notifyObjectService.GetPositions();
+
             ViewBag.Types = types;
+            ViewBag.Positions = positions;
 
             return View(model);
         }
@@ -127,27 +152,47 @@ namespace LSRPO.Controllers
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 
-            if (User.IsInRole(UserConstant.Roles.Operator) && model.Phone1.Length != 11)
+            if (User.IsInRole(UserConstant.Roles.Operator) && model.Phone1 != null && model.Phone1.Length != 11)
             {
-                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Тел. Обект / Мобилен 1";
                 var types = await notifyObjectService.GetTypes();
+                var positions = await notifyObjectService.GetPositions();
                 if (!User.IsInRole(UserConstant.Roles.Administrator))
                 {
                     types = await notifyObjectService.GetOperatorTypes();
                 }
                 ViewBag.Types = types;
+                ViewBag.Positions = positions;
                 return View(model);
             }
 
-            if (model.Phone1.Length != 11 && model.TypeId == 2)
+            if (model.Phone1 != null && model.Phone1.Length != 11 && model.TypeId == 2)
             {
-                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Телефон 1";
+                TempData[MessageConstant.ErrorMessage] = "Невалиден номер на Тел. Обект / Мобилен 1";
                 var types = await notifyObjectService.GetTypes();
+                var positions = await notifyObjectService.GetPositions();
                 if (!User.IsInRole(UserConstant.Roles.Administrator))
                 {
                     types = await notifyObjectService.GetOperatorTypes();
                 }
                 ViewBag.Types = types;
+                ViewBag.Positions = positions;
+                return View(model);
+            }
+
+            if (model.TypeId != 2 && model.PositionId != null)
+            {
+                TempData[MessageConstant.ErrorMessage] = "Невалиден Пост";
+                var types = await notifyObjectService.GetTypes();
+                var positions = await notifyObjectService.GetPositions();
+                if (!User.IsInRole(UserConstant.Roles.Administrator))
+                {
+                    types = await notifyObjectService.GetOperatorTypes();
+                }
+                ViewBag.Types = types;
+                ViewBag.Positions = positions;
+                model.PositionId = null;
+
                 return View(model);
             }
 

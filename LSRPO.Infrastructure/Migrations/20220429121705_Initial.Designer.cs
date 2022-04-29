@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LSRPO.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220420105602_Initial")]
+    [Migration("20220429121705_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -196,6 +196,28 @@ namespace LSRPO.Infrastructure.Migrations
                     b.HasKey("NO_TYPE_ID");
 
                     b.ToTable("NO_TYPES");
+                });
+
+            modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_POSITION", b =>
+                {
+                    b.Property<int>("POSITION_ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("POSITION_ID"), 1L, 1);
+
+                    b.Property<string>("POSITION_DESCR")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("POSITION_NAME")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("POSITION_ID");
+
+                    b.ToTable("NOT_POSITIONS");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_PROCES_STATE", b =>
@@ -490,10 +512,15 @@ namespace LSRPO.Infrastructure.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<int?>("POSITION_ID")
+                        .HasColumnType("int");
+
                     b.Property<int?>("PULT_ID")
                         .HasColumnType("int");
 
                     b.HasKey("NO_ID");
+
+                    b.HasIndex("POSITION_ID");
 
                     b.HasIndex("PULT_ID");
 
@@ -703,9 +730,15 @@ namespace LSRPO.Infrastructure.Migrations
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOTIFY_OBJECT", b =>
                 {
+                    b.HasOne("LSRPO.Infrastructure.Data.Models.NOT_POSITION", "NOT_POSITION")
+                        .WithMany("NOTIFY_OBJECTS")
+                        .HasForeignKey("POSITION_ID");
+
                     b.HasOne("LSRPO.Infrastructure.Data.Models.NOT_PULT", "NOT_PULT")
                         .WithMany("NOTIFY_OBJECTS")
                         .HasForeignKey("PULT_ID");
+
+                    b.Navigation("NOT_POSITION");
 
                     b.Navigation("NOT_PULT");
                 });
@@ -767,6 +800,11 @@ namespace LSRPO.Infrastructure.Migrations
 
                     b.Navigation("NOT_USER_PIN")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_POSITION", b =>
+                {
+                    b.Navigation("NOTIFY_OBJECTS");
                 });
 
             modelBuilder.Entity("LSRPO.Infrastructure.Data.Models.NOT_PROCESS", b =>

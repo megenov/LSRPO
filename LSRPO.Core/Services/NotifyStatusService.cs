@@ -17,6 +17,35 @@ namespace LSRPO.Core.Services
             this.repo = repo;
         }
 
+        public async Task<ProcessListAllViewModel> GetProcess(int id)
+        {
+            var process = await repo.All<NOT_PROCESS>().Include(i => i.NPR_TYPE).FirstOrDefaultAsync(f => f.NPR_ID == id);
+            if (process == null)
+            {
+                throw new ArgumentException("Невалиден процес!");
+            }
+
+            var groups = await repo.All<NOTIFY_GROUP>().ToListAsync();
+            var users = await repo.All<AUTH_USER>().ToListAsync();
+            var pults = await repo.All<NOT_PULT>().ToListAsync();
+            var flags = await repo.All<NOT_PROCES_STATE>().ToListAsync();
+
+            var result = new ProcessListAllViewModel
+            {
+                ProcessId = process.NPR_ID,
+                GroupName = groups.Where(w => w.NG_ID == process.NG_ID).Select(g => g.NG_NAME).FirstOrDefault(),
+                UserName = users.Where(w => w.Id == process.USR_ID).Select(u => u.USR_FULLNAME).FirstOrDefault(),
+                PultName = pults.Where(w => w.PULT_NUMBER == process.PULT_NUMBER).Select(p => p.PULT_DESCR).FirstOrDefault(),
+                ProccesTypeName = process.NPR_TYPE != null ? process.NPR_TYPE.NTP_DESCRIPTION : "N/A",
+                StartDate = process.NPR_DATE != null ? process.NPR_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "N/A",
+                EndDate = process.NPR_END_DATE != null ? process.NPR_END_DATE.Value.ToString(FormatingConstant.CustomShowDateFormat, CultureInfo.InvariantCulture) : "N/A",
+                FlagName = flags.Where(w => w.ST_ID.ToString() == process.NPR_FLAG).Select(f => f.ST_DESC).FirstOrDefault(),
+                FlagId = flags.Where(w => w.ST_ID.ToString() == process.NPR_FLAG).Select(f => f.ST_ID).FirstOrDefault(),
+            };
+
+            return result;
+        }
+
         public async Task<IEnumerable<ProcessListAllViewModel>> GetProcessAll()
         {
             var groups = await repo.All<NOTIFY_GROUP>().ToListAsync();

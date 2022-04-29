@@ -67,6 +67,20 @@ namespace LSRPO.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "NOT_POSITIONS",
+                columns: table => new
+                {
+                    POSITION_ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    POSITION_NAME = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    POSITION_DESCR = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NOT_POSITIONS", x => x.POSITION_ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "NOT_PROCES_STATES",
                 columns: table => new
                 {
@@ -297,11 +311,17 @@ namespace LSRPO.Infrastructure.Migrations
                     NP_EXT_PHONE1 = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     NP_EXT_PHONE2 = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     NO_TYPE = table.Column<byte>(type: "tinyint", nullable: true),
-                    PULT_ID = table.Column<int>(type: "int", nullable: true)
+                    PULT_ID = table.Column<int>(type: "int", nullable: true),
+                    POSITION_ID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_NOTIFY_OBJECTS", x => x.NO_ID);
+                    table.ForeignKey(
+                        name: "FK_NOTIFY_OBJECTS_NOT_POSITIONS_POSITION_ID",
+                        column: x => x.POSITION_ID,
+                        principalTable: "NOT_POSITIONS",
+                        principalColumn: "POSITION_ID");
                     table.ForeignKey(
                         name: "FK_NOTIFY_OBJECTS_NOT_PULTS_PULT_ID",
                         column: x => x.PULT_ID,
@@ -517,6 +537,11 @@ namespace LSRPO.Infrastructure.Migrations
                 filter: "[USR_PIN] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_NOTIFY_OBJECTS_POSITION_ID",
+                table: "NOTIFY_OBJECTS",
+                column: "POSITION_ID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_NOTIFY_OBJECTS_PULT_ID",
                 table: "NOTIFY_OBJECTS",
                 column: "PULT_ID");
@@ -583,6 +608,9 @@ namespace LSRPO.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "NPR_TYPES");
+
+            migrationBuilder.DropTable(
+                name: "NOT_POSITIONS");
 
             migrationBuilder.DropTable(
                 name: "NOT_PULTS");

@@ -26,7 +26,12 @@ namespace LSRPO.Core.Services
                 return (result, error);
             }
 
-            var notifyObject = new NOTIFY_OBJECT { NO_NAME = model.Name, NO_INT_PHONE = model.Phone1, NP_MOB_PHONE = model.Phone2, NP_EXT_PHONE2 = model.Phone3, NP_EXT_PHONE1 = model.Phone4, NO_TYPE = model.TypeId };
+            if (repo.All<NOTIFY_OBJECT>().Any(a => a.NO_NAME == model.Name))
+            {
+                return (result, $"Вече съществува обект с име: {model.Name}");
+            }
+
+            var notifyObject = new NOTIFY_OBJECT { NO_NAME = model.Name, NO_INT_PHONE = model.Phone1, NP_MOB_PHONE = model.Phone2, NP_EXT_PHONE2 = model.Phone3, NP_EXT_PHONE1 = model.Phone4, NO_TYPE = model.TypeId, POSITION_ID = model.PositionId };
 
             try
             {
@@ -141,6 +146,11 @@ namespace LSRPO.Core.Services
             {
                 if (notifyObject.NO_NAME != model.Name)
                 {
+                    if (repo.All<NOTIFY_OBJECT>().Any(a => a.NO_NAME == model.Name))
+                    {
+                        return (result, $"Вече съществува обект с име: {model.Name}");
+                    }
+
                     notifyObject.NO_NAME = model.Name;
                     changes = true;
                 }
@@ -172,6 +182,12 @@ namespace LSRPO.Core.Services
                 if (notifyObject.NO_TYPE != model.TypeId)
                 {
                     notifyObject.NO_TYPE = model.TypeId;
+                    changes = true;
+                }
+
+                if (notifyObject.POSITION_ID != model.PositionId)
+                {
+                    notifyObject.POSITION_ID = model.PositionId;
                     changes = true;
                 }
 
@@ -273,7 +289,8 @@ namespace LSRPO.Core.Services
                     Phone2 = notifyObject.NP_MOB_PHONE,
                     Phone3 = notifyObject.NP_EXT_PHONE2,
                     Phone4 = notifyObject.NP_EXT_PHONE1,
-                    TypeId = notifyObject.NO_TYPE
+                    TypeId = notifyObject.NO_TYPE,
+                    PositionId = notifyObject.POSITION_ID
                 }, types );
         }
 
@@ -290,14 +307,23 @@ namespace LSRPO.Core.Services
                     Phone3 = no.NP_EXT_PHONE2,
                     Phone4 = no.NP_EXT_PHONE1,
                     TypeDes = nt.NO_TYPE_DESCRIPTION,
-                    TypeId = nt.NO_TYPE_ID
+                    TypeId = nt.NO_TYPE_ID,
+                    PositionId = no.NOT_POSITION.POSITION_ID,
+                    PositionName = no.NOT_POSITION.POSITION_NAME
                 })
+                .OrderBy(o => o.PositionId != null ? o.PositionId : 999)
+                .ThenBy(o => o.Name)
                 .ToListAsync();
         }
 
         public async Task<IEnumerable<SelectListItem>> GetOperatorTypes()
         {
             return await repo.All<NO_TYPE>().Where(w => w.NO_TYPE_ID == 2).Select(s => new SelectListItem() { Text = s.NO_TYPE_DESCRIPTION, Value = s.NO_TYPE_ID.ToString() }).ToListAsync();
+        }
+
+        public async Task<IEnumerable<SelectListItem>> GetPositions()
+        {
+            return await repo.All<NOT_POSITION>().Select(s => new SelectListItem() { Text = s.POSITION_NAME, Value = s.POSITION_ID.ToString() }).ToListAsync();
         }
 
         public async Task<EditPultViewModel> GetPultForEdit(int id)

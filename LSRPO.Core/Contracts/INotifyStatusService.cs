@@ -7,5 +7,7 @@ namespace LSRPO.Core.Contracts
         Task<IEnumerable<ProcessDetailsViewModel>> GetProcessDetails(int id);
 
         Task<IEnumerable<ProcessListAllViewModel>> GetProcessAll();
+
+        Task<ProcessListAllViewModel> GetProcess(int id);
     }
 }

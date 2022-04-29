@@ -1,0 +1,227 @@
+[
+  {
+    "POSITION_ID": 1,
+    "POSITION_NAME": "ГР1",
+    "POSITION_DESCR": "Ръководител на аварийните работи"
+  },
+  {
+    "POSITION_ID": 2,
+    "POSITION_NAME": "ГР2",
+    "POSITION_DESCR": "Заместник ръководител на аварийните работи"
+  },
+  {
+    "POSITION_ID": 3,
+    "POSITION_NAME": "ГР3",
+    "POSITION_DESCR": "Ръководител Група за анализи и прогнози"
+  },
+  {
+    "POSITION_ID": 4,
+    "POSITION_NAME": "ГР4",
+    "POSITION_DESCR": "Ръководител Радиационен контрол"
+  },
+  {
+    "POSITION_ID": 5,
+    "POSITION_NAME": "ГР5",
+    "POSITION_DESCR": "Ръководител Спасителни служби"
+  },
+  {
+    "POSITION_ID": 6,
+    "POSITION_NAME": "ГР6",
+    "POSITION_DESCR": "Ръководител Служби за поддръжка"
+  },
+  {
+    "POSITION_ID": 7,
+    "POSITION_NAME": "ГР7",
+    "POSITION_DESCR": "Главен секретар"
+  },
+  {
+    "POSITION_ID": 8,
+    "POSITION_NAME": "ГР8",
+    "POSITION_DESCR": "Технически секретар"
+  },
+  {
+    "POSITION_ID": 9,
+    "POSITION_NAME": "ГАП1",
+    "POSITION_DESCR": "Специалист Анализ и оценка"
+  },
+  {
+    "POSITION_ID": 10,
+    "POSITION_NAME": "ГАП2",
+    "POSITION_DESCR": "Специалист Реакторно физични разчети"
+  },
+  {
+    "POSITION_ID": 11,
+    "POSITION_NAME": "ГАП3",
+    "POSITION_DESCR": "Специалист Контролиращ физик"
+  },
+  {
+    "POSITION_ID": 12,
+    "POSITION_NAME": "ГАП4",
+    "POSITION_DESCR": "Специалист Електрооборудване"
+  },
+  {
+    "POSITION_ID": 13,
+    "POSITION_NAME": "ГАП5",
+    "POSITION_DESCR": "Специалист СКУ"
+  },
+  {
+    "POSITION_ID": 14,
+    "POSITION_NAME": "ГАП6",
+    "POSITION_DESCR": "Специалист Реакторно оборудване"
+  },
+  {
+    "POSITION_ID": 15,
+    "POSITION_NAME": "ГАП7",
+    "POSITION_DESCR": "Специалист Турбинно оборудване"
+  },
+  {
+    "POSITION_ID": 16,
+    "POSITION_NAME": "ГАП8",
+    "POSITION_DESCR": "Специалист СКиХТС"
+  },
+  {
+    "POSITION_ID": 17,
+    "POSITION_NAME": "ГАП9",
+    "POSITION_DESCR": "Специалист Химия"
+  },
+  {
+    "POSITION_ID": 18,
+    "POSITION_NAME": "ГАП10",
+    "POSITION_DESCR": "Специалист Радиохимия"
+  },
+  {
+    "POSITION_ID": 19,
+    "POSITION_NAME": "ГАП11",
+    "POSITION_DESCR": "Специалист ХОГ"
+  },
+  {
+    "POSITION_ID": 20,
+    "POSITION_NAME": "ГАП12",
+    "POSITION_DESCR": "Специалист ОРУ"
+  },
+  {
+    "POSITION_ID": 21,
+    "POSITION_NAME": "РК1",
+    "POSITION_DESCR": "Специалист Прогнози на рад. последствия"
+  },
+  {
+    "POSITION_ID": 22,
+    "POSITION_NAME": "РК2",
+    "POSITION_DESCR": "Специалист АИСВРК и СММ"
+  },
+  {
+    "POSITION_ID": 23,
+    "POSITION_NAME": "РК3",
+    "POSITION_DESCR": "Дозиметрист Мониторинг на площадката"
+  },
+  {
+    "POSITION_ID": 24,
+    "POSITION_NAME": "РК4",
+    "POSITION_DESCR": "Спациалист Радиационен мониторинг на ЗНЗМ"
+  },
+  {
+    "POSITION_ID": 25,
+    "POSITION_NAME": "РК5",
+    "POSITION_DESCR": "Дозиметрист Мониторинг на площадката"
+  },
+  {
+    "POSITION_ID": 26,
+    "POSITION_NAME": "РК6",
+    "POSITION_DESCR": "Специалист Радиационен мониторинг на ОС"
+  },
+  {
+    "POSITION_ID": 27,
+    "POSITION_NAME": "РК7",
+    "POSITION_DESCR": "Специалист Анализ на проби от ОС"
+  },
+  {
+    "POSITION_ID": 28,
+    "POSITION_NAME": "РК8",
+    "POSITION_DESCR": "Дозиметрист ТЛД"
+  },
+  {
+    "POSITION_ID": 29,
+    "POSITION_NAME": "РК9",
+    "POSITION_DESCR": "Дозиметрист ИДК"
+  },
+  {
+    "POSITION_ID": 30,
+    "POSITION_NAME": "Г-ЦУА1",
+    "POSITION_DESCR": "Специалист Цифрови комуникационни с-ми"
+  },
+  {
+    "POSITION_ID": 31,
+    "POSITION_NAME": "Г-ЦУА2",
+    "POSITION_DESCR": "Оператор СТК"
+  },
+  {
+    "POSITION_ID": 32,
+    "POSITION_NAME": "Г-ЦУА3",
+    "POSITION_DESCR": "Оператор Радиокомуникационни с-ми"
+  },
+  {
+    "POSITION_ID": 33,
+    "POSITION_NAME": "Г-ЦУА4",
+    "POSITION_DESCR": "Специалист ИСиКТ ЦУА"
+  },
+  {
+    "POSITION_ID": 34,
+    "POSITION_NAME": "Г-ЦУА5",
+    "POSITION_DESCR": "Отговорник Първа долекарска помощ ЦУА"
+  },
+  {
+    "POSITION_ID": 35,
+    "POSITION_NAME": "Г-ЦУА6",
+    "POSITION_DESCR": "Специалист Вентилационни системи ЦУА"
+  },
+  {
+    "POSITION_ID": 36,
+    "POSITION_NAME": "Г-ЦУА7",
+    "POSITION_DESCR": "Специалист Дизел агрегат ЦУА"
+  },
+  {
+    "POSITION_ID": 37,
+    "POSITION_NAME": "Г-ЦУА8",
+    "POSITION_DESCR": "Специалист Връзки с обществеността"
+  },
+  {
+    "POSITION_ID": 38,
+    "POSITION_NAME": "Г-ЦУА9",
+    "POSITION_DESCR": "Специалист Техническа поддръжка на ИИЦ"
+  },
+  {
+    "POSITION_ID": 39,
+    "POSITION_NAME": "Г-ЦУА10",
+    "POSITION_DESCR": "Специалист Дежурен в Дом на енергетика"
+  },
+  {
+    "POSITION_ID": 40,
+    "POSITION_NAME": "Г-ЦУА11",
+    "POSITION_DESCR": "Специалист Дизел агрегат ПРУ-ИЛК"
+  },
+  {
+    "POSITION_ID": 41,
+    "POSITION_NAME": "Г-АТ1",
+    "POSITION_DESCR": "Група Автотранспорт - оперативен дежурен"
+  },
+  {
+    "POSITION_ID": 42,
+    "POSITION_NAME": "Г-АТ2",
+    "POSITION_DESCR": "Група Автотранспорт - водач на автобус"
+  },
+  {
+    "POSITION_ID": 43,
+    "POSITION_NAME": "Г-АТ3",
+    "POSITION_DESCR": "Група Автотранспорт - водач на лек автомобил"
+  },
+  {
+    "POSITION_ID": 44,
+    "POSITION_NAME": "Г-АТ4",
+    "POSITION_DESCR": "Група Автотранспорт - водач на влекач"
+  },
+  {
+    "POSITION_ID": 45,
+    "POSITION_NAME": "Г-АТ5",
+    "POSITION_DESCR": "Група Автотранспорт - водач па трактор"
+  }
+]

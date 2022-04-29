@@ -22,11 +22,12 @@
 
                         <thead>
                             <tr>
+                                <th>Пост</th>
                                 <th>Име</th>
-                                <th>Телефон 1</th>
-                                <th>Телефон 2</th>
-                                <th>Телефон 3</th>
-                                <th>Телефон 4</th>
+                                <th>Тел. Обект / Мобилен 1</th>
+                                <th>Мобилен 2</th>
+                                <th>Служебен 1</th>
+                                <th>Служебен 2</th>
                                 <th>Тип</th>
                                 <th>Действие</th>
                             </tr>
@@ -36,6 +37,7 @@
                             @foreach (var notifyObject in Model)
                             {
                                 <tr>
+                                    <td>@notifyObject.PositionName</td>
                                     <td>@notifyObject.Name</td>
                                     <td>@notifyObject.Phone1</td>
                                     <td>@notifyObject.Phone2</td>
@@ -89,11 +91,12 @@
 
                         <tfoot>
                             <tr>
+                                <th>Пост</th>
                                 <th>Име</th>
-                                <th>Телефон 1</th>
-                                <th>Телефон 2</th>
-                                <th>Телефон 3</th>
-                                <th>Телефон 4</th>
+                                <th>Тел. Обект / Мобилен 1</th>
+                                <th>Мобилен 2</th>
+                                <th>Служебен 1</th>
+                                <th>Служебен 2</th>
                                 <th>Тип</th>
                                 <th>Действие</th>
                             </tr>
@@ -117,6 +120,7 @@
 <script>
     $(document).ready(function() {
         $('#datatable').DataTable({
+            "order": [[ 7 ]],
             "pageLength": 100,
             "lengthMenu": [[10, 25, 50, 100, 250, 500, -1], [10, 25, 50, 100, 250, 500, "All"]],
             "responsive": true,
@@ -124,26 +128,26 @@
             {
                 extend: 'copyHtml5',
                 exportOptions: {
-                    columns: [ 0, 1, 2, 3, 4, 5 ]
+                    columns: [ 0, 1, 2, 3, 4, 5, 6 ]
                 }
             },
             {
                 extend: 'excelHtml5',
                 exportOptions: {
-                    columns: [ 0, 1, 2, 3, 4, 5 ]
+                    columns: [ 0, 1, 2, 3, 4, 5, 6 ]
                 }
             },
             {
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 exportOptions: {
-                    columns: [ 0, 1, 2, 3, 4, 5 ]
+                    columns: [ 0, 1, 2, 3, 4, 5, 6 ]
                 }
             },
             {
                 extend: "print",
                 exportOptions: {
-                    columns: [ 0, 1, 2, 3, 4, 5 ]
+                    columns: [ 0, 1, 2, 3, 4, 5, 6 ]
                 }
             }]
         }).buttons().container().appendTo('#buttons');

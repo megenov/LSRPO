@@ -28,7 +28,11 @@ namespace LSRPO.Controllers
                 return RedirectToAction(nameof(ProcessListAll));
             }
 
-            ViewBag.ProcessId = id;
+            var status = await notifyStatusService.GetProcess(id);
+            var processString = $"Група - {status.GroupName}, Потребител - {status.UserName}, Пулт - {status.PultName}, Тип - {status.ProccesTypeName}, Начало - {status.StartDate}, Край - {status.EndDate}, {status.FlagName}";
+
+            ViewBag.Status = status;
+            ViewBag.ProcessString = processString;
 
             return View(process);
         }
